@@ -10,10 +10,11 @@
         "hero": {
             "subtitle": { "en": "Fullstack Web & Mobile Developer<br>Graphic Designer", "es": "Desarrollador Fullstack Web y Móvil<br>Diseñador Gráfico" },
             "bio": { 
-                "en": "� 6 years of turning complex problems into elegant digital solutions. Currently building the future at <strong>PinkzebraHome</strong>.", 
-                "es": "� 6 años convirtiendo problemas complejos en soluciones digitales elegantes. Construyendo el futuro en <strong>PinkzebraHome</strong>." 
+                "en": "6 years of turning complex problems into elegant digital solutions.", 
+                "es": "6 años convirtiendo problemas complejos en soluciones digitales elegantes." 
             },
-            "cta": { "en": "View Projects", "es": "Ver Proyectos" }
+            "cta": { "en": "View Projects", "es": "Ver Proyectos" },
+            "download_cv": { "en": "Download CV", "es": "Descargar CV" }
         },
         "projects_section": {
             "title": { "en": "Recent Projects", "es": "Proyectos Recientes" },
@@ -22,17 +23,17 @@
         },
         "experience_section": {
             "title": { "en": "Experience", "es": "Experiencia" },
-            "subtitle": { "en": "6 years of building digital experiences.", "es": "6 años construyendo experiencias digitales." }
+            "subtitle": { "en": "My professional journey through technology.", "es": "Mi trayectoria profesional a través de la tecnología." }
         },
         "about_section": {
             "title": { "en": "About Me", "es": "Sobre Mí" },
             "p1": { 
-                "en": "I'm a programmer at heart 💻. ⚡ I also create 🎨 <strong>2D designs, ⚒️ 3D models, and 🕹️ games</strong>. While I have strong graphic design skills, my core passion lies in programming and architecture.", 
-                "es": "Soy programador de corazón 💻. ⚡ También hago 🎨 <strong>diseño 2D, ⚒️ modelado 3D y 🕹️ juegos</strong>. Aunque tengo sólidas habilidades en diseño gráfico, mi verdadera pasión es la programación y arquitectura." 
+                "en": "I’m a life enthusiast, always with a smile on my face and ready to face new challenges and turn ideas into reality. I love to learn, grow, and contribute in every project I participate in. Always ready for the next adventure!", 
+                "es": "Soy un entusiasta de la vida, siempre con una sonrisa y listo para enfrentar nuevos retos y convertir ideas en realidad. Me encanta aprender, crecer y contribuir en cada proyecto en el que participo. ¡Siempre listo para la próxima aventura!" 
             },
             "p2": { 
-                "en": "With <strong>6 years of experience</strong>, I tackle complex projects with ease. 🌱 I am currently deep-diving into <strong>Machine Learning and IA</strong> to push the boundaries of what's possible.", 
-                "es": "Con <strong>6 años de experiencia</strong>, abordo proyectos complejos con facilidad. 🌱 Actualmente estoy profundizando en <strong>Machine Learning e IA</strong> para ampliar los límites de lo posible." 
+                "en": "🌱 Currently deep-diving into <strong>Machine Learning and IA</strong>. ⚡ Also creating 🎨 <strong>2D designs, ⚒️ 3D models & 🕹️ games</strong>.", 
+                "es": "🌱 Profundizando en <strong>Machine Learning e IA</strong>. ⚡ También hago 🎨 <strong>diseño 2D, ⚒️ modelado 3D y 🕹️ juegos</strong>." 
             },
             "stats": {
                 "years": { "en": "Years Exp.", "es": "6 Años Exp." },
@@ -110,70 +111,39 @@
             "githubUrl": "https://github.com/albertolicea00/Banca_Remota",
             "liveUrl": "https://github.com/albertolicea00/Banca_Remota",
             "featured": true
-        },
-        {
-            "id": 5,
-            "title": { "en": "Hide-n-Seek Media Blocker", "es": "Hide-n-Seek Bloqueador de Media" },
-            "description": {
-                "en": "Browser extension to hide and seek specific media content, enhancing privacy and user browsing control.",
-                "es": "Extensión de navegador para ocultar y buscar contenido multimedia específico, mejorando la privacidad y el control del usuario."
-            },
-            "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-            "tags": ["JavaScript", "Extension", "Privacy"],
-            "githubUrl": "https://github.com/albertolicea00/hide-n-seek-block-media-addon",
-            "liveUrl": "https://github.com/albertolicea00/hide-n-seek-block-media-addon",
-            "featured": false
-        },
-        {
-            "id": 6,
-            "title": { "en": "Flask API REST Template", "es": "Plantilla Flask API REST" },
-            "description": {
-                "en": "Professional-grade boilerplate for quickly deploying Python RESTful APIs with clean architecture and scalability.",
-                "es": "Plantilla de nivel profesional para desplegar rápidamente APIs RESTful en Python con arquitectura limpia y escalabilidad."
-            },
-            "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-            "tags": ["Python", "Flask", "API"],
-            "githubUrl": "https://github.com/albertolicea00/flask-apirest-template",
-            "liveUrl": "https://github.com/albertolicea00/flask-apirest-template",
-            "featured": false
-        },
-        {
-            "id": 7,
-            "title": { "en": "Python Obj-Dict Helpers", "es": "Python Obj-Dict Helpers" },
-            "description": {
-                "en": "Developer utility library to seamlessly bridge the gap between Python objects and dictionaries for easier data manipulation.",
-                "es": "Librería de utilidades para desarrolladores que facilita la transición entre objetos Python y diccionarios para manipulación de datos."
-            },
-            "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-            "tags": ["Python", "Open Source", "Lib"],
-            "githubUrl": "https://github.com/albertolicea00/python-obj-dict-helpers",
-            "liveUrl": "https://github.com/albertolicea00/python-obj-dict-helpers",
-            "featured": false
         }
     ],
     "experience": [
         {
-            "date": "2020 - Present",
-            "title": { "en": "Senior Fullstack Developer", "es": "Desarrollador Fullstack Senior" },
+            "date": "Present",
+            "title": { "en": "PinkzebraHome - Confidential", "es": "PinkzebraHome - Confidencial" },
             "desc": { 
-                "en": "Leading development for high-scale applications, focusing on architectural patterns.",
-                "es": "Liderando desarrollo de aplicaciones a gran escala, enfocado en patrones de arquitectura."
+                "en": "Currently developing a private, high-impact project. Something big is coming soon...", 
+                "es": "Actualmente desarrollando un proyecto privado de alto impacto. Muy pronto..." 
             }
         },
         {
-            "date": "2016 - 2020",
-            "title": { "en": "Mid-Senior Software Engineer", "es": "Ingeniero de Software Semi-Senior" },
-            "desc": {
-                "en": "Specialized in React/Node.js ecosystems. Developed CRM and E-commerce platforms.",
-                "es": "Especializado en React/Node.js. Desarrollo de plataformas CRM y comercio electrónico."
+            "date": "Mar 2024 - Present",
+            "title": { "en": "Software Developer @ Ladetec", "es": "Desarrollador de Software @ Ladetec" },
+            "desc": { 
+                "en": "API integration (Bigcommerce, KillBill) and ERP development using Django, Vue.js, Svelte, and Node.js.",
+                "es": "Integración de APIs (Bigcommerce, KillBill) y desarrollo de ERPs usando Django, Vue.js, Svelte y Node.js."
             }
         },
         {
-            "date": "2013 - 2016",
-            "title": { "en": "Junior - Mid Developer & Designer", "es": "Desarrollador y Diseñador" },
+            "date": "Mar 2022 - Feb 2024",
+            "title": { "en": "IT Support Manager @ Wateke Soluciones", "es": "Manager de Soporte IT @ Wateke Soluciones" },
             "desc": {
-                "en": "Combined graphic design skills with frontend development.",
-                "es": "Combinando habilidades de diseño gráfico con desarrollo frontend."
+                "en": "Developed custom ERP and CMS systems using Laravel & Livewire. Managed WordPress sites and custom plugins.",
+                "es": "Desarrollo de sistemas ERP y CMS a medida con Laravel y Livewire. Gestión de sitios WordPress y plugins personalizados."
+            }
+        },
+        {
+            "date": "Jan 2022 - Feb 2024",
+            "title": { "en": "External Collaborator @ Wateke Travel", "es": "Colaborador Externo @ Wateke Travel" },
+            "desc": {
+                "en": "Built mobile apps with Apache Cordova and managed interactive logo animations using After Effects.",
+                "es": "Creación de apps móviles con Apache Cordova y animaciones de logos con After Effects."
             }
         }
     ]
