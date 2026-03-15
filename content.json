@@ -14,6 +14,7 @@
                 "es": "6 años convirtiendo café en código de alta gama." 
             },
             "cta": { "en": "View Projects", "es": "Ver Proyectos" },
+            "contact": { "en": "Contact Me", "es": "Contactame" },
             "download_cv": { "en": "Download CV", "es": "Descargar CV" }
         },
         "projects_section": {

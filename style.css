@@ -182,7 +182,7 @@ a {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 6rem 2rem 2rem;
+  padding: 6rem 2rem 4rem 2rem;
   overflow: hidden;
 }
 
@@ -278,20 +278,13 @@ a {
   margin: 0 auto 2rem;
 }
 
-.social-links-hero {
+.hero-actions {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.hero-btns {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.2rem;
-    flex-wrap: wrap;
-    margin-top: 1rem;
+  align-items: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
 }
 
 .social-icon {
@@ -362,6 +355,73 @@ a {
   color: var(--brand-yellow-darker);
   transform: translateY(-3px);
   background: rgba(254, 217, 164, 0.05);
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 5;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-indicator:hover {
+  opacity: 1;
+}
+
+.mouse {
+  width: 26px;
+  height: 42px;
+  border: 2px solid var(--text-main);
+  border-radius: 20px;
+  position: relative;
+}
+
+.wheel {
+  width: 3px;
+  height: 8px;
+  background: var(--brand-yellow);
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+  animation: mouseScroll 2s infinite;
+}
+
+.arrows span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid var(--text-main);
+  border-right: 2px solid var(--text-main);
+  transform: rotate(45deg);
+  margin: -4px;
+  animation: arrowScroll 2s infinite;
+}
+
+.arrows span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+@keyframes mouseScroll {
+  0% { opacity: 0; transform: translate(-50%, 0); }
+  20% { opacity: 1; transform: translate(-50%, 0); }
+  100% { opacity: 0; transform: translate(-50%, 15px); }
+}
+
+@keyframes arrowScroll {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
 }
 
 /* Sections Setup */
