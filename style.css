@@ -677,6 +677,13 @@ a {
   box-shadow: 0 0 10px var(--brand-yellow-glow);
 }
 
+.form-group input:disabled, 
+.form-group textarea:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background: rgba(0,0,0,0.1);
+}
+
 .copyright {
   font-size: 0.95rem !important;
   opacity: 0.8;

@@ -10,8 +10,8 @@
         "hero": {
             "subtitle": { "en": "Fullstack Web & Mobile Developer<br>Graphic Designer", "es": "Desarrollador Fullstack Web y Móvil<br>Diseñador Gráfico" },
             "bio": { 
-                "en": "🔭 Currently working on <strong>PinkzebraHome</strong>. over 10 years of experience building robust solutions and beautiful interfaces.", 
-                "es": "🔭 Actualmente trabajando en <strong>PinkzebraHome</strong>. Más de 10 años de experiencia construyendo soluciones robustas e interfaces hermosas." 
+                "en": "� 6 years of turning complex problems into elegant digital solutions. Currently building the future at <strong>PinkzebraHome</strong>.", 
+                "es": "� 6 años convirtiendo problemas complejos en soluciones digitales elegantes. Construyendo el futuro en <strong>PinkzebraHome</strong>." 
             },
             "cta": { "en": "View Projects", "es": "Ver Proyectos" }
         },
@@ -22,7 +22,7 @@
         },
         "experience_section": {
             "title": { "en": "Experience", "es": "Experiencia" },
-            "subtitle": { "en": "Over a decade of building digital experiences.", "es": "Más de una década construyendo experiencias digitales." }
+            "subtitle": { "en": "6 years of building digital experiences.", "es": "6 años construyendo experiencias digitales." }
         },
         "about_section": {
             "title": { "en": "About Me", "es": "Sobre Mí" },
@@ -31,11 +31,11 @@
                 "es": "Soy programador de corazón 💻. ⚡ También hago 🎨 <strong>diseño 2D, ⚒️ modelado 3D y 🕹️ juegos</strong>. Aunque tengo sólidas habilidades en diseño gráfico, mi verdadera pasión es la programación y arquitectura." 
             },
             "p2": { 
-                "en": "With <strong>10+ years of experience</strong>, I tackle complex projects with ease. 🌱 I am currently deep-diving into <strong>Machine Learning and IA</strong> to push the boundaries of what's possible.", 
-                "es": "Con <strong>+10 años de experiencia</strong>, abordo proyectos complejos con facilidad. 🌱 Actualmente estoy profundizando en <strong>Machine Learning e IA</strong> para ampliar los límites de lo posible." 
+                "en": "With <strong>6 years of experience</strong>, I tackle complex projects with ease. 🌱 I am currently deep-diving into <strong>Machine Learning and IA</strong> to push the boundaries of what's possible.", 
+                "es": "Con <strong>6 años de experiencia</strong>, abordo proyectos complejos con facilidad. 🌱 Actualmente estoy profundizando en <strong>Machine Learning e IA</strong> para ampliar los límites de lo posible." 
             },
             "stats": {
-                "years": { "en": "Years Exp.", "es": "Años de Exp." },
+                "years": { "en": "Years Exp.", "es": "6 Años Exp." },
                 "commitment": { "en": "Commitment", "es": "Compromiso" }
             }
         },
@@ -47,11 +47,11 @@
                 "email": { "en": "Your Email", "es": "Tu Correo" },
                 "message": { "en": "Project Details / Message", "es": "Detalles del Proyecto / Mensaje" }
             },
-            "submit_btn": { "en": "Send Message", "es": "Enviar Mensaje" },
+            "submit_btn": { "en": "Form Offline", "es": "Formulario Offline" },
             "success_msg": { "en": "Message sent! I will contact you soon.", "es": "¡Mensaje enviado! Te contactaré pronto." }
         },
         "footer": {
-            "rights": { "en": "All rights reserved.", "es": "Todos los derechos reservados." }
+            "rights": { "en": "Crafted with passion by @albertolicea00", "es": "Creado con pasión por @albertolicea00" }
         },
         "common": {
             "view_project": { "en": "View Project", "es": "Ver Proyecto" },
@@ -67,7 +67,7 @@
                 "es": "Plataforma corporativa escalable para servicios de climatización, con generación de presupuestos y gestión de clientes."
             },
             "image": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-            "tags": ["Svelte", "Node.js", "Css"],
+            "tags": ["Svelte", "Node.js", "CSS"],
             "githubUrl": "https://github.com/albertolicea00/bettahvac-landing",
             "liveUrl": "https://www.bettahvacservices.com/",
             "featured": false
@@ -80,7 +80,7 @@
                 "es": "Landing page de entretenimiento altamente dinámica con diseño envolvente y animaciones fluidas."
             },
             "image": "https://yt3.googleusercontent.com/xktD1rgu2QIivNnnDWVuYuFlchkfdH23Yp4YUbv1-7Y5LIJHLvgEHD-rOgwn8XEskC3vAGzTeg=s160-c-k-c0x00ffffff-no-rj",
-            "tags": ["Astro", "TypeScript", "CSS"],
+            "tags": ["Astro", "TypeScript", "Tailwind CSS"],
             "githubUrl": "https://github.com/albertolicea00/las-locuras-de-miguelin-landing",
             "liveUrl": "https://las-locuras-de-miguelin-landing.vercel.app/",
             "featured": true
@@ -93,7 +93,7 @@
                 "es": "Landing page para plataforma de VOD centrada en la excelencia UI/UX y narrativa de marca."
             },
             "image": "https://yt3.googleusercontent.com/_nwkuUvKJT-ztrUNH1bymp7trvZfDXp07UVV7NJNv-Zfws0Wpnlla9nExFRhYSVNAMeKxt9AHA=s160-c-k-c0x00ffffff-no-rj",
-            "tags": ["Astro", "TypeScript", "CSS"],
+            "tags": ["Astro", "TypeScript", "Tailwind CSS"],
             "githubUrl": "https://github.com/albertolicea00/kristoff-landing",
             "liveUrl": "https://kristoff-landing.vercel.app/",
             "featured": true
