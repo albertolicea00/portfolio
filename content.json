@@ -10,15 +10,15 @@
         "hero": {
             "subtitle": { "en": "Fullstack Web & Mobile Developer<br>Graphic Designer", "es": "Desarrollador Fullstack Web y Móvil<br>Diseñador Gráfico" },
             "bio": { 
-                "en": "6 years of turning complex problems into elegant digital solutions.", 
-                "es": "6 años convirtiendo problemas complejos en soluciones digitales elegantes." 
+                "en": "6 years of converting coffee into high-end code.", 
+                "es": "6 años convirtiendo café en código de alta gama." 
             },
             "cta": { "en": "View Projects", "es": "Ver Proyectos" },
             "download_cv": { "en": "Download CV", "es": "Descargar CV" }
         },
         "projects_section": {
             "title": { "en": "Recent Projects", "es": "Proyectos Recientes" },
-            "subtitle": { "en": "A selection of my latest work in web, mobile, and design.", "es": "Una selección de mis últimos trabajos en web, móvil y diseño." },
+            "subtitle": { "en": "New and exciting projects are being prepared. Stay tuned!", "es": "Nuevos y emocionantes proyectos se están preparando. ¡Mantente atento!" },
             "view_all": { "en": "View All Projects", "es": "Ver Todos los Proyectos" }
         },
         "experience_section": {
@@ -56,7 +56,11 @@
         },
         "common": {
             "view_project": { "en": "View Project", "es": "Ver Proyecto" },
-            "repository": { "en": "Repository", "es": "Repositorio" }
+            "repository": { "en": "Repository", "es": "Repositorio" },
+            "coming_soon": { 
+                "en": "I'm currently polishing and refining my latest projects to ensure they meet the highest standards. Check back soon for the full reveal!", 
+                "es": "Estoy terminando de pulir y retocar mis últimos proyectos para que queden perfectos antes de incluirlos aquí. ¡Vuelve pronto para ver el resultado!" 
+            }
         }
     },
     "projects": [
@@ -84,7 +88,7 @@
             "tags": ["Astro", "TypeScript", "Tailwind CSS"],
             "githubUrl": "https://github.com/albertolicea00/las-locuras-de-miguelin-landing",
             "liveUrl": "https://las-locuras-de-miguelin-landing.vercel.app/",
-            "featured": true
+            "featured": false
         },
         {
             "id": 3,
@@ -97,7 +101,7 @@
             "tags": ["Astro", "TypeScript", "Tailwind CSS"],
             "githubUrl": "https://github.com/albertolicea00/kristoff-landing",
             "liveUrl": "https://kristoff-landing.vercel.app/",
-            "featured": true
+            "featured": false
         },
         {
             "id": 4,
@@ -110,7 +114,7 @@
             "tags": ["Swift", "IOs"],
             "githubUrl": "https://github.com/albertolicea00/Banca_Remota",
             "liveUrl": "https://github.com/albertolicea00/Banca_Remota",
-            "featured": true
+            "featured": false
         }
     ],
     "experience": [

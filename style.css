@@ -177,12 +177,12 @@ a {
 /* Hero */
 .hero {
   position: relative;
-  min-height: 80vh;
+  min-height: 98vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 4rem 2rem 2rem;
+  padding: 6rem 2rem 2rem;
   overflow: hidden;
 }
 

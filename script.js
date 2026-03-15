@@ -97,7 +97,25 @@ function renderProjects() {
     containers.forEach(item => {
         if (item.el) {
             item.el.innerHTML = '';
-            siteData.projects.filter(item.filter).forEach(project => {
+            const filteredProjects = siteData.projects.filter(item.filter);
+
+            if (filteredProjects.length === 0) {
+                const comingSoon = document.createElement('div');
+                comingSoon.className = 'coming-soon-box glass-panel';
+                comingSoon.style.padding = '4rem';
+                comingSoon.style.width = '100%';
+                comingSoon.style.gridColumn = '1 / -1';
+                comingSoon.style.textAlign = 'center';
+                comingSoon.innerHTML = `
+                    <i class="fas fa-tools" style="font-size: 3rem; color: var(--brand-yellow); margin-bottom: 2rem; display: block;"></i>
+                    <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">Coming Soon</h3>
+                    <p style="opacity: 0.8; font-size: 1.1rem;">${siteData.home.common.coming_soon[currentLang]}</p>
+                `;
+                item.el.appendChild(comingSoon);
+                return;
+            }
+
+            filteredProjects.forEach(project => {
                 const card = document.createElement('div');
                 card.className = 'project-card';
                 const tagsHtml = project.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
