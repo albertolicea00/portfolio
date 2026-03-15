@@ -1,0 +1,119 @@
+{
+    "home": {
+        "nav": {
+            "home": { "en": "Home", "es": "Inicio" },
+            "projects": { "en": "Projects", "es": "Proyectos" },
+            "experience": { "en": "Experience", "es": "Experiencia" },
+            "allwork": { "en": "Apps", "es": "Apps" },
+            "contact": { "en": "Contact", "es": "Contacto" }
+        },
+        "hero": {
+            "subtitle": { "en": "Fullstack Web & Mobile Developer<br>Graphic Designer", "es": "Desarrollador Fullstack Web y Móvil<br>Diseñador Gráfico" },
+            "bio": { "en": "Passionate about technology, building robust solutions and beautiful interfaces with over 10 years of experience.", "es": "Apasionado por la tecnología, construyendo soluciones robustas e interfaces hermosas con más de 10 años de experiencia." },
+            "cta": { "en": "View Projects", "es": "Ver Proyectos" }
+        },
+        "projects_section": {
+            "title": { "en": "Recent Projects", "es": "Proyectos Recientes" },
+            "subtitle": { "en": "A selection of my latest work in web, mobile, and design.", "es": "Una selección de mis últimos trabajos en web, móvil y diseño." },
+            "view_all": { "en": "View All Projects", "es": "Ver Todos los Proyectos" }
+        },
+        "experience_section": {
+            "title": { "en": "Experience", "es": "Experiencia" },
+            "subtitle": { "en": "Over a decade of building digital experiences.", "es": "Más de una década construyendo experiencias digitales." }
+        },
+        "about_section": {
+            "title": { "en": "About Me", "es": "Sobre Mí" },
+            "p1": { "en": "I'm a programmer at heart 💻. While I have strong graphic design skills that I apply to every project, my core passion lies in <strong>programming and architecture</strong>.", "es": "Soy programador de corazón 💻. Aunque tengo sólidas habilidades en diseño gráfico que aplico a cada proyecto, mi verdadera pasión reside en la <strong>programación y arquitectura</strong>." },
+            "p2": { "en": "With <strong>10+ years of experience</strong> in the tech industry, I can tackle projects of any complexity levels, from immersive frontends to clean, efficient backend systems for both Web and Mobile platforms.", "es": "Con <strong>+10 años de experiencia</strong> en la industria tecnológica, puedo abordar proyectos de cualquier complejidad, desde interfaces envolventes hasta sistemas backend limpios y eficientes." },
+            "stats": {
+                "years": { "en": "Years Exp.", "es": "Años de Exp." },
+                "commitment": { "en": "Commitment", "es": "Compromiso" }
+            }
+        },
+        "contact_section": {
+            "title": { "en": "Let's Work Together", "es": "Trabajemos Juntos" },
+            "desc": { "en": "Interested in collaborating or hiring me for your next project? Drop me a message and I'll get back to you as soon as possible.", "es": "¿Interesado en colaborar o contratarme para tu próximo proyecto? Envíame un mensaje y te responderé lo antes posible." },
+            "placeholders": {
+                "name": { "en": "Your Name", "es": "Tu Nombre" },
+                "email": { "en": "Your Email", "es": "Tu Correo" },
+                "message": { "en": "Project Details / Message", "es": "Detalles del Proyecto / Mensaje" }
+            },
+            "submit_btn": { "en": "Send Message", "es": "Enviar Mensaje" },
+            "success_msg": { "en": "Message sent! I will contact you soon.", "es": "¡Mensaje enviado! Te contactaré pronto." }
+        },
+        "footer": {
+            "rights": { "en": "All rights reserved.", "es": "Todos los derechos reservados." }
+        },
+        "common": {
+            "view_project": { "en": "View Project", "es": "Ver Proyecto" },
+            "repository": { "en": "Repository", "es": "Repositorio" }
+        }
+    },
+    "projects": [
+        {
+            "id": 1,
+            "title": { "en": "E-Commerce App (Web & Mobile)", "es": "App E-Commerce (Web y Móvil)" },
+            "description": { 
+                "en": "Complete e-commerce platform with integrated payment gateway, admin dashboard, and a native mobile app built with React Native.",
+                "es": "Plataforma completa de comercio electrónico con pasarela de pagos, panel de administración y app móvil nativa en React Native."
+            },
+            "image": "https://images.unsplash.com/photo-1555421689-491a97ff2040?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "tags": ["React", "React Native", "Node.js", "MongoDB"],
+            "githubUrl": "https://github.com/albertolicea00",
+            "liveUrl": "https://github.com/albertolicea00",
+            "featured": true
+        },
+        {
+            "id": 2,
+            "title": { "en": "BettaHVAC Landing & CRM", "es": "Landing Page y CRM BettaHVAC" },
+            "description": {
+                "en": "Corporate site and scalable custom CRM for an HVAC company. Features real-time quotes, appointment scheduling, and customer management.",
+                "es": "Sitio corporativo y CRM a medida para empresa HVAC. Incluye cotizaciones en tiempo real, citas y manejo de clientes."
+            },
+            "image": "https://images.unsplash.com/photo-1581092921461-eab62e974320?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "tags": ["Svelte", "Express", "PostgreSQL", "Tailwind"],
+            "githubUrl": "https://github.com/albertolicea00",
+            "liveUrl": "https://github.com/albertolicea00",
+            "featured": true
+        },
+        {
+            "id": 3,
+            "title": { "en": "Kristoff TV UI/UX Redesign", "es": "Rediseño UI/UX Kristoff TV" },
+            "description": {
+                "en": "Full UI/UX redesign for a VOD platform. Includes initial graphic design, wireframing, and conversion to high-fidelity frontend code.",
+                "es": "Rediseño completo de UI/UX para plataforma VOD. Incluye diseño gráfico, wireframes y código frontend de alta fidelidad."
+            },
+            "image": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "tags": ["Figma", "HTML5", "CSS3", "JavaScript"],
+            "githubUrl": "https://github.com/albertolicea00",
+            "liveUrl": "https://github.com/albertolicea00",
+            "featured": true
+        }
+    ],
+    "experience": [
+        {
+            "date": "2020 - Present",
+            "title": { "en": "Senior Fullstack Developer", "es": "Desarrollador Fullstack Senior" },
+            "desc": { 
+                "en": "Leading development for high-scale applications, focusing on architectural patterns.",
+                "es": "Liderando desarrollo de aplicaciones a gran escala, enfocado en patrones de arquitectura."
+            }
+        },
+        {
+            "date": "2016 - 2020",
+            "title": { "en": "Mid-Senior Software Engineer", "es": "Ingeniero de Software Semi-Senior" },
+            "desc": {
+                "en": "Specialized in React/Node.js ecosystems. Developed CRM and E-commerce platforms.",
+                "es": "Especializado en React/Node.js. Desarrollo de plataformas CRM y comercio electrónico."
+            }
+        },
+        {
+            "date": "2013 - 2016",
+            "title": { "en": "Junior - Mid Developer & Designer", "es": "Desarrollador y Diseñador" },
+            "desc": {
+                "en": "Combined graphic design skills with frontend development.",
+                "es": "Combinando habilidades de diseño gráfico con desarrollo frontend."
+            }
+        }
+    ]
+}
