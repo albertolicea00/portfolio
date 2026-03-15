@@ -288,8 +288,10 @@ a {
 .hero-btns {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
+    align-items: center;
+    gap: 1.2rem;
     flex-wrap: wrap;
+    margin-top: 1rem;
 }
 
 .social-icon {
@@ -314,16 +316,18 @@ a {
 }
 
 .cta-btn {
-  display: inline-block;
-  padding: 1rem 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1.8rem;
   background: var(--brand-yellow);
   color: #0a0a0c;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   border-radius: 50px;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
   border: 2px solid var(--brand-yellow);
   cursor: pointer;
 }
@@ -331,26 +335,33 @@ a {
 .cta-btn:hover {
   background: transparent;
   color: var(--brand-yellow-darker);
-  box-shadow: 0 5px 15px var(--brand-yellow-glow);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px var(--brand-yellow-glow);
 }
 
 .outline-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.8rem;
-  padding: 1rem 2rem;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.7rem 1.8rem;
   background: transparent;
   color: var(--text-main);
   font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
   border-radius: 50px;
   border: 2px solid var(--glass-border);
-  transition: var(--transition-smooth);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
 }
 
 .outline-btn:hover {
   border-color: var(--brand-yellow-darker);
   color: var(--brand-yellow-darker);
-  transform: translateX(5px);
+  transform: translateY(-3px);
+  background: rgba(254, 217, 164, 0.05);
 }
 
 /* Sections Setup */
