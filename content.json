@@ -9,7 +9,10 @@
         },
         "hero": {
             "subtitle": { "en": "Fullstack Web & Mobile Developer<br>Graphic Designer", "es": "Desarrollador Fullstack Web y Móvil<br>Diseñador Gráfico" },
-            "bio": { "en": "Passionate about technology, building robust solutions and beautiful interfaces with over 10 years of experience.", "es": "Apasionado por la tecnología, construyendo soluciones robustas e interfaces hermosas con más de 10 años de experiencia." },
+            "bio": { 
+                "en": "🔭 Currently working on <strong>PinkzebraHome</strong>. over 10 years of experience building robust solutions and beautiful interfaces.", 
+                "es": "🔭 Actualmente trabajando en <strong>PinkzebraHome</strong>. Más de 10 años de experiencia construyendo soluciones robustas e interfaces hermosas." 
+            },
             "cta": { "en": "View Projects", "es": "Ver Proyectos" }
         },
         "projects_section": {
@@ -23,8 +26,14 @@
         },
         "about_section": {
             "title": { "en": "About Me", "es": "Sobre Mí" },
-            "p1": { "en": "I'm a programmer at heart 💻. While I have strong graphic design skills that I apply to every project, my core passion lies in <strong>programming and architecture</strong>.", "es": "Soy programador de corazón 💻. Aunque tengo sólidas habilidades en diseño gráfico que aplico a cada proyecto, mi verdadera pasión reside en la <strong>programación y arquitectura</strong>." },
-            "p2": { "en": "With <strong>10+ years of experience</strong> in the tech industry, I can tackle projects of any complexity levels, from immersive frontends to clean, efficient backend systems for both Web and Mobile platforms.", "es": "Con <strong>+10 años de experiencia</strong> en la industria tecnológica, puedo abordar proyectos de cualquier complejidad, desde interfaces envolventes hasta sistemas backend limpios y eficientes." },
+            "p1": { 
+                "en": "I'm a programmer at heart 💻. ⚡ I also create 🎨 <strong>2D designs, ⚒️ 3D models, and 🕹️ games</strong>. While I have strong graphic design skills, my core passion lies in programming and architecture.", 
+                "es": "Soy programador de corazón 💻. ⚡ También hago 🎨 <strong>diseño 2D, ⚒️ modelado 3D y 🕹️ juegos</strong>. Aunque tengo sólidas habilidades en diseño gráfico, mi verdadera pasión es la programación y arquitectura." 
+            },
+            "p2": { 
+                "en": "With <strong>10+ years of experience</strong>, I tackle complex projects with ease. 🌱 I am currently deep-diving into <strong>Machine Learning and IA</strong> to push the boundaries of what's possible.", 
+                "es": "Con <strong>+10 años de experiencia</strong>, abordo proyectos complejos con facilidad. 🌱 Actualmente estoy profundizando en <strong>Machine Learning e IA</strong> para ampliar los límites de lo posible." 
+            },
             "stats": {
                 "years": { "en": "Years Exp.", "es": "Años de Exp." },
                 "commitment": { "en": "Commitment", "es": "Compromiso" }
@@ -52,42 +61,94 @@
     "projects": [
         {
             "id": 1,
-            "title": { "en": "E-Commerce App (Web & Mobile)", "es": "App E-Commerce (Web y Móvil)" },
+            "title": { "en": "BettaHVAC Services", "es": "Servicios BettaHVAC" },
             "description": { 
-                "en": "Complete e-commerce platform with integrated payment gateway, admin dashboard, and a native mobile app built with React Native.",
-                "es": "Plataforma completa de comercio electrónico con pasarela de pagos, panel de administración y app móvil nativa en React Native."
+                "en": "Scalable corporate platform for HVAC services, featuring automated quote generation and customer management.",
+                "es": "Plataforma corporativa escalable para servicios de climatización, con generación de presupuestos y gestión de clientes."
             },
-            "image": "https://images.unsplash.com/photo-1555421689-491a97ff2040?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-            "tags": ["React", "React Native", "Node.js", "MongoDB"],
+            "image": "https://images.unsplash.com/photo-1581092921461-eab62e974320?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "tags": ["Svelte", "Node.js", "PostgreSQL"],
             "githubUrl": "https://github.com/albertolicea00",
-            "liveUrl": "https://github.com/albertolicea00",
+            "liveUrl": "https://www.bettahvacservices.com/",
             "featured": true
         },
         {
             "id": 2,
-            "title": { "en": "BettaHVAC Landing & CRM", "es": "Landing Page y CRM BettaHVAC" },
+            "title": { "en": "Las Locuras de Miguelín", "es": "Las Locuras de Miguelín" },
             "description": {
-                "en": "Corporate site and scalable custom CRM for an HVAC company. Features real-time quotes, appointment scheduling, and customer management.",
-                "es": "Sitio corporativo y CRM a medida para empresa HVAC. Incluye cotizaciones en tiempo real, citas y manejo de clientes."
+                "en": "Highly dynamic entertainment landing page with immersive design and fluid animations.",
+                "es": "Landing page de entretenimiento altamente dinámica con diseño envolvente y animaciones fluidas."
             },
-            "image": "https://images.unsplash.com/photo-1581092921461-eab62e974320?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-            "tags": ["Svelte", "Express", "PostgreSQL", "Tailwind"],
+            "image": "https://images.unsplash.com/photo-1514525253361-bee8718a74a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "tags": ["React", "Next.js", "Tailwind"],
             "githubUrl": "https://github.com/albertolicea00",
-            "liveUrl": "https://github.com/albertolicea00",
+            "liveUrl": "https://las-locuras-de-miguelin-landing.vercel.app/",
             "featured": true
         },
         {
             "id": 3,
-            "title": { "en": "Kristoff TV UI/UX Redesign", "es": "Rediseño UI/UX Kristoff TV" },
+            "title": { "en": "Kristoff Landing Page", "es": "Landing Page Kristoff" },
             "description": {
-                "en": "Full UI/UX redesign for a VOD platform. Includes initial graphic design, wireframing, and conversion to high-fidelity frontend code.",
-                "es": "Rediseño completo de UI/UX para plataforma VOD. Incluye diseño gráfico, wireframes y código frontend de alta fidelidad."
+                "en": "Modern VOD platform landing page focused on UX/UI excellence and brand storytelling.",
+                "es": "Landing page para plataforma de VOD centrada en la excelencia UI/UX y narrativa de marca."
             },
             "image": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-            "tags": ["Figma", "HTML5", "CSS3", "JavaScript"],
+            "tags": ["Figma", "Frontend", "Animation"],
             "githubUrl": "https://github.com/albertolicea00",
-            "liveUrl": "https://github.com/albertolicea00",
+            "liveUrl": "https://kristoff-landing.vercel.app/",
             "featured": true
+        },
+        {
+            "id": 4,
+            "title": { "en": "Banca Remota System", "es": "Sistema de Banca Remota" },
+            "description": {
+                "en": "Robust digital banking solution focusing on security, remote operations, and high-performance architecture.",
+                "es": "Solución de banca digital robusta centrada en la seguridad, operaciones remotas y arquitectura de alto rendimiento."
+            },
+            "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "tags": ["Java", "Kotlin", "Fintech"],
+            "githubUrl": "https://github.com/albertolicea00/Banca_Remota",
+            "liveUrl": "https://github.com/albertolicea00/Banca_Remota",
+            "featured": true
+        },
+        {
+            "id": 5,
+            "title": { "en": "Hide-n-Seek Media Blocker", "es": "Hide-n-Seek Bloqueador de Media" },
+            "description": {
+                "en": "Browser extension to hide and seek specific media content, enhancing privacy and user browsing control.",
+                "es": "Extensión de navegador para ocultar y buscar contenido multimedia específico, mejorando la privacidad y el control del usuario."
+            },
+            "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "tags": ["JavaScript", "Extension", "Privacy"],
+            "githubUrl": "https://github.com/albertolicea00/hide-n-seek-block-media-addon",
+            "liveUrl": "https://github.com/albertolicea00/hide-n-seek-block-media-addon",
+            "featured": false
+        },
+        {
+            "id": 6,
+            "title": { "en": "Flask API REST Template", "es": "Plantilla Flask API REST" },
+            "description": {
+                "en": "Professional-grade boilerplate for quickly deploying Python RESTful APIs with clean architecture and scalability.",
+                "es": "Plantilla de nivel profesional para desplegar rápidamente APIs RESTful en Python con arquitectura limpia y escalabilidad."
+            },
+            "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "tags": ["Python", "Flask", "API"],
+            "githubUrl": "https://github.com/albertolicea00/flask-apirest-template",
+            "liveUrl": "https://github.com/albertolicea00/flask-apirest-template",
+            "featured": false
+        },
+        {
+            "id": 7,
+            "title": { "en": "Python Obj-Dict Helpers", "es": "Python Obj-Dict Helpers" },
+            "description": {
+                "en": "Developer utility library to seamlessly bridge the gap between Python objects and dictionaries for easier data manipulation.",
+                "es": "Librería de utilidades para desarrolladores que facilita la transición entre objetos Python y diccionarios para manipulación de datos."
+            },
+            "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "tags": ["Python", "Open Source", "Lib"],
+            "githubUrl": "https://github.com/albertolicea00/python-obj-dict-helpers",
+            "liveUrl": "https://github.com/albertolicea00/python-obj-dict-helpers",
+            "featured": false
         }
     ],
     "experience": [
