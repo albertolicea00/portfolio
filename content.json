@@ -66,11 +66,11 @@
                 "en": "Scalable corporate platform for HVAC services, featuring automated quote generation and customer management.",
                 "es": "Plataforma corporativa escalable para servicios de climatización, con generación de presupuestos y gestión de clientes."
             },
-            "image": "https://images.unsplash.com/photo-1581092921461-eab62e974320?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-            "tags": ["Svelte", "Node.js", "PostgreSQL"],
-            "githubUrl": "https://github.com/albertolicea00",
+            "image": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "tags": ["Svelte", "Node.js", "Css"],
+            "githubUrl": "https://github.com/albertolicea00/bettahvac-landing",
             "liveUrl": "https://www.bettahvacservices.com/",
-            "featured": true
+            "featured": false
         },
         {
             "id": 2,
@@ -79,9 +79,9 @@
                 "en": "Highly dynamic entertainment landing page with immersive design and fluid animations.",
                 "es": "Landing page de entretenimiento altamente dinámica con diseño envolvente y animaciones fluidas."
             },
-            "image": "https://images.unsplash.com/photo-1514525253361-bee8718a74a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-            "tags": ["React", "Next.js", "Tailwind"],
-            "githubUrl": "https://github.com/albertolicea00",
+            "image": "https://yt3.googleusercontent.com/xktD1rgu2QIivNnnDWVuYuFlchkfdH23Yp4YUbv1-7Y5LIJHLvgEHD-rOgwn8XEskC3vAGzTeg=s160-c-k-c0x00ffffff-no-rj",
+            "tags": ["Astro", "TypeScript", "CSS"],
+            "githubUrl": "https://github.com/albertolicea00/las-locuras-de-miguelin-landing",
             "liveUrl": "https://las-locuras-de-miguelin-landing.vercel.app/",
             "featured": true
         },
@@ -92,9 +92,9 @@
                 "en": "Modern VOD platform landing page focused on UX/UI excellence and brand storytelling.",
                 "es": "Landing page para plataforma de VOD centrada en la excelencia UI/UX y narrativa de marca."
             },
-            "image": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-            "tags": ["Figma", "Frontend", "Animation"],
-            "githubUrl": "https://github.com/albertolicea00",
+            "image": "https://yt3.googleusercontent.com/_nwkuUvKJT-ztrUNH1bymp7trvZfDXp07UVV7NJNv-Zfws0Wpnlla9nExFRhYSVNAMeKxt9AHA=s160-c-k-c0x00ffffff-no-rj",
+            "tags": ["Astro", "TypeScript", "CSS"],
+            "githubUrl": "https://github.com/albertolicea00/kristoff-landing",
             "liveUrl": "https://kristoff-landing.vercel.app/",
             "featured": true
         },
@@ -105,8 +105,8 @@
                 "en": "Robust digital banking solution focusing on security, remote operations, and high-performance architecture.",
                 "es": "Solución de banca digital robusta centrada en la seguridad, operaciones remotas y arquitectura de alto rendimiento."
             },
-            "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-            "tags": ["Java", "Kotlin", "Fintech"],
+            "image": "https://github.com/albertolicea00/Banca_Remota/blob/main/Banca_Remota.xcassets/Logo.imageset/logo.png?raw=true",
+            "tags": ["Swift", "IOs"],
             "githubUrl": "https://github.com/albertolicea00/Banca_Remota",
             "liveUrl": "https://github.com/albertolicea00/Banca_Remota",
             "featured": true
