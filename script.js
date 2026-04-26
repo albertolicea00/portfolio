@@ -54,12 +54,35 @@ function initApp() {
     renderDynamicContent();
     setupEventListeners();
     syncAccessibilityUI();
-    
+    initTooltipPositioning();
+
     // Auto update year in footer
     const yearSpan = document.getElementById('year');
     if (yearSpan) {
         yearSpan.textContent = new Date().getFullYear();
     }
+}
+
+function initTooltipPositioning() {
+    function adjustTooltip(el) {
+        el.classList.remove('tooltip-pos-right', 'tooltip-pos-left');
+        const rect = el.getBoundingClientRect();
+        const maxW = Math.min(360, window.innerWidth * 0.82);
+        const cx = rect.left + rect.width / 2;
+        if (cx + maxW / 2 > window.innerWidth - 8) {
+            el.classList.add('tooltip-pos-right');
+        } else if (cx - maxW / 2 < 8) {
+            el.classList.add('tooltip-pos-left');
+        }
+    }
+    document.addEventListener('mouseover', e => {
+        const el = e.target.closest('[data-tooltip]');
+        if (el) adjustTooltip(el);
+    });
+    document.addEventListener('focusin', e => {
+        const el = e.target.closest('[data-tooltip]');
+        if (el) adjustTooltip(el);
+    });
 }
 
 function initTheme() {
@@ -284,7 +307,7 @@ function syncAccessibilityUI() {
     const logo = document.querySelector('.logo');
     if (logo) {
         logo.setAttribute('aria-label', homeLabel);
-        logo.setAttribute('data-tooltip', homeLabel);
+        logo.removeAttribute('data-tooltip');
     }
 
     const themeToggle = document.getElementById('theme-toggle');
@@ -340,10 +363,7 @@ function syncAccessibilityUI() {
     });
 
     document.querySelectorAll('.nav-links a').forEach(link => {
-        const text = link.textContent.replace(/\s+/g, ' ').trim();
-        if (text) {
-            link.setAttribute('data-tooltip', text);
-        }
+        link.removeAttribute('data-tooltip');
     });
 
     document.querySelectorAll('.outline-btn:not(#download-cv-link):not(#hero-contact-link):not(#view-all-projects-link)').forEach(link => {

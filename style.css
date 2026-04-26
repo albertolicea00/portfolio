@@ -159,7 +159,7 @@ textarea {
   transform: translate(-50%, 8px);
   display: block;
   width: max-content;
-  min-width: 230px;
+  min-width: 80px;
   max-width: min(360px, 82vw);
   padding: 0.8rem 1rem;
   border-radius: 14px;
@@ -194,6 +194,70 @@ textarea {
 [data-tooltip]:hover::after,
 [data-tooltip]:focus-visible::after {
   transform: translate(-50%, 0);
+}
+
+/* Navbar: tooltips appear below since navbar is pinned to top */
+.navbar [data-tooltip]::after {
+  bottom: auto;
+  top: calc(100% + 0.95rem);
+  transform: translate(-50%, -8px);
+}
+.navbar [data-tooltip]::before {
+  bottom: auto;
+  top: calc(100% + 0.45rem);
+  border-color: transparent transparent var(--tooltip-bg) transparent;
+}
+.navbar [data-tooltip]:hover::after,
+.navbar [data-tooltip]:focus-visible::after {
+  transform: translate(-50%, 0);
+}
+
+/* Right-edge: tooltip right edge aligns to element right edge */
+[data-tooltip].tooltip-pos-right::after,
+[data-tooltip-pos="right"]::after {
+  left: auto;
+  right: 0;
+  transform: translate(0, 8px);
+}
+[data-tooltip].tooltip-pos-right:hover::after,
+[data-tooltip].tooltip-pos-right:focus-visible::after,
+[data-tooltip-pos="right"]:hover::after,
+[data-tooltip-pos="right"]:focus-visible::after {
+  transform: translate(0, 0);
+}
+
+/* Left-edge: tooltip left edge aligns to element left edge */
+[data-tooltip].tooltip-pos-left::after {
+  left: 0;
+  transform: translate(0, 8px);
+}
+[data-tooltip].tooltip-pos-left:hover::after,
+[data-tooltip].tooltip-pos-left:focus-visible::after {
+  transform: translate(0, 0);
+}
+
+/* Navbar + right-edge */
+.navbar [data-tooltip].tooltip-pos-right::after,
+.navbar [data-tooltip-pos="right"]::after {
+  left: auto;
+  right: 0;
+  transform: translate(0, -8px);
+}
+.navbar [data-tooltip].tooltip-pos-right:hover::after,
+.navbar [data-tooltip].tooltip-pos-right:focus-visible::after,
+.navbar [data-tooltip-pos="right"]:hover::after,
+.navbar [data-tooltip-pos="right"]:focus-visible::after {
+  transform: translate(0, 0);
+}
+
+/* Navbar + left-edge */
+.navbar [data-tooltip].tooltip-pos-left::after {
+  left: 0;
+  transform: translate(0, -8px);
+}
+.navbar [data-tooltip].tooltip-pos-left:hover::after,
+.navbar [data-tooltip].tooltip-pos-left:focus-visible::after {
+  transform: translate(0, 0);
 }
 
 a:focus-visible,
@@ -288,7 +352,7 @@ textarea:focus-visible {
   padding: 0.5rem 0;
 }
 
-.nav-links a::after {
+.nav-links a::before {
   content: "";
   position: absolute;
   width: 0%;
@@ -297,10 +361,11 @@ textarea:focus-visible {
   left: 0;
   background-color: var(--brand-yellow);
   transition: width 0.3s ease;
+  pointer-events: none;
 }
 
-.nav-links a:hover::after,
-.nav-links a:focus-visible::after {
+.nav-links a:hover::before,
+.nav-links a:focus-visible::before {
   width: 100%;
 }
 
@@ -862,7 +927,7 @@ textarea:focus-visible {
   background: var(--glass-bg);
   border-radius: 20px;
   border: 1px solid var(--glass-border);
-  overflow: hidden;
+  overflow: visible;
   transition: all 0.4s ease;
   display: flex;
   flex-direction: column;
