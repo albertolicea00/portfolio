@@ -20,7 +20,7 @@
         "projects_section": {
             "title": { "en": "Recent Projects", "es": "Proyectos Recientes" },
             "subtitle": { "en": "New and exciting projects are being prepared. Stay tuned!", "es": "Nuevos y emocionantes proyectos se están preparando. ¡Mantente atento!" },
-            "view_all": { "en": "View All Projects", "es": "Ver Todos los Proyectos" }
+            "view_all": { "en": "View All Apps", "es": "Ver Todas las Apps" }
         },
         "experience_section": {
             "title": { "en": "Experience", "es": "Experiencia" },
