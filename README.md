@@ -1,53 +1,70 @@
-# Modern Developer Portfolio 🚀
+# Modern Developer Portfolio
 
-A high-end, responsive developer portfolio built with **Pure HTML, CSS, and JavaScript**. Featuring multi-language support, theme switching, and a JSON-driven content system for easy maintenance.
+Responsive portfolio built with plain HTML, CSS, and JavaScript. The site ships as a static frontend with no build step and loads its UI copy and dynamic sections from per-language JSON files in `assets/i18n/`.
 
-## ✨ Features
+## Features
 
-- 🌓 **Dynamic Theming**: Smooth transition between Dark and Light modes.
-- 🌍 **Multi-language Support**: Full English and Spanish integration with instant toggle.
-- 📦 **JSON-Driven**: All projects, experience, and text content are centralized in `content.json`.
-- 📱 **Fully Responsive**: Optimized for all devices—from desktop to mobile.
-- 💎 **Modern Aesthetics**: Glassmorphism effects, glitch transitions, and smooth scroll animations.
-- 🚀 **Zero Dependencies**: Built with vanilla technologies for maximum performance.
+- Light and dark theme toggle
+- Multi-language interface with automatic browser detection and English fallback
+- Custom language dropdown with keyboard support
+- Dynamic project and experience rendering from JSON
+- Responsive layout for desktop and mobile
+- Zero runtime dependencies beyond CDN fonts and icons
 
-## 🛠️ Tech Stack
+## Tech Stack
 
-- **HTML5**: Semantic structure.
-- **CSS3**: Custom properties (Variables), Flexbox, Grid, and Animations.
-- **JavaScript (ES6+)**: Dynamic rendering, I18n logic, and state management.
-- **Font Awesome**: Professional iconography.
-- **Google Fonts**: Premium typography (Outfit & Inter).
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- Font Awesome
+- Google Fonts
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
-├── index.html          # Main landing page
-├── projects.html       # Gallery for all projects
-├── style.css           # Main stylesheet with theme variables
-├── script.js           # Core logic (Theme, Language, Data rendering)
-├── content.json        # The "CMS" - Edit this to update your info!
-└── assets/             # Images and design assets
+├── index.html
+├── projects.html
+├── style.css
+├── script.js
+└── assets/
+    ├── i18n/
+    │   ├── en.json
+    │   ├── es.json
+    │   ├── ...
+    ├── img/
+    └── pdf/
 ```
 
-## ⚙️ How to Update Your Content
+## Content Model
 
-To update the information on the website, you only need to modify **`content.json`**.
+Each file in `assets/i18n/` contains:
 
-- **Translations**: Grouped by section (nav, hero, about, etc.) in `en` and `es`.
-- **Projects**: Add your own work in the `projects` array. Use `featured: true` to show them on the home page.
-- **Experience**: Update your career timeline in the `experience` array.
+- `home`: UI text, labels, accessibility copy, and section content
+- `projects`: project cards rendered on the home page and projects page
+- `experience`: timeline entries rendered dynamically
 
-## 🚀 Deployment
+`script.js` loads `assets/i18n/{lang}.json`, applies translated UI strings, and falls back to `en.json` if a language file cannot be loaded.
 
-The site is ready to be hosted on any static hosting service like:
+## Updating Content
 
-- **GitHub Pages**
-- **Vercel**
-- **Netlify**
+- Edit `assets/i18n/en.json` to update the default content
+- Mirror those changes in the other language files if you want localized versions
+- Add or update entries in the `projects` array to change the portfolio cards
+- Add or update entries in the `experience` array to change the timeline
+- Replace assets in `assets/img/` or `assets/pdf/` when needed
 
-Simply push your code to the repository and connect your hosting provider.
+## Local Preview
 
----
+Open `index.html` directly in the browser for a quick check, or serve the folder with any static file server if you want to avoid local `fetch` restrictions in stricter browser setups.
 
-Developed with ❤️ by [Alberto Licea](https://github.com/albertolicea00)
+## Deployment
+
+This project can be deployed to any static hosting provider, including:
+
+- GitHub Pages
+- Netlify
+- Vercel
+
+## Author
+
+[Alberto Licea](https://github.com/albertolicea00)
