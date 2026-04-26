@@ -282,14 +282,29 @@ function announceStatus(message) {
 }
 
 // Initial Load
-document.addEventListener('DOMContentLoaded', async () => {
+document.addEventListener('DOMContentLoaded', () => {
+    initApp();
+    hydrateInitialContent();
+});
+
+async function hydrateInitialContent() {
     try {
         siteData = await loadLanguage(currentLang);
-        initApp();
+
+        if (currentLang === FALLBACK_LANG) {
+            updatePageText();
+            renderDynamicContent();
+            syncAccessibilityUI();
+            return;
+        }
+
+        initLanguage();
+        renderDynamicContent();
+        syncAccessibilityUI();
     } catch (error) {
         console.error('Error loading i18n data:', error);
     }
-});
+}
 
 function initApp() {
     initTheme();
