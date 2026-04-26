@@ -4,10 +4,12 @@
  * Auto-detects browser language (navigator.language) with fallback to 'en'.
  */
 
-const SUPPORTED_LANGS = ['en', 'en.cav', 'es', 'es.cav', 'de', 'fr', 'it', 'ja', 'ko', 'pt', 'ru', 'zh'];
+const SUPPORTED_LANGS = ['en', 'en.cav', 'es', 'es.cav', 'de', 'fr', 'it', 'ja', 'ko', 'pt', 'ru', 'zh', 'cat', 'alien'];
 const FALLBACK_LANG = 'en';
 const LANGUAGE_CONTROL_LABELS = {
     en: 'Select language',
+    cat: 'Select cat language',
+    alien: 'Select alien language',
     es: 'Seleccionar idioma',
     de: 'Sprache w\u00e4hlen',
     fr: 'Choisir la langue',
@@ -21,6 +23,8 @@ const LANGUAGE_CONTROL_LABELS = {
 const LANGUAGE_CHANGED_LABELS = {
     en: 'Language changed to English',
     'en.cav': 'Caveman English active',
+    cat: 'Cat language active',
+    alien: 'Alien language active',
     es: 'Idioma cambiado a espa\u00f1ol',
     'es.cav': 'Espa\u00f1ol cavern\u00edcola activo',
     de: 'Sprache auf Deutsch ge\u00e4ndert',
@@ -48,6 +52,20 @@ const TOKEN_SAVER_VARIANTS = {
         deactivateLabel: 'Volver a espa\u00f1ol est\u00e1ndar'
     }
 };
+const CAT_SOUNDS = ['meow', 'miau', 'mrrp', 'nya', 'mew', 'purr'];
+const ALIEN_SYMBOLS = [
+    '⟟', '⌿', '⌇', '⟒', '⍀', '⌰', '⏃', '⍜', '⏁', '⊑', '⍙', '⌖',
+    '⊕', '⊗', '⊙', '⊚', '⊛', '⊞', '⊟', '⊠', '⊡',
+    '◉', '◎', '◌', '◍', '◐', '◑', '◒', '◓', '◔', '◕',
+    '▣', '▤', '▥', '▦', '▧', '▨', '▩',
+    '╬', '╠', '╣', '╦', '╩', '╔', '╗', '╚', '╝',
+    'ᚠ', 'ᚢ', 'ᚦ', 'ᚨ', 'ᚱ', 'ᚲ', 'ᚷ', 'ᚹ', 'ᚺ', 'ᛉ', 'ᛊ', 'ᛏ',
+    '☌', '☍', '☊', '☋', '☿', '⚚', '⚛', '⚝', '⛧', '⛤', '🜁', '🜂', '🜃', '🜄'
+];
+const SYNTHETIC_LANGUAGE_GENERATORS = {
+    cat: generateCatLanguageData,
+    alien: generateAlienLanguageData
+};
 
 let siteData = null;
 let currentLang = detectLanguage();
@@ -55,9 +73,15 @@ let currentTheme = localStorage.getItem('theme') || 'dark';
 let tokenSaverAudioContext = null;
 let tokenSaverAttentionTimeoutId = null;
 let tokenSaverAudioPrimed = false;
+const syntheticLanguageCache = {};
 
 function getBaseLanguage(lang = currentLang) {
     return lang.split('.')[0];
+}
+
+function getDocumentLanguageCode(lang = currentLang) {
+    const baseLang = getBaseLanguage(lang);
+    return baseLang === 'cat' || baseLang === 'alien' ? 'en' : baseLang;
 }
 
 function getLanguageConfigValue(map, lang = currentLang) {
@@ -72,6 +96,10 @@ function detectLanguage() {
 }
 
 async function loadLanguage(lang) {
+    if (SYNTHETIC_LANGUAGE_GENERATORS[lang]) {
+        return loadSyntheticLanguage(lang);
+    }
+
     try {
         const res = await fetch(`assets/i18n/${lang}.json`);
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -88,6 +116,139 @@ async function loadLanguage(lang) {
         }
         throw new Error('Failed to load i18n data');
     }
+}
+
+async function loadSyntheticLanguage(lang) {
+    if (syntheticLanguageCache[lang]) return syntheticLanguageCache[lang];
+
+    const baseData = await loadLanguage(FALLBACK_LANG);
+    const generator = SYNTHETIC_LANGUAGE_GENERATORS[lang];
+    const generatedData = generator(baseData);
+    syntheticLanguageCache[lang] = generatedData;
+    return generatedData;
+}
+
+function hashString(value) {
+    let hash = 2166136261;
+    for (let index = 0; index < value.length; index += 1) {
+        hash ^= value.charCodeAt(index);
+        hash = Math.imul(hash, 16777619);
+    }
+    return hash >>> 0;
+}
+
+function createSeededRandom(seedSource) {
+    let seed = hashString(seedSource);
+    return () => {
+        seed = (Math.imul(seed, 1664525) + 1013904223) >>> 0;
+        return seed / 4294967296;
+    };
+}
+
+function transformHtmlText(input, transformer) {
+    return input
+        .split(/(<[^>]+>)/g)
+        .map(fragment => (fragment.startsWith('<') && fragment.endsWith('>') ? fragment : transformer(fragment)))
+        .join('');
+}
+
+function mapVisibleContent(data, stringTransformer) {
+    return {
+        home: transformNestedStrings(data.home, stringTransformer),
+        projects: data.projects.map(project => ({
+            ...project,
+            title: stringTransformer(project.title),
+            description: stringTransformer(project.description),
+            tags: project.tags.map(tag => stringTransformer(tag))
+        })),
+        experience: data.experience.map(item => ({
+            ...item,
+            date: stringTransformer(item.date),
+            title: stringTransformer(item.title),
+            desc: stringTransformer(item.desc),
+            links: (item.links || []).map(link => ({
+                ...link,
+                label: stringTransformer(link.label)
+            }))
+        }))
+    };
+}
+
+function transformNestedStrings(value, stringTransformer) {
+    if (typeof value === 'string') return stringTransformer(value);
+    if (Array.isArray(value)) return value.map(item => transformNestedStrings(item, stringTransformer));
+    if (!value || typeof value !== 'object') return value;
+
+    return Object.fromEntries(
+        Object.entries(value).map(([key, nestedValue]) => [key, transformNestedStrings(nestedValue, stringTransformer)])
+    );
+}
+
+function looksProtectedToken(word) {
+    return (
+        !word
+        || /^https?:/i.test(word)
+        || /^www\./i.test(word)
+        || /^[@#]/.test(word)
+        || /^[0-9]+([./:-][0-9]+)*$/.test(word)
+    );
+}
+
+function getCatSound(coreWord, trailingPunctuation, rng) {
+    if (trailingPunctuation.includes('!')) return 'HISSS';
+    if (trailingPunctuation.includes('?')) return 'mrrp';
+    if (coreWord.length > 6) return 'meooow';
+
+    let sound = CAT_SOUNDS[Math.floor(rng() * CAT_SOUNDS.length)];
+    if (rng() > 0.6) sound = sound.replace('o', 'oooo').replace('a', 'aaa');
+    return sound;
+}
+
+function transformWordToken(token, transformWord) {
+    if (!token || /^\s+$/.test(token)) return token;
+
+    const leading = token.match(/^[^A-Za-z0-9@#]+/)?.[0] || '';
+    const trailing = token.match(/[^A-Za-z0-9]+$/)?.[0] || '';
+    const start = leading.length;
+    const end = token.length - trailing.length;
+    const coreWord = token.slice(start, end);
+
+    if (!coreWord) return token;
+    if (looksProtectedToken(coreWord)) return token;
+
+    return `${leading}${transformWord(coreWord, trailing)}${trailing}`;
+}
+
+function toCatLanguage(input, seedKey) {
+    return transformHtmlText(input, segment => {
+        const rng = createSeededRandom(`${seedKey}:${segment}`);
+        return segment
+            .split(/(\s+)/)
+            .map(token => transformWordToken(token, (coreWord, trailing) => getCatSound(coreWord, trailing, rng)))
+            .join('');
+    });
+}
+
+function randomAlienText(length, rng) {
+    return Array.from({ length }, () => ALIEN_SYMBOLS[Math.floor(rng() * ALIEN_SYMBOLS.length)]).join('');
+}
+
+function toAlienLanguage(input, seedKey) {
+    return transformHtmlText(input, segment => {
+        const rng = createSeededRandom(`${seedKey}:${segment}`);
+        return segment
+            .split(/(\s+)/)
+            .map(token => transformWordToken(token, coreWord => randomAlienText(Math.max(2, Math.min(coreWord.length, 12)), rng)))
+            .join('');
+    });
+}
+
+function generateCatLanguageData(baseData) {
+    return mapVisibleContent(baseData, value => toCatLanguage(value, 'cat'));
+}
+
+function generateAlienLanguageData(baseData) {
+    return mapVisibleContent(baseData, value => toAlienLanguage(value, 'alien'));
 }
 
 function getNestedValue(obj, path) {
@@ -354,7 +515,7 @@ async function changeLanguage(nextLang) {
 }
 
 function initLanguage() {
-    document.documentElement.lang = getBaseLanguage(currentLang);
+    document.documentElement.lang = getDocumentLanguageCode(currentLang);
     updatePageText();
     updateLanguageUI();
 }

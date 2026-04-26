@@ -367,7 +367,10 @@ textarea:focus-visible {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   cursor: pointer;
-  transition: color 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
+  transition:
+    color 0.2s ease,
+    opacity 0.2s ease,
+    transform 0.2s ease;
 }
 
 .lang-variant-toggle.is-visible {
@@ -385,7 +388,10 @@ textarea:focus-visible {
   background: rgba(255, 255, 255, 0.18);
   transform: scaleX(0.5);
   transform-origin: center;
-  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .lang-variant-icon {
@@ -408,7 +414,11 @@ textarea:focus-visible {
 }
 
 .lang-variant-toggle.is-active::after {
-  background: linear-gradient(90deg, rgba(255, 221, 120, 0.9), rgba(255, 200, 0, 1));
+  background: linear-gradient(
+    90deg,
+    rgba(255, 221, 120, 0.9),
+    rgba(255, 200, 0, 1)
+  );
   transform: scaleX(1);
   box-shadow: 0 0 10px rgba(255, 200, 0, 0.22);
 }
@@ -418,7 +428,9 @@ textarea:focus-visible {
 }
 
 .lang-variant-toggle.is-attention {
-  animation: token-saver-pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.2), token-saver-glow 0.8s ease 2;
+  animation:
+    token-saver-pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.2),
+    token-saver-glow 0.8s ease 2;
 }
 
 @keyframes token-saver-pop {
@@ -653,7 +665,6 @@ textarea:focus-visible {
   align-items: center;
   gap: 1.2rem;
   flex-wrap: wrap;
-  margin-top: 2rem;
 }
 
 .social-icon {
