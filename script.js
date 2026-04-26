@@ -70,9 +70,7 @@ const SYNTHETIC_LANGUAGE_GENERATORS = {
 let siteData = null;
 let currentLang = detectLanguage();
 let currentTheme = localStorage.getItem('theme') || 'dark';
-let tokenSaverAudioContext = null;
 let tokenSaverAttentionTimeoutId = null;
-let tokenSaverAudioPrimed = false;
 const syntheticLanguageCache = {};
 
 function getBaseLanguage(lang = currentLang) {
@@ -282,7 +280,6 @@ function initApp() {
     initLanguage();
     renderDynamicContent();
     setupEventListeners();
-    setupTokenSaverAudioUnlock();
     syncAccessibilityUI();
     initTooltipPositioning();
 
@@ -332,54 +329,6 @@ function getTokenSaverElements() {
     return { tokenSaverToggle };
 }
 
-function ensureTokenSaverAudioContext() {
-    const AudioContextCtor = window.AudioContext || window.webkitAudioContext;
-    if (!AudioContextCtor) return null;
-    if (!tokenSaverAudioContext) tokenSaverAudioContext = new AudioContextCtor();
-    return tokenSaverAudioContext;
-}
-
-function primeTokenSaverAudio() {
-    const ctx = ensureTokenSaverAudioContext();
-    if (!ctx) return;
-
-    if (!tokenSaverAudioPrimed) {
-        tokenSaverAudioPrimed = true;
-        const gainNode = ctx.createGain();
-        gainNode.gain.value = 0.00001;
-        gainNode.connect(ctx.destination);
-    }
-
-    if (ctx.state === 'suspended') ctx.resume().catch(() => {});
-}
-
-function playTokenSaverBeep() {
-    try {
-        const ctx = ensureTokenSaverAudioContext();
-        if (!ctx) return;
-        if (ctx.state === 'suspended') ctx.resume().catch(() => {});
-
-        const now = ctx.currentTime;
-        const oscillator = ctx.createOscillator();
-        const gainNode = ctx.createGain();
-
-        oscillator.type = 'triangle';
-        oscillator.frequency.setValueAtTime(880, now);
-        oscillator.frequency.exponentialRampToValueAtTime(1320, now + 0.08);
-
-        gainNode.gain.setValueAtTime(0.0001, now);
-        gainNode.gain.exponentialRampToValueAtTime(0.035, now + 0.02);
-        gainNode.gain.exponentialRampToValueAtTime(0.0001, now + 0.18);
-
-        oscillator.connect(gainNode);
-        gainNode.connect(ctx.destination);
-        oscillator.start(now);
-        oscillator.stop(now + 0.18);
-    } catch {
-        // Ignore browsers that block audio without interaction.
-    }
-}
-
 function triggerTokenSaverAttention(tokenSaverToggle) {
     if (!tokenSaverToggle) return;
 
@@ -391,17 +340,6 @@ function triggerTokenSaverAttention(tokenSaverToggle) {
     tokenSaverAttentionTimeoutId = window.setTimeout(() => {
         tokenSaverToggle.classList.remove('is-attention');
     }, 1800);
-
-    playTokenSaverBeep();
-}
-
-function setupTokenSaverAudioUnlock() {
-    const unlockAudio = () => {
-        primeTokenSaverAudio();
-    };
-
-    document.addEventListener('pointerdown', unlockAudio, { once: true, passive: true });
-    document.addEventListener('keydown', unlockAudio, { once: true });
 }
 
 function getLanguageControlLabel() {
