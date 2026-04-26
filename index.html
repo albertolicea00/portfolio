@@ -1,151 +1,402 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="dark">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alberto Licea | Fullstack Developer &amp; Designer</title>
-    <meta name="description" content="Portfolio of Alberto Licea, Fullstack Web &amp; Mobile Developer with 10+ years of experience.">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/png" href="assets/img/avatar.png">
-</head>
-<body class="dark-theme">
-    <a href="#main-content" class="skip-link" data-i18n="home.accessibility.skip_to_content">Skip to main content</a>
-    <p id="site-a11y-help" class="sr-only" data-i18n="home.accessibility.keyboard_help">Use the Tab key to move through links, buttons, and form fields. Tooltips appear on hover or keyboard focus.</p>
-    <div id="a11y-status" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+    <meta
+      name="description"
+      content="Portfolio of Alberto Licea, Fullstack Web &amp; Mobile Developer with 10+ years of experience."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&amp;family=Inter:wght@400;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="icon" type="image/png" href="assets/img/avatar.png" />
+  </head>
+  <body class="dark-theme">
+    <a
+      href="#main-content"
+      class="skip-link"
+      data-i18n="home.accessibility.skip_to_content"
+      >Skip to main content</a
+    >
+    <p
+      id="site-a11y-help"
+      class="sr-only"
+      data-i18n="home.accessibility.keyboard_help"
+    >
+      Use the Tab key to move through links, buttons, and form fields. Tooltips
+      appear on hover or keyboard focus.
+    </p>
+    <div
+      id="a11y-status"
+      class="sr-only"
+      aria-live="polite"
+      aria-atomic="true"
+    ></div>
 
     <nav class="navbar" id="site-navigation" aria-label="Primary navigation">
-        <div class="nav-container">
-            <a href="index.html" class="logo" data-tooltip="Home"><span>@</span>albertolicea00<span>.</span></a>
-            <ul class="nav-links" id="primary-navigation">
-                <li><a href="index.html#projects" data-i18n="home.nav.projects">Projects</a></li>
-                <li><a href="index.html#experience" data-i18n="home.nav.experience">Experience</a></li>
-                <li><a href="projects.html" data-i18n="home.nav.allwork">All Work</a></li>
-                <li><a href="index.html#contact" data-i18n="home.nav.contact">Contact</a></li>
-                <li class="controls-container">
-                    <button class="theme-toggle" id="theme-toggle" type="button" aria-describedby="site-a11y-help">
-                        <i class="fas fa-moon" aria-hidden="true"></i>
-                    </button>
-                    <button class="lang-toggle" id="lang-toggle" type="button" aria-describedby="site-a11y-help">
-                        EN
-                    </button>
-                </li>
-            </ul>
-            <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="primary-navigation" aria-expanded="false" aria-describedby="site-a11y-help"><i class="fas fa-bars" aria-hidden="true"></i></button>
-        </div>
+      <div class="nav-container">
+        <a href="index.html" class="logo" data-tooltip="Home"
+          ><span>@</span>albertolicea00<span>.</span></a
+        >
+        <ul class="nav-links" id="primary-navigation">
+          <li>
+            <a href="index.html#projects" data-i18n="home.nav.projects"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a href="index.html#experience" data-i18n="home.nav.experience"
+              >Experience</a
+            >
+          </li>
+          <li>
+            <a href="projects.html" data-i18n="home.nav.allwork">All Work</a>
+          </li>
+          <li>
+            <a href="index.html#contact" data-i18n="home.nav.contact"
+              >Contact</a
+            >
+          </li>
+          <li class="controls-container">
+            <button
+              class="theme-toggle"
+              id="theme-toggle"
+              type="button"
+              aria-describedby="site-a11y-help"
+            >
+              <i class="fas fa-moon" aria-hidden="true"></i>
+            </button>
+            <button
+              class="lang-toggle"
+              id="lang-toggle"
+              type="button"
+              aria-describedby="site-a11y-help"
+            >
+              EN
+            </button>
+          </li>
+        </ul>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open menu"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+          aria-describedby="site-a11y-help"
+        >
+          <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
     </nav>
 
     <main id="main-content" tabindex="-1">
-    <header class="hero" id="home">
-        <div class="hero-bg" style="background-image: url('assets/img/hero-bg.jpg');" aria-hidden="true"></div>
+      <header class="hero" id="home">
+        <div
+          class="hero-bg"
+          style="background-image: url(&quot;assets/img/hero-bg.jpg&quot;)"
+          aria-hidden="true"
+        ></div>
         <div class="hero-content">
-            <div class="avatar-container">
-                <img src="assets/img/avatar.png" alt="Alberto Licea Avatar" class="avatar">
-                <div class="glow" aria-hidden="true"></div>
-            </div>
-            <h1 class="glitch-text" data-text="Alberto Licea">Alberto Licea</h1>
-            <h2 class="subtitle" data-i18n="home.hero.subtitle">Fullstack Web &amp; Mobile Developer<br>Graphic Designer</h2>
-            <p class="bio" data-i18n="home.hero.bio">Passionate about technology, building robust solutions and beautiful interfaces with over 6 years of experience.</p>
-            <div class="hero-actions">
-                <a href="https://github.com/albertolicea00" target="_blank" rel="noopener noreferrer" class="social-icon" data-social="github" aria-describedby="site-a11y-help"><i class="fab fa-github" aria-hidden="true"></i></a>
-                <a href="https://linkedin.com/in/albertolicea00" target="_blank" rel="noopener noreferrer" class="social-icon" data-social="linkedin" aria-describedby="site-a11y-help"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
-                <a href="#contact" class="outline-btn" id="hero-contact-link" data-i18n="home.hero.contact" aria-describedby="site-a11y-help">Contact</a>
-                <a href="assets/pdf/CV_Alberto_Licea_2024.pdf" download class="outline-btn" id="download-cv-link" style="border-color: var(--brand-yellow);" aria-describedby="site-a11y-help"><i class="fas fa-download" aria-hidden="true"></i> <span data-i18n="home.hero.download_cv">Download CV</span></a>
-            </div>
+          <div class="avatar-container">
+            <img
+              src="assets/img/avatar.png"
+              alt="Alberto Licea Avatar"
+              class="avatar"
+            />
+            <div class="glow" aria-hidden="true"></div>
+          </div>
+          <h1 class="glitch-text" data-text="Alberto Licea">Alberto Licea</h1>
+          <h2 class="subtitle" data-i18n="home.hero.subtitle">
+            Fullstack Web &amp; Mobile Developer<br />Graphic Designer
+          </h2>
+          <p class="bio" data-i18n="home.hero.bio">
+            Passionate about technology, building robust solutions and beautiful
+            interfaces with over 6 years of experience.
+          </p>
+          <div class="hero-actions">
+            <a
+              href="https://github.com/albertolicea00"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-icon"
+              data-social="github"
+              aria-describedby="site-a11y-help"
+              ><i class="fab fa-github" aria-hidden="true"></i
+            ></a>
+            <a
+              href="https://linkedin.com/in/albertolicea00"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-icon"
+              data-social="linkedin"
+              aria-describedby="site-a11y-help"
+              ><i class="fab fa-linkedin-in" aria-hidden="true"></i
+            ></a>
+            <a
+              href="#contact"
+              class="outline-btn"
+              id="hero-contact-link"
+              data-i18n="home.hero.contact"
+              aria-describedby="site-a11y-help"
+              >Contact</a
+            >
+            <a
+              href="assets/pdf/CV_Alberto_Licea_2024.pdf"
+              download
+              class="outline-btn"
+              id="download-cv-link"
+              style="border-color: var(--brand-yellow)"
+              aria-describedby="site-a11y-help"
+              ><i class="fas fa-download" aria-hidden="true"></i>
+              <span data-i18n="home.hero.download_cv">Download CV</span></a
+            >
+          </div>
         </div>
-        <a href="#projects" class="scroll-indicator" id="scroll-projects-link" aria-label="Scroll down" aria-describedby="site-a11y-help">
-            <div class="mouse" aria-hidden="true">
-                <div class="wheel" aria-hidden="true"></div>
-            </div>
-            <div class="arrows" aria-hidden="true">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </div>
+        <a
+          href="#projects"
+          class="scroll-indicator"
+          id="scroll-projects-link"
+          aria-label="Scroll down"
+          aria-describedby="site-a11y-help"
+        >
+          <div class="mouse" aria-hidden="true">
+            <div class="wheel" aria-hidden="true"></div>
+          </div>
+          <div class="arrows" aria-hidden="true">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </div>
         </a>
-    </header>
+      </header>
 
-    <section id="projects" class="section">
+      <section id="projects" class="section">
         <div class="container">
-            <h2 class="section-title" data-i18n="home.projects_section.title">Recent Projects</h2>
-            <p class="section-subtitle" data-i18n="home.projects_section.subtitle">A selection of my latest work in web, mobile, and design.</p>
-            <div class="projects-grid" id="recent-projects-container">
-                <!-- Top projects injected by script.js -->
-            </div>
-            <div class="view-all-container" style="text-align: center; margin-top: 4rem;">
-                <a href="projects.html" class="outline-btn" id="view-all-projects-link" aria-describedby="site-a11y-help"><span data-i18n="home.projects_section.view_all">View All Projects</span> <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
-            </div>
+          <h2 class="section-title" data-i18n="home.projects_section.title">
+            Recent Projects
+          </h2>
+          <p
+            class="section-subtitle"
+            data-i18n="home.projects_section.subtitle"
+          >
+            A selection of my latest work in web, mobile, and design.
+          </p>
+          <div class="projects-grid" id="recent-projects-container">
+            <!-- Top projects injected by script.js -->
+          </div>
+          <div
+            class="view-all-container"
+            style="text-align: center; margin-top: 4rem"
+          >
+            <a
+              href="projects.html"
+              class="outline-btn"
+              id="view-all-projects-link"
+              aria-describedby="site-a11y-help"
+              ><span data-i18n="home.projects_section.view_all"
+                >View All Apps</span
+              >
+              <i class="fas fa-arrow-right" aria-hidden="true"></i
+            ></a>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section id="experience" class="section">
+      <section id="experience" class="section">
         <div class="container">
-            <h2 class="section-title" data-i18n="home.experience_section.title">Experience</h2>
-            <p class="section-subtitle" data-i18n="home.experience_section.subtitle">Over a decade of building digital experiences.</p>
-            <div class="timeline" id="experience-timeline">
-                <!-- Timeline injected by script.js -->
-            </div>
+          <h2 class="section-title" data-i18n="home.experience_section.title">
+            Experience
+          </h2>
+          <p
+            class="section-subtitle"
+            data-i18n="home.experience_section.subtitle"
+          >
+            Over a decade of building digital experiences.
+          </p>
+          <div class="timeline" id="experience-timeline">
+            <!-- Timeline injected by script.js -->
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section id="about" class="section">
+      <section id="about" class="section">
         <div class="container glass-panel">
-            <h2 class="section-title" data-i18n="home.about_section.title">About Me</h2>
-            <div class="about-grid">
-                <div class="about-text">
-                    <p data-i18n="home.about_section.p1">I'm a programmer at heart 💻. While I have strong graphic design skills that I apply to every project, my core passion lies in <strong>programming and architecture</strong>.</p>
-                    <p data-i18n="home.about_section.p2">With <strong>10+ years of experience</strong> in the tech industry, I can tackle projects of any complexity levels, from immersive frontends to clean, efficient backend systems for both Web and Mobile platforms.</p>
-                </div>
-                <div class="stats">
-                    <div class="stat-item">
-                        <span class="stat-number">6</span>
-                        <span class="stat-label" data-i18n="home.about_section.stats.years">Years Exp.</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">100%</span>
-                        <span class="stat-label" data-i18n="home.about_section.stats.commitment">Commitment</span>
-                    </div>
-                </div>
+          <h2 class="section-title" data-i18n="home.about_section.title">
+            About Me
+          </h2>
+          <div class="about-grid">
+            <div class="about-text">
+              <p data-i18n="home.about_section.p1">
+                I'm a programmer at heart 💻. While I have strong graphic design
+                skills that I apply to every project, my core passion lies in
+                <strong>programming and architecture</strong>.
+              </p>
+              <p data-i18n="home.about_section.p2">
+                With <strong>10+ years of experience</strong> in the tech
+                industry, I can tackle projects of any complexity levels, from
+                immersive frontends to clean, efficient backend systems for both
+                Web and Mobile platforms.
+              </p>
             </div>
+            <div class="stats">
+              <div class="stat-item">
+                <span class="stat-number">6</span>
+                <span
+                  class="stat-label"
+                  data-i18n="home.about_section.stats.years"
+                  >Years Exp.</span
+                >
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">100%</span>
+                <span
+                  class="stat-label"
+                  data-i18n="home.about_section.stats.commitment"
+                  >Commitment</span
+                >
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <footer id="contact" class="footer">
+      <footer id="contact" class="footer">
         <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h2 class="section-title" data-i18n="home.contact_section.title">Let's Work Together</h2>
-                    <p data-i18n="home.contact_section.desc">Interested in collaborating or hiring me for your next project? Drop me a message and I'll get back to you as soon as possible.</p>
-                    <div class="social-links-footer">
-                        <a href="https://github.com/albertolicea00" target="_blank" rel="noopener noreferrer" class="social-icon" data-social="github" aria-describedby="site-a11y-help"><i class="fab fa-github" aria-hidden="true"></i></a>
-                        <a href="https://linkedin.com/in/albertolicea00" target="_blank" rel="noopener noreferrer" class="social-icon" data-social="linkedin" aria-describedby="site-a11y-help"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
-                        <a href="https://instagram.com/albertolicea00" target="_blank" rel="noopener noreferrer" class="social-icon" data-social="instagram" aria-describedby="site-a11y-help"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-                    </div>
-                </div>
-                <div class="contact-form-container glass-panel">
-                    <p class="form-helper" id="contact-form-help" data-i18n="home.contact_section.form_help">The contact form is currently offline. Use the social links or download the CV to get in touch.</p>
-                    <form id="contact-form" class="contact-form" aria-describedby="contact-form-help site-a11y-help">
-                        <div class="form-group">
-                            <label for="name" class="form-label" data-i18n="home.contact_section.labels.name">Name</label>
-                            <input type="text" id="name" placeholder="Your Name" required data-i18n-placeholder="home.contact_section.placeholders.name" disabled aria-disabled="true" autocomplete="name">
-                        </div>
-                        <div class="form-group">
-                            <label for="email" class="form-label" data-i18n="home.contact_section.labels.email">Email</label>
-                            <input type="email" id="email" placeholder="Your Email" required data-i18n-placeholder="home.contact_section.placeholders.email" disabled aria-disabled="true" autocomplete="email">
-                        </div>
-                        <div class="form-group">
-                            <label for="message" class="form-label" data-i18n="home.contact_section.labels.message">Message</label>
-                            <textarea id="message" placeholder="Project Details / Message" rows="5" required data-i18n-placeholder="home.contact_section.placeholders.message" disabled aria-disabled="true"></textarea>
-                        </div>
-                        <button type="submit" class="cta-btn" data-i18n="home.contact_section.submit_btn" disabled aria-disabled="true" aria-describedby="contact-form-help" style="opacity: 0.5; cursor: not-allowed;">Form Offline</button>
-                    </form>
-                </div>
+          <div class="contact-grid">
+            <div class="contact-info">
+              <h2 class="section-title" data-i18n="home.contact_section.title">
+                Let's Work Together
+              </h2>
+              <p data-i18n="home.contact_section.desc">
+                Interested in collaborating or hiring me for your next project?
+                Drop me a message and I'll get back to you as soon as possible.
+              </p>
+              <div class="social-links-footer">
+                <a
+                  href="https://github.com/albertolicea00"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="social-icon"
+                  data-social="github"
+                  aria-describedby="site-a11y-help"
+                  ><i class="fab fa-github" aria-hidden="true"></i
+                ></a>
+                <a
+                  href="https://linkedin.com/in/albertolicea00"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="social-icon"
+                  data-social="linkedin"
+                  aria-describedby="site-a11y-help"
+                  ><i class="fab fa-linkedin-in" aria-hidden="true"></i
+                ></a>
+                <a
+                  href="https://instagram.com/albertolicea00"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="social-icon"
+                  data-social="instagram"
+                  aria-describedby="site-a11y-help"
+                  ><i class="fab fa-instagram" aria-hidden="true"></i
+                ></a>
+              </div>
             </div>
-            <p class="copyright" style="margin-top: 4rem;">© <span id="year"></span> Alberto Licea. <span data-i18n="home.footer.rights">All rights reserved.</span></p>
+            <div class="contact-form-container glass-panel">
+              <p
+                class="form-helper"
+                id="contact-form-help"
+                data-i18n="home.contact_section.form_help"
+              >
+                The contact form is currently offline. Use the social links or
+                download the CV to get in touch.
+              </p>
+              <form
+                id="contact-form"
+                class="contact-form"
+                aria-describedby="contact-form-help site-a11y-help"
+              >
+                <div class="form-group">
+                  <label
+                    for="name"
+                    class="form-label"
+                    data-i18n="home.contact_section.labels.name"
+                    >Name</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    placeholder="Your Name"
+                    required
+                    data-i18n-placeholder="home.contact_section.placeholders.name"
+                    disabled
+                    aria-disabled="true"
+                    autocomplete="name"
+                  />
+                </div>
+                <div class="form-group">
+                  <label
+                    for="email"
+                    class="form-label"
+                    data-i18n="home.contact_section.labels.email"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="Your Email"
+                    required
+                    data-i18n-placeholder="home.contact_section.placeholders.email"
+                    disabled
+                    aria-disabled="true"
+                    autocomplete="email"
+                  />
+                </div>
+                <div class="form-group">
+                  <label
+                    for="message"
+                    class="form-label"
+                    data-i18n="home.contact_section.labels.message"
+                    >Message</label
+                  >
+                  <textarea
+                    id="message"
+                    placeholder="Project Details / Message"
+                    rows="5"
+                    required
+                    data-i18n-placeholder="home.contact_section.placeholders.message"
+                    disabled
+                    aria-disabled="true"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="cta-btn"
+                  data-i18n="home.contact_section.submit_btn"
+                  disabled
+                  aria-disabled="true"
+                  aria-describedby="contact-form-help"
+                  style="opacity: 0.5; cursor: not-allowed"
+                >
+                  Form Offline
+                </button>
+              </form>
+            </div>
+          </div>
+          <p class="copyright" style="margin-top: 4rem">
+            © <span id="year"></span> Alberto Licea.
+            <span data-i18n="home.footer.rights">All rights reserved.</span>
+          </p>
         </div>
-    </footer>
+      </footer>
     </main>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

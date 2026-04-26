@@ -2,8 +2,6 @@
 
 A high-end, responsive developer portfolio built with **Pure HTML, CSS, and JavaScript**. Featuring multi-language support, theme switching, and a JSON-driven content system for easy maintenance.
 
-![Portfolio Preview](https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80)
-
 ## ✨ Features
 
 - 🌓 **Dynamic Theming**: Smooth transition between Dark and Light modes.

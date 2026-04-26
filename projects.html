@@ -1,64 +1,156 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="dark">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>All Projects | Alberto Licea</title>
-    <meta name="description" content="A comprehensive list of projects and applications developed by Alberto Licea.">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/png" href="assets/img/avatar.png">
-</head>
-<body class="dark-theme">
-    <a href="#main-content" class="skip-link" data-i18n="home.accessibility.skip_to_content">Skip to main content</a>
-    <p id="site-a11y-help" class="sr-only" data-i18n="home.accessibility.keyboard_help">Use the Tab key to move through links, buttons, and form fields. Tooltips appear on hover or keyboard focus.</p>
-    <div id="a11y-status" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+    <meta
+      name="description"
+      content="A comprehensive list of projects and applications developed by Alberto Licea."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&amp;family=Inter:wght@400;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="icon" type="image/png" href="assets/img/avatar.png" />
+  </head>
+  <body class="dark-theme">
+    <a
+      href="#main-content"
+      class="skip-link"
+      data-i18n="home.accessibility.skip_to_content"
+      >Skip to main content</a
+    >
+    <p
+      id="site-a11y-help"
+      class="sr-only"
+      data-i18n="home.accessibility.keyboard_help"
+    >
+      Use the Tab key to move through links, buttons, and form fields. Tooltips
+      appear on hover or keyboard focus.
+    </p>
+    <div
+      id="a11y-status"
+      class="sr-only"
+      aria-live="polite"
+      aria-atomic="true"
+    ></div>
 
     <nav class="navbar" id="site-navigation" aria-label="Primary navigation">
-        <div class="nav-container">
-            <a href="index.html" class="logo"><span>@</span>albertolicea00<span>.</span></a>
-            <ul class="nav-links" id="primary-navigation">
-                <li><a href="index.html" data-i18n="home.nav.home">Home</a></li>
-                <li><a href="projects.html" class="active-link" data-i18n="home.nav.allwork">All Work</a></li>
-                <li><a href="index.html#contact" data-i18n="home.nav.contact">Contact</a></li>
-                <li class="controls-container">
-                    <button class="theme-toggle" id="theme-toggle" type="button" aria-describedby="site-a11y-help">
-                        <i class="fas fa-moon" aria-hidden="true"></i>
-                    </button>
-                    <button class="lang-toggle" id="lang-toggle" type="button" aria-describedby="site-a11y-help">
-                        EN
-                    </button>
-                </li>
-            </ul>
-            <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="primary-navigation" aria-expanded="false" aria-describedby="site-a11y-help"><i class="fas fa-bars" aria-hidden="true"></i></button>
-        </div>
+      <div class="nav-container">
+        <a href="index.html" class="logo"
+          ><span>@</span>albertolicea00<span>.</span></a
+        >
+        <ul class="nav-links" id="primary-navigation">
+          <li><a href="index.html" data-i18n="home.nav.home">Home</a></li>
+          <li>
+            <a
+              href="projects.html"
+              class="active-link"
+              data-i18n="home.nav.allwork"
+              >All Work</a
+            >
+          </li>
+          <li>
+            <a href="index.html#contact" data-i18n="home.nav.contact"
+              >Contact</a
+            >
+          </li>
+          <li class="controls-container">
+            <button
+              class="theme-toggle"
+              id="theme-toggle"
+              type="button"
+              aria-describedby="site-a11y-help"
+            >
+              <i class="fas fa-moon" aria-hidden="true"></i>
+            </button>
+            <button
+              class="lang-toggle"
+              id="lang-toggle"
+              type="button"
+              aria-describedby="site-a11y-help"
+            >
+              EN
+            </button>
+          </li>
+        </ul>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open menu"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+          aria-describedby="site-a11y-help"
+        >
+          <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
     </nav>
 
     <main id="main-content" tabindex="-1">
-    <section class="section" style="padding-top: 10rem;">
+      <section class="section" style="padding-top: 10rem">
         <div class="container">
-            <h1 class="section-title" data-i18n="home.nav.allwork">All Projects</h1>
-            <p class="section-subtitle" data-i18n="home.projects_section.subtitle">A deep dive into my professional journey through code and design.</p>
-            
-            <div class="projects-grid" id="all-projects-container">
-                <!-- All projects injected by script.js -->
-            </div>
+          <h1 class="section-title" data-i18n="home.nav.allwork">
+            All Projects
+          </h1>
+          <p
+            class="section-subtitle"
+            data-i18n="home.projects_section.subtitle"
+          >
+            A deep dive into my professional journey through code and design.
+          </p>
+
+          <div class="projects-grid" id="all-projects-container">
+            <!-- All projects injected by script.js -->
+          </div>
         </div>
-    </section>
+      </section>
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <div class="social-links-footer">
-                <a href="https://github.com/albertolicea00" target="_blank" rel="noopener noreferrer" class="social-icon" data-social="github" aria-describedby="site-a11y-help"><i class="fab fa-github" aria-hidden="true"></i></a>
-                <a href="https://linkedin.com/in/albertolicea00" target="_blank" rel="noopener noreferrer" class="social-icon" data-social="linkedin" aria-describedby="site-a11y-help"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
-                <a href="https://instagram.com/albertolicea00" target="_blank" rel="noopener noreferrer" class="social-icon" data-social="instagram" aria-describedby="site-a11y-help"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-            </div>
-            <p class="copyright" style="margin-top: 4rem;">© <span id="year"></span> Alberto Licea. <span data-i18n="home.footer.rights">All rights reserved.</span></p>
+      <div class="container">
+        <div class="social-links-footer">
+          <a
+            href="https://github.com/albertolicea00"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-icon"
+            data-social="github"
+            aria-describedby="site-a11y-help"
+            ><i class="fab fa-github" aria-hidden="true"></i
+          ></a>
+          <a
+            href="https://linkedin.com/in/albertolicea00"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-icon"
+            data-social="linkedin"
+            aria-describedby="site-a11y-help"
+            ><i class="fab fa-linkedin-in" aria-hidden="true"></i
+          ></a>
+          <a
+            href="https://instagram.com/albertolicea00"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-icon"
+            data-social="instagram"
+            aria-describedby="site-a11y-help"
+            ><i class="fab fa-instagram" aria-hidden="true"></i
+          ></a>
         </div>
+        <p class="copyright" style="margin-top: 4rem">
+          © <span id="year"></span> Alberto Licea.
+          <span data-i18n="home.footer.rights">All rights reserved.</span>
+        </p>
+      </div>
     </footer>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
