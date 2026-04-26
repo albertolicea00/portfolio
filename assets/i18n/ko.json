@@ -1,97 +1,97 @@
 {
     "home": {
         "nav": {
-            "home": "Startseite",
-            "projects": "Projekte",
-            "experience": "Erfahrung",
-            "allwork": "Apps",
-            "contact": "Kontakt"
+            "home": "홈",
+            "projects": "프로젝트",
+            "experience": "경력",
+            "allwork": "앱",
+            "contact": "연락처"
         },
         "hero": {
-            "subtitle": "Fullstack Web- & Mobile-Entwickler<br>Grafikdesigner",
-            "bio": "6 Jahre Erfahrung darin, Kaffee in hochwertigen Code zu verwandeln.",
-            "cta": "Projekte ansehen",
-            "contact": "Kontakt aufnehmen",
-            "download_cv": "Lebenslauf herunterladen"
+            "subtitle": "풀스택 웹 & 모바일 개발자<br>그래픽 디자이너",
+            "bio": "커피를 고품질 코드로 변환한 6년의 경험.",
+            "cta": "프로젝트 보기",
+            "contact": "연락하기",
+            "download_cv": "이력서 다운로드"
         },
         "projects_section": {
-            "title": "Aktuelle Projekte",
-            "subtitle": "Neue und spannende Projekte sind in Vorbereitung. Bleib dran!",
-            "view_all": "Alle Apps ansehen"
+            "title": "최근 프로젝트",
+            "subtitle": "새롭고 흥미로운 프로젝트들이 준비 중입니다. 기대해 주세요!",
+            "view_all": "모든 앱 보기"
         },
         "experience_section": {
-            "title": "Erfahrung",
-            "subtitle": "Mein beruflicher Werdegang in der Technologiebranche."
+            "title": "경력",
+            "subtitle": "기술 분야에서의 나의 전문적인 여정."
         },
         "about_section": {
-            "title": "Über mich",
-            "p1": "Ich bin ein lebensbegeisterter Mensch, immer mit einem Lächeln im Gesicht und bereit, neue Herausforderungen anzunehmen und Ideen in die Realität umzusetzen. Ich liebe es zu lernen, zu wachsen und zu jedem Projekt beizutragen, an dem ich arbeite. Immer bereit für das nächste Abenteuer!",
-            "p2": "🌱 Aktuell vertiefe ich mich in <strong>Machine Learning und KI</strong>. ⚡ Außerdem erstelle ich 🎨 <strong>2D-Designs, ⚒️ 3D-Modelle und 🕹️ Spiele</strong>.",
+            "title": "소개",
+            "p1": "저는 삶을 사랑하는 사람으로, 항상 미소를 띠며 새로운 도전을 받아들이고 아이디어를 현실로 만들 준비가 되어 있습니다. 배우고, 성장하고, 참여하는 모든 프로젝트에 기여하는 것을 좋아합니다. 언제나 다음 모험을 위해 준비되어 있습니다!",
+            "p2": "🌱 현재 <strong>머신 러닝과 AI</strong>를 깊이 탐구하고 있습니다. ⚡ 또한 🎨 <strong>2D 디자인, ⚒️ 3D 모델 및 🕹️ 게임</strong>도 제작하고 있습니다.",
             "stats": {
-                "years": "Jahre Erfahrung",
-                "commitment": "Engagement"
+                "years": "경력 연수",
+                "commitment": "헌신"
             }
         },
         "contact_section": {
-            "title": "Lass uns zusammenarbeiten",
-            "desc": "Interessiert an einer Zusammenarbeit oder daran, mich für dein nächstes Projekt zu engagieren? Schreib mir eine Nachricht und ich melde mich so schnell wie möglich bei dir.",
+            "title": "함께 일해요",
+            "desc": "다음 프로젝트에서 협업하거나 저를 고용하는 데 관심이 있으신가요? 메시지를 남겨주시면 최대한 빨리 답변드리겠습니다.",
             "labels": {
-                "name": "Name",
-                "email": "E-Mail",
-                "message": "Nachricht"
+                "name": "이름",
+                "email": "이메일",
+                "message": "메시지"
             },
             "placeholders": {
-                "name": "Dein Name",
-                "email": "Deine E-Mail",
-                "message": "Projektdetails / Nachricht"
+                "name": "이름을 입력하세요",
+                "email": "이메일을 입력하세요",
+                "message": "프로젝트 세부 사항 / 메시지"
             },
-            "form_help": "Das Kontaktformular ist derzeit offline. Nutze die Social-Links oder lade den Lebenslauf herunter, um Kontakt aufzunehmen.",
-            "submit_btn": "Formular offline",
-            "success_msg": "Nachricht gesendet! Ich werde dich bald kontaktieren."
+            "form_help": "현재 연락 양식은 오프라인 상태입니다. 소셜 링크를 이용하거나 이력서를 다운로드하여 연락해 주세요.",
+            "submit_btn": "양식 오프라인",
+            "success_msg": "메시지가 전송되었습니다! 곧 연락드리겠습니다."
         },
         "footer": {
-            "rights": "Erstellt mit ❤️ @albertolicea00"
+            "rights": "❤️ 으로 만든 @albertolicea00"
         },
         "accessibility": {
-            "skip_to_content": "Zum Hauptinhalt springen",
-            "keyboard_help": "Verwende die Tab-Taste, um zwischen Links, Buttons und Formularfeldern zu navigieren. Tooltips erscheinen beim Hover oder Fokus.",
-            "navigation": "Hauptnavigation",
-            "open_menu": "Navigationsmenü öffnen",
-            "close_menu": "Navigationsmenü schließen",
-            "theme_to_light": "Zum hellen Theme wechseln",
-            "theme_to_dark": "Zum dunklen Theme wechseln",
-            "language_to_english": "Sprache auf Englisch ändern",
-            "language_to_spanish": "Sprache auf Spanisch ändern",
-            "scroll_to_projects": "Zum Projektbereich scrollen",
-            "download_cv": "Lebenslauf als PDF herunterladen",
-            "all_projects": "Alle Apps durchsuchen",
-            "contact_shortcut": "Zum Kontaktbereich springen",
-            "open_github": "GitHub-Profil in neuem Tab öffnen",
-            "open_linkedin": "LinkedIn-Profil in neuem Tab öffnen",
-            "open_instagram": "Instagram-Profil in neuem Tab öffnen",
-            "view_live_project": "Live-Projekt in neuem Tab öffnen",
-            "view_repository": "Repository in neuem Tab öffnen",
-            "view_company_site": "Website in neuem Tab öffnen",
-            "technologies_used": "Verwendete Technologien",
-            "opens_new_tab": "Öffnet in einem neuen Tab",
-            "theme_enabled_dark": "Dunkles Theme aktiviert",
-            "theme_enabled_light": "Helles Theme aktiviert",
-            "language_changed_english": "Sprache auf Englisch geändert",
-            "language_changed_spanish": "Sprache auf Spanisch geändert",
-            "menu_expanded": "Navigationsmenü erweitert",
-            "menu_collapsed": "Navigationsmenü reduziert"
+            "skip_to_content": "메인 콘텐츠로 건너뛰기",
+            "keyboard_help": "Tab 키를 사용하여 링크, 버튼, 양식 필드 사이를 이동하세요. 툴팁은 마우스 오버 또는 키보드 포커스 시 나타납니다.",
+            "navigation": "기본 내비게이션",
+            "open_menu": "내비게이션 메뉴 열기",
+            "close_menu": "내비게이션 메뉴 닫기",
+            "theme_to_light": "라이트 테마로 전환",
+            "theme_to_dark": "다크 테마로 전환",
+            "language_to_english": "언어를 영어로 변경",
+            "language_to_spanish": "언어를 스페인어로 변경",
+            "scroll_to_projects": "프로젝트 섹션으로 스크롤",
+            "download_cv": "PDF 형식으로 이력서 다운로드",
+            "all_projects": "모든 앱 탐색",
+            "contact_shortcut": "연락처 섹션으로 이동",
+            "open_github": "새 탭에서 GitHub 프로필 열기",
+            "open_linkedin": "새 탭에서 LinkedIn 프로필 열기",
+            "open_instagram": "새 탭에서 Instagram 프로필 열기",
+            "view_live_project": "새 탭에서 라이브 프로젝트 열기",
+            "view_repository": "새 탭에서 저장소 열기",
+            "view_company_site": "새 탭에서 웹사이트 열기",
+            "technologies_used": "사용된 기술",
+            "opens_new_tab": "새 탭에서 열립니다",
+            "theme_enabled_dark": "다크 테마 활성화됨",
+            "theme_enabled_light": "라이트 테마 활성화됨",
+            "language_changed_english": "언어가 영어로 변경되었습니다",
+            "language_changed_spanish": "언어가 스페인어로 변경되었습니다",
+            "menu_expanded": "내비게이션 메뉴가 확장되었습니다",
+            "menu_collapsed": "내비게이션 메뉴가 축소되었습니다"
         },
         "common": {
-            "view_project": "Projekt ansehen",
-            "repository": "Repository",
-            "coming_soon": "Ich arbeite derzeit daran, meine neuesten Projekte zu verfeinern, um höchste Qualität zu gewährleisten. Schau bald wieder vorbei!"
+            "view_project": "프로젝트 보기",
+            "repository": "저장소",
+            "coming_soon": "최신 프로젝트를 최고의 품질로 마무리하는 중입니다. 곧 전체 공개를 기대해 주세요!"
         }
     },
     "projects": [
         {
             "id": 1,
-            "title": "BettaHVAC Dienstleistungen",
-            "description": "Skalierbare Unternehmensplattform für HVAC-Dienstleistungen mit automatisierter Angebotserstellung und Kundenverwaltung.",
+            "title": "BettaHVAC 서비스",
+            "description": "자동 견적 생성 및 고객 관리 기능을 갖춘 HVAC 서비스용 확장 가능한 기업 플랫폼.",
             "image": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
             "tags": [
                 "Svelte",
@@ -104,8 +104,8 @@
         },
         {
             "id": 2,
-            "title": "Die Verrücktheiten von Miguelín",
-            "description": "Dynamische Entertainment-Landingpage mit immersivem Design und flüssigen Animationen.",
+            "title": "Miguelín의 엉뚱한 세계",
+            "description": "몰입형 디자인과 유동적인 애니메이션이 특징인 역동적인 엔터테인먼트 랜딩 페이지.",
             "image": "https://yt3.googleusercontent.com/xktD1rgu2QIivNnnDWVuYuFlchkfdH23Yp4YUbv1-7Y5LIJHLvgEHD-rOgwn8XEskC3vAGzTeg=s160-c-k-c0x00ffffff-no-rj",
             "tags": [
                 "Astro",
@@ -118,8 +118,8 @@
         },
         {
             "id": 3,
-            "title": "Kristoff Landingpage",
-            "description": "Moderne VOD-Plattform-Landingpage mit Fokus auf UX/UI und Marken-Storytelling.",
+            "title": "Kristoff 랜딩 페이지",
+            "description": "UX/UI 우수성과 브랜드 스토리텔링에 초점을 맞춘 현대적인 VOD 플랫폼 랜딩 페이지.",
             "image": "https://yt3.googleusercontent.com/_nwkuUvKJT-ztrUNH1bymp7trvZfDXp07UVV7NJNv-Zfws0Wpnlla9nExFRhYSVNAMeKxt9AHA=s160-c-k-c0x00ffffff-no-rj",
             "tags": [
                 "Astro",
@@ -132,8 +132,8 @@
         },
         {
             "id": 4,
-            "title": "Remote-Banking-System",
-            "description": "Robuste digitale Banking-Lösung mit Fokus auf Sicherheit, Remote-Operationen und hohe Performance.",
+            "title": "원격 뱅킹 시스템",
+            "description": "보안, 원격 운영 및 고성능 아키텍처에 중점을 둔 강력한 디지털 뱅킹 솔루션.",
             "image": "https://github.com/albertolicea00/Banca_Remota/blob/main/Banca_Remota.xcassets/Logo.imageset/logo.png?raw=true",
             "tags": [
                 "Swift",
@@ -146,15 +146,81 @@
     ],
     "experience": [
         {
-            "date": "Heute",
-            "title": "PinkzebraHome - Vertraulich",
+            "date": "현재",
+            "title": "PinkzebraHome - 기밀",
             "logo": "assets/img/company/pinkzebrahome.webp",
             "logoWide": true,
-            "desc": "Derzeit arbeite ich an einem privaten Projekt mit großer Wirkung. Etwas Großes kommt bald...",
+            "desc": "현재 고영향력의 비공개 프로젝트를 개발 중입니다. 곧 큰 발표가 있을 예정입니다...",
             "links": [
                 {
                     "url": "https://pinkzebrahome.com?repid=1198544",
                     "label": "PinkzebraHome"
+                }
+            ]
+        },
+        {
+            "date": "Mar 2024 - Present",
+            "title": "소프트웨어 개발자 @ Ladetec",
+            "logo": "assets/img/company/ladetec.png",
+            "desc": "Django, Vue.js, Svelte, Node.js를 사용한 API 통합(Bigcommerce, KillBill) 및 ERP 개발.",
+            "links": [
+                {
+                    "url": "https://www.ladetec.com/",
+                    "label": "Ladetec"
+                }
+            ]
+        },
+        {
+            "date": "Mar 2024 - Aug 2024",
+            "title": "소프트웨어 유지보수 @ TOWIT Houston",
+            "logo": "assets/img/company/towithuston.jpg",
+            "desc": "회사 관리 소프트웨어의 버그 수정 및 새 기능을 구현하여 안정성과 일상 운영을 개선했습니다.",
+            "links": [
+                {
+                    "url": "https://towithouston.com/",
+                    "label": "TOWIT Houston"
+                }
+            ]
+        },
+        {
+            "date": "Mar 2022 - Feb 2024",
+            "title": "IT 지원 관리자 @ Wateke Soluciones",
+            "logo": "assets/img/company/wateketech.svg",
+            "logoWide": true,
+            "logoLight": true,
+            "desc": "Laravel & Livewire를 사용한 맞춤형 ERP 및 CMS 시스템 개발. WordPress 사이트 및 커스텀 플러그인 관리.",
+            "links": [
+                {
+                    "url": "https://wateke.tech/",
+                    "label": "Wateke Soluciones Tecnológicas"
+                }
+            ]
+        },
+        {
+            "date": "Jan 2022 - Feb 2024",
+            "title": "외부 협력자 @ Wateke Travel",
+            "logo": "assets/img/company/wateketravel.png",
+            "logoWide": true,
+            "logoDark": true,
+            "desc": "Apache Cordova로 모바일 앱을 제작하고 After Effects로 로고 애니메이션을 관리했습니다.",
+            "links": [
+                {
+                    "url": "https://wateke.travel/",
+                    "label": "Wateke Travel"
+                }
+            ]
+        },
+        {
+            "date": "Sep 2019 - Jan 2024",
+            "title": "컴퓨터 공학 @ Universidad de Camagüey",
+            "logo": "assets/img/company/ucm.png",
+            "logoWide": true,
+            "logoDark": true,
+            "desc": "컴퓨터 공학을 졸업하고 회계 및 재무 1학년 과정도 이수했습니다.",
+            "links": [
+                {
+                    "url": "https://www.reduc.edu.cu/",
+                    "label": "Universidad de Camagüey"
                 }
             ]
         }

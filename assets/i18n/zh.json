@@ -157,6 +157,72 @@
                     "label": "PinkzebraHome"
                 }
             ]
+        },
+        {
+            "date": "2024年3月 - 至今",
+            "title": "软件开发者 @ Ladetec",
+            "logo": "assets/img/company/ladetec.png",
+            "desc": "使用Django、Vue.js、Svelte和Node.js进行API集成（Bigcommerce、KillBill）和ERP开发。",
+            "links": [
+                {
+                    "url": "https://www.ladetec.com/",
+                    "label": "Ladetec"
+                }
+            ]
+        },
+        {
+            "date": "2024年3月 - 2024年8月",
+            "title": "软件维护 @ TOWIT Houston",
+            "logo": "assets/img/company/towithuston.jpg",
+            "desc": "为公司管理软件修复缺陷并开发新功能，提高了系统稳定性和日常运营效率。",
+            "links": [
+                {
+                    "url": "https://towithouston.com/",
+                    "label": "TOWIT Houston"
+                }
+            ]
+        },
+        {
+            "date": "2022年3月 - 2024年2月",
+            "title": "IT支持经理 @ Wateke Soluciones",
+            "logo": "assets/img/company/wateketech.svg",
+            "logoWide": true,
+            "logoLight": true,
+            "desc": "使用Laravel & Livewire开发定制ERP和CMS系统。管理WordPress网站和自定义插件。",
+            "links": [
+                {
+                    "url": "https://wateke.tech/",
+                    "label": "Wateke Soluciones Tecnológicas"
+                }
+            ]
+        },
+        {
+            "date": "2022年1月 - 2024年2月",
+            "title": "外部协作者 @ Wateke Travel",
+            "logo": "assets/img/company/wateketravel.png",
+            "logoWide": true,
+            "logoDark": true,
+            "desc": "使用Apache Cordova构建移动应用，并使用After Effects制作交互式logo动画。",
+            "links": [
+                {
+                    "url": "https://wateke.travel/",
+                    "label": "Wateke Travel"
+                }
+            ]
+        },
+        {
+            "date": "2019年9月 - 2024年1月",
+            "title": "计算机工程 @ Universidad de Camagüey",
+            "logo": "assets/img/company/ucm.png",
+            "logoWide": true,
+            "logoDark": true,
+            "desc": "计算机工程专业毕业，并完成了一学年的会计与金融课程。",
+            "links": [
+                {
+                    "url": "https://www.reduc.edu.cu/",
+                    "label": "Universidad de Camagüey"
+                }
+            ]
         }
     ]
 }

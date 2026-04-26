@@ -157,6 +157,72 @@
                     "label": "PinkzebraHome"
                 }
             ]
+        },
+        {
+            "date": "2024年3月 - 現在",
+            "title": "ソフトウェア開発者 @ Ladetec",
+            "logo": "assets/img/company/ladetec.png",
+            "desc": "Django、Vue.js、Svelte、Node.jsを使用したAPI統合（Bigcommerce、KillBill）とERP開発。",
+            "links": [
+                {
+                    "url": "https://www.ladetec.com/",
+                    "label": "Ladetec"
+                }
+            ]
+        },
+        {
+            "date": "2024年3月 - 2024年8月",
+            "title": "ソフトウェアメンテナンス @ TOWIT Houston",
+            "logo": "assets/img/company/towithuston.jpg",
+            "desc": "社内管理ソフトウェアのバグ修正と新機能の実装により、安定性と日常業務を改善しました。",
+            "links": [
+                {
+                    "url": "https://towithouston.com/",
+                    "label": "TOWIT Houston"
+                }
+            ]
+        },
+        {
+            "date": "2022年3月 - 2024年2月",
+            "title": "ITサポートマネージャー @ Wateke Soluciones",
+            "logo": "assets/img/company/wateketech.svg",
+            "logoWide": true,
+            "logoLight": true,
+            "desc": "Laravel & LivewireでカスタムERPおよびCMSシステムを開発。WordPressサイトとカスタムプラグインを管理。",
+            "links": [
+                {
+                    "url": "https://wateke.tech/",
+                    "label": "Wateke Soluciones Tecnológicas"
+                }
+            ]
+        },
+        {
+            "date": "2022年1月 - 2024年2月",
+            "title": "外部協力者 @ Wateke Travel",
+            "logo": "assets/img/company/wateketravel.png",
+            "logoWide": true,
+            "logoDark": true,
+            "desc": "Apache CordovaでモバイルアプリをAfter Effectsでインタラクティブなロゴアニメーションを制作しました。",
+            "links": [
+                {
+                    "url": "https://wateke.travel/",
+                    "label": "Wateke Travel"
+                }
+            ]
+        },
+        {
+            "date": "2019年9月 - 2024年1月",
+            "title": "コンピュータ工学 @ Universidad de Camagüey",
+            "logo": "assets/img/company/ucm.png",
+            "logoWide": true,
+            "logoDark": true,
+            "desc": "コンピュータ工学を卒業し、会計・ファイナンスの1学年課程も修了しました。",
+            "links": [
+                {
+                    "url": "https://www.reduc.edu.cu/",
+                    "label": "Universidad de Camagüey"
+                }
+            ]
         }
     ]
 }

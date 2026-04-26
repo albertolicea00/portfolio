@@ -157,6 +157,72 @@
                     "label": "PinkzebraHome"
                 }
             ]
+        },
+        {
+            "date": "Mär 2024 - Heute",
+            "title": "Softwareentwickler @ Ladetec",
+            "logo": "assets/img/company/ladetec.png",
+            "desc": "API-Integration (Bigcommerce, KillBill) und ERP-Entwicklung mit Django, Vue.js, Svelte und Node.js.",
+            "links": [
+                {
+                    "url": "https://www.ladetec.com/",
+                    "label": "Ladetec"
+                }
+            ]
+        },
+        {
+            "date": "Mär 2024 - Aug 2024",
+            "title": "Softwarewartung @ TOWIT Houston",
+            "logo": "assets/img/company/towithuston.jpg",
+            "desc": "Fehlerbehebungen und neue Funktionen für die Verwaltungssoftware implementiert, Stabilität und Tagesbetrieb verbessert.",
+            "links": [
+                {
+                    "url": "https://towithouston.com/",
+                    "label": "TOWIT Houston"
+                }
+            ]
+        },
+        {
+            "date": "Mär 2022 - Feb 2024",
+            "title": "IT-Support-Manager @ Wateke Soluciones",
+            "logo": "assets/img/company/wateketech.svg",
+            "logoWide": true,
+            "logoLight": true,
+            "desc": "Maßgeschneiderte ERP- und CMS-Systeme mit Laravel & Livewire entwickelt. WordPress-Seiten und Plugins verwaltet.",
+            "links": [
+                {
+                    "url": "https://wateke.tech/",
+                    "label": "Wateke Soluciones Tecnológicas"
+                }
+            ]
+        },
+        {
+            "date": "Jan 2022 - Feb 2024",
+            "title": "Externer Mitarbeiter @ Wateke Travel",
+            "logo": "assets/img/company/wateketravel.png",
+            "logoWide": true,
+            "logoDark": true,
+            "desc": "Mobile Apps mit Apache Cordova entwickelt und Logo-Animationen mit After Effects erstellt.",
+            "links": [
+                {
+                    "url": "https://wateke.travel/",
+                    "label": "Wateke Travel"
+                }
+            ]
+        },
+        {
+            "date": "Sep 2019 - Jan 2024",
+            "title": "Informatikingenieurwesen @ Universidad de Camagüey",
+            "logo": "assets/img/company/ucm.png",
+            "logoWide": true,
+            "logoDark": true,
+            "desc": "Abschluss in Informatikingenieurwesen und ein akademisches Jahr Buchhaltung und Finanzen absolviert.",
+            "links": [
+                {
+                    "url": "https://www.reduc.edu.cu/",
+                    "label": "Universidad de Camagüey"
+                }
+            ]
         }
     ]
 }

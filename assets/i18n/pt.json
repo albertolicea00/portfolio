@@ -157,6 +157,72 @@
                     "label": "PinkzebraHome"
                 }
             ]
+        },
+        {
+            "date": "Mar 2024 - Presente",
+            "title": "Desenvolvedor de Software @ Ladetec",
+            "logo": "assets/img/company/ladetec.png",
+            "desc": "Integração de APIs (Bigcommerce, KillBill) e desenvolvimento de ERPs com Django, Vue.js, Svelte e Node.js.",
+            "links": [
+                {
+                    "url": "https://www.ladetec.com/",
+                    "label": "Ladetec"
+                }
+            ]
+        },
+        {
+            "date": "Mar 2024 - Ago 2024",
+            "title": "Manutenção de Software @ TOWIT Houston",
+            "logo": "assets/img/company/towithuston.jpg",
+            "desc": "Correções de bugs e novas funcionalidades para o software de gestão da empresa, melhorando a estabilidade e as operações diárias.",
+            "links": [
+                {
+                    "url": "https://towithouston.com/",
+                    "label": "TOWIT Houston"
+                }
+            ]
+        },
+        {
+            "date": "Mar 2022 - Fev 2024",
+            "title": "Gerente de Suporte IT @ Wateke Soluciones",
+            "logo": "assets/img/company/wateketech.svg",
+            "logoWide": true,
+            "logoLight": true,
+            "desc": "Desenvolvimento de sistemas ERP e CMS personalizados com Laravel & Livewire. Gestão de sites WordPress e plugins personalizados.",
+            "links": [
+                {
+                    "url": "https://wateke.tech/",
+                    "label": "Wateke Soluciones Tecnológicas"
+                }
+            ]
+        },
+        {
+            "date": "Jan 2022 - Fev 2024",
+            "title": "Colaborador Externo @ Wateke Travel",
+            "logo": "assets/img/company/wateketravel.png",
+            "logoWide": true,
+            "logoDark": true,
+            "desc": "Criação de apps móveis com Apache Cordova e animações de logos interativas com After Effects.",
+            "links": [
+                {
+                    "url": "https://wateke.travel/",
+                    "label": "Wateke Travel"
+                }
+            ]
+        },
+        {
+            "date": "Set 2019 - Jan 2024",
+            "title": "Engenharia de Computação @ Universidad de Camagüey",
+            "logo": "assets/img/company/ucm.png",
+            "logoWide": true,
+            "logoDark": true,
+            "desc": "Formado em Engenharia de Computação e cursado um ano acadêmico de Contabilidade e Finanças.",
+            "links": [
+                {
+                    "url": "https://www.reduc.edu.cu/",
+                    "label": "Universidad de Camagüey"
+                }
+            ]
         }
     ]
 }
