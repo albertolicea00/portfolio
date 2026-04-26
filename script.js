@@ -1,50 +1,82 @@
 /**
  * PORTFOLIO ARCHITECTURE
- * Logic to fetch content.json and manage Theme/Language state.
+ * Lazy-loads per-language JSON from assets/i18n/{lang}.json.
+ * Auto-detects browser language (navigator.language) with fallback to 'en'.
  */
 
+const SUPPORTED_LANGS = ['en', 'es', 'de', 'fr', 'it', 'ja', 'ko', 'pt', 'zh'];
+const FALLBACK_LANG = 'en';
+const LANGUAGE_CONTROL_LABELS = {
+    en: 'Select language',
+    es: 'Seleccionar idioma',
+    de: 'Sprache w\u00e4hlen',
+    fr: 'Choisir la langue',
+    it: 'Seleziona lingua',
+    ja: '\u8a00\u8a9e\u3092\u9078\u629e',
+    ko: '\uc5b8\uc5b4 \uc120\ud0dd',
+    pt: 'Selecionar idioma',
+    zh: '\u9009\u62e9\u8bed\u8a00'
+};
+const LANGUAGE_CHANGED_LABELS = {
+    en: 'Language changed to English',
+    es: 'Idioma cambiado a espa\u00f1ol',
+    de: 'Sprache auf Deutsch ge\u00e4ndert',
+    fr: 'Langue chang\u00e9e en fran\u00e7ais',
+    it: 'Lingua cambiata in italiano',
+    ja: '\u65e5\u672c\u8a9e\u306b\u5909\u66f4\u3057\u307e\u3057\u305f',
+    ko: '\ud55c\uad6d\uc5b4\ub85c \ubcc0\uacbd\ub418\uc5c8\uc2b5\ub2c8\ub2e4',
+    pt: 'Idioma alterado para portugu\u00eas',
+    zh: '\u8bed\u8a00\u5df2\u5207\u6362\u4e3a\u4e2d\u6587'
+};
+
 let siteData = null;
-let currentLang = localStorage.getItem('lang') || 'en';
+let currentLang = detectLanguage();
 let currentTheme = localStorage.getItem('theme') || 'dark';
 
-// Helper function to get nested properties using dot notation
+function detectLanguage() {
+    const saved = localStorage.getItem('lang');
+    if (saved && SUPPORTED_LANGS.includes(saved)) return saved;
+    const nav = (navigator.language || 'en').split('-')[0].toLowerCase();
+    return SUPPORTED_LANGS.includes(nav) ? nav : FALLBACK_LANG;
+}
+
+async function loadLanguage(lang) {
+    try {
+        const res = await fetch(`assets/i18n/${lang}.json`);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return await res.json();
+    } catch {
+        if (lang !== FALLBACK_LANG) {
+            console.warn(`Failed to load i18n/${lang}.json, falling back to ${FALLBACK_LANG}`);
+            return loadLanguage(FALLBACK_LANG);
+        }
+        throw new Error('Failed to load i18n data');
+    }
+}
+
 function getNestedValue(obj, path) {
-    return path.split('.').reduce((prev, curr) => {
-        return prev ? prev[curr] : null;
-    }, obj);
+    return path.split('.').reduce((prev, curr) => prev?.[curr] ?? null, obj);
 }
 
 function getLocalizedText(path, fallback = '') {
-    const valueObj = getNestedValue(siteData, path);
-    if (valueObj && typeof valueObj === 'object' && valueObj[currentLang]) {
-        return valueObj[currentLang];
-    }
-
-    if (typeof valueObj === 'string') {
-        return valueObj;
-    }
-
-    return fallback;
+    const value = getNestedValue(siteData, path);
+    return typeof value === 'string' ? value : fallback;
 }
 
 function announceStatus(message) {
     const liveRegion = document.getElementById('a11y-status');
     if (!liveRegion || !message) return;
-
     liveRegion.textContent = '';
-    window.setTimeout(() => {
-        liveRegion.textContent = message;
-    }, 30);
+    window.setTimeout(() => { liveRegion.textContent = message; }, 30);
 }
 
 // Initial Load
-document.addEventListener("DOMContentLoaded", async () => {
+document.addEventListener('DOMContentLoaded', async () => {
     try {
-        const response = await fetch('content.json');
-        siteData = await response.json();
+        siteData = await loadLanguage(currentLang);
         initApp();
     } catch (error) {
-        console.error("Error loading content.json:", error);
+        console.error('Error loading i18n data:', error);
     }
 });
 
@@ -56,11 +88,8 @@ function initApp() {
     syncAccessibilityUI();
     initTooltipPositioning();
 
-    // Auto update year in footer
     const yearSpan = document.getElementById('year');
-    if (yearSpan) {
-        yearSpan.textContent = new Date().getFullYear();
-    }
+    if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 }
 
 function initTooltipPositioning() {
@@ -87,42 +116,94 @@ function initTooltipPositioning() {
 
 function initTheme() {
     document.documentElement.setAttribute('data-theme', currentTheme);
-    const themeToggle = document.getElementById('theme-toggle');
     const themeIcon = document.querySelector('#theme-toggle i');
-    if (themeIcon) {
-        themeIcon.className = currentTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+    if (themeIcon) themeIcon.className = currentTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+    const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) themeToggle.setAttribute('aria-pressed', String(currentTheme === 'dark'));
+}
+
+function getLanguageElements() {
+    const langToggle = document.getElementById('lang-toggle');
+    const langDropdown = document.getElementById('lang-dropdown');
+    const langOptions = langDropdown ? Array.from(langDropdown.querySelectorAll('[data-lang]')) : [];
+    return { langToggle, langDropdown, langOptions };
+}
+
+function getLanguageControlLabel() {
+    return LANGUAGE_CONTROL_LABELS[currentLang] || LANGUAGE_CONTROL_LABELS[FALLBACK_LANG];
+}
+
+function setLanguageMenuState(isOpen) {
+    const { langToggle, langDropdown } = getLanguageElements();
+    if (!langToggle || !langDropdown) return;
+    langDropdown.classList.toggle('is-open', isOpen);
+    langToggle.setAttribute('aria-expanded', String(isOpen));
+}
+
+function focusLanguageOption(targetLang = currentLang) {
+    const { langOptions } = getLanguageElements();
+    const targetOption = langOptions.find(option => option.dataset.lang === targetLang) || langOptions[0];
+    targetOption?.focus();
+}
+
+function updateLanguageUI() {
+    const { langToggle, langDropdown, langOptions } = getLanguageElements();
+    if (!langToggle || !langDropdown || !langOptions.length) return;
+
+    const selectedOption = langOptions.find(option => option.dataset.lang === currentLang) || langOptions[0];
+
+    langOptions.forEach((option, index) => {
+        if (!option.id) option.id = `lang-option-${option.dataset.lang || index}`;
+        option.tabIndex = -1;
+        option.setAttribute('aria-selected', String(option === selectedOption));
+    });
+
+    const controlLabel = getLanguageControlLabel();
+    langToggle.textContent = selectedOption.textContent.trim();
+    langToggle.setAttribute('aria-label', controlLabel);
+    langToggle.setAttribute('data-tooltip', controlLabel);
+    langToggle.setAttribute('aria-expanded', String(langDropdown.classList.contains('is-open')));
+    langDropdown.setAttribute('aria-label', controlLabel);
+    langDropdown.setAttribute('aria-activedescendant', selectedOption.id);
+}
+
+async function changeLanguage(nextLang) {
+    const targetLang = SUPPORTED_LANGS.includes(nextLang) ? nextLang : FALLBACK_LANG;
+
+    try {
+        siteData = await loadLanguage(targetLang);
+        currentLang = targetLang;
+    } catch {
+        currentLang = FALLBACK_LANG;
+        siteData = await loadLanguage(FALLBACK_LANG);
     }
-    if (themeToggle) {
-        themeToggle.setAttribute('aria-pressed', String(currentTheme === 'dark'));
-    }
+
+    localStorage.setItem('lang', currentLang);
+    initLanguage();
+    renderDynamicContent();
+    syncAccessibilityUI();
+    announceStatus(LANGUAGE_CHANGED_LABELS[currentLang] || 'Language changed');
 }
 
 function initLanguage() {
     document.documentElement.lang = currentLang;
     updatePageText();
-    const langBtn = document.getElementById('lang-toggle');
-    if (langBtn) langBtn.textContent = currentLang.toUpperCase();
+    updateLanguageUI();
 }
 
 function updatePageText() {
     if (!siteData) return;
-    
+
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const path = el.getAttribute('data-i18n');
-        const valueObj = getNestedValue(siteData, path);
-        if (valueObj && valueObj[currentLang]) {
-            el.innerHTML = valueObj[currentLang];
-        } else if (typeof valueObj === 'string') {
-            el.innerHTML = valueObj;
-        }
+        const value = getNestedValue(siteData, path);
+        if (typeof value === 'string') el.innerHTML = value;
     });
 
     document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
         const path = el.getAttribute('data-i18n-placeholder');
-        const valueObj = getNestedValue(siteData, path);
-        if (valueObj && valueObj[currentLang]) {
-            el.placeholder = valueObj[currentLang];
-        }
+        const value = getNestedValue(siteData, path);
+        if (typeof value === 'string') el.placeholder = value;
     });
 }
 
@@ -135,7 +216,7 @@ function renderDynamicContent() {
 function renderProjects() {
     const recentProjectsContainer = document.getElementById('recent-projects-container');
     const allProjectsContainer = document.getElementById('all-projects-container');
-    
+
     if (!recentProjectsContainer && !allProjectsContainer) return;
 
     const containers = [
@@ -143,66 +224,63 @@ function renderProjects() {
         { el: allProjectsContainer, filter: () => true }
     ];
 
-    const viewProjectLabel = siteData.home.common.view_project[currentLang];
-    const repoLabel = siteData.home.common.repository[currentLang];
+    const viewProjectLabel = getLocalizedText('home.common.view_project', 'View Project');
+    const repoLabel = getLocalizedText('home.common.repository', 'Repository');
     const liveProjectA11y = getLocalizedText('home.accessibility.view_live_project', 'Open live project in a new tab');
     const repoA11y = getLocalizedText('home.accessibility.view_repository', 'Open repository in a new tab');
     const technologiesLabel = getLocalizedText('home.accessibility.technologies_used', 'Technologies used');
+    const comingSoonText = getLocalizedText('home.common.coming_soon', 'Coming soon!');
 
     containers.forEach(item => {
-        if (item.el) {
-            item.el.innerHTML = '';
-            const filteredProjects = siteData.projects.filter(item.filter);
+        if (!item.el) return;
+        item.el.innerHTML = '';
+        const filteredProjects = siteData.projects.filter(item.filter);
 
-            if (filteredProjects.length === 0) {
-                const comingSoon = document.createElement('div');
-                comingSoon.className = 'coming-soon-box glass-panel';
-                comingSoon.style.padding = '4rem';
-                comingSoon.style.width = '100%';
-                comingSoon.style.gridColumn = '1 / -1';
-                comingSoon.style.textAlign = 'center';
-                comingSoon.innerHTML = `
-                    <i class="fas fa-tools" style="font-size: 3rem; color: var(--brand-yellow); margin-bottom: 2rem; display: block;"></i>
-                    <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">Coming Soon</h3>
-                    <p style="opacity: 0.8; font-size: 1.1rem;">${siteData.home.common.coming_soon[currentLang]}</p>
-                `;
-                item.el.appendChild(comingSoon);
-                return;
-            }
-
-            filteredProjects.forEach(project => {
-                const card = document.createElement('article');
-                card.className = 'project-card';
-                const titleId = `project-title-${project.id}-${currentLang}`;
-                const descId = `project-desc-${project.id}-${currentLang}`;
-                const tagsHtml = project.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
-                const projectTitle = project.title[currentLang];
-                const projectDescription = project.description[currentLang];
-                const techList = project.tags.join(', ');
-                
-                card.innerHTML = `
-                    <div class="project-img-container">
-                        <img src="${project.image}" alt="${projectTitle} preview" class="project-img" loading="lazy">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title" id="${titleId}">${projectTitle}</h3>
-                        <div class="project-tags" aria-label="${technologiesLabel}: ${techList}">${tagsHtml}</div>
-                        <p class="project-desc" id="${descId}">${projectDescription}</p>
-                        <div class="project-links">
-                            <a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="${liveProjectA11y}: ${projectTitle}" data-tooltip="${liveProjectA11y}: ${projectTitle}">
-                                <i class="fas fa-external-link-alt" aria-hidden="true"></i> ${viewProjectLabel}
-                            </a>
-                            <a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="${repoA11y}: ${projectTitle}" data-tooltip="${repoA11y}: ${projectTitle}">
-                                <i class="fab fa-github" aria-hidden="true"></i> ${repoLabel}
-                            </a>
-                        </div>
-                    </div>
-                `;
-                card.setAttribute('aria-labelledby', titleId);
-                card.setAttribute('aria-describedby', descId);
-                item.el.appendChild(card);
-            });
+        if (filteredProjects.length === 0) {
+            const comingSoon = document.createElement('div');
+            comingSoon.className = 'coming-soon-box glass-panel';
+            comingSoon.style.cssText = 'padding:4rem;width:100%;grid-column:1/-1;text-align:center';
+            comingSoon.innerHTML = `
+                <i class="fas fa-tools" style="font-size:3rem;color:var(--brand-yellow);margin-bottom:2rem;display:block;" aria-hidden="true"></i>
+                <h3 style="font-size:1.8rem;margin-bottom:1rem;">Coming Soon</h3>
+                <p style="opacity:0.8;font-size:1.1rem;">${comingSoonText}</p>
+            `;
+            item.el.appendChild(comingSoon);
+            return;
         }
+
+        filteredProjects.forEach(project => {
+            const card = document.createElement('article');
+            card.className = 'project-card';
+            const titleId = `project-title-${project.id}`;
+            const descId = `project-desc-${project.id}`;
+            const tagsHtml = project.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
+            const projectTitle = project.title;
+            const projectDescription = project.description;
+            const techList = project.tags.join(', ');
+
+            card.innerHTML = `
+                <div class="project-img-container">
+                    <img src="${project.image}" alt="${projectTitle} preview" class="project-img" loading="lazy">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title" id="${titleId}">${projectTitle}</h3>
+                    <div class="project-tags" aria-label="${technologiesLabel}: ${techList}">${tagsHtml}</div>
+                    <p class="project-desc" id="${descId}">${projectDescription}</p>
+                    <div class="project-links">
+                        <a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="${liveProjectA11y}: ${projectTitle}" data-tooltip="${liveProjectA11y}: ${projectTitle}">
+                            <i class="fas fa-external-link-alt" aria-hidden="true"></i> ${viewProjectLabel}
+                        </a>
+                        <a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="${repoA11y}: ${projectTitle}" data-tooltip="${repoA11y}: ${projectTitle}">
+                            <i class="fab fa-github" aria-hidden="true"></i> ${repoLabel}
+                        </a>
+                    </div>
+                </div>
+            `;
+            card.setAttribute('aria-labelledby', titleId);
+            card.setAttribute('aria-describedby', descId);
+            item.el.appendChild(card);
+        });
     });
     initScrollAnimations();
 }
@@ -213,6 +291,7 @@ function renderExperience() {
 
     container.innerHTML = '';
     const websiteA11y = getLocalizedText('home.accessibility.view_company_site', 'Open website in a new tab');
+
     siteData.experience.forEach((exp, index) => {
         const logoClasses = [
             'timeline-logo-frame',
@@ -220,8 +299,8 @@ function renderExperience() {
             exp.logoDark ? 'is-dark' : '',
             exp.logoLight ? 'is-light' : ''
         ].filter(Boolean).join(' ');
-        const titleId = `timeline-title-${index}-${currentLang}`;
-        const descId = `timeline-desc-${index}-${currentLang}`;
+        const titleId = `timeline-title-${index}`;
+        const descId = `timeline-desc-${index}`;
 
         const logoHtml = exp.logo ? `
             <div class="${logoClasses}">
@@ -230,10 +309,7 @@ function renderExperience() {
         ` : '';
 
         const linksHtml = (exp.links || []).map(link => {
-            const label = typeof link.label === 'string'
-                ? link.label
-                : link.label?.[currentLang] || link.url;
-
+            const label = typeof link.label === 'string' ? link.label : link.url;
             return `
                 <a href="${link.url}" target="_blank" rel="noopener noreferrer" class="timeline-link" aria-label="${websiteA11y}: ${label}" data-tooltip="${websiteA11y}: ${label}">
                     <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
@@ -251,8 +327,8 @@ function renderExperience() {
                 <div class="timeline-header">
                     ${logoHtml}
                     <div class="timeline-copy">
-                        <h3 id="${titleId}">${exp.title[currentLang]}</h3>
-                        <p id="${descId}">${exp.desc[currentLang]}</p>
+                        <h3 id="${titleId}">${exp.title}</h3>
+                        <p id="${descId}">${exp.desc}</p>
                     </div>
                 </div>
                 ${linksHtml ? `<div class="timeline-links">${linksHtml}</div>` : ''}
@@ -280,13 +356,9 @@ function syncAccessibilityUI() {
         currentTheme === 'dark' ? 'home.accessibility.theme_to_light' : 'home.accessibility.theme_to_dark',
         currentTheme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'
     );
-    const languageLabel = getLocalizedText(
-        currentLang === 'en' ? 'home.accessibility.language_to_spanish' : 'home.accessibility.language_to_english',
-        currentLang === 'en' ? 'Switch language to Spanish' : 'Switch language to English'
-    );
     const scrollProjectsLabel = getLocalizedText('home.accessibility.scroll_to_projects', 'Scroll to projects section');
     const downloadCvLabel = getLocalizedText('home.accessibility.download_cv', 'Download CV in PDF format');
-    const allProjectsLabel = getLocalizedText('home.accessibility.all_projects', 'Browse all projects');
+    const allProjectsLabel = getLocalizedText('home.accessibility.all_projects', 'Browse all apps');
     const contactShortcutLabel = getLocalizedText('home.accessibility.contact_shortcut', 'Jump to contact section');
     const openNewTabLabel = getLocalizedText('home.accessibility.opens_new_tab', 'Opens in a new tab');
     const socialLabels = {
@@ -295,14 +367,10 @@ function syncAccessibilityUI() {
         instagram: getLocalizedText('home.accessibility.open_instagram', 'Open Instagram profile in a new tab')
     };
 
-    document.querySelectorAll('i[class*="fa"]').forEach(icon => {
-        icon.setAttribute('aria-hidden', 'true');
-    });
+    document.querySelectorAll('i[class*="fa"]').forEach(icon => icon.setAttribute('aria-hidden', 'true'));
 
     const siteNavigation = document.getElementById('site-navigation');
-    if (siteNavigation) {
-        siteNavigation.setAttribute('aria-label', navLabel);
-    }
+    if (siteNavigation) siteNavigation.setAttribute('aria-label', navLabel);
 
     const logo = document.querySelector('.logo');
     if (logo) {
@@ -314,12 +382,6 @@ function syncAccessibilityUI() {
     if (themeToggle) {
         themeToggle.setAttribute('aria-label', themeLabel);
         themeToggle.setAttribute('data-tooltip', themeLabel);
-    }
-
-    const langToggle = document.getElementById('lang-toggle');
-    if (langToggle) {
-        langToggle.setAttribute('aria-label', languageLabel);
-        langToggle.setAttribute('data-tooltip', languageLabel);
     }
 
     if (menuToggle) {
@@ -362,15 +424,11 @@ function syncAccessibilityUI() {
         link.setAttribute('rel', 'noopener noreferrer');
     });
 
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.removeAttribute('data-tooltip');
-    });
+    document.querySelectorAll('.nav-links a').forEach(link => link.removeAttribute('data-tooltip'));
 
     document.querySelectorAll('.outline-btn:not(#download-cv-link):not(#hero-contact-link):not(#view-all-projects-link)').forEach(link => {
         const text = link.textContent.replace(/\s+/g, ' ').trim();
-        if (text) {
-            link.setAttribute('data-tooltip', text);
-        }
+        if (text) link.setAttribute('data-tooltip', text);
     });
 
     document.querySelectorAll('a[target="_blank"]').forEach(link => {
@@ -381,32 +439,43 @@ function syncAccessibilityUI() {
         }
     });
 
-    document.querySelectorAll('.active-link').forEach(link => {
-        link.setAttribute('aria-current', 'page');
-    });
+    document.querySelectorAll('.active-link').forEach(link => link.setAttribute('aria-current', 'page'));
+    updateLanguageUI();
 }
 
 function setupEventListeners() {
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
+    const langWrapper = document.querySelector('.lang-select-wrapper');
+    const { langToggle, langDropdown, langOptions } = getLanguageElements();
 
     const setMenuState = (isOpen, shouldAnnounce = false) => {
         if (!navLinks || !menuToggle) return;
-
         navLinks.classList.toggle('active', isOpen);
         const icon = menuToggle.querySelector('i');
-        if (icon) {
-            icon.className = isOpen ? 'fas fa-times' : 'fas fa-bars';
-        }
-
+        if (icon) icon.className = isOpen ? 'fas fa-times' : 'fas fa-bars';
         syncAccessibilityUI();
-
         if (shouldAnnounce) {
             announceStatus(getLocalizedText(
                 isOpen ? 'home.accessibility.menu_expanded' : 'home.accessibility.menu_collapsed',
                 isOpen ? 'Navigation menu expanded' : 'Navigation menu collapsed'
             ));
         }
+    };
+
+    const moveLanguageFocus = direction => {
+        const focusedOption = document.activeElement?.closest?.('[data-lang]');
+        const currentIndex = langOptions.indexOf(focusedOption);
+        const fallbackIndex = langOptions.findIndex(option => option.dataset.lang === currentLang);
+        const startIndex = currentIndex >= 0 ? currentIndex : fallbackIndex >= 0 ? fallbackIndex : 0;
+        const nextIndex = (startIndex + direction + langOptions.length) % langOptions.length;
+        langOptions[nextIndex]?.focus();
+    };
+
+    const handleLanguageSelection = async lang => {
+        if (!lang) return;
+        await changeLanguage(lang);
+        setLanguageMenuState(false);
     };
 
     // Theme Toggle
@@ -421,17 +490,77 @@ function setupEventListeners() {
         ));
     });
 
-    // Language Toggle
-    document.getElementById('lang-toggle')?.addEventListener('click', () => {
-        currentLang = currentLang === 'en' ? 'es' : 'en';
-        localStorage.setItem('lang', currentLang);
-        initLanguage();
-        renderDynamicContent();
-        syncAccessibilityUI();
-        announceStatus(getLocalizedText(
-            currentLang === 'en' ? 'home.accessibility.language_changed_english' : 'home.accessibility.language_changed_spanish',
-            currentLang === 'en' ? 'Language changed to English' : 'Language changed to Spanish'
-        ));
+    // Language Select
+    langToggle?.addEventListener('click', () => {
+        const shouldOpen = !langDropdown?.classList.contains('is-open');
+        setLanguageMenuState(shouldOpen);
+        if (shouldOpen) focusLanguageOption();
+    });
+
+    langToggle?.addEventListener('keydown', event => {
+        if (!['Enter', ' ', 'ArrowDown', 'ArrowUp'].includes(event.key)) return;
+        event.preventDefault();
+        setLanguageMenuState(true);
+        if (event.key === 'ArrowUp') {
+            langOptions[langOptions.length - 1]?.focus();
+            return;
+        }
+        focusLanguageOption();
+    });
+
+    langDropdown?.addEventListener('click', async event => {
+        const option = event.target.closest('[data-lang]');
+        if (!option) return;
+        await handleLanguageSelection(option.dataset.lang);
+        langToggle?.focus();
+    });
+
+    langDropdown?.addEventListener('keydown', async event => {
+        const option = event.target.closest('[data-lang]');
+        if (!option) return;
+
+        if (event.key === 'ArrowDown') {
+            event.preventDefault();
+            moveLanguageFocus(1);
+            return;
+        }
+
+        if (event.key === 'ArrowUp') {
+            event.preventDefault();
+            moveLanguageFocus(-1);
+            return;
+        }
+
+        if (event.key === 'Home') {
+            event.preventDefault();
+            langOptions[0]?.focus();
+            return;
+        }
+
+        if (event.key === 'End') {
+            event.preventDefault();
+            langOptions[langOptions.length - 1]?.focus();
+            return;
+        }
+
+        if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            await handleLanguageSelection(option.dataset.lang);
+            langToggle?.focus();
+            return;
+        }
+
+        if (event.key === 'Escape') {
+            event.preventDefault();
+            setLanguageMenuState(false);
+            langToggle?.focus();
+        }
+    });
+
+    document.addEventListener('click', event => {
+        if (langWrapper && !langWrapper.contains(event.target)) {
+            setLanguageMenuState(false);
+        }
     });
 
     // Mobile Menu
@@ -441,13 +570,17 @@ function setupEventListeners() {
 
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
-            if (window.innerWidth <= 768) {
-                setMenuState(false);
-            }
+            if (window.innerWidth <= 768) setMenuState(false);
         });
     });
 
     document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && langDropdown?.classList.contains('is-open')) {
+            setLanguageMenuState(false);
+            langToggle?.focus();
+            return;
+        }
+
         if (event.key === 'Escape' && navLinks?.classList.contains('active')) {
             setMenuState(false, true);
             menuToggle?.focus();
@@ -457,8 +590,7 @@ function setupEventListeners() {
     // Simple Form Handler
     document.getElementById('contact-form')?.addEventListener('submit', (e) => {
         e.preventDefault();
-        const successMsg = siteData.home.contact_section.success_msg[currentLang];
-        alert(successMsg);
+        alert(getLocalizedText('home.contact_section.success_msg', 'Message sent!'));
         e.target.reset();
     });
 }
@@ -474,7 +606,7 @@ function initScrollAnimations() {
         return;
     }
 
-    const observerOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+    const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {

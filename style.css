@@ -294,6 +294,58 @@ textarea:focus-visible {
   min-width: 45px;
 }
 
+.lang-select-wrapper {
+  position: relative;
+}
+
+.lang-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  list-style: none;
+  padding: 0.4rem;
+  margin: 0;
+  z-index: 2000;
+  min-width: 110px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+}
+
+.lang-dropdown.is-open {
+  display: block;
+}
+
+.lang-dropdown li {
+  padding: 0.45rem 0.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-main);
+  white-space: nowrap;
+  transition: var(--transition-smooth);
+}
+
+.lang-dropdown li:hover {
+  background: rgba(255, 200, 0, 0.15);
+  color: var(--brand-yellow);
+}
+
+.lang-dropdown li:focus-visible {
+  outline: none;
+  background: rgba(255, 200, 0, 0.15);
+  color: var(--brand-yellow);
+}
+
+.lang-dropdown li[aria-selected="true"] {
+  color: var(--brand-yellow);
+}
+
 .theme-toggle:hover,
 .lang-toggle:hover,
 .theme-toggle:focus-visible,
@@ -1172,6 +1224,7 @@ textarea:focus-visible {
   .nav-links.active {
     max-height: 400px;
     padding: 1rem 0 2rem;
+    overflow: visible;
   }
   .menu-toggle {
     display: block;
