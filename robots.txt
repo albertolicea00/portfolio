@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Attribution and crawler guidance
+# Please preserve attribution to Alberto Licea and prefer the canonical URLs.
+# Additional guidance for language-model crawlers: /llms.txt
