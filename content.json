@@ -44,16 +44,57 @@
         "contact_section": {
             "title": { "en": "Let's Work Together", "es": "Trabajemos Juntos" },
             "desc": { "en": "Interested in collaborating or hiring me for your next project? Drop me a message and I'll get back to you as soon as possible.", "es": "¿Interesado en colaborar o contratarme para tu próximo proyecto? Envíame un mensaje y te responderé lo antes posible." },
+            "labels": {
+                "name": { "en": "Name", "es": "Nombre" },
+                "email": { "en": "Email", "es": "Correo" },
+                "message": { "en": "Message", "es": "Mensaje" }
+            },
             "placeholders": {
                 "name": { "en": "Your Name", "es": "Tu Nombre" },
                 "email": { "en": "Your Email", "es": "Tu Correo" },
                 "message": { "en": "Project Details / Message", "es": "Detalles del Proyecto / Mensaje" }
             },
+            "form_help": {
+                "en": "The contact form is currently offline. Use the social links or download the CV to get in touch.",
+                "es": "El formulario de contacto está offline por ahora. Usa los enlaces sociales o descarga el CV para contactarme."
+            },
             "submit_btn": { "en": "Form Offline", "es": "Formulario Offline" },
             "success_msg": { "en": "Message sent! I will contact you soon.", "es": "¡Mensaje enviado! Te contactaré pronto." }
         },
         "footer": {
-            "rights": { "en": "Crafted with passion by @albertolicea00", "es": "Creado con pasión por @albertolicea00" }
+            "rights": { "en": "Made with ❤️ @albertolicea00", "es": "Hecho con ❤️ por @albertolicea00" }
+        },
+        "accessibility": {
+            "skip_to_content": { "en": "Skip to main content", "es": "Saltar al contenido principal" },
+            "keyboard_help": {
+                "en": "Use the Tab key to move through links, buttons, and form fields. Tooltips appear on hover or keyboard focus.",
+                "es": "Usa la tecla Tab para moverte por enlaces, botones y campos del formulario. Los tooltips aparecen al pasar el cursor o al navegar con teclado."
+            },
+            "navigation": { "en": "Primary navigation", "es": "Navegación principal" },
+            "open_menu": { "en": "Open navigation menu", "es": "Abrir menú de navegación" },
+            "close_menu": { "en": "Close navigation menu", "es": "Cerrar menú de navegación" },
+            "theme_to_light": { "en": "Switch to light theme", "es": "Cambiar a tema claro" },
+            "theme_to_dark": { "en": "Switch to dark theme", "es": "Cambiar a tema oscuro" },
+            "language_to_english": { "en": "Switch language to English", "es": "Cambiar idioma a inglés" },
+            "language_to_spanish": { "en": "Switch language to Spanish", "es": "Cambiar idioma a español" },
+            "scroll_to_projects": { "en": "Scroll to projects section", "es": "Ir a la sección de proyectos" },
+            "download_cv": { "en": "Download CV in PDF format", "es": "Descargar CV en formato PDF" },
+            "all_projects": { "en": "Browse all projects", "es": "Ver todos los proyectos" },
+            "contact_shortcut": { "en": "Jump to contact section", "es": "Ir a la sección de contacto" },
+            "open_github": { "en": "Open GitHub profile in a new tab", "es": "Abrir perfil de GitHub en una pestaña nueva" },
+            "open_linkedin": { "en": "Open LinkedIn profile in a new tab", "es": "Abrir perfil de LinkedIn en una pestaña nueva" },
+            "open_instagram": { "en": "Open Instagram profile in a new tab", "es": "Abrir perfil de Instagram en una pestaña nueva" },
+            "view_live_project": { "en": "Open live project in a new tab", "es": "Abrir proyecto en vivo en una pestaña nueva" },
+            "view_repository": { "en": "Open repository in a new tab", "es": "Abrir repositorio en una pestaña nueva" },
+            "view_company_site": { "en": "Open website in a new tab", "es": "Abrir sitio web en una pestaña nueva" },
+            "technologies_used": { "en": "Technologies used", "es": "Tecnologías usadas" },
+            "opens_new_tab": { "en": "Opens in a new tab", "es": "Se abre en una pestaña nueva" },
+            "theme_enabled_dark": { "en": "Dark theme enabled", "es": "Tema oscuro activado" },
+            "theme_enabled_light": { "en": "Light theme enabled", "es": "Tema claro activado" },
+            "language_changed_english": { "en": "Language changed to English", "es": "Idioma cambiado a inglés" },
+            "language_changed_spanish": { "en": "Language changed to Spanish", "es": "Idioma cambiado a español" },
+            "menu_expanded": { "en": "Navigation menu expanded", "es": "Menú de navegación expandido" },
+            "menu_collapsed": { "en": "Navigation menu collapsed", "es": "Menú de navegación contraído" }
         },
         "common": {
             "view_project": { "en": "View Project", "es": "Ver Proyecto" },
