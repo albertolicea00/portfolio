@@ -68,6 +68,7 @@
             "contact_shortcut": "お問い合わせセクションへ移動",
             "open_github": "GitHubプロフィールを新しいタブで開く",
             "open_linkedin": "LinkedInプロフィールを新しいタブで開く",
+            "open_x": "Xプロフィールを新しいタブで開く",
             "open_instagram": "Instagramプロフィールを新しいタブで開く",
             "view_live_project": "ライブプロジェクトを新しいタブで開く",
             "view_repository": "リポジトリを新しいタブで開く",
@@ -162,7 +163,7 @@
         {
             "date": "2024年3月 - 現在",
             "title": "ソフトウェア開発者 @ Ladetec",
-            "logo": "assets/img/company/ladetec.png",
+            "logo": "assets/img/company/ladetec.webp",
             "desc": "Django、Vue.js、Svelte、Node.jsを使用したAPI統合（Bigcommerce、KillBill）とERP開発。",
             "links": [
                 {
@@ -174,7 +175,7 @@
         {
             "date": "2024年3月 - 2024年8月",
             "title": "ソフトウェアメンテナンス @ TOWIT Houston",
-            "logo": "assets/img/company/towithuston.jpg",
+            "logo": "assets/img/company/towithuston.webp",
             "desc": "社内管理ソフトウェアのバグ修正と新機能の実装により、安定性と日常業務を改善しました。",
             "links": [
                 {
@@ -214,7 +215,7 @@
         {
             "date": "2019年9月 - 2024年1月",
             "title": "コンピュータ工学 @ Universidad de Camagüey",
-            "logo": "assets/img/company/ucm.png",
+            "logo": "assets/img/company/ucm.webp",
             "logoWide": true,
             "logoDark": true,
             "desc": "コンピュータ工学を卒業し、会計・ファイナンスの1学年課程も修了しました。",

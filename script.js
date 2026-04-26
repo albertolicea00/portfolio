@@ -66,6 +66,17 @@ const SYNTHETIC_LANGUAGE_GENERATORS = {
     cat: generateCatLanguageData,
     alien: generateAlienLanguageData
 };
+const UI_GLYPHS = {
+    themeDark: '\u263e',
+    themeLight: '\u2600',
+    menuClosed: '\u2630',
+    menuOpen: '\u2715',
+    external: '\u2197',
+    github: 'GH',
+    arrowRight: '\u2192',
+    download: '\u2193',
+    tools: '\ud83d\udee0'
+};
 
 let siteData = null;
 let currentLang = detectLanguage();
@@ -258,6 +269,11 @@ function getLocalizedText(path, fallback = '') {
     return typeof value === 'string' ? value : fallback;
 }
 
+function getInlineIconMarkup(name, className = 'inline-icon') {
+    const glyph = UI_GLYPHS[name];
+    return glyph ? `<span class="${className}" aria-hidden="true">${glyph}</span>` : '';
+}
+
 function announceStatus(message) {
     const liveRegion = document.getElementById('a11y-status');
     if (!liveRegion || !message) return;
@@ -311,8 +327,8 @@ function initTooltipPositioning() {
 
 function initTheme() {
     document.documentElement.setAttribute('data-theme', currentTheme);
-    const themeIcon = document.querySelector('#theme-toggle i');
-    if (themeIcon) themeIcon.className = currentTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+    const themeIcon = document.querySelector('#theme-toggle .toggle-glyph');
+    if (themeIcon) themeIcon.textContent = currentTheme === 'dark' ? UI_GLYPHS.themeDark : UI_GLYPHS.themeLight;
     const themeToggle = document.getElementById('theme-toggle');
     if (themeToggle) themeToggle.setAttribute('aria-pressed', String(currentTheme === 'dark'));
 }
@@ -333,8 +349,11 @@ function triggerTokenSaverAttention(tokenSaverToggle) {
     if (!tokenSaverToggle) return;
 
     tokenSaverToggle.classList.remove('is-attention');
-    void tokenSaverToggle.offsetWidth;
-    tokenSaverToggle.classList.add('is-attention');
+    window.requestAnimationFrame(() => {
+        window.requestAnimationFrame(() => {
+            tokenSaverToggle.classList.add('is-attention');
+        });
+    });
 
     if (tokenSaverAttentionTimeoutId) window.clearTimeout(tokenSaverAttentionTimeoutId);
     tokenSaverAttentionTimeoutId = window.setTimeout(() => {
@@ -509,7 +528,7 @@ function renderProjects() {
             comingSoon.className = 'coming-soon-box glass-panel';
             comingSoon.style.cssText = 'padding:4rem;width:100%;grid-column:1/-1;text-align:center';
             comingSoon.innerHTML = `
-                <i class="fas fa-tools" style="font-size:3rem;color:var(--brand-yellow);margin-bottom:2rem;display:block;" aria-hidden="true"></i>
+                ${getInlineIconMarkup('tools', 'coming-soon-icon')}
                 <h3 style="font-size:1.8rem;margin-bottom:1rem;">${comingSoonTitle}</h3>
                 <p style="opacity:0.8;font-size:1.1rem;">${comingSoonText}</p>
             `;
@@ -529,7 +548,7 @@ function renderProjects() {
 
             card.innerHTML = `
                 <div class="project-img-container">
-                    <img src="${project.image}" alt="${projectTitle} preview" class="project-img" loading="lazy">
+                    <img src="${project.image}" alt="${projectTitle} preview" class="project-img" loading="lazy" decoding="async">
                 </div>
                 <div class="project-content">
                     <h3 class="project-title" id="${titleId}">${projectTitle}</h3>
@@ -537,10 +556,10 @@ function renderProjects() {
                     <p class="project-desc" id="${descId}">${projectDescription}</p>
                     <div class="project-links">
                         <a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="${liveProjectA11y}: ${projectTitle}" data-tooltip="${liveProjectA11y}: ${projectTitle}">
-                            <i class="fas fa-external-link-alt" aria-hidden="true"></i> ${viewProjectLabel}
+                            ${getInlineIconMarkup('external')} ${viewProjectLabel}
                         </a>
                         <a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="${repoA11y}: ${projectTitle}" data-tooltip="${repoA11y}: ${projectTitle}">
-                            <i class="fab fa-github" aria-hidden="true"></i> ${repoLabel}
+                            ${getInlineIconMarkup('github', 'inline-icon text-icon')} ${repoLabel}
                         </a>
                     </div>
                 </div>
@@ -572,7 +591,7 @@ function renderExperience() {
 
         const logoHtml = exp.logo ? `
             <div class="${logoClasses}">
-                <img src="${exp.logo}" alt="" aria-hidden="true" class="timeline-logo" loading="lazy">
+                <img src="${exp.logo}" alt="" aria-hidden="true" class="timeline-logo" loading="lazy" decoding="async">
             </div>
         ` : '';
 
@@ -580,7 +599,7 @@ function renderExperience() {
             const label = typeof link.label === 'string' ? link.label : link.url;
             return `
                 <a href="${link.url}" target="_blank" rel="noopener noreferrer" class="timeline-link" aria-label="${websiteA11y}: ${label}" data-tooltip="${websiteA11y}: ${label}">
-                    <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                    ${getInlineIconMarkup('external')}
                     <span>${label}</span>
                 </a>
             `;
@@ -632,10 +651,9 @@ function syncAccessibilityUI() {
     const socialLabels = {
         github: getLocalizedText('home.accessibility.open_github', 'Open GitHub profile in a new tab'),
         linkedin: getLocalizedText('home.accessibility.open_linkedin', 'Open LinkedIn profile in a new tab'),
+        x: getLocalizedText('home.accessibility.open_x', 'Open X profile in a new tab'),
         instagram: getLocalizedText('home.accessibility.open_instagram', 'Open Instagram profile in a new tab')
     };
-
-    document.querySelectorAll('i[class*="fa"]').forEach(icon => icon.setAttribute('aria-hidden', 'true'));
 
     const siteNavigation = document.getElementById('site-navigation');
     if (siteNavigation) siteNavigation.setAttribute('aria-label', navLabel);
@@ -721,8 +739,8 @@ function setupEventListeners() {
     const setMenuState = (isOpen, shouldAnnounce = false) => {
         if (!navLinks || !menuToggle) return;
         navLinks.classList.toggle('active', isOpen);
-        const icon = menuToggle.querySelector('i');
-        if (icon) icon.className = isOpen ? 'fas fa-times' : 'fas fa-bars';
+        const icon = menuToggle.querySelector('.toggle-glyph');
+        if (icon) icon.textContent = isOpen ? UI_GLYPHS.menuOpen : UI_GLYPHS.menuClosed;
         syncAccessibilityUI();
         if (shouldAnnounce) {
             announceStatus(getLocalizedText(

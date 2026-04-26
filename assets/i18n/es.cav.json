@@ -68,6 +68,7 @@
             "contact_shortcut": "Ir a gritar mensaje",
             "open_github": "Abrir cueva GitHub",
             "open_linkedin": "Abrir cueva LinkedIn",
+            "open_x": "Abrir cueva X",
             "open_instagram": "Abrir cueva Instagram",
             "view_live_project": "Abrir invento vivo",
             "view_repository": "Abrir piedras de código",
@@ -162,7 +163,7 @@
         {
             "date": "2024 - Ahora",
             "title": "Yo programar @ Ladetec",
-            "logo": "assets/img/company/ladetec.png",
+            "logo": "assets/img/company/ladetec.webp",
             "desc": "Hombre conectar APIs, domar BigCommerce, hablar con KillBill y construir ERP sin romper cueva.",
             "links": [
                 {
@@ -174,7 +175,7 @@
         {
             "date": "2024",
             "title": "Yo arreglar software @ TOWIT",
-            "logo": "assets/img/company/towithuston.jpg",
+            "logo": "assets/img/company/towithuston.webp",
             "desc": "Hombre encontrar bugs escondidos. Golpear con garrote. Sistema mejor.",
             "links": [
                 {
@@ -214,7 +215,7 @@
         {
             "date": "2019 - 2024",
             "title": "Yo estudiar",
-            "logo": "assets/img/company/ucm.png",
+            "logo": "assets/img/company/ucm.webp",
             "logoWide": true,
             "logoDark": true,
             "desc": "Yo aprender informática. Yo aprender números también. Cerebro sufrir",

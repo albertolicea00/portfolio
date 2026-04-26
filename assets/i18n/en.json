@@ -68,6 +68,7 @@
             "contact_shortcut": "Jump to contact section",
             "open_github": "Open GitHub profile in a new tab",
             "open_linkedin": "Open LinkedIn profile in a new tab",
+            "open_x": "Open X profile in a new tab",
             "open_instagram": "Open Instagram profile in a new tab",
             "view_live_project": "Open live project in a new tab",
             "view_repository": "Open repository in a new tab",
@@ -162,7 +163,7 @@
         {
             "date": "Mar 2024 - Present",
             "title": "Software Developer @ Ladetec",
-            "logo": "assets/img/company/ladetec.png",
+            "logo": "assets/img/company/ladetec.webp",
             "desc": "API integration (Bigcommerce, KillBill) and ERP development using Django, Vue.js, Svelte, and Node.js.",
             "links": [
                 {
@@ -174,7 +175,7 @@
         {
             "date": "Mar 2024 - Aug 2024",
             "title": "Software Maintenance @ TOWIT Houston",
-            "logo": "assets/img/company/towithuston.jpg",
+            "logo": "assets/img/company/towithuston.webp",
             "desc": "Implemented bug fixes and delivered new features for the company's management software, improving stability and day-to-day operations.",
             "links": [
                 {
@@ -214,7 +215,7 @@
         {
             "date": "Sep 2019 - Jan 2024",
             "title": "Computer Engineering @ Universidad de Camagüey",
-            "logo": "assets/img/company/ucm.png",
+            "logo": "assets/img/company/ucm.webp",
             "logoWide": true,
             "logoDark": true,
             "desc": "Graduated in Computer Engineering and also completed one academic year of Accounting and Finance studies.",

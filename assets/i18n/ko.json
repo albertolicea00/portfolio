@@ -68,6 +68,7 @@
             "contact_shortcut": "연락처 섹션으로 이동",
             "open_github": "새 탭에서 GitHub 프로필 열기",
             "open_linkedin": "새 탭에서 LinkedIn 프로필 열기",
+            "open_x": "새 탭에서 X 프로필 열기",
             "open_instagram": "새 탭에서 Instagram 프로필 열기",
             "view_live_project": "새 탭에서 라이브 프로젝트 열기",
             "view_repository": "새 탭에서 저장소 열기",
@@ -162,7 +163,7 @@
         {
             "date": "Mar 2024 - Present",
             "title": "소프트웨어 개발자 @ Ladetec",
-            "logo": "assets/img/company/ladetec.png",
+            "logo": "assets/img/company/ladetec.webp",
             "desc": "Django, Vue.js, Svelte, Node.js를 사용한 API 통합(Bigcommerce, KillBill) 및 ERP 개발.",
             "links": [
                 {
@@ -174,7 +175,7 @@
         {
             "date": "Mar 2024 - Aug 2024",
             "title": "소프트웨어 유지보수 @ TOWIT Houston",
-            "logo": "assets/img/company/towithuston.jpg",
+            "logo": "assets/img/company/towithuston.webp",
             "desc": "회사 관리 소프트웨어의 버그 수정 및 새 기능을 구현하여 안정성과 일상 운영을 개선했습니다.",
             "links": [
                 {
@@ -214,7 +215,7 @@
         {
             "date": "Sep 2019 - Jan 2024",
             "title": "컴퓨터 공학 @ Universidad de Camagüey",
-            "logo": "assets/img/company/ucm.png",
+            "logo": "assets/img/company/ucm.webp",
             "logoWide": true,
             "logoDark": true,
             "desc": "컴퓨터 공학을 졸업하고 회계 및 재무 1학년 과정도 이수했습니다.",

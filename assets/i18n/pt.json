@@ -68,6 +68,7 @@
             "contact_shortcut": "Ir para a seção de contato",
             "open_github": "Abrir perfil do GitHub em uma nova aba",
             "open_linkedin": "Abrir perfil do LinkedIn em uma nova aba",
+            "open_x": "Abrir perfil do X em uma nova aba",
             "open_instagram": "Abrir perfil do Instagram em uma nova aba",
             "view_live_project": "Abrir projeto ao vivo em uma nova aba",
             "view_repository": "Abrir repositório em uma nova aba",
@@ -162,7 +163,7 @@
         {
             "date": "Mar 2024 - Presente",
             "title": "Desenvolvedor de Software @ Ladetec",
-            "logo": "assets/img/company/ladetec.png",
+            "logo": "assets/img/company/ladetec.webp",
             "desc": "Integração de APIs (Bigcommerce, KillBill) e desenvolvimento de ERPs com Django, Vue.js, Svelte e Node.js.",
             "links": [
                 {
@@ -174,7 +175,7 @@
         {
             "date": "Mar 2024 - Ago 2024",
             "title": "Manutenção de Software @ TOWIT Houston",
-            "logo": "assets/img/company/towithuston.jpg",
+            "logo": "assets/img/company/towithuston.webp",
             "desc": "Correções de bugs e novas funcionalidades para o software de gestão da empresa, melhorando a estabilidade e as operações diárias.",
             "links": [
                 {
@@ -214,7 +215,7 @@
         {
             "date": "Set 2019 - Jan 2024",
             "title": "Engenharia de Computação @ Universidad de Camagüey",
-            "logo": "assets/img/company/ucm.png",
+            "logo": "assets/img/company/ucm.webp",
             "logoWide": true,
             "logoDark": true,
             "desc": "Formado em Engenharia de Computação e cursado um ano acadêmico de Contabilidade e Finanças.",

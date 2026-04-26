@@ -293,6 +293,15 @@ textarea:focus-visible {
   gap: 0.5rem;
   transition: var(--transition-smooth);
   min-width: 45px;
+  line-height: 1;
+}
+
+.toggle-glyph {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  line-height: 1;
 }
 
 .lang-select-wrapper {
@@ -428,9 +437,7 @@ textarea:focus-visible {
 }
 
 .lang-variant-toggle.is-attention {
-  animation:
-    token-saver-pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.2),
-    token-saver-glow 0.8s ease 2;
+  animation: token-saver-pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.2);
 }
 
 @keyframes token-saver-pop {
@@ -445,16 +452,6 @@ textarea:focus-visible {
   100% {
     transform: translateY(0);
     opacity: 1;
-  }
-}
-
-@keyframes token-saver-glow {
-  0%,
-  100% {
-    color: var(--text-muted);
-  }
-  50% {
-    color: var(--brand-yellow-darker);
   }
 }
 
@@ -679,6 +676,14 @@ textarea:focus-visible {
   font-size: 1.4rem;
   color: var(--text-main);
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.social-icon-svg {
+  width: 1.15rem;
+  height: 1.15rem;
+  flex: 0 0 auto;
+  fill: currentColor;
+  display: block;
 }
 
 .social-icon:hover,
@@ -993,8 +998,8 @@ textarea:focus-visible {
   box-shadow: 0 0 16px var(--brand-yellow-glow);
 }
 
-.timeline-link i {
-  font-size: 0.85rem;
+.timeline-link .inline-icon {
+  font-size: 0.9rem;
 }
 
 /* Glass Panels */
@@ -1200,6 +1205,30 @@ textarea:focus-visible {
   background: var(--brand-yellow);
   color: #0a0a0c;
   border-color: var(--brand-yellow);
+}
+
+.inline-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1em;
+  line-height: 1;
+  flex: 0 0 auto;
+}
+
+.text-icon {
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.coming-soon-icon {
+  display: block;
+  margin-bottom: 2rem;
+  color: var(--brand-yellow);
+  font-size: 3rem;
+  line-height: 1;
 }
 
 /* Footer & Contact Form */

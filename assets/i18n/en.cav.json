@@ -68,6 +68,7 @@
             "contact_shortcut": "Go contact",
             "open_github": "Open GitHub",
             "open_linkedin": "Open LinkedIn",
+            "open_x": "Open X",
             "open_instagram": "Open Instagram",
             "view_live_project": "Open live thing",
             "view_repository": "Open code cave",
@@ -162,7 +163,7 @@
         {
             "date": "2024 - Now",
             "title": "Me code @ Ladetec",
-            "logo": "assets/img/company/ladetec.png",
+            "logo": "assets/img/company/ladetec.webp",
             "desc": "Me connect APIs. Me build ERP. Me use Django, Vue, Svelte, Node.",
             "links": [
                 {
@@ -174,7 +175,7 @@
         {
             "date": "2024",
             "title": "Me fix software @ TOWIT",
-            "logo": "assets/img/company/towithuston.jpg",
+            "logo": "assets/img/company/towithuston.webp",
             "desc": "Me fix bugs. Me add features. System more stable.",
             "links": [
                 {
@@ -214,7 +215,7 @@
         {
             "date": "2019 - 2024",
             "title": "Me study computer",
-            "logo": "assets/img/company/ucm.png",
+            "logo": "assets/img/company/ucm.webp",
             "logoWide": true,
             "logoDark": true,
             "desc": "Me graduate Computer Engineering. Me also study money numbers one year.",

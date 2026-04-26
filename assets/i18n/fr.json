@@ -68,6 +68,7 @@
             "contact_shortcut": "Aller à la section contact",
             "open_github": "Ouvrir le profil GitHub dans un nouvel onglet",
             "open_linkedin": "Ouvrir le profil LinkedIn dans un nouvel onglet",
+            "open_x": "Ouvrir le profil X dans un nouvel onglet",
             "open_instagram": "Ouvrir le profil Instagram dans un nouvel onglet",
             "view_live_project": "Ouvrir le projet en ligne dans un nouvel onglet",
             "view_repository": "Ouvrir le dépôt dans un nouvel onglet",
@@ -162,7 +163,7 @@
         {
             "date": "Mars 2024 - Présent",
             "title": "Développeur Logiciel @ Ladetec",
-            "logo": "assets/img/company/ladetec.png",
+            "logo": "assets/img/company/ladetec.webp",
             "desc": "Intégration d'API (Bigcommerce, KillBill) et développement ERP avec Django, Vue.js, Svelte et Node.js.",
             "links": [
                 {
@@ -174,7 +175,7 @@
         {
             "date": "Mars 2024 - Août 2024",
             "title": "Maintenance Logicielle @ TOWIT Houston",
-            "logo": "assets/img/company/towithuston.jpg",
+            "logo": "assets/img/company/towithuston.webp",
             "desc": "Corrections de bugs et nouvelles fonctionnalités pour le logiciel de gestion de l'entreprise, améliorant la stabilité et les opérations quotidiennes.",
             "links": [
                 {
@@ -214,7 +215,7 @@
         {
             "date": "Sep 2019 - Jan 2024",
             "title": "Ingénierie Informatique @ Universidad de Camagüey",
-            "logo": "assets/img/company/ucm.png",
+            "logo": "assets/img/company/ucm.webp",
             "logoWide": true,
             "logoDark": true,
             "desc": "Diplômé en Ingénierie Informatique et complété une année académique de Comptabilité et Finance.",

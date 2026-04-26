@@ -68,6 +68,7 @@
             "contact_shortcut": "Перейти к разделу контактов",
             "open_github": "Открыть профиль GitHub в новой вкладке",
             "open_linkedin": "Открыть профиль LinkedIn в новой вкладке",
+            "open_x": "Открыть профиль X в новой вкладке",
             "open_instagram": "Открыть профиль Instagram в новой вкладке",
             "view_live_project": "Открыть проект в новой вкладке",
             "view_repository": "Открыть репозиторий в новой вкладке",
@@ -162,7 +163,7 @@
         {
             "date": "Март 2024 - Настоящее время",
             "title": "Разработчик программного обеспечения @ Ladetec",
-            "logo": "assets/img/company/ladetec.png",
+            "logo": "assets/img/company/ladetec.webp",
             "desc": "Интеграция API (Bigcommerce, KillBill) и разработка ERP-систем с использованием Django, Vue.js, Svelte и Node.js.",
             "links": [
                 {
@@ -174,7 +175,7 @@
         {
             "date": "Март 2024 - Август 2024",
             "title": "Сопровождение программного обеспечения @ TOWIT Houston",
-            "logo": "assets/img/company/towithuston.jpg",
+            "logo": "assets/img/company/towithuston.webp",
             "desc": "Исправлял ошибки и добавлял новые функции в систему управления компании, повышая стабильность и улучшая повседневную работу.",
             "links": [
                 {
@@ -214,7 +215,7 @@
         {
             "date": "Сентябрь 2019 - Январь 2024",
             "title": "Компьютерная инженерия @ Университет Камагуэя",
-            "logo": "assets/img/company/ucm.png",
+            "logo": "assets/img/company/ucm.webp",
             "logoWide": true,
             "logoDark": true,
             "desc": "Окончил специальность «Компьютерная инженерия» и также прошёл один учебный год по направлению бухгалтерского учёта и финансов.",

@@ -68,6 +68,7 @@
             "contact_shortcut": "跳转到联系部分",
             "open_github": "在新标签页打开 GitHub 主页",
             "open_linkedin": "在新标签页打开 LinkedIn 主页",
+            "open_x": "在新标签页打开 X 主页",
             "open_instagram": "在新标签页打开 Instagram 主页",
             "view_live_project": "在新标签页打开在线项目",
             "view_repository": "在新标签页打开代码仓库",
@@ -162,7 +163,7 @@
         {
             "date": "2024年3月 - 至今",
             "title": "软件开发者 @ Ladetec",
-            "logo": "assets/img/company/ladetec.png",
+            "logo": "assets/img/company/ladetec.webp",
             "desc": "使用Django、Vue.js、Svelte和Node.js进行API集成（Bigcommerce、KillBill）和ERP开发。",
             "links": [
                 {
@@ -174,7 +175,7 @@
         {
             "date": "2024年3月 - 2024年8月",
             "title": "软件维护 @ TOWIT Houston",
-            "logo": "assets/img/company/towithuston.jpg",
+            "logo": "assets/img/company/towithuston.webp",
             "desc": "为公司管理软件修复缺陷并开发新功能，提高了系统稳定性和日常运营效率。",
             "links": [
                 {
@@ -214,7 +215,7 @@
         {
             "date": "2019年9月 - 2024年1月",
             "title": "计算机工程 @ Universidad de Camagüey",
-            "logo": "assets/img/company/ucm.png",
+            "logo": "assets/img/company/ucm.webp",
             "logoWide": true,
             "logoDark": true,
             "desc": "计算机工程专业毕业，并完成了一学年的会计与金融课程。",

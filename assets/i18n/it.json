@@ -68,6 +68,7 @@
             "contact_shortcut": "Vai alla sezione contatti",
             "open_github": "Apri il profilo GitHub in una nuova scheda",
             "open_linkedin": "Apri il profilo LinkedIn in una nuova scheda",
+            "open_x": "Apri il profilo X in una nuova scheda",
             "open_instagram": "Apri il profilo Instagram in una nuova scheda",
             "view_live_project": "Apri il progetto live in una nuova scheda",
             "view_repository": "Apri il repository in una nuova scheda",
@@ -162,7 +163,7 @@
         {
             "date": "Mar 2024 - Presente",
             "title": "Sviluppatore Software @ Ladetec",
-            "logo": "assets/img/company/ladetec.png",
+            "logo": "assets/img/company/ladetec.webp",
             "desc": "Integrazione API (Bigcommerce, KillBill) e sviluppo ERP con Django, Vue.js, Svelte e Node.js.",
             "links": [
                 {
@@ -174,7 +175,7 @@
         {
             "date": "Mar 2024 - Ago 2024",
             "title": "Manutenzione Software @ TOWIT Houston",
-            "logo": "assets/img/company/towithuston.jpg",
+            "logo": "assets/img/company/towithuston.webp",
             "desc": "Correzioni di bug e nuove funzionalità per il software gestionale aziendale, migliorando la stabilità e le operazioni quotidiane.",
             "links": [
                 {
@@ -214,7 +215,7 @@
         {
             "date": "Set 2019 - Gen 2024",
             "title": "Ingegneria Informatica @ Universidad de Camagüey",
-            "logo": "assets/img/company/ucm.png",
+            "logo": "assets/img/company/ucm.webp",
             "logoWide": true,
             "logoDark": true,
             "desc": "Laureato in Ingegneria Informatica e completato un anno accademico di Contabilità e Finanza.",
