@@ -84,6 +84,7 @@
         "common": {
             "view_project": "Ver",
             "repository": "Código",
+            "coming_soon_title": "Yo casi ya",
             "coming_soon": "Yo trabajar duro. Tú esperar pronto."
         }
     },

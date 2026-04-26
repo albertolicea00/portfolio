@@ -84,6 +84,7 @@
         "common": {
             "view_project": "查看项目",
             "repository": "代码仓库",
+            "coming_soon_title": "即将推出",
             "coming_soon": "我正在打磨最新项目以确保达到最高质量。敬请期待完整发布！"
         }
     },

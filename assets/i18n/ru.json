@@ -1,0 +1,229 @@
+{
+    "home": {
+        "nav": {
+            "home": "Главная",
+            "projects": "Проекты",
+            "experience": "Опыт",
+            "allwork": "Приложения",
+            "contact": "Контакты"
+        },
+        "hero": {
+            "subtitle": "Fullstack веб и мобильный разработчик<br>Графический дизайнер",
+            "bio": "6 лет превращаю кофе в качественный код.",
+            "cta": "Смотреть проекты",
+            "contact": "Связаться со мной",
+            "download_cv": "Скачать резюме"
+        },
+        "projects_section": {
+            "title": "Последние проекты",
+            "subtitle": "Новые и интересные проекты готовятся. Оставайтесь с нами!",
+            "view_all": "Смотреть все приложения"
+        },
+        "experience_section": {
+            "title": "Опыт",
+            "subtitle": "Мой профессиональный путь в сфере технологий."
+        },
+        "about_section": {
+            "title": "Обо мне",
+            "p1": "Я человек, который любит жизнь, всегда с улыбкой и готов к новым вызовам, превращая идеи в реальность. Мне нравится учиться, развиваться и вносить вклад в каждый проект, в котором я участвую. Всегда готов к следующему приключению!",
+            "p2": "🌱 Сейчас углубляюсь в <strong>машинное обучение и ИИ</strong>. ⚡ Также создаю 🎨 <strong>2D-дизайн, ⚒️ 3D-модели и 🕹️ игры</strong>.",
+            "stats": {
+                "years": "Опыт (лет)",
+                "commitment": "Вовлечённость"
+            }
+        },
+        "contact_section": {
+            "title": "Давайте работать вместе",
+            "desc": "Хотите сотрудничать или нанять меня для вашего следующего проекта? Напишите мне, и я отвечу как можно скорее.",
+            "labels": {
+                "name": "Имя",
+                "email": "Email",
+                "message": "Сообщение"
+            },
+            "placeholders": {
+                "name": "Ваше имя",
+                "email": "Ваш email",
+                "message": "Детали проекта / сообщение"
+            },
+            "form_help": "Форма обратной связи временно недоступна. Используйте социальные сети или скачайте резюме, чтобы связаться.",
+            "submit_btn": "Форма недоступна",
+            "success_msg": "Сообщение отправлено! Я скоро свяжусь с вами."
+        },
+        "footer": {
+            "rights": "Сделано с ❤️ @albertolicea00"
+        },
+        "accessibility": {
+            "skip_to_content": "Перейти к основному содержимому",
+            "keyboard_help": "Используйте клавишу Tab для перемещения по ссылкам, кнопкам и полям формы. Подсказки появляются при наведении или фокусе.",
+            "navigation": "Основная навигация",
+            "open_menu": "Открыть меню",
+            "close_menu": "Закрыть меню",
+            "theme_to_light": "Переключить на светлую тему",
+            "theme_to_dark": "Переключить на тёмную тему",
+            "language_to_english": "Переключить язык на английский",
+            "language_to_spanish": "Переключить язык на испанский",
+            "scroll_to_projects": "Перейти к разделу проектов",
+            "download_cv": "Скачать резюме в PDF",
+            "all_projects": "Просмотреть все приложения",
+            "contact_shortcut": "Перейти к разделу контактов",
+            "open_github": "Открыть профиль GitHub в новой вкладке",
+            "open_linkedin": "Открыть профиль LinkedIn в новой вкладке",
+            "open_instagram": "Открыть профиль Instagram в новой вкладке",
+            "view_live_project": "Открыть проект в новой вкладке",
+            "view_repository": "Открыть репозиторий в новой вкладке",
+            "view_company_site": "Открыть сайт в новой вкладке",
+            "technologies_used": "Используемые технологии",
+            "opens_new_tab": "Открывается в новой вкладке",
+            "theme_enabled_dark": "Тёмная тема включена",
+            "theme_enabled_light": "Светлая тема включена",
+            "language_changed_english": "Язык переключён на английский",
+            "language_changed_spanish": "Язык переключён на испанский",
+            "menu_expanded": "Меню раскрыто",
+            "menu_collapsed": "Меню свернуто"
+        },
+        "common": {
+            "view_project": "Смотреть проект",
+            "repository": "Репозиторий",
+            "coming_soon_title": "Скоро",
+            "coming_soon": "Сейчас я дорабатываю и улучшаю свои последние проекты, чтобы они соответствовали самым высоким стандартам. Скоро всё будет доступно!"
+        }
+    },
+    "projects": [
+        {
+            "id": 1,
+            "title": "BettaHVAC Сервисы",
+            "description": "Масштабируемая корпоративная платформа для HVAC-услуг с автоматической генерацией предложений и управлением клиентами.",
+            "image": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "tags": [
+                "Svelte",
+                "Node.js",
+                "CSS"
+            ],
+            "githubUrl": "https://github.com/albertolicea00/bettahvac-landing",
+            "liveUrl": "https://www.bettahvacservices.com/",
+            "featured": false
+        },
+        {
+            "id": 2,
+            "title": "Безумства Мигелина",
+            "description": "Динамичная развлекательная лендинг-страница с погружающим дизайном и плавными анимациями.",
+            "image": "https://yt3.googleusercontent.com/xktD1rgu2QIivNnnDWVuYuFlchkfdH23Yp4YUbv1-7Y5LIJHLvgEHD-rOgwn8XEskC3vAGzTeg=s160-c-k-c0x00ffffff-no-rj",
+            "tags": [
+                "Astro",
+                "TypeScript",
+                "Tailwind CSS"
+            ],
+            "githubUrl": "https://github.com/albertolicea00/las-locuras-de-miguelin-landing",
+            "liveUrl": "https://las-locuras-de-miguelin-landing.vercel.app/",
+            "featured": false
+        },
+        {
+            "id": 3,
+            "title": "Kristoff Лендинг",
+            "description": "Современная лендинг-страница для VOD-платформы с упором на UX/UI и сторителлинг бренда.",
+            "image": "https://yt3.googleusercontent.com/_nwkuUvKJT-ztrUNH1bymp7trvZfDXp07UVV7NJNv-Zfws0Wpnlla9nExFRhYSVNAMeKxt9AHA=s160-c-k-c0x00ffffff-no-rj",
+            "tags": [
+                "Astro",
+                "TypeScript",
+                "Tailwind CSS"
+            ],
+            "githubUrl": "https://github.com/albertolicea00/kristoff-landing",
+            "liveUrl": "https://kristoff-landing.vercel.app/",
+            "featured": false
+        },
+        {
+            "id": 4,
+            "title": "Система удалённого банкинга",
+            "description": "Надёжное цифровое банковское решение с упором на безопасность, удалённые операции и высокую производительность.",
+            "image": "https://github.com/albertolicea00/Banca_Remota/blob/main/Banca_Remota.xcassets/Logo.imageset/logo.png?raw=true",
+            "tags": [
+                "Swift",
+                "iOS"
+            ],
+            "githubUrl": "https://github.com/albertolicea00/Banca_Remota",
+            "liveUrl": "https://github.com/albertolicea00/Banca_Remota",
+            "featured": false
+        }
+    ],
+    "experience": [
+        {
+            "date": "Настоящее время",
+            "title": "PinkzebraHome - Конфиденциально",
+            "logo": "assets/img/company/pinkzebrahome.webp",
+            "logoWide": true,
+            "desc": "В настоящее время разрабатываю приватный проект с большим потенциалом. Скоро будет что-то большое...",
+            "links": [
+                {
+                    "url": "https://pinkzebrahome.com?repid=1198544",
+                    "label": "PinkzebraHome"
+                }
+            ]
+        },
+        {
+            "date": "Март 2024 - Настоящее время",
+            "title": "Разработчик программного обеспечения @ Ladetec",
+            "logo": "assets/img/company/ladetec.png",
+            "desc": "Интеграция API (Bigcommerce, KillBill) и разработка ERP-систем с использованием Django, Vue.js, Svelte и Node.js.",
+            "links": [
+                {
+                    "url": "https://www.ladetec.com/",
+                    "label": "Ladetec"
+                }
+            ]
+        },
+        {
+            "date": "Март 2024 - Август 2024",
+            "title": "Сопровождение программного обеспечения @ TOWIT Houston",
+            "logo": "assets/img/company/towithuston.jpg",
+            "desc": "Исправлял ошибки и добавлял новые функции в систему управления компании, повышая стабильность и улучшая повседневную работу.",
+            "links": [
+                {
+                    "url": "https://towithouston.com/",
+                    "label": "TOWIT Houston"
+                }
+            ]
+        },
+        {
+            "date": "Март 2022 - Февраль 2024",
+            "title": "Менеджер IT-поддержки @ Wateke Soluciones",
+            "logo": "assets/img/company/wateketech.svg",
+            "logoWide": true,
+            "logoLight": true,
+            "desc": "Разрабатывал индивидуальные ERP и CMS-системы с использованием Laravel и Livewire. Управлял сайтами WordPress и пользовательскими плагинами.",
+            "links": [
+                {
+                    "url": "https://wateke.tech/",
+                    "label": "Wateke Soluciones Tecnológicas"
+                }
+            ]
+        },
+        {
+            "date": "Январь 2022 - Февраль 2024",
+            "title": "Внешний сотрудник @ Wateke Travel",
+            "logo": "assets/img/company/wateketravel.png",
+            "logoWide": true,
+            "logoDark": true,
+            "desc": "Создавал мобильные приложения на Apache Cordova и занимался интерактивной анимацией логотипов с использованием After Effects.",
+            "links": [
+                {
+                    "url": "https://wateke.travel/",
+                    "label": "Wateke Travel"
+                }
+            ]
+        },
+        {
+            "date": "Сентябрь 2019 - Январь 2024",
+            "title": "Компьютерная инженерия @ Университет Камагуэя",
+            "logo": "assets/img/company/ucm.png",
+            "logoWide": true,
+            "logoDark": true,
+            "desc": "Окончил специальность «Компьютерная инженерия» и также прошёл один учебный год по направлению бухгалтерского учёта и финансов.",
+            "links": [
+                {
+                    "url": "https://www.reduc.edu.cu/",
+                    "label": "Университет Камагуэя"
+                }
+            ]
+        }
+    ]
+}

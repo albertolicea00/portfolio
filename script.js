@@ -4,7 +4,7 @@
  * Auto-detects browser language (navigator.language) with fallback to 'en'.
  */
 
-const SUPPORTED_LANGS = ['en', 'en.cav', 'es', 'es.cav', 'de', 'fr', 'it', 'ja', 'ko', 'pt', 'zh'];
+const SUPPORTED_LANGS = ['en', 'en.cav', 'es', 'es.cav', 'de', 'fr', 'it', 'ja', 'ko', 'pt', 'ru', 'zh'];
 const FALLBACK_LANG = 'en';
 const LANGUAGE_CONTROL_LABELS = {
     en: 'Select language',
@@ -15,6 +15,7 @@ const LANGUAGE_CONTROL_LABELS = {
     ja: '\u8a00\u8a9e\u3092\u9078\u629e',
     ko: '\uc5b8\uc5b4 \uc120\ud0dd',
     pt: 'Selecionar idioma',
+    ru: '\u0412\u044b\u0431\u0440\u0430\u0442\u044c \u044f\u0437\u044b\u043a',
     zh: '\u9009\u62e9\u8bed\u8a00'
 };
 const LANGUAGE_CHANGED_LABELS = {
@@ -28,6 +29,7 @@ const LANGUAGE_CHANGED_LABELS = {
     ja: '\u65e5\u672c\u8a9e\u306b\u5909\u66f4\u3057\u307e\u3057\u305f',
     ko: '\ud55c\uad6d\uc5b4\ub85c \ubcc0\uacbd\ub418\uc5c8\uc2b5\ub2c8\ub2e4',
     pt: 'Idioma alterado para portugu\u00eas',
+    ru: '\u042f\u0437\u044b\u043a \u043f\u0435\u0440\u0435\u043a\u043b\u044e\u0447\u0451\u043d \u043d\u0430 \u0440\u0443\u0441\u0441\u043a\u0438\u0439',
     zh: '\u8bed\u8a00\u5df2\u5207\u6362\u4e3a\u4e2d\u6587'
 };
 const TOKEN_SAVER_VARIANTS = {
@@ -303,6 +305,7 @@ function renderProjects() {
     const liveProjectA11y = getLocalizedText('home.accessibility.view_live_project', 'Open live project in a new tab');
     const repoA11y = getLocalizedText('home.accessibility.view_repository', 'Open repository in a new tab');
     const technologiesLabel = getLocalizedText('home.accessibility.technologies_used', 'Technologies used');
+    const comingSoonTitle = getLocalizedText('home.common.coming_soon_title', 'Coming Soon');
     const comingSoonText = getLocalizedText('home.common.coming_soon', 'Coming soon!');
 
     containers.forEach(item => {
@@ -316,7 +319,7 @@ function renderProjects() {
             comingSoon.style.cssText = 'padding:4rem;width:100%;grid-column:1/-1;text-align:center';
             comingSoon.innerHTML = `
                 <i class="fas fa-tools" style="font-size:3rem;color:var(--brand-yellow);margin-bottom:2rem;display:block;" aria-hidden="true"></i>
-                <h3 style="font-size:1.8rem;margin-bottom:1rem;">Coming Soon</h3>
+                <h3 style="font-size:1.8rem;margin-bottom:1rem;">${comingSoonTitle}</h3>
                 <p style="opacity:0.8;font-size:1.1rem;">${comingSoonText}</p>
             `;
             item.el.appendChild(comingSoon);

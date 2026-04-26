@@ -84,6 +84,7 @@
         "common": {
             "view_project": "프로젝트 보기",
             "repository": "저장소",
+            "coming_soon_title": "곧 공개",
             "coming_soon": "최신 프로젝트를 최고의 품질로 마무리하는 중입니다. 곧 전체 공개를 기대해 주세요!"
         }
     },

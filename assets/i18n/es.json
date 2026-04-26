@@ -84,6 +84,7 @@
         "common": {
             "view_project": "Ver Proyecto",
             "repository": "Repositorio",
+            "coming_soon_title": "Próximamente",
             "coming_soon": "Estoy terminando de pulir y retocar mis últimos proyectos para que queden perfectos antes de incluirlos aquí. ¡Vuelve pronto para ver el resultado!"
         }
     },

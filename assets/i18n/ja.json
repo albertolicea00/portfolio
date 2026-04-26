@@ -84,6 +84,7 @@
         "common": {
             "view_project": "プロジェクトを見る",
             "repository": "リポジトリ",
+            "coming_soon_title": "近日公開",
             "coming_soon": "現在、最新プロジェクトを最高の品質に仕上げるために調整中です。近日公開をお楽しみに！"
         }
     },
