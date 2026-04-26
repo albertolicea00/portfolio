@@ -684,6 +684,23 @@ textarea:focus-visible {
   flex: 0 0 auto;
   fill: currentColor;
   display: block;
+  transform-origin: center;
+}
+
+.social-icon[data-social="github"] .social-icon-svg {
+  transform: scale(1.9);
+}
+
+.social-icon[data-social="linkedin"] .social-icon-svg {
+  transform: scale(2.0);
+}
+
+.social-icon[data-social="x"] .social-icon-svg {
+  transform: scale(1.3);
+}
+
+.social-icon[data-social="instagram"] .social-icon-svg {
+  transform: scale(1.5);
 }
 
 .social-icon:hover,
