@@ -273,6 +273,7 @@ textarea:focus-visible {
 .controls-container {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 0.8rem;
 }
 
@@ -331,6 +332,10 @@ textarea:focus-visible {
   transition: var(--transition-smooth);
 }
 
+.lang-option-main {
+  white-space: nowrap;
+}
+
 .lang-dropdown li:hover {
   background: rgba(255, 200, 0, 0.15);
   color: var(--brand-yellow);
@@ -344,6 +349,39 @@ textarea:focus-visible {
 
 .lang-dropdown li[aria-selected="true"] {
   color: var(--brand-yellow);
+}
+
+.lang-variant-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0.5rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 200, 0, 0.22);
+  background: rgba(255, 200, 0, 0.08);
+  color: var(--brand-yellow-darker);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.lang-variant-toggle.is-visible {
+  display: inline-flex;
+}
+
+.lang-variant-toggle:hover,
+.lang-variant-toggle:focus-visible {
+  background: rgba(255, 200, 0, 0.16);
+  border-color: rgba(255, 200, 0, 0.36);
+  box-shadow: 0 0 12px rgba(255, 200, 0, 0.12);
+}
+
+.lang-variant-toggle.is-active {
+  background: rgba(255, 200, 0, 0.2);
+  color: var(--text-main);
 }
 
 .theme-toggle:hover,

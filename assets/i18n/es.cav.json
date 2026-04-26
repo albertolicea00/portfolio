@@ -1,0 +1,228 @@
+{
+    "home": {
+        "nav": {
+            "home": "Yo inicio",
+            "projects": "Yo proyectos",
+            "experience": "Yo experiencia",
+            "allwork": "Yo apps",
+            "contact": "Yo contacto"
+        },
+        "hero": {
+            "subtitle": "Yo hacer web y móvil<br>Yo diseñador",
+            "bio": "6 años. Yo café. Yo código.",
+            "cta": "Yo ver proyectos",
+            "contact": "Yo hablar",
+            "download_cv": "Yo bajar CV"
+        },
+        "projects_section": {
+            "title": "Yo proyectos",
+            "subtitle": "Yo hacer cosas nuevas. Tú esperar.",
+            "view_all": "Yo ver todo"
+        },
+        "experience_section": {
+            "title": "Yo experiencia",
+            "subtitle": "Yo caminar mundo tecnología."
+        },
+        "about_section": {
+            "title": "Yo ser",
+            "p1": "Yo feliz. Yo sonrisa. Yo enfrentar retos. Yo hacer ideas realidad. Yo aprender siempre. Yo crecer fuerte.",
+            "p2": "🌱 Yo aprender Machine Learning e IA. ⚡ Yo hacer 🎨 diseño 2D, ⚒️ 3D y 🕹️ juegos.",
+            "stats": {
+                "years": "6 años",
+                "commitment": "Fuerza"
+            }
+        },
+        "contact_section": {
+            "title": "Yo trabajar contigo",
+            "desc": "Tú querer proyecto. Tú escribir. Yo responder rápido.",
+            "labels": {
+                "name": "Nombre",
+                "email": "Correo",
+                "message": "Mensaje"
+            },
+            "placeholders": {
+                "name": "Tú nombre",
+                "email": "Tú correo",
+                "message": "Tú proyecto / mensaje"
+            },
+            "form_help": "Formulario no funcionar. Tú usar otra cosa.",
+            "submit_btn": "No funcionar",
+            "success_msg": "Mensaje enviado. Yo venir pronto."
+        },
+        "footer": {
+            "rights": "Hecho con ❤️ por humano fuerte"
+        },
+        "accessibility": {
+            "skip_to_content": "Ir contenido",
+            "keyboard_help": "Tú usar teclado. Tú mover.",
+            "navigation": "Mover",
+            "open_menu": "Abrir",
+            "close_menu": "Cerrar",
+            "theme_to_light": "Claro",
+            "theme_to_dark": "Oscuro",
+            "language_to_english": "Idioma inglés",
+            "language_to_spanish": "Idioma español",
+            "scroll_to_projects": "Ir proyectos",
+            "download_cv": "Bajar CV",
+            "all_projects": "Ver todo",
+            "contact_shortcut": "Ir contacto",
+            "open_github": "Abrir GitHub",
+            "open_linkedin": "Abrir LinkedIn",
+            "open_instagram": "Abrir Instagram",
+            "view_live_project": "Abrir proyecto",
+            "view_repository": "Abrir código",
+            "view_company_site": "Abrir sitio",
+            "technologies_used": "Tecnología",
+            "opens_new_tab": "Nueva ventana",
+            "theme_enabled_dark": "Oscuro activo",
+            "theme_enabled_light": "Claro activo",
+            "language_changed_english": "Cambio inglés",
+            "language_changed_spanish": "Cambio español",
+            "menu_expanded": "Menú abierto",
+            "menu_collapsed": "Menú cerrado"
+        },
+        "common": {
+            "view_project": "Ver",
+            "repository": "Código",
+            "coming_soon": "Yo trabajar duro. Tú esperar pronto."
+        }
+    },
+    "projects": [
+        {
+            "id": 1,
+            "title": "Yo HVAC",
+            "description": "Yo hacer sistema grande. Cliente feliz. Máquina funcionar.",
+            "image": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "tags": [
+                "Yo Svelte",
+                "Yo Node",
+                "Yo CSS"
+            ],
+            "githubUrl": "https://github.com/albertolicea00/bettahvac-landing",
+            "liveUrl": "https://www.bettahvacservices.com/",
+            "featured": false
+        },
+        {
+            "id": 2,
+            "title": "Yo Miguelín loco",
+            "description": "Yo hacer página divertida. Animación moverse bonito.",
+            "image": "https://yt3.googleusercontent.com/xktD1rgu2QIivNnnDWVuYuFlchkfdH23Yp4YUbv1-7Y5LIJHLvgEHD-rOgwn8XEskC3vAGzTeg=s160-c-k-c0x00ffffff-no-rj",
+            "tags": [
+                "Yo Astro",
+                "Yo TypeScript",
+                "Yo Tailwind"
+            ],
+            "githubUrl": "https://github.com/albertolicea00/las-locuras-de-miguelin-landing",
+            "liveUrl": "https://las-locuras-de-miguelin-landing.vercel.app/",
+            "featured": false
+        },
+        {
+            "id": 3,
+            "title": "Yo Kristoff",
+            "description": "Yo hacer página bonita. Usuario feliz. Marca fuerte.",
+            "image": "https://yt3.googleusercontent.com/_nwkuUvKJT-ztrUNH1bymp7trvZfDXp07UVV7NJNv-Zfws0Wpnlla9nExFRhYSVNAMeKxt9AHA=s160-c-k-c0x00ffffff-no-rj",
+            "tags": [
+                "Yo Astro",
+                "Yo TypeScript",
+                "Yo Tailwind"
+            ],
+            "githubUrl": "https://github.com/albertolicea00/kristoff-landing",
+            "liveUrl": "https://kristoff-landing.vercel.app/",
+            "featured": false
+        },
+        {
+            "id": 4,
+            "title": "Yo banca",
+            "description": "Yo hacer sistema fuerte. Seguro. Rápido.",
+            "image": "https://github.com/albertolicea00/Banca_Remota/blob/main/Banca_Remota.xcassets/Logo.imageset/logo.png?raw=true",
+            "tags": [
+                "Yo Swift",
+                "Yo iOS"
+            ],
+            "githubUrl": "https://github.com/albertolicea00/Banca_Remota",
+            "liveUrl": "https://github.com/albertolicea00/Banca_Remota",
+            "featured": false
+        }
+    ],
+    "experience": [
+        {
+            "date": "Ahora",
+            "title": "Proyecto secreto",
+            "logo": "assets/img/company/pinkzebrahome.webp",
+            "logoWide": true,
+            "desc": "Yo hacer cosa grande. Tú esperar.",
+            "links": [
+                {
+                    "url": "https://pinkzebrahome.com?repid=1198544",
+                    "label": "PinkzebraHome"
+                }
+            ]
+        },
+        {
+            "date": "2024 - Ahora",
+            "title": "Yo programar @ Ladetec",
+            "logo": "assets/img/company/ladetec.png",
+            "desc": "Yo conectar APIs. Yo hacer ERP. Yo usar Django, Vue, Node.",
+            "links": [
+                {
+                    "url": "https://www.ladetec.com/",
+                    "label": "Ladetec"
+                }
+            ]
+        },
+        {
+            "date": "2024",
+            "title": "Yo arreglar software @ TOWIT",
+            "logo": "assets/img/company/towithuston.jpg",
+            "desc": "Yo arreglar bugs. Yo hacer mejora. Sistema mejor.",
+            "links": [
+                {
+                    "url": "https://towithouston.com/",
+                    "label": "TOWIT"
+                }
+            ]
+        },
+        {
+            "date": "2022 - 2024",
+            "title": "Yo IT @ Wateke",
+            "logo": "assets/img/company/wateketech.svg",
+            "logoWide": true,
+            "logoLight": true,
+            "desc": "Yo hacer ERP, CMS. Yo manejar WordPress.",
+            "links": [
+                {
+                    "url": "https://wateke.tech/",
+                    "label": "Wateke"
+                }
+            ]
+        },
+        {
+            "date": "2022 - 2024",
+            "title": "Yo ayudar @ Travel",
+            "logo": "assets/img/company/wateketravel.png",
+            "logoWide": true,
+            "logoDark": true,
+            "desc": "Yo hacer apps. Yo animar logos.",
+            "links": [
+                {
+                    "url": "https://wateke.travel/",
+                    "label": "Wateke Travel"
+                }
+            ]
+        },
+        {
+            "date": "2019 - 2024",
+            "title": "Yo estudiar",
+            "logo": "assets/img/company/ucm.png",
+            "logoWide": true,
+            "logoDark": true,
+            "desc": "Yo aprender informática. Yo aprender números también.",
+            "links": [
+                {
+                    "url": "https://www.reduc.edu.cu/",
+                    "label": "Universidad"
+                }
+            ]
+        }
+    ]
+}

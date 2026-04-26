@@ -4,7 +4,7 @@
  * Auto-detects browser language (navigator.language) with fallback to 'en'.
  */
 
-const SUPPORTED_LANGS = ['en', 'es', 'de', 'fr', 'it', 'ja', 'ko', 'pt', 'zh'];
+const SUPPORTED_LANGS = ['en', 'en.cav', 'es', 'es.cav', 'de', 'fr', 'it', 'ja', 'ko', 'pt', 'zh'];
 const FALLBACK_LANG = 'en';
 const LANGUAGE_CONTROL_LABELS = {
     en: 'Select language',
@@ -19,7 +19,9 @@ const LANGUAGE_CONTROL_LABELS = {
 };
 const LANGUAGE_CHANGED_LABELS = {
     en: 'Language changed to English',
+    'en.cav': 'Caveman English active',
     es: 'Idioma cambiado a espa\u00f1ol',
+    'es.cav': 'Espa\u00f1ol cavern\u00edcola activo',
     de: 'Sprache auf Deutsch ge\u00e4ndert',
     fr: 'Langue chang\u00e9e en fran\u00e7ais',
     it: 'Lingua cambiata in italiano',
@@ -28,10 +30,32 @@ const LANGUAGE_CHANGED_LABELS = {
     pt: 'Idioma alterado para portugu\u00eas',
     zh: '\u8bed\u8a00\u5df2\u5207\u6362\u4e3a\u4e2d\u6587'
 };
+const TOKEN_SAVER_VARIANTS = {
+    en: {
+        variant: 'en.cav',
+        label: '\ud83e\uddb4 Save tokens',
+        activateLabel: 'Switch to Caveman English',
+        deactivateLabel: 'Switch back to standard English'
+    },
+    es: {
+        variant: 'es.cav',
+        label: '\ud83e\udea8 Ahorra tokens',
+        activateLabel: 'Cambiar a espa\u00f1ol cavern\u00edcola',
+        deactivateLabel: 'Volver a espa\u00f1ol est\u00e1ndar'
+    }
+};
 
 let siteData = null;
 let currentLang = detectLanguage();
 let currentTheme = localStorage.getItem('theme') || 'dark';
+
+function getBaseLanguage(lang = currentLang) {
+    return lang.split('.')[0];
+}
+
+function getLanguageConfigValue(map, lang = currentLang) {
+    return map[lang] || map[getBaseLanguage(lang)] || map[FALLBACK_LANG];
+}
 
 function detectLanguage() {
     const saved = localStorage.getItem('lang');
@@ -46,6 +70,11 @@ async function loadLanguage(lang) {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         return await res.json();
     } catch {
+        const baseLang = getBaseLanguage(lang);
+        if (lang !== baseLang) {
+            console.warn(`Failed to load i18n/${lang}.json, falling back to ${baseLang}`);
+            return loadLanguage(baseLang);
+        }
         if (lang !== FALLBACK_LANG) {
             console.warn(`Failed to load i18n/${lang}.json, falling back to ${FALLBACK_LANG}`);
             return loadLanguage(FALLBACK_LANG);
@@ -129,8 +158,13 @@ function getLanguageElements() {
     return { langToggle, langDropdown, langOptions };
 }
 
+function getTokenSaverElements() {
+    const tokenSaverToggle = document.getElementById('lang-variant-toggle');
+    return { tokenSaverToggle };
+}
+
 function getLanguageControlLabel() {
-    return LANGUAGE_CONTROL_LABELS[currentLang] || LANGUAGE_CONTROL_LABELS[FALLBACK_LANG];
+    return getLanguageConfigValue(LANGUAGE_CONTROL_LABELS);
 }
 
 function setLanguageMenuState(isOpen) {
@@ -142,15 +176,51 @@ function setLanguageMenuState(isOpen) {
 
 function focusLanguageOption(targetLang = currentLang) {
     const { langOptions } = getLanguageElements();
-    const targetOption = langOptions.find(option => option.dataset.lang === targetLang) || langOptions[0];
+    const targetOption = (
+        langOptions.find(option => option.dataset.lang === targetLang)
+        || langOptions.find(option => option.dataset.lang === getBaseLanguage(targetLang))
+        || langOptions[0]
+    );
     targetOption?.focus();
+}
+
+function updateTokenSaverUI() {
+    const { tokenSaverToggle } = getTokenSaverElements();
+    if (!tokenSaverToggle) return;
+
+    const baseLang = getBaseLanguage(currentLang);
+    const tokenSaverConfig = TOKEN_SAVER_VARIANTS[baseLang];
+
+    if (!tokenSaverConfig) {
+        tokenSaverToggle.hidden = true;
+        tokenSaverToggle.classList.remove('is-visible', 'is-active');
+        tokenSaverToggle.removeAttribute('aria-label');
+        tokenSaverToggle.removeAttribute('aria-pressed');
+        tokenSaverToggle.removeAttribute('data-tooltip');
+        return;
+    }
+
+    const isActive = currentLang === tokenSaverConfig.variant;
+    const actionLabel = isActive ? tokenSaverConfig.deactivateLabel : tokenSaverConfig.activateLabel;
+
+    tokenSaverToggle.hidden = false;
+    tokenSaverToggle.textContent = tokenSaverConfig.label;
+    tokenSaverToggle.classList.add('is-visible');
+    tokenSaverToggle.classList.toggle('is-active', isActive);
+    tokenSaverToggle.setAttribute('aria-label', actionLabel);
+    tokenSaverToggle.setAttribute('aria-pressed', String(isActive));
+    tokenSaverToggle.setAttribute('data-tooltip', actionLabel);
 }
 
 function updateLanguageUI() {
     const { langToggle, langDropdown, langOptions } = getLanguageElements();
     if (!langToggle || !langDropdown || !langOptions.length) return;
 
-    const selectedOption = langOptions.find(option => option.dataset.lang === currentLang) || langOptions[0];
+    const selectedOption = (
+        langOptions.find(option => option.dataset.lang === currentLang)
+        || langOptions.find(option => option.dataset.lang === getBaseLanguage(currentLang))
+        || langOptions[0]
+    );
 
     langOptions.forEach((option, index) => {
         if (!option.id) option.id = `lang-option-${option.dataset.lang || index}`;
@@ -159,12 +229,16 @@ function updateLanguageUI() {
     });
 
     const controlLabel = getLanguageControlLabel();
-    langToggle.textContent = selectedOption.textContent.trim();
+    const buttonLabel = selectedOption.dataset.buttonLabel
+        || selectedOption.querySelector('.lang-option-main')?.textContent.trim()
+        || selectedOption.textContent.trim();
+    langToggle.textContent = buttonLabel;
     langToggle.setAttribute('aria-label', controlLabel);
     langToggle.setAttribute('data-tooltip', controlLabel);
     langToggle.setAttribute('aria-expanded', String(langDropdown.classList.contains('is-open')));
     langDropdown.setAttribute('aria-label', controlLabel);
     langDropdown.setAttribute('aria-activedescendant', selectedOption.id);
+    updateTokenSaverUI();
 }
 
 async function changeLanguage(nextLang) {
@@ -182,11 +256,11 @@ async function changeLanguage(nextLang) {
     initLanguage();
     renderDynamicContent();
     syncAccessibilityUI();
-    announceStatus(LANGUAGE_CHANGED_LABELS[currentLang] || 'Language changed');
+    announceStatus(getLanguageConfigValue(LANGUAGE_CHANGED_LABELS) || 'Language changed');
 }
 
 function initLanguage() {
-    document.documentElement.lang = currentLang;
+    document.documentElement.lang = getBaseLanguage(currentLang);
     updatePageText();
     updateLanguageUI();
 }
@@ -448,6 +522,7 @@ function setupEventListeners() {
     const navLinks = document.querySelector('.nav-links');
     const langWrapper = document.querySelector('.lang-select-wrapper');
     const { langToggle, langDropdown, langOptions } = getLanguageElements();
+    const { tokenSaverToggle } = getTokenSaverElements();
 
     const setMenuState = (isOpen, shouldAnnounce = false) => {
         if (!navLinks || !menuToggle) return;
@@ -513,6 +588,16 @@ function setupEventListeners() {
         if (!option) return;
         await handleLanguageSelection(option.dataset.lang);
         langToggle?.focus();
+    });
+
+    tokenSaverToggle?.addEventListener('click', async () => {
+        const baseLang = getBaseLanguage(currentLang);
+        const tokenSaverConfig = TOKEN_SAVER_VARIANTS[baseLang];
+        if (!tokenSaverConfig) return;
+
+        const nextLang = currentLang === tokenSaverConfig.variant ? baseLang : tokenSaverConfig.variant;
+        await handleLanguageSelection(nextLang);
+        tokenSaverToggle.focus();
     });
 
     langDropdown?.addEventListener('keydown', async event => {

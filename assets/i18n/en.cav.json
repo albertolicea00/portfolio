@@ -1,0 +1,228 @@
+{
+    "home": {
+        "nav": {
+            "home": "Me home",
+            "projects": "Me projects",
+            "experience": "Me experience",
+            "allwork": "Me apps",
+            "contact": "Me contact"
+        },
+        "hero": {
+            "subtitle": "Me build web and mobile<br>Me make graphics",
+            "bio": "6 years. Me drink coffee. Me make code.",
+            "cta": "Me see projects",
+            "contact": "Talk to me",
+            "download_cv": "Me get CV"
+        },
+        "projects_section": {
+            "title": "Me projects",
+            "subtitle": "Me make new things. You wait.",
+            "view_all": "Me see all apps"
+        },
+        "experience_section": {
+            "title": "Me experience",
+            "subtitle": "Me walk tech path."
+        },
+        "about_section": {
+            "title": "About me",
+            "p1": "Me like life. Me smile. Me face big challenges. Me turn ideas into real things. Me learn. Me grow. Me help every project.",
+            "p2": "🌱 Me learn <strong>Machine Learning and AI</strong>. ⚡ Me also make 🎨 <strong>2D designs, ⚒️ 3D models & 🕹️ games</strong>.",
+            "stats": {
+                "years": "Years strong",
+                "commitment": "Strong promise"
+            }
+        },
+        "contact_section": {
+            "title": "Me work with you",
+            "desc": "You want project. You send message. Me answer fast.",
+            "labels": {
+                "name": "Name",
+                "email": "Email",
+                "message": "Message"
+            },
+            "placeholders": {
+                "name": "You name",
+                "email": "You email",
+                "message": "Project thing / Message"
+            },
+            "form_help": "Form no work now. You use social links or get CV.",
+            "submit_btn": "Form no work",
+            "success_msg": "Message sent! Me contact soon."
+        },
+        "footer": {
+            "rights": "Made with ❤️ by strong human"
+        },
+        "accessibility": {
+            "skip_to_content": "Go main thing",
+            "keyboard_help": "You use Tab key. You move through links and buttons.",
+            "navigation": "Main moving",
+            "open_menu": "Open menu",
+            "close_menu": "Close menu",
+            "theme_to_light": "Make light",
+            "theme_to_dark": "Make dark",
+            "language_to_english": "Make English",
+            "language_to_spanish": "Make Spanish",
+            "scroll_to_projects": "Go projects",
+            "download_cv": "Get CV PDF",
+            "all_projects": "See all apps",
+            "contact_shortcut": "Go contact",
+            "open_github": "Open GitHub",
+            "open_linkedin": "Open LinkedIn",
+            "open_instagram": "Open Instagram",
+            "view_live_project": "Open live thing",
+            "view_repository": "Open code cave",
+            "view_company_site": "Open website",
+            "technologies_used": "Tools used",
+            "opens_new_tab": "Open new tab",
+            "theme_enabled_dark": "Dark active",
+            "theme_enabled_light": "Light active",
+            "language_changed_english": "English active",
+            "language_changed_spanish": "Spanish active",
+            "menu_expanded": "Menu open",
+            "menu_collapsed": "Menu closed"
+        },
+        "common": {
+            "view_project": "See project",
+            "repository": "Code cave",
+            "coming_soon": "Me polish projects. Me make perfect. You come back soon."
+        }
+    },
+    "projects": [
+        {
+            "id": 1,
+            "title": "Me HVAC",
+            "description": "Me make big business platform. Quotes automatic. Customers managed.",
+            "image": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "tags": [
+                "Me Svelte",
+                "Me Node",
+                "Me CSS"
+            ],
+            "githubUrl": "https://github.com/albertolicea00/bettahvac-landing",
+            "liveUrl": "https://www.bettahvacservices.com/",
+            "featured": false
+        },
+        {
+            "id": 2,
+            "title": "Me Miguelín crazy",
+            "description": "Me make fun page. Big motion. Smooth moving.",
+            "image": "https://yt3.googleusercontent.com/xktD1rgu2QIivNnnDWVuYuFlchkfdH23Yp4YUbv1-7Y5LIJHLvgEHD-rOgwn8XEskC3vAGzTeg=s160-c-k-c0x00ffffff-no-rj",
+            "tags": [
+                "Me Astro",
+                "Me TypeScript",
+                "Me Tailwind"
+            ],
+            "githubUrl": "https://github.com/albertolicea00/las-locuras-de-miguelin-landing",
+            "liveUrl": "https://las-locuras-de-miguelin-landing.vercel.app/",
+            "featured": false
+        },
+        {
+            "id": 3,
+            "title": "Me Kristoff page",
+            "description": "Me make modern VOD page. User happy. Brand strong.",
+            "image": "https://yt3.googleusercontent.com/_nwkuUvKJT-ztrUNH1bymp7trvZfDXp07UVV7NJNv-Zfws0Wpnlla9nExFRhYSVNAMeKxt9AHA=s160-c-k-c0x00ffffff-no-rj",
+            "tags": [
+                "Me Astro",
+                "Me TypeScript",
+                "Me Tailwind"
+            ],
+            "githubUrl": "https://github.com/albertolicea00/kristoff-landing",
+            "liveUrl": "https://kristoff-landing.vercel.app/",
+            "featured": false
+        },
+        {
+            "id": 4,
+            "title": "Me bank system",
+            "description": "Me make strong digital bank. Safe. Remote. Fast.",
+            "image": "https://github.com/albertolicea00/Banca_Remota/blob/main/Banca_Remota.xcassets/Logo.imageset/logo.png?raw=true",
+            "tags": [
+                "Me Swift",
+                "Me iOS"
+            ],
+            "githubUrl": "https://github.com/albertolicea00/Banca_Remota",
+            "liveUrl": "https://github.com/albertolicea00/Banca_Remota",
+            "featured": false
+        }
+    ],
+    "experience": [
+        {
+            "date": "Now",
+            "title": "Secret project",
+            "logo": "assets/img/company/pinkzebrahome.webp",
+            "logoWide": true,
+            "desc": "Me build private big thing. Big thing come soon...",
+            "links": [
+                {
+                    "url": "https://pinkzebrahome.com?repid=1198544",
+                    "label": "PinkzebraHome"
+                }
+            ]
+        },
+        {
+            "date": "2024 - Now",
+            "title": "Me code @ Ladetec",
+            "logo": "assets/img/company/ladetec.png",
+            "desc": "Me connect APIs. Me build ERP. Me use Django, Vue, Svelte, Node.",
+            "links": [
+                {
+                    "url": "https://www.ladetec.com/",
+                    "label": "Ladetec"
+                }
+            ]
+        },
+        {
+            "date": "2024",
+            "title": "Me fix software @ TOWIT",
+            "logo": "assets/img/company/towithuston.jpg",
+            "desc": "Me fix bugs. Me add features. System more stable.",
+            "links": [
+                {
+                    "url": "https://towithouston.com/",
+                    "label": "TOWIT Houston"
+                }
+            ]
+        },
+        {
+            "date": "2022 - 2024",
+            "title": "Me IT support @ Wateke",
+            "logo": "assets/img/company/wateketech.svg",
+            "logoWide": true,
+            "logoLight": true,
+            "desc": "Me build ERP and CMS. Me manage WordPress and plugins.",
+            "links": [
+                {
+                    "url": "https://wateke.tech/",
+                    "label": "Wateke Soluciones Tecnológicas"
+                }
+            ]
+        },
+        {
+            "date": "2022 - 2024",
+            "title": "Me help @ Wateke Travel",
+            "logo": "assets/img/company/wateketravel.png",
+            "logoWide": true,
+            "logoDark": true,
+            "desc": "Me build mobile apps. Me animate logos.",
+            "links": [
+                {
+                    "url": "https://wateke.travel/",
+                    "label": "Wateke Travel"
+                }
+            ]
+        },
+        {
+            "date": "2019 - 2024",
+            "title": "Me study computer",
+            "logo": "assets/img/company/ucm.png",
+            "logoWide": true,
+            "logoDark": true,
+            "desc": "Me graduate Computer Engineering. Me also study money numbers one year.",
+            "links": [
+                {
+                    "url": "https://www.reduc.edu.cu/",
+                    "label": "Universidad de Camagüey"
+                }
+            ]
+        }
+    ]
+}
