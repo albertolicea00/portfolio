@@ -1,103 +1,103 @@
 {
     "home": {
         "nav": {
-            "home": "Yo inicio",
-            "projects": "Yo proyectos",
-            "experience": "Yo experiencia",
-            "allwork": "Yo apps",
-            "contact": "Yo contacto"
+            "home": "Cueva",
+            "projects": "Inventos",
+            "experience": "Batallas",
+            "allwork": "Cosas",
+            "contact": "Grito"
         },
         "hero": {
-            "subtitle": "Yo hacer web y móvil<br>Yo diseñador",
-            "bio": "6 años. Yo café. Yo código.",
-            "cta": "Yo ver proyectos",
-            "contact": "Yo hablar",
-            "download_cv": "Yo bajar CV"
+            "subtitle": "Hombre hacer web y móvil<br>También dibujar bonito",
+            "bio": "6 años. Mucho café. Mucho código. Poco dormir.",
+            "cta": "Ver inventos",
+            "contact": "Mandar señal de humo",
+            "download_cv": "Bajar pergamino CV"
         },
         "projects_section": {
-            "title": "Yo proyectos",
-            "subtitle": "Yo hacer cosas nuevas. Tú esperar.",
-            "view_all": "Yo ver todo"
+            "title": "Inventos recientes",
+            "subtitle": "Yo preparar cosas nuevas. Tú mirar luego. No tocar fuego.",
+            "view_all": "Ver todas las cosas"
         },
         "experience_section": {
-            "title": "Yo experiencia",
+            "title": "Batallas ganadas",
             "subtitle": "Yo caminar mundo tecnología."
         },
         "about_section": {
             "title": "Yo ser",
-            "p1": "Yo feliz. Yo sonrisa. Yo enfrentar retos. Yo hacer ideas realidad. Yo aprender siempre. Yo crecer fuerte.",
-            "p2": "🌱 Yo aprender Machine Learning e IA. ⚡ Yo hacer 🎨 diseño 2D, ⚒️ 3D y 🕹️ juegos.",
+            "p1": "Yo feliz. Yo sonrisa. Yo enfrentar retos. Ideas entrar en cabeza, hombre golpear teclado y hacerlas realidad.",
+            "p2": "🌱 Hombre aprender <strong>Machine Learning e IA</strong>. ⚡ También hacer 🎨 <strong>dibujos 2D, ⚒️ piedras 3D y 🕹️ juegos para tribu</strong>.",
             "stats": {
-                "years": "6 años",
-                "commitment": "Fuerza"
+                "years": "6 años de garrote",
+                "commitment": "Fuerza bruta"
             }
         },
         "contact_section": {
             "title": "Yo trabajar contigo",
             "desc": "Tú querer proyecto. Tú escribir. Yo responder rápido.",
             "labels": {
-                "name": "Nombre",
-                "email": "Correo",
-                "message": "Mensaje"
+                "name": "Nombre de humano",
+                "email": "Correo mágico",
+                "message": "Mensaje de tribu"
             },
             "placeholders": {
                 "name": "Tú nombre",
                 "email": "Tú correo",
-                "message": "Tú proyecto / mensaje"
+                "message": "Tú idea / problema / fuego"
             },
             "form_help": "Formulario no funcionar. Tú usar otra cosa.",
             "submit_btn": "No funcionar",
             "success_msg": "Mensaje enviado. Yo venir pronto."
         },
         "footer": {
-            "rights": "Hecho con ❤️ por humano fuerte"
+            "rights": "Hecho con ❤️ por humano fuerte @albertolicea00"
         },
         "accessibility": {
-            "skip_to_content": "Ir contenido",
-            "keyboard_help": "Tú usar teclado. Tú mover.",
-            "navigation": "Mover",
-            "open_menu": "Abrir",
-            "close_menu": "Cerrar",
-            "theme_to_light": "Claro",
-            "theme_to_dark": "Oscuro",
-            "language_to_english": "Idioma inglés",
-            "language_to_spanish": "Idioma español",
-            "scroll_to_projects": "Ir proyectos",
-            "download_cv": "Bajar CV",
-            "all_projects": "Ver todo",
-            "contact_shortcut": "Ir contacto",
-            "open_github": "Abrir GitHub",
-            "open_linkedin": "Abrir LinkedIn",
-            "open_instagram": "Abrir Instagram",
-            "view_live_project": "Abrir proyecto",
-            "view_repository": "Abrir código",
-            "view_company_site": "Abrir sitio",
-            "technologies_used": "Tecnología",
-            "opens_new_tab": "Nueva ventana",
-            "theme_enabled_dark": "Oscuro activo",
-            "theme_enabled_light": "Claro activo",
-            "language_changed_english": "Cambio inglés",
-            "language_changed_spanish": "Cambio español",
-            "menu_expanded": "Menú abierto",
-            "menu_collapsed": "Menú cerrado"
+            "skip_to_content": "Saltar a cosa importante",
+            "keyboard_help": "Usa Tab. Tecla mover humano por botones, enlaces y campos. Tooltip aparecer como magia.",
+            "navigation": "Mapa de cueva",
+            "open_menu": "Abrir piedra menú",
+            "close_menu": "Cerrar piedra menú",
+            "theme_to_light": "Hacer sol",
+            "theme_to_dark": "Hacer noche",
+            "language_to_english": "Hablar inglés",
+            "language_to_spanish": "Hablar español",
+            "scroll_to_projects": "Bajar a inventos",
+            "download_cv": "Bajar pergamino CV",
+            "all_projects": "Ver todas las cosas",
+            "contact_shortcut": "Ir a gritar mensaje",
+            "open_github": "Abrir cueva GitHub",
+            "open_linkedin": "Abrir cueva LinkedIn",
+            "open_instagram": "Abrir cueva Instagram",
+            "view_live_project": "Abrir invento vivo",
+            "view_repository": "Abrir piedras de código",
+            "view_company_site": "Abrir sitio de tribu",
+            "technologies_used": "Herramientas usadas",
+            "opens_new_tab": "Abre nueva cueva",
+            "theme_enabled_dark": "Noche activada",
+            "theme_enabled_light": "Sol activado",
+            "language_changed_english": "Ahora tribu habla inglés",
+            "language_changed_spanish": "Ahora tribu habla español",
+            "menu_expanded": "Menú grande abierto",
+            "menu_collapsed": "Menú pequeño cerrado"
         },
         "common": {
-            "view_project": "Ver",
-            "repository": "Código",
-            "coming_soon_title": "Yo casi ya",
-            "coming_soon": "Yo trabajar duro. Tú esperar pronto."
+            "view_project": "Ver invento",
+            "repository": "Cueva código",
+            "coming_soon_title": "Casi listo",
+            "coming_soon": "Hombre pulir inventos con piedra fina. Tú volver pronto y ver cosa brillante."
         }
     },
     "projects": [
         {
             "id": 1,
-            "title": "Yo HVAC",
-            "description": "Yo hacer sistema grande. Cliente feliz. Máquina funcionar.",
+            "title": "Servicio de BettaHVAC",
+            "description": "Hombre hacer sistema grande para aire frío y aire caliente. Cliente pedir precio. Máquina responder. Todos felices.",
             "image": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
             "tags": [
-                "Yo Svelte",
-                "Yo Node",
-                "Yo CSS"
+                "Svelte",
+                "Node.js",
+                "CSS"
             ],
             "githubUrl": "https://github.com/albertolicea00/bettahvac-landing",
             "liveUrl": "https://www.bettahvacservices.com/",
@@ -105,13 +105,13 @@
         },
         {
             "id": 2,
-            "title": "Yo Miguelín loco",
-            "description": "Yo hacer página divertida. Animación moverse bonito.",
+            "title": "Miguelín hacer locuras",
+            "description": "Página moverse mucho. Luces, colores, animación. Tribu mirar y decir: ugha, bonito.",
             "image": "https://yt3.googleusercontent.com/xktD1rgu2QIivNnnDWVuYuFlchkfdH23Yp4YUbv1-7Y5LIJHLvgEHD-rOgwn8XEskC3vAGzTeg=s160-c-k-c0x00ffffff-no-rj",
             "tags": [
-                "Yo Astro",
-                "Yo TypeScript",
-                "Yo Tailwind"
+                "Astro",
+                "TypeScript",
+                "Tailwind CSS"
             ],
             "githubUrl": "https://github.com/albertolicea00/las-locuras-de-miguelin-landing",
             "liveUrl": "https://las-locuras-de-miguelin-landing.vercel.app/",
@@ -119,13 +119,13 @@
         },
         {
             "id": 3,
-            "title": "Yo Kristoff",
-            "description": "Yo hacer página bonita. Usuario feliz. Marca fuerte.",
+            "title": "Kristoff página bonita",
+            "description": "Página moderna para videos. Usuario entrar, ver bonito, no perderse en selva.",
             "image": "https://yt3.googleusercontent.com/_nwkuUvKJT-ztrUNH1bymp7trvZfDXp07UVV7NJNv-Zfws0Wpnlla9nExFRhYSVNAMeKxt9AHA=s160-c-k-c0x00ffffff-no-rj",
             "tags": [
-                "Yo Astro",
-                "Yo TypeScript",
-                "Yo Tailwind"
+                "Astro",
+                "TypeScript",
+                "Tailwind CSS"
             ],
             "githubUrl": "https://github.com/albertolicea00/kristoff-landing",
             "liveUrl": "https://kristoff-landing.vercel.app/",
@@ -133,12 +133,12 @@
         },
         {
             "id": 4,
-            "title": "Yo banca",
-            "description": "Yo hacer sistema fuerte. Seguro. Rápido.",
+            "title": "Banco remoto de tribu",
+            "description": "Sistema de banco fuerte. Seguro como roca. Rápido como tigre con WiFi.",
             "image": "https://github.com/albertolicea00/Banca_Remota/blob/main/Banca_Remota.xcassets/Logo.imageset/logo.png?raw=true",
             "tags": [
-                "Yo Swift",
-                "Yo iOS"
+                "Swift",
+                "iOS"
             ],
             "githubUrl": "https://github.com/albertolicea00/Banca_Remota",
             "liveUrl": "https://github.com/albertolicea00/Banca_Remota",
@@ -148,10 +148,10 @@
     "experience": [
         {
             "date": "Ahora",
-            "title": "Proyecto secreto",
+            "title": "PinkzebraHome - Proyecto secreto de cueva",
             "logo": "assets/img/company/pinkzebrahome.webp",
             "logoWide": true,
-            "desc": "Yo hacer cosa grande. Tú esperar.",
+            "desc": "Hombre construir cosa privada. Cosa grande venir pronto. Tribu no poder ver todavía.",
             "links": [
                 {
                     "url": "https://pinkzebrahome.com?repid=1198544",
@@ -163,7 +163,7 @@
             "date": "2024 - Ahora",
             "title": "Yo programar @ Ladetec",
             "logo": "assets/img/company/ladetec.png",
-            "desc": "Yo conectar APIs. Yo hacer ERP. Yo usar Django, Vue, Node.",
+            "desc": "Hombre conectar APIs, domar BigCommerce, hablar con KillBill y construir ERP sin romper cueva.",
             "links": [
                 {
                     "url": "https://www.ladetec.com/",
@@ -175,7 +175,7 @@
             "date": "2024",
             "title": "Yo arreglar software @ TOWIT",
             "logo": "assets/img/company/towithuston.jpg",
-            "desc": "Yo arreglar bugs. Yo hacer mejora. Sistema mejor.",
+            "desc": "Hombre encontrar bugs escondidos. Golpear con garrote. Sistema mejor.",
             "links": [
                 {
                     "url": "https://towithouston.com/",
@@ -217,7 +217,7 @@
             "logo": "assets/img/company/ucm.png",
             "logoWide": true,
             "logoDark": true,
-            "desc": "Yo aprender informática. Yo aprender números también.",
+            "desc": "Yo aprender informática. Yo aprender números también. Cerebro sufrir",
             "links": [
                 {
                     "url": "https://www.reduc.edu.cu/",

@@ -35,13 +35,15 @@ const LANGUAGE_CHANGED_LABELS = {
 const TOKEN_SAVER_VARIANTS = {
     en: {
         variant: 'en.cav',
-        label: '\ud83e\uddb4 Save tokens',
+        icon: '\ud83e\uddb4',
+        text: 'Save tokens',
         activateLabel: 'Switch to Caveman English',
         deactivateLabel: 'Switch back to standard English'
     },
     es: {
         variant: 'es.cav',
-        label: '\ud83e\udea8 Ahorra tokens',
+        icon: '\ud83e\udea8',
+        text: 'Ahorra tokens',
         activateLabel: 'Cambiar a espa\u00f1ol cavern\u00edcola',
         deactivateLabel: 'Volver a espa\u00f1ol est\u00e1ndar'
     }
@@ -50,6 +52,9 @@ const TOKEN_SAVER_VARIANTS = {
 let siteData = null;
 let currentLang = detectLanguage();
 let currentTheme = localStorage.getItem('theme') || 'dark';
+let tokenSaverAudioContext = null;
+let tokenSaverAttentionTimeoutId = null;
+let tokenSaverAudioPrimed = false;
 
 function getBaseLanguage(lang = currentLang) {
     return lang.split('.')[0];
@@ -116,6 +121,7 @@ function initApp() {
     initLanguage();
     renderDynamicContent();
     setupEventListeners();
+    setupTokenSaverAudioUnlock();
     syncAccessibilityUI();
     initTooltipPositioning();
 
@@ -165,6 +171,78 @@ function getTokenSaverElements() {
     return { tokenSaverToggle };
 }
 
+function ensureTokenSaverAudioContext() {
+    const AudioContextCtor = window.AudioContext || window.webkitAudioContext;
+    if (!AudioContextCtor) return null;
+    if (!tokenSaverAudioContext) tokenSaverAudioContext = new AudioContextCtor();
+    return tokenSaverAudioContext;
+}
+
+function primeTokenSaverAudio() {
+    const ctx = ensureTokenSaverAudioContext();
+    if (!ctx) return;
+
+    if (!tokenSaverAudioPrimed) {
+        tokenSaverAudioPrimed = true;
+        const gainNode = ctx.createGain();
+        gainNode.gain.value = 0.00001;
+        gainNode.connect(ctx.destination);
+    }
+
+    if (ctx.state === 'suspended') ctx.resume().catch(() => {});
+}
+
+function playTokenSaverBeep() {
+    try {
+        const ctx = ensureTokenSaverAudioContext();
+        if (!ctx) return;
+        if (ctx.state === 'suspended') ctx.resume().catch(() => {});
+
+        const now = ctx.currentTime;
+        const oscillator = ctx.createOscillator();
+        const gainNode = ctx.createGain();
+
+        oscillator.type = 'triangle';
+        oscillator.frequency.setValueAtTime(880, now);
+        oscillator.frequency.exponentialRampToValueAtTime(1320, now + 0.08);
+
+        gainNode.gain.setValueAtTime(0.0001, now);
+        gainNode.gain.exponentialRampToValueAtTime(0.035, now + 0.02);
+        gainNode.gain.exponentialRampToValueAtTime(0.0001, now + 0.18);
+
+        oscillator.connect(gainNode);
+        gainNode.connect(ctx.destination);
+        oscillator.start(now);
+        oscillator.stop(now + 0.18);
+    } catch {
+        // Ignore browsers that block audio without interaction.
+    }
+}
+
+function triggerTokenSaverAttention(tokenSaverToggle) {
+    if (!tokenSaverToggle) return;
+
+    tokenSaverToggle.classList.remove('is-attention');
+    void tokenSaverToggle.offsetWidth;
+    tokenSaverToggle.classList.add('is-attention');
+
+    if (tokenSaverAttentionTimeoutId) window.clearTimeout(tokenSaverAttentionTimeoutId);
+    tokenSaverAttentionTimeoutId = window.setTimeout(() => {
+        tokenSaverToggle.classList.remove('is-attention');
+    }, 1800);
+
+    playTokenSaverBeep();
+}
+
+function setupTokenSaverAudioUnlock() {
+    const unlockAudio = () => {
+        primeTokenSaverAudio();
+    };
+
+    document.addEventListener('pointerdown', unlockAudio, { once: true, passive: true });
+    document.addEventListener('keydown', unlockAudio, { once: true });
+}
+
 function getLanguageControlLabel() {
     return getLanguageConfigValue(LANGUAGE_CONTROL_LABELS);
 }
@@ -195,23 +273,37 @@ function updateTokenSaverUI() {
 
     if (!tokenSaverConfig) {
         tokenSaverToggle.hidden = true;
-        tokenSaverToggle.classList.remove('is-visible', 'is-active');
+        tokenSaverToggle.classList.remove('is-visible', 'is-active', 'is-attention');
         tokenSaverToggle.removeAttribute('aria-label');
         tokenSaverToggle.removeAttribute('aria-pressed');
         tokenSaverToggle.removeAttribute('data-tooltip');
+        tokenSaverToggle.removeAttribute('data-state');
+        tokenSaverToggle.innerHTML = '';
         return;
     }
 
     const isActive = currentLang === tokenSaverConfig.variant;
     const actionLabel = isActive ? tokenSaverConfig.deactivateLabel : tokenSaverConfig.activateLabel;
+    const wasHidden = tokenSaverToggle.hidden || !tokenSaverToggle.classList.contains('is-visible');
+    const previousPressed = tokenSaverToggle.getAttribute('aria-pressed');
 
     tokenSaverToggle.hidden = false;
-    tokenSaverToggle.textContent = tokenSaverConfig.label;
+    tokenSaverToggle.innerHTML = `
+        <span class="lang-variant-icon" aria-hidden="true">${tokenSaverConfig.icon}</span>
+        <span class="lang-variant-copy">${tokenSaverConfig.text}</span>
+    `;
     tokenSaverToggle.classList.add('is-visible');
     tokenSaverToggle.classList.toggle('is-active', isActive);
     tokenSaverToggle.setAttribute('aria-label', actionLabel);
     tokenSaverToggle.setAttribute('aria-pressed', String(isActive));
-    tokenSaverToggle.setAttribute('data-tooltip', actionLabel);
+    tokenSaverToggle.removeAttribute('data-tooltip');
+    tokenSaverToggle.setAttribute('data-state', isActive ? 'active' : 'idle');
+
+    if (wasHidden) {
+        triggerTokenSaverAttention(tokenSaverToggle);
+    } else if (previousPressed !== String(isActive)) {
+        triggerTokenSaverAttention(tokenSaverToggle);
+    }
 }
 
 function updateLanguageUI() {
