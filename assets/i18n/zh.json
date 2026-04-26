@@ -1,0 +1,162 @@
+{
+    "home": {
+        "nav": {
+            "home": "首页",
+            "projects": "项目",
+            "experience": "经验",
+            "allwork": "应用",
+            "contact": "联系"
+        },
+        "hero": {
+            "subtitle": "全栈 Web & 移动开发者<br>平面设计师",
+            "bio": "6 年将咖啡转化为高质量代码的经验。",
+            "cta": "查看项目",
+            "contact": "联系我",
+            "download_cv": "下载简历"
+        },
+        "projects_section": {
+            "title": "近期项目",
+            "subtitle": "全新且令人兴奋的项目正在准备中，敬请期待！",
+            "view_all": "查看所有应用"
+        },
+        "experience_section": {
+            "title": "经验",
+            "subtitle": "我在科技领域的职业发展历程。"
+        },
+        "about_section": {
+            "title": "关于我",
+            "p1": "我是一个热爱生活的人，总是面带微笑，准备迎接新的挑战并将想法变为现实。我喜欢学习、成长，并在参与的每个项目中做出贡献。随时准备迎接下一次冒险！",
+            "p2": "🌱 目前正在深入学习 <strong>机器学习和人工智能</strong>。⚡ 同时也在创作 🎨 <strong>2D 设计、⚒️ 3D 模型和 🕹️ 游戏</strong>。",
+            "stats": {
+                "years": "经验年限",
+                "commitment": "投入度"
+            }
+        },
+        "contact_section": {
+            "title": "一起合作吧",
+            "desc": "有兴趣合作或雇佣我参与您的下一个项目吗？请给我留言，我会尽快回复您。",
+            "labels": {
+                "name": "姓名",
+                "email": "邮箱",
+                "message": "留言"
+            },
+            "placeholders": {
+                "name": "您的姓名",
+                "email": "您的邮箱",
+                "message": "项目详情 / 留言"
+            },
+            "form_help": "联系表单目前不可用。请使用社交链接或下载简历与我联系。",
+            "submit_btn": "表单不可用",
+            "success_msg": "消息已发送！我会尽快联系您。"
+        },
+        "footer": {
+            "rights": "用 ❤️ 制作 @albertolicea00"
+        },
+        "accessibility": {
+            "skip_to_content": "跳转到主要内容",
+            "keyboard_help": "使用 Tab 键在链接、按钮和表单之间移动。提示信息在悬停或键盘聚焦时显示。",
+            "navigation": "主导航",
+            "open_menu": "打开导航菜单",
+            "close_menu": "关闭导航菜单",
+            "theme_to_light": "切换到浅色主题",
+            "theme_to_dark": "切换到深色主题",
+            "language_to_english": "切换语言为英语",
+            "language_to_spanish": "切换语言为西班牙语",
+            "scroll_to_projects": "滚动到项目部分",
+            "download_cv": "下载 PDF 简历",
+            "all_projects": "浏览所有应用",
+            "contact_shortcut": "跳转到联系部分",
+            "open_github": "在新标签页打开 GitHub 主页",
+            "open_linkedin": "在新标签页打开 LinkedIn 主页",
+            "open_instagram": "在新标签页打开 Instagram 主页",
+            "view_live_project": "在新标签页打开在线项目",
+            "view_repository": "在新标签页打开代码仓库",
+            "view_company_site": "在新标签页打开网站",
+            "technologies_used": "使用的技术",
+            "opens_new_tab": "将在新标签页中打开",
+            "theme_enabled_dark": "已启用深色主题",
+            "theme_enabled_light": "已启用浅色主题",
+            "language_changed_english": "语言已切换为英语",
+            "language_changed_spanish": "语言已切换为西班牙语",
+            "menu_expanded": "导航菜单已展开",
+            "menu_collapsed": "导航菜单已折叠"
+        },
+        "common": {
+            "view_project": "查看项目",
+            "repository": "代码仓库",
+            "coming_soon": "我正在打磨最新项目以确保达到最高质量。敬请期待完整发布！"
+        }
+    },
+    "projects": [
+        {
+            "id": 1,
+            "title": "BettaHVAC 服务",
+            "description": "面向 HVAC 服务的可扩展企业平台，具备自动报价生成和客户管理功能。",
+            "image": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "tags": [
+                "Svelte",
+                "Node.js",
+                "CSS"
+            ],
+            "githubUrl": "https://github.com/albertolicea00/bettahvac-landing",
+            "liveUrl": "https://www.bettahvacservices.com/",
+            "featured": false
+        },
+        {
+            "id": 2,
+            "title": "Miguelín 的疯狂世界",
+            "description": "具有沉浸式设计和流畅动画的动态娱乐落地页。",
+            "image": "https://yt3.googleusercontent.com/xktD1rgu2QIivNnnDWVuYuFlchkfdH23Yp4YUbv1-7Y5LIJHLvgEHD-rOgwn8XEskC3vAGzTeg=s160-c-k-c0x00ffffff-no-rj",
+            "tags": [
+                "Astro",
+                "TypeScript",
+                "Tailwind CSS"
+            ],
+            "githubUrl": "https://github.com/albertolicea00/las-locuras-de-miguelin-landing",
+            "liveUrl": "https://las-locuras-de-miguelin-landing.vercel.app/",
+            "featured": false
+        },
+        {
+            "id": 3,
+            "title": "Kristoff 落地页",
+            "description": "专注于 UX/UI 和品牌叙事的现代 VOD 平台落地页。",
+            "image": "https://yt3.googleusercontent.com/_nwkuUvKJT-ztrUNH1bymp7trvZfDXp07UVV7NJNv-Zfws0Wpnlla9nExFRhYSVNAMeKxt9AHA=s160-c-k-c0x00ffffff-no-rj",
+            "tags": [
+                "Astro",
+                "TypeScript",
+                "Tailwind CSS"
+            ],
+            "githubUrl": "https://github.com/albertolicea00/kristoff-landing",
+            "liveUrl": "https://kristoff-landing.vercel.app/",
+            "featured": false
+        },
+        {
+            "id": 4,
+            "title": "远程银行系统",
+            "description": "专注于安全性、远程操作和高性能架构的强大数字银行解决方案。",
+            "image": "https://github.com/albertolicea00/Banca_Remota/blob/main/Banca_Remota.xcassets/Logo.imageset/logo.png?raw=true",
+            "tags": [
+                "Swift",
+                "iOS"
+            ],
+            "githubUrl": "https://github.com/albertolicea00/Banca_Remota",
+            "liveUrl": "https://github.com/albertolicea00/Banca_Remota",
+            "featured": false
+        }
+    ],
+    "experience": [
+        {
+            "date": "现在",
+            "title": "PinkzebraHome - 机密",
+            "logo": "assets/img/company/pinkzebrahome.webp",
+            "logoWide": true,
+            "desc": "目前正在开发一个高影响力的私密项目。重大内容即将到来……",
+            "links": [
+                {
+                    "url": "https://pinkzebrahome.com?repid=1198544",
+                    "label": "PinkzebraHome"
+                }
+            ]
+        }
+    ]
+}
