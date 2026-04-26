@@ -38,11 +38,13 @@
             "labels": {
                 "name": "Name",
                 "email": "E-Mail",
+                "phone": "Telefon",
                 "message": "Nachricht"
             },
             "placeholders": {
                 "name": "Dein Name",
                 "email": "Deine E-Mail",
+                "phone": "Deine Telefonnummer",
                 "message": "Projektdetails / Nachricht"
             },
             "form_help": "Das Kontaktformular ist derzeit offline. Nutze die Social-Links oder lade den Lebenslauf herunter, um Kontakt aufzunehmen.",

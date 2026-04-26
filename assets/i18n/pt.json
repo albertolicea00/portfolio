@@ -38,11 +38,13 @@
             "labels": {
                 "name": "Nome",
                 "email": "Email",
+                "phone": "Telefone",
                 "message": "Mensagem"
             },
             "placeholders": {
                 "name": "Seu nome",
                 "email": "Seu email",
+                "phone": "Seu telefone",
                 "message": "Detalhes do projeto / Mensagem"
             },
             "form_help": "O formulário de contato está offline no momento. Use os links sociais ou baixe o CV para entrar em contato.",

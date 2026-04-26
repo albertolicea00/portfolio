@@ -38,11 +38,13 @@
             "labels": {
                 "name": "Nombre de humano",
                 "email": "Correo mágico",
+                "phone": "Telefono de humano",
                 "message": "Mensaje de tribu"
             },
             "placeholders": {
                 "name": "Tú nombre",
                 "email": "Tú correo",
+                "phone": "Tú telefono",
                 "message": "Tú idea / problema / fuego"
             },
             "form_help": "Formulario no funcionar. Tú usar otra cosa.",

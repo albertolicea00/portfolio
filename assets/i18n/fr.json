@@ -38,11 +38,13 @@
             "labels": {
                 "name": "Nom",
                 "email": "Email",
+                "phone": "Téléphone",
                 "message": "Message"
             },
             "placeholders": {
                 "name": "Votre nom",
                 "email": "Votre email",
+                "phone": "Votre téléphone",
                 "message": "Détails du projet / Message"
             },
             "form_help": "Le formulaire de contact est actuellement hors ligne. Utilisez les liens sociaux ou téléchargez le CV pour me contacter.",

@@ -38,11 +38,13 @@
             "labels": {
                 "name": "姓名",
                 "email": "邮箱",
+                "phone": "电话",
                 "message": "留言"
             },
             "placeholders": {
                 "name": "您的姓名",
                 "email": "您的邮箱",
+                "phone": "您的电话",
                 "message": "项目详情 / 留言"
             },
             "form_help": "联系表单目前不可用。请使用社交链接或下载简历与我联系。",

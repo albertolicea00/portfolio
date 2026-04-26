@@ -38,11 +38,13 @@
             "labels": {
                 "name": "Name",
                 "email": "Email",
+                "phone": "Phone",
                 "message": "Message"
             },
             "placeholders": {
                 "name": "You name",
                 "email": "You email",
+                "phone": "You phone",
                 "message": "Project thing / Message"
             },
             "form_help": "Form no work now. You use social links or get CV.",
