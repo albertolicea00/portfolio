@@ -122,34 +122,99 @@
         {
             "date": "Present",
             "title": { "en": "PinkzebraHome - Confidential", "es": "PinkzebraHome - Confidencial" },
+            "logo": "assets/img/company/pinkzebrahome.webp",
+            "logoWide": true,
             "desc": { 
                 "en": "Currently developing a private, high-impact project. Something big is coming soon...", 
                 "es": "Actualmente desarrollando un proyecto privado de alto impacto. Muy pronto..." 
-            }
+            },
+            "links": [
+                {
+                    "url": "https://pinkzebrahome.com?repid=1198544",
+                    "label": { "en": "PinkzebraHome", "es": "PinkzebraHome" }
+                }
+            ]
         },
         {
             "date": "Mar 2024 - Present",
             "title": { "en": "Software Developer @ Ladetec", "es": "Desarrollador de Software @ Ladetec" },
+            "logo": "assets/img/company/ladetec.png",
             "desc": { 
                 "en": "API integration (Bigcommerce, KillBill) and ERP development using Django, Vue.js, Svelte, and Node.js.",
                 "es": "Integración de APIs (Bigcommerce, KillBill) y desarrollo de ERPs usando Django, Vue.js, Svelte y Node.js."
-            }
+            },
+            "links": [
+                {
+                    "url": "https://www.ladetec.com/",
+                    "label": { "en": "Ladetec", "es": "Ladetec" }
+                }
+            ]
+        },
+        {
+            "date": "Mar 2024 - Aug 2024",
+            "title": { "en": "Software Maintenance @ TOWIT Houston", "es": "Mantenimiento de Software @ TOWIT Houston" },
+            "logo": "assets/img/company/towithuston.jpg",
+            "desc": {
+                "en": "Implemented bug fixes and delivered new features for the company's management software, improving stability and day-to-day operations.",
+                "es": "Realicé correcciones de bugs y añadí nuevas funcionalidades en su software de gestión, mejorando la estabilidad y la operación del día a día."
+            },
+            "links": [
+                {
+                    "url": "https://towithouston.com/",
+                    "label": { "en": "TOWIT Houston", "es": "TOWIT Houston" }
+                }
+            ]
         },
         {
             "date": "Mar 2022 - Feb 2024",
             "title": { "en": "IT Support Manager @ Wateke Soluciones", "es": "Manager de Soporte IT @ Wateke Soluciones" },
+            "logo": "assets/img/company/wateketech.svg",
+            "logoWide": true,
+            "logoLight": true,
             "desc": {
                 "en": "Developed custom ERP and CMS systems using Laravel & Livewire. Managed WordPress sites and custom plugins.",
                 "es": "Desarrollo de sistemas ERP y CMS a medida con Laravel y Livewire. Gestión de sitios WordPress y plugins personalizados."
-            }
+            },
+            "links": [
+                {
+                    "url": "https://wateke.tech/",
+                    "label": { "en": "Wateke Soluciones Tecnológicas", "es": "Wateke Soluciones" }
+                }
+            ]
         },
         {
             "date": "Jan 2022 - Feb 2024",
             "title": { "en": "External Collaborator @ Wateke Travel", "es": "Colaborador Externo @ Wateke Travel" },
+            "logo": "assets/img/company/wateketravel.png",
+            "logoWide": true,
+            "logoDark": true,
             "desc": {
                 "en": "Built mobile apps with Apache Cordova and managed interactive logo animations using After Effects.",
                 "es": "Creación de apps móviles con Apache Cordova y animaciones de logos con After Effects."
-            }
+            },
+            "links": [
+                {
+                    "url": "https://wateke.travel/",
+                    "label": { "en": "Wateke Travel", "es": "Wateke Travel" }
+                }
+            ]
+        },
+        {
+            "date": "Sep 2019 - Jan 2024",
+            "title": { "en": "Computer Engineering @ Universidad de Camagüey", "es": "Ingeniería Informática @ Universidad de Camagüey" },
+            "logo": "assets/img/company/ucm.png",
+            "logoWide": true,
+            "logoDark": true,
+            "desc": {
+                "en": "Graduated in Computer Engineering and also completed one academic year of Accounting and Finance studies.",
+                "es": "Me gradué en Ingeniería Informática y además cursé un año de Contabilidad y Finanzas."
+            },
+            "links": [
+                {
+                    "url": "https://www.reduc.edu.cu/",
+                    "label": { "en": "Universidad de Camagüey", "es": "Universidad de Camagüey" }
+                }
+            ]
         }
     ]
 }

@@ -151,14 +151,46 @@ function renderExperience() {
 
     container.innerHTML = '';
     siteData.experience.forEach(exp => {
+        const logoClasses = [
+            'timeline-logo-frame',
+            exp.logoWide ? 'is-wide' : '',
+            exp.logoDark ? 'is-dark' : '',
+            exp.logoLight ? 'is-light' : ''
+        ].filter(Boolean).join(' ');
+
+        const logoHtml = exp.logo ? `
+            <div class="${logoClasses}">
+                <img src="${exp.logo}" alt="${exp.title[currentLang]}" class="timeline-logo" loading="lazy">
+            </div>
+        ` : '';
+
+        const linksHtml = (exp.links || []).map(link => {
+            const label = typeof link.label === 'string'
+                ? link.label
+                : link.label?.[currentLang] || link.url;
+
+            return `
+                <a href="${link.url}" target="_blank" rel="noopener noreferrer" class="timeline-link">
+                    <i class="fas fa-arrow-up-right-from-square"></i>
+                    <span>${label}</span>
+                </a>
+            `;
+        }).join('');
+
         const item = document.createElement('div');
         item.className = 'timeline-item';
         item.innerHTML = `
             <div class="timeline-dot"></div>
             <div class="timeline-date">${exp.date}</div>
             <div class="timeline-content glass-panel">
-                <h3>${exp.title[currentLang]}</h3>
-                <p>${exp.desc[currentLang]}</p>
+                <div class="timeline-header">
+                    ${logoHtml}
+                    <div class="timeline-copy">
+                        <h3>${exp.title[currentLang]}</h3>
+                        <p>${exp.desc[currentLang]}</p>
+                    </div>
+                </div>
+                ${linksHtml ? `<div class="timeline-links">${linksHtml}</div>` : ''}
             </div>
         `;
         container.appendChild(item);
