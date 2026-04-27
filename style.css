@@ -1389,6 +1389,10 @@ textarea:focus-visible {
 @media (max-width: 768px) {
   .hero {
     padding-top: 7rem;
+    padding-bottom: 6rem;
+  }
+  .hero-content {
+    padding-bottom: 2.75rem;
   }
   .glitch-text {
     font-size: 3rem;
@@ -1402,6 +1406,9 @@ textarea:focus-visible {
   }
   .hero-actions {
     min-height: 112px;
+  }
+  .scroll-indicator {
+    bottom: 1rem;
   }
   .about-grid {
     grid-template-columns: 1fr;
