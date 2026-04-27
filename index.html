@@ -133,24 +133,33 @@
               </ul>
             </div>
             <button
-              class="lang-variant-toggle"
-              id="lang-variant-toggle"
+              class="lang-variant-toggle lang-variant-toggle--menu"
               type="button"
               hidden
+              data-token-saver-toggle
               aria-describedby="site-a11y-help"
             >🪨 Ahorra tokens</button>
           </li>
         </ul>
-        <button
-          class="menu-toggle"
-          type="button"
-          aria-label="Open menu"
-          aria-controls="primary-navigation"
-          aria-expanded="false"
-          aria-describedby="site-a11y-help"
-        >
-          <span class="toggle-glyph" aria-hidden="true">☰</span>
-        </button>
+        <div class="nav-mobile-tools">
+          <button
+            class="lang-variant-toggle lang-variant-toggle--mobile"
+            type="button"
+            hidden
+            data-token-saver-toggle
+            aria-describedby="site-a11y-help"
+          >🪨 Ahorra tokens</button>
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Open menu"
+            aria-controls="primary-navigation"
+            aria-expanded="false"
+            aria-describedby="site-a11y-help"
+          >
+            <span class="toggle-glyph" aria-hidden="true">☰</span>
+          </button>
+        </div>
       </div>
     </nav>
 

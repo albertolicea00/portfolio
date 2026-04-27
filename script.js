@@ -462,23 +462,30 @@ function getLanguageElements() {
 }
 
 function getTokenSaverElements() {
-    const tokenSaverToggle = document.getElementById('lang-variant-toggle');
-    return { tokenSaverToggle };
+    const tokenSaverToggles = Array.from(document.querySelectorAll('[data-token-saver-toggle]'));
+    return { tokenSaverToggles };
 }
 
-function triggerTokenSaverAttention(tokenSaverToggle) {
-    if (!tokenSaverToggle) return;
+function triggerTokenSaverAttention() {
+    const { tokenSaverToggles } = getTokenSaverElements();
+    if (!tokenSaverToggles.length) return;
 
-    tokenSaverToggle.classList.remove('is-attention');
+    tokenSaverToggles.forEach(toggle => {
+        toggle.classList.remove('is-attention');
+    });
     window.requestAnimationFrame(() => {
         window.requestAnimationFrame(() => {
-            tokenSaverToggle.classList.add('is-attention');
+            tokenSaverToggles.forEach(toggle => {
+                toggle.classList.add('is-attention');
+            });
         });
     });
 
     if (tokenSaverAttentionTimeoutId) window.clearTimeout(tokenSaverAttentionTimeoutId);
     tokenSaverAttentionTimeoutId = window.setTimeout(() => {
-        tokenSaverToggle.classList.remove('is-attention');
+        tokenSaverToggles.forEach(toggle => {
+            toggle.classList.remove('is-attention');
+        });
     }, 1800);
 }
 
@@ -504,45 +511,52 @@ function focusLanguageOption(targetLang = currentLang) {
 }
 
 function updateTokenSaverUI() {
-    const { tokenSaverToggle } = getTokenSaverElements();
-    if (!tokenSaverToggle) return;
+    const { tokenSaverToggles } = getTokenSaverElements();
+    if (!tokenSaverToggles.length) return;
 
     const baseLang = getBaseLanguage(currentLang);
     const tokenSaverConfig = TOKEN_SAVER_VARIANTS[baseLang];
 
     if (!tokenSaverConfig) {
-        tokenSaverToggle.hidden = true;
-        tokenSaverToggle.classList.remove('is-visible', 'is-active', 'is-attention');
-        tokenSaverToggle.removeAttribute('aria-label');
-        tokenSaverToggle.removeAttribute('aria-pressed');
-        tokenSaverToggle.removeAttribute('data-tooltip');
-        tokenSaverToggle.removeAttribute('data-state');
-        tokenSaverToggle.innerHTML = '';
+        tokenSaverToggles.forEach(toggle => {
+            toggle.hidden = true;
+            toggle.classList.remove('is-visible', 'is-active', 'is-attention');
+            toggle.removeAttribute('aria-label');
+            toggle.removeAttribute('aria-pressed');
+            toggle.removeAttribute('data-tooltip');
+            toggle.removeAttribute('data-state');
+            toggle.innerHTML = '';
+        });
         return;
     }
 
     const isActive = currentLang === tokenSaverConfig.variant;
     const actionLabel = isActive ? tokenSaverConfig.deactivateLabel : tokenSaverConfig.activateLabel;
-    const wasHidden = tokenSaverToggle.hidden || !tokenSaverToggle.classList.contains('is-visible');
-    const previousPressed = tokenSaverToggle.getAttribute('aria-pressed');
+    let shouldTriggerAttention = false;
 
-    tokenSaverToggle.hidden = false;
-    tokenSaverToggle.innerHTML = `
+    tokenSaverToggles.forEach(toggle => {
+        const wasHidden = toggle.hidden || !toggle.classList.contains('is-visible');
+        const previousPressed = toggle.getAttribute('aria-pressed');
+
+        toggle.hidden = false;
+        toggle.innerHTML = `
         <span class="lang-variant-icon" aria-hidden="true">${tokenSaverConfig.icon}</span>
         <span class="lang-variant-copy">${tokenSaverConfig.text}</span>
+        <span class="lang-variant-rail" aria-hidden="true"></span>
     `;
-    tokenSaverToggle.classList.add('is-visible');
-    tokenSaverToggle.classList.toggle('is-active', isActive);
-    tokenSaverToggle.setAttribute('aria-label', actionLabel);
-    tokenSaverToggle.setAttribute('aria-pressed', String(isActive));
-    tokenSaverToggle.removeAttribute('data-tooltip');
-    tokenSaverToggle.setAttribute('data-state', isActive ? 'active' : 'idle');
+        toggle.classList.add('is-visible');
+        toggle.classList.toggle('is-active', isActive);
+        toggle.setAttribute('aria-label', actionLabel);
+        toggle.setAttribute('aria-pressed', String(isActive));
+        toggle.setAttribute('data-tooltip', actionLabel);
+        toggle.setAttribute('data-state', isActive ? 'active' : 'idle');
 
-    if (wasHidden) {
-        triggerTokenSaverAttention(tokenSaverToggle);
-    } else if (previousPressed !== String(isActive)) {
-        triggerTokenSaverAttention(tokenSaverToggle);
-    }
+        if (wasHidden || previousPressed !== String(isActive)) {
+            shouldTriggerAttention = true;
+        }
+    });
+
+    if (shouldTriggerAttention) triggerTokenSaverAttention();
 }
 
 function updateLanguageUI() {
@@ -859,7 +873,7 @@ function setupEventListeners() {
     const navLinks = document.querySelector('.nav-links');
     const langWrapper = document.querySelector('.lang-select-wrapper');
     const { langToggle, langDropdown, langOptions } = getLanguageElements();
-    const { tokenSaverToggle } = getTokenSaverElements();
+    const { tokenSaverToggles } = getTokenSaverElements();
 
     const setMenuState = (isOpen, shouldAnnounce = false) => {
         if (!navLinks || !menuToggle) return;
@@ -927,14 +941,16 @@ function setupEventListeners() {
         langToggle?.focus();
     });
 
-    tokenSaverToggle?.addEventListener('click', async () => {
-        const baseLang = getBaseLanguage(currentLang);
-        const tokenSaverConfig = TOKEN_SAVER_VARIANTS[baseLang];
-        if (!tokenSaverConfig) return;
+    tokenSaverToggles.forEach(tokenSaverToggle => {
+        tokenSaverToggle.addEventListener('click', async () => {
+            const baseLang = getBaseLanguage(currentLang);
+            const tokenSaverConfig = TOKEN_SAVER_VARIANTS[baseLang];
+            if (!tokenSaverConfig) return;
 
-        const nextLang = currentLang === tokenSaverConfig.variant ? baseLang : tokenSaverConfig.variant;
-        await handleLanguageSelection(nextLang);
-        tokenSaverToggle.focus();
+            const nextLang = currentLang === tokenSaverConfig.variant ? baseLang : tokenSaverConfig.variant;
+            await handleLanguageSelection(nextLang);
+            tokenSaverToggle.focus();
+        });
     });
 
     langDropdown?.addEventListener('keydown', async event => {
