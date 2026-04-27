@@ -269,6 +269,19 @@ textarea:focus-visible {
   box-shadow: 0 0 0 6px var(--brand-yellow-glow);
 }
 
+@media (hover: hover) and (pointer: fine) {
+  .cursor-particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 2400;
+    contain: strict;
+  }
+}
+
 /* Theme & Language Toggles */
 .controls-container {
   display: flex;
