@@ -111,7 +111,7 @@
                 aria-label="Select language"
                 aria-describedby="site-a11y-help"
               >
-                🇬🇧 EN
+                🇺🇸 EN
               </button>
               <ul
                 class="lang-dropdown"
@@ -122,18 +122,18 @@
                 <li
                   role="option"
                   data-lang="en"
-                  data-button-label="🇬🇧 EN"
+                  data-button-label="🇺🇸 EN"
                   aria-selected="true"
                 >
-                  <span class="lang-option-main">🇬🇧 EN</span>
+                  <span class="lang-option-main">🇺🇸 EN</span>
                 </li>
                 <li
                   role="option"
                   data-lang="es"
-                  data-button-label="🇪🇸 ES"
+                  data-button-label="🇨🇺 ES"
                   aria-selected="false"
                 >
-                  <span class="lang-option-main">🇪🇸 ES</span>
+                  <span class="lang-option-main">🇨🇺 ES</span>
                 </li>
                 <li
                   role="option"
@@ -178,10 +178,10 @@
                 <li
                   role="option"
                   data-lang="pt"
-                  data-button-label="🇵🇹 PT"
+                  data-button-label="🇧🇷 PT"
                   aria-selected="false"
                 >
-                  <span class="lang-option-main">🇵🇹 PT</span>
+                  <span class="lang-option-main">🇧🇷 PT</span>
                 </li>
                 <li
                   role="option"
@@ -242,13 +242,23 @@
     </nav>
 
     <main id="main-content" tabindex="-1">
-      <section class="section" style="padding-top: 10rem">
+      <section
+        class="section"
+        style="padding-top: 10rem"
+        aria-labelledby="all-projects-title"
+        aria-describedby="all-projects-subtitle"
+      >
         <div class="container">
-          <h1 class="section-title" data-i18n="home.nav.allwork">
+          <h1
+            class="section-title"
+            id="all-projects-title"
+            data-i18n="home.nav.allwork"
+          >
             All Projects
           </h1>
           <p
             class="section-subtitle"
+            id="all-projects-subtitle"
             data-i18n="home.projects_section.subtitle"
           >
             A deep dive into my professional journey through code and design.
@@ -274,6 +284,7 @@
             ><svg
               class="social-icon-svg"
               aria-hidden="true"
+              focusable="false"
               viewBox="0 0 24 24"
             >
               <use href="assets/icons/social-sprite.svg#icon-github"></use></svg
@@ -288,6 +299,7 @@
             ><svg
               class="social-icon-svg"
               aria-hidden="true"
+              focusable="false"
               viewBox="0 0 24 24"
             >
               <use
@@ -304,6 +316,7 @@
             ><svg
               class="social-icon-svg"
               aria-hidden="true"
+              focusable="false"
               viewBox="0 0 24 24"
             >
               <use href="assets/icons/social-sprite.svg#icon-x"></use></svg
@@ -318,6 +331,7 @@
             ><svg
               class="social-icon-svg"
               aria-hidden="true"
+              focusable="false"
               viewBox="0 0 24 24"
             >
               <use

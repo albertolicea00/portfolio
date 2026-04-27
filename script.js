@@ -1,6 +1,6 @@
 /**
  * PORTFOLIO ARCHITECTURE
- * Lazy-loads per-language JSON from assets/i18n/{lang}.json.
+ * Loads the active language on demand and preloads the rest in the background.
  * Auto-detects browser language (navigator.language) with fallback to 'en'.
  */
 
@@ -71,7 +71,10 @@ const UI_GLYPHS = {
     themeLight: '\u2600',
     menuClosed: '\u2630',
     menuOpen: '\u2715',
-    external: '\u2197',
+    external: {
+        type: 'sprite',
+        id: 'icon-external'
+    },
     github: 'GH',
     arrowRight: '\u2192',
     download: '\u2193',
@@ -83,6 +86,13 @@ let currentLang = detectLanguage();
 let currentTheme = localStorage.getItem('theme') || 'dark';
 let tokenSaverAttentionTimeoutId = null;
 const syntheticLanguageCache = {};
+const languageDataCache = {};
+const languageRequestCache = {};
+let hasScheduledLanguagePreload = false;
+
+function getLanguageAssetPath(lang) {
+    return `assets/i18n/${lang}.json`;
+}
 
 function getBaseLanguage(lang = currentLang) {
     return lang.split('.')[0];
@@ -110,9 +120,7 @@ async function loadLanguage(lang) {
     }
 
     try {
-        const res = await fetch(`assets/i18n/${lang}.json`);
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        return await res.json();
+        return await fetchConcreteLanguage(lang);
     } catch {
         const baseLang = getBaseLanguage(lang);
         if (lang !== baseLang) {
@@ -125,6 +133,27 @@ async function loadLanguage(lang) {
         }
         throw new Error('Failed to load i18n data');
     }
+}
+
+async function fetchConcreteLanguage(lang) {
+    if (languageDataCache[lang]) return languageDataCache[lang];
+    if (languageRequestCache[lang]) return languageRequestCache[lang];
+
+    const request = fetch(getLanguageAssetPath(lang))
+        .then(res => {
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            return res.json();
+        })
+        .then(data => {
+            languageDataCache[lang] = data;
+            return data;
+        })
+        .finally(() => {
+            delete languageRequestCache[lang];
+        });
+
+    languageRequestCache[lang] = request;
+    return request;
 }
 
 async function loadSyntheticLanguage(lang) {
@@ -269,9 +298,46 @@ function getLocalizedText(path, fallback = '') {
     return typeof value === 'string' ? value : fallback;
 }
 
+function escapeHtmlAttribute(value) {
+    return String(value)
+        .replace(/&/g, '&amp;')
+        .replace(/"/g, '&quot;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;');
+}
+
+function getSamePageHashTarget(link) {
+    if (!(link instanceof HTMLAnchorElement)) return null;
+
+    const url = new URL(link.href, window.location.href);
+    if (url.origin !== window.location.origin || url.pathname !== window.location.pathname || !url.hash) {
+        return null;
+    }
+
+    const targetId = decodeURIComponent(url.hash.slice(1));
+    if (!targetId) return null;
+    return document.getElementById(targetId);
+}
+
 function getInlineIconMarkup(name, className = 'inline-icon') {
     const glyph = UI_GLYPHS[name];
-    return glyph ? `<span class="${className}" aria-hidden="true">${glyph}</span>` : '';
+    if (!glyph) return '';
+
+    if (typeof glyph === 'string') {
+        return `<span class="${className}" aria-hidden="true">${glyph}</span>`;
+    }
+
+    if (glyph.type === 'sprite') {
+        return `
+            <span class="${className}" aria-hidden="true">
+                <svg class="glyph-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
+                    <use href="assets/icons/social-sprite.svg#${glyph.id}"></use>
+                </svg>
+            </span>
+        `;
+    }
+
+    return '';
 }
 
 function announceStatus(message) {
@@ -279,6 +345,45 @@ function announceStatus(message) {
     if (!liveRegion || !message) return;
     liveRegion.textContent = '';
     window.setTimeout(() => { liveRegion.textContent = message; }, 30);
+}
+
+function getBackgroundPreloadLanguages() {
+    return SUPPORTED_LANGS.filter(lang => (
+        !SYNTHETIC_LANGUAGE_GENERATORS[lang]
+        && !languageDataCache[lang]
+        && !languageRequestCache[lang]
+    ));
+}
+
+async function preloadLanguagesInBackground() {
+    const languagesToPreload = getBackgroundPreloadLanguages();
+    if (!languagesToPreload.length) return;
+
+    const results = await Promise.allSettled(
+        languagesToPreload.map(lang => fetchConcreteLanguage(lang))
+    );
+
+    results.forEach((result, index) => {
+        if (result.status === 'rejected') {
+            console.warn(`Background preload failed for ${getLanguageAssetPath(languagesToPreload[index])}`, result.reason);
+        }
+    });
+}
+
+function scheduleBackgroundLanguagePreload() {
+    if (hasScheduledLanguagePreload) return;
+    hasScheduledLanguagePreload = true;
+
+    const startPreload = () => {
+        void preloadLanguagesInBackground();
+    };
+
+    if ('requestIdleCallback' in window) {
+        window.requestIdleCallback(startPreload, { timeout: 2500 });
+        return;
+    }
+
+    window.setTimeout(startPreload, 1200);
 }
 
 // Initial Load
@@ -295,12 +400,13 @@ async function hydrateInitialContent() {
             updatePageText();
             renderDynamicContent();
             syncAccessibilityUI();
-            return;
+        } else {
+            initLanguage();
+            renderDynamicContent();
+            syncAccessibilityUI();
         }
 
-        initLanguage();
-        renderDynamicContent();
-        syncAccessibilityUI();
+        scheduleBackgroundLanguagePreload();
     } catch (error) {
         console.error('Error loading i18n data:', error);
     }
@@ -556,15 +662,19 @@ function renderProjects() {
             card.className = 'project-card';
             const titleId = `project-title-${project.id}`;
             const descId = `project-desc-${project.id}`;
+            const imageCaptionId = `project-image-caption-${project.id}`;
             const tagsHtml = project.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
             const projectTitle = project.title;
             const projectDescription = project.description;
             const techList = project.tags.join(', ');
+            const projectImageCaption = projectDescription || projectTitle;
+            const safeProjectImageCaption = escapeHtmlAttribute(projectImageCaption);
 
             card.innerHTML = `
-                <div class="project-img-container">
-                    <img src="${project.image}" alt="${projectTitle} preview" class="project-img" loading="lazy" decoding="async">
-                </div>
+                <figure class="project-img-container" role="img" aria-labelledby="${titleId}" aria-describedby="${imageCaptionId}">
+                    <img src="${project.image}" alt="" aria-hidden="true" class="project-img" loading="lazy" decoding="async">
+                    <figcaption id="${imageCaptionId}" class="sr-only">${safeProjectImageCaption}</figcaption>
+                </figure>
                 <div class="project-content">
                     <h3 class="project-title" id="${titleId}">${projectTitle}</h3>
                     <div class="project-tags" aria-label="${technologiesLabel}: ${techList}">${tagsHtml}</div>
@@ -605,7 +715,7 @@ function renderExperience() {
         const descId = `timeline-desc-${index}`;
 
         const logoHtml = exp.logo ? `
-            <div class="${logoClasses}">
+            <div class="${logoClasses}" aria-hidden="true">
                 <img src="${exp.logo}" alt="" aria-hidden="true" class="timeline-logo" loading="lazy" decoding="async">
             </div>
         ` : '';
@@ -623,7 +733,7 @@ function renderExperience() {
         const item = document.createElement('article');
         item.className = 'timeline-item';
         item.innerHTML = `
-            <div class="timeline-dot"></div>
+            <div class="timeline-dot" aria-hidden="true"></div>
             <div class="timeline-date">${exp.date}</div>
             <div class="timeline-content glass-panel">
                 <div class="timeline-header">
@@ -870,7 +980,16 @@ function setupEventListeners() {
     });
 
     document.addEventListener('click', event => {
-        if (langWrapper && !langWrapper.contains(event.target)) {
+        const clickTarget = event.target instanceof Element ? event.target : null;
+        const hashLink = clickTarget?.closest('a[href*="#"]');
+        const hashTarget = hashLink ? getSamePageHashTarget(hashLink) : null;
+        if (hashTarget) {
+            window.setTimeout(() => {
+                hashTarget.focus({ preventScroll: true });
+            }, 0);
+        }
+
+        if (langWrapper && clickTarget && !langWrapper.contains(clickTarget)) {
             setLanguageMenuState(false);
         }
     });

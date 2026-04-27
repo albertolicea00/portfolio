@@ -1144,6 +1144,7 @@ textarea:focus-visible {
 }
 
 .project-img-container {
+  margin: 0;
   width: 100%;
   height: 220px;
   overflow: hidden;
@@ -1240,6 +1241,12 @@ textarea:focus-visible {
   min-width: 1em;
   line-height: 1;
   flex: 0 0 auto;
+}
+
+.glyph-svg {
+  width: 1em;
+  height: 1em;
+  display: block;
 }
 
 .text-icon {
@@ -1339,6 +1346,10 @@ textarea:focus-visible {
   color: var(--text-muted);
 }
 
+.copyright-line {
+  display: inline;
+}
+
 /* Responsive */
 @media (max-width: 992px) {
   .about-grid {
@@ -1411,6 +1422,12 @@ textarea:focus-visible {
   .lang-variant-toggle {
     font-size: 0.68rem;
     padding-bottom: 0.4rem;
+  }
+  .copyright-line {
+    display: block;
+  }
+  .copyright-line + .copyright-line {
+    margin-top: 0.35rem;
   }
 }
 

@@ -116,16 +116,16 @@
                 aria-expanded="false"
                 aria-label="Select language"
                 aria-describedby="site-a11y-help"
-              >🇬🇧 EN</button>
+              >🇺🇸 EN</button>
               <ul class="lang-dropdown" id="lang-dropdown" role="listbox" aria-label="Select language">
-                <li role="option" data-lang="en" data-button-label="🇬🇧 EN" aria-selected="true"><span class="lang-option-main">🇬🇧 EN</span></li>
-                <li role="option" data-lang="es" data-button-label="🇪🇸 ES" aria-selected="false"><span class="lang-option-main">🇪🇸 ES</span></li>
+                <li role="option" data-lang="en" data-button-label="🇺🇸 EN" aria-selected="true"><span class="lang-option-main">🇺🇸 EN</span></li>
+                <li role="option" data-lang="es" data-button-label="🇨🇺 ES" aria-selected="false"><span class="lang-option-main">🇨🇺 ES</span></li>
                 <li role="option" data-lang="de" data-button-label="🇩🇪 DE" aria-selected="false"><span class="lang-option-main">🇩🇪 DE</span></li>
                 <li role="option" data-lang="fr" data-button-label="🇫🇷 FR" aria-selected="false"><span class="lang-option-main">🇫🇷 FR</span></li>
                 <li role="option" data-lang="it" data-button-label="🇮🇹 IT" aria-selected="false"><span class="lang-option-main">🇮🇹 IT</span></li>
                 <li role="option" data-lang="ja" data-button-label="🇯🇵 JA" aria-selected="false"><span class="lang-option-main">🇯🇵 JA</span></li>
                 <li role="option" data-lang="ko" data-button-label="🇰🇷 KO" aria-selected="false"><span class="lang-option-main">🇰🇷 KO</span></li>
-                <li role="option" data-lang="pt" data-button-label="🇵🇹 PT" aria-selected="false"><span class="lang-option-main">🇵🇹 PT</span></li>
+                <li role="option" data-lang="pt" data-button-label="🇧🇷 PT" aria-selected="false"><span class="lang-option-main">🇧🇷 PT</span></li>
                 <li role="option" data-lang="ru" data-button-label="🇷🇺 RU" aria-selected="false"><span class="lang-option-main">🇷🇺 RU</span></li>
                 <li role="option" data-lang="zh" data-button-label="🇨🇳 ZH" aria-selected="false"><span class="lang-option-main">🇨🇳 ZH</span></li>
                 <li role="option" data-lang="cat" data-button-label="🐱 MEW" aria-selected="false"><span class="lang-option-main">🐱 MEW</span></li>
@@ -155,7 +155,12 @@
     </nav>
 
     <main id="main-content" tabindex="-1">
-      <header class="hero" id="home">
+      <header
+        class="hero"
+        id="home"
+        aria-labelledby="hero-title"
+        aria-describedby="hero-subtitle hero-bio"
+      >
         <div
           class="hero-bg"
           style="background-image: url(&quot;assets/img/hero-bg.webp&quot;)"
@@ -165,7 +170,7 @@
           <div class="avatar-container">
             <img
               src="assets/img/avatar.webp"
-              alt="Alberto Licea Avatar"
+              alt="Portrait of Alberto Licea"
               class="avatar"
               width="360"
               height="360"
@@ -175,11 +180,13 @@
             />
             <div class="glow" aria-hidden="true"></div>
           </div>
-          <h1 class="glitch-text" data-text="Alberto Licea">Alberto Licea</h1>
-          <h2 class="subtitle" data-i18n="home.hero.subtitle">
+          <h1 class="glitch-text" id="hero-title" data-text="Alberto Licea">
+            Alberto Licea
+          </h1>
+          <h2 class="subtitle" id="hero-subtitle" data-i18n="home.hero.subtitle">
             Fullstack Web &amp; Mobile Developer<br />Graphic Designer
           </h2>
-          <p class="bio" data-i18n="home.hero.bio">
+          <p class="bio" id="hero-bio" data-i18n="home.hero.bio">
             6 years of converting coffee into high-end code.
           </p>
           <div class="hero-actions">
@@ -190,7 +197,7 @@
               class="social-icon"
               data-social="github"
               aria-describedby="site-a11y-help"
-              ><svg class="social-icon-svg" aria-hidden="true" viewBox="0 0 24 24">
+              ><svg class="social-icon-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
                 <use href="assets/icons/social-sprite.svg#icon-github"></use></svg
             ></a>
             <a
@@ -200,7 +207,7 @@
               class="social-icon"
               data-social="linkedin"
               aria-describedby="site-a11y-help"
-              ><svg class="social-icon-svg" aria-hidden="true" viewBox="0 0 24 24">
+              ><svg class="social-icon-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
                 <use href="assets/icons/social-sprite.svg#icon-linkedin"></use></svg
             ></a>
             <a
@@ -240,13 +247,24 @@
         </a>
       </header>
 
-      <section id="projects" class="section">
+      <section
+        id="projects"
+        class="section"
+        tabindex="-1"
+        aria-labelledby="projects-title"
+        aria-describedby="projects-subtitle"
+      >
         <div class="container">
-          <h2 class="section-title" data-i18n="home.projects_section.title">
+          <h2
+            class="section-title"
+            id="projects-title"
+            data-i18n="home.projects_section.title"
+          >
             Recent Projects
           </h2>
           <p
             class="section-subtitle"
+            id="projects-subtitle"
             data-i18n="home.projects_section.subtitle"
           >
             A selection of my latest work in web, mobile, and design.
@@ -272,13 +290,24 @@
         </div>
       </section>
 
-      <section id="experience" class="section">
+      <section
+        id="experience"
+        class="section"
+        tabindex="-1"
+        aria-labelledby="experience-title"
+        aria-describedby="experience-subtitle"
+      >
         <div class="container">
-          <h2 class="section-title" data-i18n="home.experience_section.title">
+          <h2
+            class="section-title"
+            id="experience-title"
+            data-i18n="home.experience_section.title"
+          >
             Experience
           </h2>
           <p
             class="section-subtitle"
+            id="experience-subtitle"
             data-i18n="home.experience_section.subtitle"
           >
             Over a decade of building digital experiences.
@@ -289,19 +318,28 @@
         </div>
       </section>
 
-      <section id="about" class="section">
+      <section
+        id="about"
+        class="section"
+        aria-labelledby="about-title"
+        aria-describedby="about-copy-primary about-copy-secondary"
+      >
         <div class="container glass-panel">
-          <h2 class="section-title" data-i18n="home.about_section.title">
+          <h2
+            class="section-title"
+            id="about-title"
+            data-i18n="home.about_section.title"
+          >
             About Me
           </h2>
           <div class="about-grid">
             <div class="about-text">
-              <p data-i18n="home.about_section.p1">
+              <p id="about-copy-primary" data-i18n="home.about_section.p1">
                 I'm a programmer at heart 💻. While I have strong graphic design
                 skills that I apply to every project, my core passion lies in
                 <strong>programming and architecture</strong>.
               </p>
-              <p data-i18n="home.about_section.p2">
+              <p id="about-copy-secondary" data-i18n="home.about_section.p2">
                 With <strong>10+ years of experience</strong> in the tech
                 industry, I can tackle projects of any complexity levels, from
                 immersive frontends to clean, efficient backend systems for both
@@ -330,14 +368,24 @@
         </div>
       </section>
 
-      <footer id="contact" class="footer">
+      <footer
+        id="contact"
+        class="footer"
+        tabindex="-1"
+        aria-labelledby="contact-title"
+        aria-describedby="contact-desc"
+      >
         <div class="container">
           <div class="contact-grid">
             <div class="contact-info">
-              <h2 class="section-title" data-i18n="home.contact_section.title">
+              <h2
+                class="section-title"
+                id="contact-title"
+                data-i18n="home.contact_section.title"
+              >
                 Let's Work Together
               </h2>
-              <p data-i18n="home.contact_section.desc">
+              <p id="contact-desc" data-i18n="home.contact_section.desc">
                 Interested in collaborating or hiring me for your next project?
                 Drop me a message and I'll get back to you as soon as possible.
               </p>
@@ -349,7 +397,7 @@
                   class="social-icon"
                   data-social="github"
                   aria-describedby="site-a11y-help"
-                  ><svg class="social-icon-svg" aria-hidden="true" viewBox="0 0 24 24">
+                  ><svg class="social-icon-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
                     <use href="assets/icons/social-sprite.svg#icon-github"></use></svg
                 ></a>
                 <a
@@ -359,7 +407,7 @@
                   class="social-icon"
                   data-social="linkedin"
                   aria-describedby="site-a11y-help"
-                  ><svg class="social-icon-svg" aria-hidden="true" viewBox="0 0 24 24">
+                  ><svg class="social-icon-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
                     <use href="assets/icons/social-sprite.svg#icon-linkedin"></use></svg
                 ></a>
                 <a
@@ -369,7 +417,7 @@
                   class="social-icon"
                   data-social="x"
                   aria-describedby="site-a11y-help"
-                  ><svg class="social-icon-svg" aria-hidden="true" viewBox="0 0 24 24">
+                  ><svg class="social-icon-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
                     <use href="assets/icons/social-sprite.svg#icon-x"></use></svg
                 ></a>
                 <a
@@ -379,7 +427,7 @@
                   class="social-icon"
                   data-social="instagram"
                   aria-describedby="site-a11y-help"
-                  ><svg class="social-icon-svg" aria-hidden="true" viewBox="0 0 24 24">
+                  ><svg class="social-icon-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
                     <use href="assets/icons/social-sprite.svg#icon-instagram"></use></svg
                 ></a>
               </div>
@@ -483,8 +531,12 @@
             </div>
           </div>
           <p class="copyright" style="margin-top: 4rem">
-            © <span id="year"></span> Alberto Licea.
-            <span data-i18n="home.footer.rights">All rights reserved.</span>
+            <span class="copyright-line"
+              >© <span id="year"></span> Alberto Licea.</span
+            >
+            <span class="copyright-line" data-i18n="home.footer.rights"
+              >All rights reserved.</span
+            >
           </p>
         </div>
       </footer>
