@@ -6,6 +6,7 @@
 
 const SUPPORTED_LANGS = ['en', 'en.cav', 'es', 'es.cav', 'de', 'fr', 'it', 'ja', 'ko', 'pt', 'ru', 'zh', 'cat', 'alien'];
 const FALLBACK_LANG = 'en';
+const EXPERIENCE_START_DATE = { year: 2019, month: 0, day: 1 };
 const LANGUAGE_CONTROL_LABELS = {
     en: 'Select language',
     cat: 'Select cat language',
@@ -420,9 +421,30 @@ function initApp() {
     syncAccessibilityUI();
     initTooltipPositioning();
     initCursorParticles();
+    updateExperienceYearsStat();
 
     const yearSpan = document.getElementById('year');
     if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+}
+
+function getCompletedYearsSince({ year, month, day }) {
+    const now = new Date();
+    let years = now.getFullYear() - year;
+    const hasReachedAnniversary = (
+        now.getMonth() > month
+        || (now.getMonth() === month && now.getDate() >= day)
+    );
+
+    if (!hasReachedAnniversary) years -= 1;
+    return Math.max(0, years);
+}
+
+function updateExperienceYearsStat() {
+    const experienceYearsStat = document.getElementById('experience-years-stat');
+    if (!experienceYearsStat) return;
+
+    const completedYears = getCompletedYearsSince(EXPERIENCE_START_DATE);
+    experienceYearsStat.textContent = `+ ${completedYears}`;
 }
 
 function initTooltipPositioning() {
