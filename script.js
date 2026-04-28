@@ -6,6 +6,7 @@
 
 const SUPPORTED_LANGS = ['en', 'en.cav', 'es', 'es.cav', 'de', 'fr', 'it', 'ja', 'ko', 'pt', 'ru', 'zh', 'cat', 'alien'];
 const FALLBACK_LANG = 'en';
+const I18N_ASSET_VERSION = '20260428-1';
 const EXPERIENCE_START_DATE = { year: 2019, month: 0, day: 1 };
 const LANGUAGE_CONTROL_LABELS = {
     en: 'Select language',
@@ -91,7 +92,7 @@ const languageRequestCache = {};
 let hasScheduledLanguagePreload = false;
 
 function getLanguageAssetPath(lang) {
-    return `assets/i18n/${lang}.json`;
+    return `assets/i18n/${lang}.json?v=${I18N_ASSET_VERSION}`;
 }
 
 function getBaseLanguage(lang = currentLang) {
