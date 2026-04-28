@@ -978,10 +978,10 @@ function renderProjects() {
                     <div class="project-tags" aria-label="${technologiesLabel}: ${techList}">${tagsHtml}</div>
                     <p class="project-desc" id="${descId}">${projectDescription}</p>
                     <div class="project-links">
-                        <a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="${liveProjectA11y}: ${projectTitle}" data-tooltip="${liveProjectA11y}: ${projectTitle}">
+                        <a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--primary" aria-label="${liveProjectA11y}: ${projectTitle}" data-tooltip="${liveProjectA11y}: ${projectTitle}">
                             ${getInlineIconMarkup('external')} ${viewProjectLabel}
                         </a>
-                        <a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="${repoA11y}: ${projectTitle}" data-tooltip="${repoA11y}: ${projectTitle}">
+                        <a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--secondary" aria-label="${repoA11y}: ${projectTitle}" data-tooltip="${repoA11y}: ${projectTitle}">
                             ${getInlineIconMarkup('external')} ${repoLabel}
                         </a>
                     </div>
