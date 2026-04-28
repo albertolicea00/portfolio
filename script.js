@@ -76,7 +76,10 @@ const UI_GLYPHS = {
         type: 'sprite',
         id: 'icon-external'
     },
-    github: 'GH',
+    github: {
+        type: 'sprite',
+        id: 'icon-github'
+    },
     arrowRight: '\u2192',
     download: '\u2193',
     tools: '\ud83d\udee0'
@@ -982,7 +985,7 @@ function renderProjects() {
                             ${getInlineIconMarkup('external')} ${viewProjectLabel}
                         </a>
                         <a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="${repoA11y}: ${projectTitle}" data-tooltip="${repoA11y}: ${projectTitle}">
-                            ${getInlineIconMarkup('github', 'inline-icon text-icon')} ${repoLabel}
+                            ${getInlineIconMarkup('github')} ${repoLabel}
                         </a>
                     </div>
                 </div>

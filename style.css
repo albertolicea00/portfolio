@@ -4,7 +4,7 @@
   --brand-yellow-glow: rgba(254, 217, 164, 0.4);
   --brand-yellow-darker: #f0c58a;
   --font-heading: "Outfit", sans-serif;
-  --font-body: "Inter", sans-serif;
+  --font-body: "Manrope", sans-serif;
   --transition-smooth: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 
   /* Dark Theme (Default) */
@@ -587,9 +587,11 @@ textarea:focus-visible {
   left: 0;
   width: 100%;
   height: 100%;
+  border-radius: inherit;
   background-size: cover;
   background-position: center;
   opacity: var(--hero-image-opacity);
+  overflow: hidden;
   z-index: 0;
 }
 
@@ -1104,13 +1106,7 @@ textarea:focus-visible {
   border-radius: 16px;
   text-align: center;
   border: 1px solid var(--glass-border);
-  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.stat-item:hover {
-  transform: translateY(-8px) scale(1.02);
-  border-color: var(--brand-yellow);
-  box-shadow: 0 10px 25px var(--brand-yellow-glow);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
 }
 
 .stat-number {
@@ -1144,25 +1140,8 @@ textarea:focus-visible {
   border-radius: 20px;
   border: 1px solid var(--glass-border);
   overflow: visible;
-  transition: all 0.4s ease;
   display: flex;
   flex-direction: column;
-}
-
-.project-card:hover {
-  transform: translateY(-12px);
-  border-color: var(--brand-yellow);
-  box-shadow:
-    0 20px 40px var(--glass-panel-shadow),
-    0 0 20px var(--brand-yellow-glow);
-}
-
-.project-card:focus-within {
-  transform: translateY(-12px);
-  border-color: var(--brand-yellow);
-  box-shadow:
-    0 20px 40px var(--glass-panel-shadow),
-    0 0 20px var(--brand-yellow-glow);
 }
 
 .project-img-container {
@@ -1178,12 +1157,6 @@ textarea:focus-visible {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.project-card:hover .project-img,
-.project-card:focus-within .project-img {
-  transform: scale(1.05);
 }
 
 .project-content {
@@ -1197,12 +1170,6 @@ textarea:focus-visible {
   font-size: 1.4rem;
   margin-bottom: 0.75rem;
   color: var(--text-main);
-  transition: color 0.3s ease;
-}
-
-.project-card:hover .project-title,
-.project-card:focus-within .project-title {
-  color: var(--brand-yellow-darker);
 }
 
 .project-tags {
@@ -1269,13 +1236,6 @@ textarea:focus-visible {
   width: 1em;
   height: 1em;
   display: block;
-}
-
-.text-icon {
-  font-size: 0.76rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
 }
 
 .coming-soon-icon {
