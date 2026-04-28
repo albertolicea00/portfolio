@@ -1199,13 +1199,14 @@ textarea:focus-visible {
 
 .project-links {
   display: flex;
+  align-items: stretch;
   gap: 1rem;
 }
 
 .project-btn {
   font-size: 0.95rem;
   font-weight: 600;
-  padding: 0.6rem 1.2rem;
+  padding: 0.85rem 1rem;
   border-radius: 8px;
   background: var(--bg-secondary);
   border: 1px solid var(--glass-border);
@@ -1213,7 +1214,13 @@ textarea:focus-visible {
   transition: all 0.3s ease;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: 56px;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .project-btn:hover,

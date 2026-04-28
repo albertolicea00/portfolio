@@ -73,7 +73,7 @@
             "open_x": "Open X profile in a new tab",
             "open_instagram": "Open Instagram profile in a new tab",
             "view_live_project": "Open live project in a new tab",
-            "view_repository": "Open repository in a new tab",
+            "view_repository": "Open source code in a new tab",
             "view_company_site": "Open website in a new tab",
             "technologies_used": "Technologies used",
             "opens_new_tab": "Opens in a new tab",
@@ -86,7 +86,7 @@
         },
         "common": {
             "view_project": "View Project",
-            "repository": "Repository",
+            "repository": "Source Code",
             "coming_soon_title": "Coming Soon",
             "coming_soon": "I'm currently polishing and refining my latest projects to ensure they meet the highest standards. Check back soon for the full reveal!"
         }

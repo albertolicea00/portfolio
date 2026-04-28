@@ -73,7 +73,7 @@
             "open_x": "在新标签页打开 X 主页",
             "open_instagram": "在新标签页打开 Instagram 主页",
             "view_live_project": "在新标签页打开在线项目",
-            "view_repository": "在新标签页打开代码仓库",
+            "view_repository": "在新标签页打开源代码",
             "view_company_site": "在新标签页打开网站",
             "technologies_used": "使用的技术",
             "opens_new_tab": "将在新标签页中打开",
@@ -86,7 +86,7 @@
         },
         "common": {
             "view_project": "查看项目",
-            "repository": "代码仓库",
+            "repository": "源代码",
             "coming_soon_title": "即将推出",
             "coming_soon": "我正在打磨最新项目以确保达到最高质量。敬请期待完整发布！"
         }

@@ -73,7 +73,7 @@
             "open_x": "Open X",
             "open_instagram": "Open Instagram",
             "view_live_project": "Open live thing",
-            "view_repository": "Open code cave",
+            "view_repository": "Open source code",
             "view_company_site": "Open website",
             "technologies_used": "Tools used",
             "opens_new_tab": "Open new tab",
@@ -86,7 +86,7 @@
         },
         "common": {
             "view_project": "See project",
-            "repository": "Code cave",
+            "repository": "Source code",
             "coming_soon_title": "Me soon",
             "coming_soon": "Me polish projects. Me make perfect. You come back soon."
         }

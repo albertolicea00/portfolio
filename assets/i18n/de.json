@@ -73,7 +73,7 @@
             "open_x": "X-Profil in neuem Tab öffnen",
             "open_instagram": "Instagram-Profil in neuem Tab öffnen",
             "view_live_project": "Live-Projekt in neuem Tab öffnen",
-            "view_repository": "Repository in neuem Tab öffnen",
+            "view_repository": "Quellcode in neuem Tab öffnen",
             "view_company_site": "Website in neuem Tab öffnen",
             "technologies_used": "Verwendete Technologien",
             "opens_new_tab": "Öffnet in einem neuen Tab",
@@ -86,7 +86,7 @@
         },
         "common": {
             "view_project": "Projekt ansehen",
-            "repository": "Repository",
+            "repository": "Quellcode",
             "coming_soon_title": "Demnächst",
             "coming_soon": "Ich arbeite derzeit daran, meine neuesten Projekte zu verfeinern, um höchste Qualität zu gewährleisten. Schau bald wieder vorbei!"
         }

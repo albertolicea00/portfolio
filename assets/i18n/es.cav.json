@@ -73,7 +73,7 @@
             "open_x": "Abrir cueva X",
             "open_instagram": "Abrir cueva Instagram",
             "view_live_project": "Abrir invento vivo",
-            "view_repository": "Abrir piedras de código",
+            "view_repository": "Abrir código fuente",
             "view_company_site": "Abrir sitio de tribu",
             "technologies_used": "Herramientas usadas",
             "opens_new_tab": "Abre nueva cueva",
@@ -86,7 +86,7 @@
         },
         "common": {
             "view_project": "Ver invento",
-            "repository": "Cueva código",
+            "repository": "Código fuente",
             "coming_soon_title": "Casi listo",
             "coming_soon": "Hombre pulir inventos con piedra fina. Tú volver pronto y ver cosa brillante."
         }

@@ -73,7 +73,7 @@
             "open_x": "Xプロフィールを新しいタブで開く",
             "open_instagram": "Instagramプロフィールを新しいタブで開く",
             "view_live_project": "ライブプロジェクトを新しいタブで開く",
-            "view_repository": "リポジトリを新しいタブで開く",
+            "view_repository": "ソースコードを新しいタブで開く",
             "view_company_site": "ウェブサイトを新しいタブで開く",
             "technologies_used": "使用技術",
             "opens_new_tab": "新しいタブで開きます",
@@ -86,7 +86,7 @@
         },
         "common": {
             "view_project": "プロジェクトを見る",
-            "repository": "リポジトリ",
+            "repository": "ソースコード",
             "coming_soon_title": "近日公開",
             "coming_soon": "現在、最新プロジェクトを最高の品質に仕上げるために調整中です。近日公開をお楽しみに！"
         }
