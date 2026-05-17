@@ -32,6 +32,9 @@
                 "commitment": "Commitment"
             }
         },
+        "skills_section": {
+            "title": "Languages & Tech"
+        },
         "contact_section": {
             "title": "Let's Work Together",
             "desc": "Interested in collaborating or hiring me for your next project? Drop me a message and I'll get back to you as soon as possible.",
@@ -76,6 +79,7 @@
             "view_repository": "Open source code in a new tab",
             "view_company_site": "Open website in a new tab",
             "technologies_used": "Technologies used",
+            "skills_marquee": "Core languages and technologies",
             "opens_new_tab": "Opens in a new tab",
             "theme_enabled_dark": "Dark theme enabled",
             "theme_enabled_light": "Light theme enabled",

@@ -32,6 +32,9 @@
                 "commitment": "Compromiso"
             }
         },
+        "skills_section": {
+            "title": "Lenguajes y Tech"
+        },
         "contact_section": {
             "title": "Trabajemos Juntos",
             "desc": "¿Interesado en colaborar o contratarme para tu próximo proyecto? Envíame un mensaje y te responderé lo antes posible.",
@@ -76,6 +79,7 @@
             "view_repository": "Abrir código fuente en una pestaña nueva",
             "view_company_site": "Abrir sitio web en una pestaña nueva",
             "technologies_used": "Tecnologías usadas",
+            "skills_marquee": "Lenguajes y tecnologías principales",
             "opens_new_tab": "Se abre en una pestaña nueva",
             "theme_enabled_dark": "Tema oscuro activado",
             "theme_enabled_light": "Tema claro activado",

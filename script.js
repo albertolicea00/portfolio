@@ -6,7 +6,23 @@
 
 const SUPPORTED_LANGS = ['en', 'en.cav', 'es', 'es.cav', 'de', 'fr', 'it', 'ja', 'ko', 'pt', 'ru', 'zh', 'cat', 'alien'];
 const FALLBACK_LANG = 'en';
-const I18N_ASSET_VERSION = '20260428-1';
+const I18N_ASSET_VERSION = '20260428-2';
+const SKILLS_MARQUEE_ITEMS = [
+    'JavaScript',
+    'TypeScript',
+    'Python',
+    'Django',
+    'Node.js',
+    'Svelte',
+    'Astro',
+    'Vue',
+    'Laravel',
+    'Livewire',
+    'Swift',
+    'Tailwind CSS',
+    'WordPress',
+    'BigCommerce'
+];
 const EXPERIENCE_START_DATE = { year: 2019, month: 0, day: 1 };
 const LANGUAGE_CONTROL_LABELS = {
     en: 'Select language',
@@ -914,8 +930,30 @@ function updatePageText() {
 
 function renderDynamicContent() {
     if (!siteData) return;
+    renderSkillsMarquee();
     renderProjects();
     renderExperience();
+}
+
+function renderSkillsMarquee() {
+    const track = document.getElementById('skills-track');
+    const marquee = document.getElementById('skills-marquee');
+    if (!track || !marquee) return;
+
+    const skillsA11y = getLocalizedText('home.accessibility.skills_marquee', 'Core languages and technologies');
+    const itemMarkup = SKILLS_MARQUEE_ITEMS.map(skill => (
+        `<span class="skill-pill" role="listitem">${skill}</span>`
+    )).join('');
+
+    track.innerHTML = `
+        <div class="skills-track-group" role="list">
+            ${itemMarkup}
+        </div>
+        <div class="skills-track-group" aria-hidden="true">
+            ${itemMarkup}
+        </div>
+    `;
+    marquee.setAttribute('aria-label', skillsA11y);
 }
 
 function renderProjects() {

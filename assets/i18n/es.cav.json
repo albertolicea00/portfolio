@@ -32,6 +32,9 @@
                 "commitment": "Fuerza bruta"
             }
         },
+        "skills_section": {
+            "title": "Código y herramientas"
+        },
         "contact_section": {
             "title": "Yo trabajar contigo",
             "desc": "Tú querer proyecto. Tú escribir. Yo responder rápido.",
@@ -76,6 +79,7 @@
             "view_repository": "Abrir código fuente",
             "view_company_site": "Abrir sitio de tribu",
             "technologies_used": "Herramientas usadas",
+            "skills_marquee": "Lenguajes y herramientas principales",
             "opens_new_tab": "Abre nueva cueva",
             "theme_enabled_dark": "Noche activada",
             "theme_enabled_light": "Sol activado",

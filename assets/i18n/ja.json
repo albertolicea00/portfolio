@@ -32,6 +32,9 @@
                 "commitment": "コミットメント"
             }
         },
+        "skills_section": {
+            "title": "言語とテック"
+        },
         "contact_section": {
             "title": "一緒に働きましょう",
             "desc": "コラボレーションやプロジェクトへの参加に興味がありますか？メッセージを送ってください。できるだけ早く返信します。",
@@ -76,6 +79,7 @@
             "view_repository": "ソースコードを新しいタブで開く",
             "view_company_site": "ウェブサイトを新しいタブで開く",
             "technologies_used": "使用技術",
+            "skills_marquee": "主要な言語と技術",
             "opens_new_tab": "新しいタブで開きます",
             "theme_enabled_dark": "ダークテーマが有効です",
             "theme_enabled_light": "ライトテーマが有効です",

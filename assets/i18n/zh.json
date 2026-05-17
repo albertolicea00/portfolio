@@ -32,6 +32,9 @@
                 "commitment": "投入度"
             }
         },
+        "skills_section": {
+            "title": "语言与技术"
+        },
         "contact_section": {
             "title": "一起合作吧",
             "desc": "有兴趣合作或雇佣我参与您的下一个项目吗？请给我留言，我会尽快回复您。",
@@ -76,6 +79,7 @@
             "view_repository": "在新标签页打开源代码",
             "view_company_site": "在新标签页打开网站",
             "technologies_used": "使用的技术",
+            "skills_marquee": "核心语言与技术",
             "opens_new_tab": "将在新标签页中打开",
             "theme_enabled_dark": "已启用深色主题",
             "theme_enabled_light": "已启用浅色主题",

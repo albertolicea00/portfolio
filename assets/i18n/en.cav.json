@@ -32,6 +32,9 @@
                 "commitment": "Strong promise"
             }
         },
+        "skills_section": {
+            "title": "Code Tools"
+        },
         "contact_section": {
             "title": "Me work with you",
             "desc": "You want project. You send message. Me answer fast.",
@@ -76,6 +79,7 @@
             "view_repository": "Open source code",
             "view_company_site": "Open website",
             "technologies_used": "Tools used",
+            "skills_marquee": "Main code tools",
             "opens_new_tab": "Open new tab",
             "theme_enabled_dark": "Dark active",
             "theme_enabled_light": "Light active",

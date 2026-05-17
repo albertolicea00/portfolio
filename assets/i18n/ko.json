@@ -32,6 +32,9 @@
                 "commitment": "헌신"
             }
         },
+        "skills_section": {
+            "title": "언어와 테크"
+        },
         "contact_section": {
             "title": "함께 일해요",
             "desc": "다음 프로젝트에서 협업하거나 저를 고용하는 데 관심이 있으신가요? 메시지를 남겨주시면 최대한 빨리 답변드리겠습니다.",
@@ -76,6 +79,7 @@
             "view_repository": "새 탭에서 소스 코드 열기",
             "view_company_site": "새 탭에서 웹사이트 열기",
             "technologies_used": "사용된 기술",
+            "skills_marquee": "핵심 언어와 기술",
             "opens_new_tab": "새 탭에서 열립니다",
             "theme_enabled_dark": "다크 테마 활성화됨",
             "theme_enabled_light": "라이트 테마 활성화됨",
