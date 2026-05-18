@@ -16,3 +16,4 @@ Thumbs.db
 # Project specific
 .gemini/
 .agents/
+.env

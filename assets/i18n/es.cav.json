@@ -50,8 +50,8 @@
                 "phone": "Tú telefono",
                 "message": "Tú idea / problema / fuego"
             },
-            "form_help": "Formulario no funcionar. Tú usar otra cosa.",
-            "submit_btn": "No funcionar",
+            "form_help": "Formulario tu usar. Yo responder rápido.",
+            "submit_btn": "Enviar señal de humo",
             "success_msg": "Mensaje enviado. Yo venir pronto."
         },
         "footer": {

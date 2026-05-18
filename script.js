@@ -1356,11 +1356,49 @@ function setupEventListeners() {
         }
     });
 
-    // Simple Form Handler
-    document.getElementById('contact-form')?.addEventListener('submit', (e) => {
+    // Contact Form Handler
+    document.getElementById('contact-form')?.addEventListener('submit', async (e) => {
         e.preventDefault();
-        alert(getLocalizedText('home.contact_section.success_msg', 'Message sent!'));
-        e.target.reset();
+        const form = e.target;
+        const btn = document.getElementById('contact-submit-btn');
+        const statusEl = document.getElementById('contact-form-status');
+
+        const name = form.querySelector('#name').value.trim();
+        const email = form.querySelector('#email').value.trim();
+        const phone = form.querySelector('#phone').value.trim();
+        const message = form.querySelector('#message').value.trim();
+
+        if (!name || !email || !message) return;
+
+        btn.disabled = true;
+        btn.style.opacity = '0.7';
+        statusEl.style.display = 'none';
+
+        try {
+            const res = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, email, phone, message }),
+            });
+
+            if (res.ok) {
+                statusEl.textContent = getLocalizedText('home.contact_section.success_msg', 'Message sent! I\'ll get back to you soon.');
+                statusEl.style.display = 'block';
+                statusEl.style.color = 'var(--accent, #6ee7b7)';
+                form.reset();
+            } else {
+                statusEl.textContent = getLocalizedText('home.contact_section.error_msg', 'Something went wrong. Please try again or use the social links.');
+                statusEl.style.display = 'block';
+                statusEl.style.color = '#f87171';
+            }
+        } catch {
+            statusEl.textContent = getLocalizedText('home.contact_section.error_msg', 'Something went wrong. Please try again or use the social links.');
+            statusEl.style.display = 'block';
+            statusEl.style.color = '#f87171';
+        } finally {
+            btn.disabled = false;
+            btn.style.opacity = '';
+        }
     });
 }
 

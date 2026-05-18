@@ -1,236 +1,237 @@
 {
-    "home": {
-        "nav": {
-            "home": "Inicio",
-            "projects": "Proyectos",
-            "experience": "Experiencia",
-            "allwork": "Apps",
-            "contact": "Contacto"
-        },
-        "hero": {
-            "subtitle": "Desarrollador Fullstack Web y Móvil<br>Diseñador Gráfico",
-            "bio": "6 años convirtiendo café en código de alta gama.",
-            "cta": "Ver Proyectos",
-            "contact": "Contactame",
-            "download_cv": "Descargar CV"
-        },
-        "projects_section": {
-            "title": "Proyectos Recientes",
-            "subtitle": "Nuevos y emocionantes proyectos se están preparando. ¡Mantente atento!",
-            "view_all": "Ver Todas las Apps"
-        },
-        "experience_section": {
-            "title": "Experiencia",
-            "subtitle": "Mi trayectoria profesional a través de la tecnología."
-        },
-        "about_section": {
-            "title": "Sobre Mí",
-            "p1": "Soy un entusiasta de la vida, siempre con una sonrisa y listo para enfrentar nuevos retos y convertir ideas en realidad. Me encanta aprender, crecer y contribuir en cada proyecto en el que participo. ¡Siempre listo para la próxima aventura!",
-            "p2": "🌱 Profundizando en <strong>Machine Learning e IA</strong>. ⚡ También hago 🎨 <strong>diseño 2D, ⚒️ modelado 3D y 🕹️ juegos</strong>.",
-            "stats": {
-                "years": "Años Exp.",
-                "commitment": "Compromiso"
-            }
-        },
-        "skills_section": {
-            "title": "Lenguajes y Tech"
-        },
-        "contact_section": {
-            "title": "Trabajemos Juntos",
-            "desc": "¿Interesado en colaborar o contratarme para tu próximo proyecto? Envíame un mensaje y te responderé lo antes posible.",
-            "labels": {
-                "name": "Nombre",
-                "email": "Correo",
-                "phone": "Teléfono",
-                "message": "Mensaje"
-            },
-            "placeholders": {
-                "name": "Tu Nombre",
-                "email": "Tu Correo",
-                "phone": "Tu Teléfono",
-                "message": "Detalles del Proyecto / Mensaje"
-            },
-            "form_help": "El formulario de contacto está offline por ahora. Usa los enlaces sociales o descarga el CV para contactarme.",
-            "submit_btn": "Formulario Offline",
-            "success_msg": "¡Mensaje enviado! Te contactaré pronto."
-        },
-        "footer": {
-            "rights": "Hecho con ❤️ por @albertolicea00"
-        },
-        "accessibility": {
-            "skip_to_content": "Saltar al contenido principal",
-            "keyboard_help": "Usa la tecla Tab para moverte por enlaces, botones y campos del formulario. Los tooltips aparecen al pasar el cursor o al navegar con teclado.",
-            "navigation": "Navegación principal",
-            "open_menu": "Abrir menú de navegación",
-            "close_menu": "Cerrar menú de navegación",
-            "theme_to_light": "Cambiar a tema claro",
-            "theme_to_dark": "Cambiar a tema oscuro",
-            "language_to_english": "Cambiar idioma a inglés",
-            "language_to_spanish": "Cambiar idioma a español",
-            "scroll_to_projects": "Ir a la sección de proyectos",
-            "download_cv": "Descargar CV en formato PDF",
-            "all_projects": "Ver todas las Apps",
-            "contact_shortcut": "Ir a la sección de contacto",
-            "open_github": "Abrir perfil de GitHub en una pestaña nueva",
-            "open_linkedin": "Abrir perfil de LinkedIn en una pestaña nueva",
-            "open_x": "Abrir perfil de X en una pestaña nueva",
-            "open_instagram": "Abrir perfil de Instagram en una pestaña nueva",
-            "view_live_project": "Abrir proyecto en vivo en una pestaña nueva",
-            "view_repository": "Abrir código fuente en una pestaña nueva",
-            "view_company_site": "Abrir sitio web en una pestaña nueva",
-            "technologies_used": "Tecnologías usadas",
-            "skills_marquee": "Lenguajes y tecnologías principales",
-            "opens_new_tab": "Se abre en una pestaña nueva",
-            "theme_enabled_dark": "Tema oscuro activado",
-            "theme_enabled_light": "Tema claro activado",
-            "language_changed_english": "Idioma cambiado a inglés",
-            "language_changed_spanish": "Idioma cambiado a español",
-            "menu_expanded": "Menú de navegación expandido",
-            "menu_collapsed": "Menú de navegación contraído"
-        },
-        "common": {
-            "view_project": "Ver Proyecto",
-            "repository": "Código fuente",
-            "coming_soon_title": "Próximamente",
-            "coming_soon": "Estoy terminando de pulir y retocar mis últimos proyectos para que queden perfectos antes de incluirlos aquí. ¡Vuelve pronto para ver el resultado!"
-        }
+  "home": {
+    "nav": {
+      "home": "Inicio",
+      "projects": "Proyectos",
+      "experience": "Experiencia",
+      "allwork": "Apps",
+      "contact": "Contacto"
     },
-    "projects": [
+    "hero": {
+      "subtitle": "Desarrollador Fullstack Web y Móvil<br>Diseñador Gráfico",
+      "bio": "6 años convirtiendo café en código de alta gama.",
+      "cta": "Ver Proyectos",
+      "contact": "Contactame",
+      "download_cv": "Descargar CV"
+    },
+    "projects_section": {
+      "title": "Proyectos Recientes",
+      "subtitle": "Nuevos y emocionantes proyectos se están preparando. ¡Mantente atento!",
+      "view_all": "Ver Todas las Apps"
+    },
+    "experience_section": {
+      "title": "Experiencia",
+      "subtitle": "Mi trayectoria profesional a través de la tecnología."
+    },
+    "about_section": {
+      "title": "Sobre Mí",
+      "p1": "Soy un entusiasta de la vida, siempre con una sonrisa y listo para enfrentar nuevos retos y convertir ideas en realidad. Me encanta aprender, crecer y contribuir en cada proyecto en el que participo. ¡Siempre listo para la próxima aventura!",
+      "p2": "🌱 Profundizando en <strong>Machine Learning e IA</strong>. ⚡ También hago 🎨 <strong>diseño 2D, ⚒️ modelado 3D y 🕹️ juegos</strong>.",
+      "stats": {
+        "years": "Años Exp.",
+        "commitment": "Compromiso"
+      }
+    },
+    "skills_section": {
+      "title": "Lenguajes y Tech"
+    },
+    "contact_section": {
+      "title": "Trabajemos Juntos",
+      "desc": "¿Interesado en colaborar o contratarme para tu próximo proyecto? Envíame un mensaje y te responderé lo antes posible.",
+      "labels": {
+        "name": "Nombre",
+        "email": "Correo",
+        "phone": "Teléfono",
+        "message": "Mensaje"
+      },
+      "placeholders": {
+        "name": "Tu Nombre",
+        "email": "Tu Correo",
+        "phone": "Tu Teléfono",
+        "message": "Detalles del Proyecto / Mensaje"
+      },
+      "form_help": "Rellena el formulario y me pondré en contacto contigo lo antes posible.",
+      "submit_btn": "Enviar Mensaje",
+      "success_msg": "¡Mensaje enviado! Me pondré en contacto contigo pronto.",
+      "error_msg": "Algo salió mal. Por favor intenta de nuevo o usa los enlaces sociales."
+    },
+    "footer": {
+      "rights": "Hecho con ❤️ por @albertolicea00"
+    },
+    "accessibility": {
+      "skip_to_content": "Saltar al contenido principal",
+      "keyboard_help": "Usa la tecla Tab para moverte por enlaces, botones y campos del formulario. Los tooltips aparecen al pasar el cursor o al navegar con teclado.",
+      "navigation": "Navegación principal",
+      "open_menu": "Abrir menú de navegación",
+      "close_menu": "Cerrar menú de navegación",
+      "theme_to_light": "Cambiar a tema claro",
+      "theme_to_dark": "Cambiar a tema oscuro",
+      "language_to_english": "Cambiar idioma a inglés",
+      "language_to_spanish": "Cambiar idioma a español",
+      "scroll_to_projects": "Ir a la sección de proyectos",
+      "download_cv": "Descargar CV en formato PDF",
+      "all_projects": "Ver todas las Apps",
+      "contact_shortcut": "Ir a la sección de contacto",
+      "open_github": "Abrir perfil de GitHub en una pestaña nueva",
+      "open_linkedin": "Abrir perfil de LinkedIn en una pestaña nueva",
+      "open_x": "Abrir perfil de X en una pestaña nueva",
+      "open_instagram": "Abrir perfil de Instagram en una pestaña nueva",
+      "view_live_project": "Abrir proyecto en vivo en una pestaña nueva",
+      "view_repository": "Abrir código fuente en una pestaña nueva",
+      "view_company_site": "Abrir sitio web en una pestaña nueva",
+      "technologies_used": "Tecnologías usadas",
+      "skills_marquee": "Lenguajes y tecnologías principales",
+      "opens_new_tab": "Se abre en una pestaña nueva",
+      "theme_enabled_dark": "Tema oscuro activado",
+      "theme_enabled_light": "Tema claro activado",
+      "language_changed_english": "Idioma cambiado a inglés",
+      "language_changed_spanish": "Idioma cambiado a español",
+      "menu_expanded": "Menú de navegación expandido",
+      "menu_collapsed": "Menú de navegación contraído"
+    },
+    "common": {
+      "view_project": "Ver Proyecto",
+      "repository": "Código fuente",
+      "coming_soon_title": "Próximamente",
+      "coming_soon": "Estoy terminando de pulir y retocar mis últimos proyectos para que queden perfectos antes de incluirlos aquí. ¡Vuelve pronto para ver el resultado!"
+    }
+  },
+  "projects": [
+    {
+      "id": 1,
+      "title": "Servicios BettaHVAC",
+      "description": "Plataforma corporativa escalable para servicios de climatización, con generación de presupuestos y gestión de clientes.",
+      "image": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "tags": [
+        "Svelte",
+        "Node.js",
+        "CSS"
+      ],
+      "githubUrl": "https://github.com/albertolicea00/bettahvac-landing",
+      "liveUrl": "https://www.bettahvacservices.com/",
+      "featured": false
+    },
+    {
+      "id": 2,
+      "title": "Las Locuras de Miguelín",
+      "description": "Landing page de entretenimiento altamente dinámica con diseño envolvente y animaciones fluidas.",
+      "image": "https://yt3.googleusercontent.com/xktD1rgu2QIivNnnDWVuYuFlchkfdH23Yp4YUbv1-7Y5LIJHLvgEHD-rOgwn8XEskC3vAGzTeg=s160-c-k-c0x00ffffff-no-rj",
+      "tags": [
+        "Astro",
+        "TypeScript",
+        "Tailwind CSS"
+      ],
+      "githubUrl": "https://github.com/albertolicea00/las-locuras-de-miguelin-landing",
+      "liveUrl": "https://las-locuras-de-miguelin-landing.vercel.app/",
+      "featured": false
+    },
+    {
+      "id": 3,
+      "title": "Landing Page Kristoff",
+      "description": "Landing page para plataforma de VOD centrada en la excelencia UI/UX y narrativa de marca.",
+      "image": "https://yt3.googleusercontent.com/_nwkuUvKJT-ztrUNH1bymp7trvZfDXp07UVV7NJNv-Zfws0Wpnlla9nExFRhYSVNAMeKxt9AHA=s160-c-k-c0x00ffffff-no-rj",
+      "tags": [
+        "Astro",
+        "TypeScript",
+        "Tailwind CSS"
+      ],
+      "githubUrl": "https://github.com/albertolicea00/kristoff-landing",
+      "liveUrl": "https://kristoff-landing.vercel.app/",
+      "featured": false
+    },
+    {
+      "id": 4,
+      "title": "Sistema de Banca Remota",
+      "description": "Solución de banca digital robusta centrada en la seguridad, operaciones remotas y arquitectura de alto rendimiento.",
+      "image": "https://github.com/albertolicea00/Banca_Remota/blob/main/Banca_Remota.xcassets/Logo.imageset/logo.png?raw=true",
+      "tags": [
+        "Swift",
+        "iOS"
+      ],
+      "githubUrl": "https://github.com/albertolicea00/Banca_Remota",
+      "liveUrl": "https://github.com/albertolicea00/Banca_Remota",
+      "featured": false
+    }
+  ],
+  "experience": [
+    {
+      "date": "Present",
+      "title": "PinkzebraHome - Confidencial",
+      "logo": "assets/img/company/pinkzebrahome.webp",
+      "logoWide": true,
+      "desc": "Actualmente desarrollando un proyecto privado de alto impacto. Muy pronto...",
+      "links": [
         {
-            "id": 1,
-            "title": "Servicios BettaHVAC",
-            "description": "Plataforma corporativa escalable para servicios de climatización, con generación de presupuestos y gestión de clientes.",
-            "image": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-            "tags": [
-                "Svelte",
-                "Node.js",
-                "CSS"
-            ],
-            "githubUrl": "https://github.com/albertolicea00/bettahvac-landing",
-            "liveUrl": "https://www.bettahvacservices.com/",
-            "featured": false
-        },
-        {
-            "id": 2,
-            "title": "Las Locuras de Miguelín",
-            "description": "Landing page de entretenimiento altamente dinámica con diseño envolvente y animaciones fluidas.",
-            "image": "https://yt3.googleusercontent.com/xktD1rgu2QIivNnnDWVuYuFlchkfdH23Yp4YUbv1-7Y5LIJHLvgEHD-rOgwn8XEskC3vAGzTeg=s160-c-k-c0x00ffffff-no-rj",
-            "tags": [
-                "Astro",
-                "TypeScript",
-                "Tailwind CSS"
-            ],
-            "githubUrl": "https://github.com/albertolicea00/las-locuras-de-miguelin-landing",
-            "liveUrl": "https://las-locuras-de-miguelin-landing.vercel.app/",
-            "featured": false
-        },
-        {
-            "id": 3,
-            "title": "Landing Page Kristoff",
-            "description": "Landing page para plataforma de VOD centrada en la excelencia UI/UX y narrativa de marca.",
-            "image": "https://yt3.googleusercontent.com/_nwkuUvKJT-ztrUNH1bymp7trvZfDXp07UVV7NJNv-Zfws0Wpnlla9nExFRhYSVNAMeKxt9AHA=s160-c-k-c0x00ffffff-no-rj",
-            "tags": [
-                "Astro",
-                "TypeScript",
-                "Tailwind CSS"
-            ],
-            "githubUrl": "https://github.com/albertolicea00/kristoff-landing",
-            "liveUrl": "https://kristoff-landing.vercel.app/",
-            "featured": false
-        },
-        {
-            "id": 4,
-            "title": "Sistema de Banca Remota",
-            "description": "Solución de banca digital robusta centrada en la seguridad, operaciones remotas y arquitectura de alto rendimiento.",
-            "image": "https://github.com/albertolicea00/Banca_Remota/blob/main/Banca_Remota.xcassets/Logo.imageset/logo.png?raw=true",
-            "tags": [
-                "Swift",
-                "iOS"
-            ],
-            "githubUrl": "https://github.com/albertolicea00/Banca_Remota",
-            "liveUrl": "https://github.com/albertolicea00/Banca_Remota",
-            "featured": false
+          "url": "https://pinkzebrahome.com?repid=1198544",
+          "label": "PinkzebraHome"
         }
-    ],
-    "experience": [
+      ]
+    },
+    {
+      "date": "Mar 2024 - Present",
+      "title": "Desarrollador de Software @ Ladetec",
+      "logo": "assets/img/company/ladetec.webp",
+      "desc": "Integración de APIs (Bigcommerce, KillBill) y desarrollo de ERPs usando Django, Vue.js, Svelte y Node.js.",
+      "links": [
         {
-            "date": "Present",
-            "title": "PinkzebraHome - Confidencial",
-            "logo": "assets/img/company/pinkzebrahome.webp",
-            "logoWide": true,
-            "desc": "Actualmente desarrollando un proyecto privado de alto impacto. Muy pronto...",
-            "links": [
-                {
-                    "url": "https://pinkzebrahome.com?repid=1198544",
-                    "label": "PinkzebraHome"
-                }
-            ]
-        },
-        {
-            "date": "Mar 2024 - Present",
-            "title": "Desarrollador de Software @ Ladetec",
-            "logo": "assets/img/company/ladetec.webp",
-            "desc": "Integración de APIs (Bigcommerce, KillBill) y desarrollo de ERPs usando Django, Vue.js, Svelte y Node.js.",
-            "links": [
-                {
-                    "url": "https://www.ladetec.com/",
-                    "label": "Ladetec"
-                }
-            ]
-        },
-        {
-            "date": "Mar 2024 - Aug 2024",
-            "title": "Mantenimiento de Software @ TOWIT Houston",
-            "logo": "assets/img/company/towithuston.webp",
-            "desc": "Realicé correcciones de bugs y añadí nuevas funcionalidades en su software de gestión, mejorando la estabilidad y la operación del día a día.",
-            "links": [
-                {
-                    "url": "https://towithouston.com/",
-                    "label": "TOWIT Houston"
-                }
-            ]
-        },
-        {
-            "date": "Mar 2022 - Feb 2024",
-            "title": "Manager de Soporte IT @ Wateke Soluciones",
-            "logo": "assets/img/company/wateketech.svg",
-            "logoWide": true,
-            "logoLight": true,
-            "desc": "Desarrollo de sistemas ERP y CMS a medida con Laravel y Livewire. Gestión de sitios WordPress y plugins personalizados.",
-            "links": [
-                {
-                    "url": "https://wateke.tech/",
-                    "label": "Wateke Soluciones"
-                }
-            ]
-        },
-        {
-            "date": "Jan 2022 - Feb 2024",
-            "title": "Colaborador Externo @ Wateke Travel",
-            "logo": "assets/img/company/wateketravel.webp",
-            "logoWide": true,
-            "logoDark": true,
-            "desc": "Creación de apps móviles con Apache Cordova y animaciones de logos con After Effects.",
-            "links": [
-                {
-                    "url": "https://wateke.travel/",
-                    "label": "Wateke Travel"
-                }
-            ]
-        },
-        {
-            "date": "Sep 2019 - Jan 2024",
-            "title": "Ingeniería Informática @ Universidad de Camagüey",
-            "logo": "assets/img/company/ucm.webp",
-            "logoWide": true,
-            "logoDark": true,
-            "desc": "Me gradué en Ingeniería Informática y además cursé un año de Contabilidad y Finanzas.",
-            "links": [
-                {
-                    "url": "https://www.reduc.edu.cu/",
-                    "label": "Universidad de Camagüey"
-                }
-            ]
+          "url": "https://www.ladetec.com/",
+          "label": "Ladetec"
         }
-    ]
+      ]
+    },
+    {
+      "date": "Mar 2024 - Aug 2024",
+      "title": "Mantenimiento de Software @ TOWIT Houston",
+      "logo": "assets/img/company/towithuston.webp",
+      "desc": "Realicé correcciones de bugs y añadí nuevas funcionalidades en su software de gestión, mejorando la estabilidad y la operación del día a día.",
+      "links": [
+        {
+          "url": "https://towithouston.com/",
+          "label": "TOWIT Houston"
+        }
+      ]
+    },
+    {
+      "date": "Mar 2022 - Feb 2024",
+      "title": "Manager de Soporte IT @ Wateke Soluciones",
+      "logo": "assets/img/company/wateketech.svg",
+      "logoWide": true,
+      "logoLight": true,
+      "desc": "Desarrollo de sistemas ERP y CMS a medida con Laravel y Livewire. Gestión de sitios WordPress y plugins personalizados.",
+      "links": [
+        {
+          "url": "https://wateke.tech/",
+          "label": "Wateke Soluciones"
+        }
+      ]
+    },
+    {
+      "date": "Jan 2022 - Feb 2024",
+      "title": "Colaborador Externo @ Wateke Travel",
+      "logo": "assets/img/company/wateketravel.webp",
+      "logoWide": true,
+      "logoDark": true,
+      "desc": "Creación de apps móviles con Apache Cordova y animaciones de logos con After Effects.",
+      "links": [
+        {
+          "url": "https://wateke.travel/",
+          "label": "Wateke Travel"
+        }
+      ]
+    },
+    {
+      "date": "Sep 2019 - Jan 2024",
+      "title": "Ingeniería Informática @ Universidad de Camagüey",
+      "logo": "assets/img/company/ucm.webp",
+      "logoWide": true,
+      "logoDark": true,
+      "desc": "Me gradué en Ingeniería Informática y además cursé un año de Contabilidad y Finanzas.",
+      "links": [
+        {
+          "url": "https://www.reduc.edu.cu/",
+          "label": "Universidad de Camagüey"
+        }
+      ]
+    }
+  ]
 }

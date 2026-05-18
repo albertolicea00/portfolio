@@ -1,236 +1,237 @@
 {
-    "home": {
-        "nav": {
-            "home": "ホーム",
-            "projects": "プロジェクト",
-            "experience": "経験",
-            "allwork": "アプリ",
-            "contact": "お問い合わせ"
-        },
-        "hero": {
-            "subtitle": "フルスタックWeb & モバイル開発者<br>グラフィックデザイナー",
-            "bio": "コーヒーを高品質なコードに変えてきた6年間。",
-            "cta": "プロジェクトを見る",
-            "contact": "連絡する",
-            "download_cv": "履歴書をダウンロード"
-        },
-        "projects_section": {
-            "title": "最近のプロジェクト",
-            "subtitle": "新しく魅力的なプロジェクトを準備中です。お楽しみに！",
-            "view_all": "すべてのアプリを見る"
-        },
-        "experience_section": {
-            "title": "経験",
-            "subtitle": "テクノロジー分野での私のキャリアの歩み。"
-        },
-        "about_section": {
-            "title": "自己紹介",
-            "p1": "私は人生を楽しむ人間で、いつも笑顔で新しい挑戦に立ち向かい、アイデアを現実に変えることが大好きです。学び、成長し、関わるすべてのプロジェクトに貢献することを大切にしています。常に次の冒険に向けて準備万端です！",
-            "p2": "🌱 現在は<strong>機械学習とAI</strong>を深く学んでいます。⚡ また 🎨 <strong>2Dデザイン、⚒️ 3Dモデル、🕹️ ゲーム制作</strong>にも取り組んでいます。",
-            "stats": {
-                "years": "経験年数",
-                "commitment": "コミットメント"
-            }
-        },
-        "skills_section": {
-            "title": "言語とテック"
-        },
-        "contact_section": {
-            "title": "一緒に働きましょう",
-            "desc": "コラボレーションやプロジェクトへの参加に興味がありますか？メッセージを送ってください。できるだけ早く返信します。",
-            "labels": {
-                "name": "名前",
-                "email": "メール",
-                "phone": "電話番号",
-                "message": "メッセージ"
-            },
-            "placeholders": {
-                "name": "あなたの名前",
-                "email": "あなたのメール",
-                "phone": "あなたの電話番号",
-                "message": "プロジェクト詳細 / メッセージ"
-            },
-            "form_help": "現在お問い合わせフォームはオフラインです。SNSリンクまたはCVをダウンロードしてご連絡ください。",
-            "submit_btn": "フォームオフライン",
-            "success_msg": "送信されました！後ほどご連絡します。"
-        },
-        "footer": {
-            "rights": "❤️ で作成 @albertolicea00"
-        },
-        "accessibility": {
-            "skip_to_content": "メインコンテンツへ移動",
-            "keyboard_help": "Tabキーでリンク、ボタン、フォームを移動できます。ツールチップはホバーまたはフォーカスで表示されます。",
-            "navigation": "メインナビゲーション",
-            "open_menu": "ナビゲーションメニューを開く",
-            "close_menu": "ナビゲーションメニューを閉じる",
-            "theme_to_light": "ライトテーマに切り替え",
-            "theme_to_dark": "ダークテーマに切り替え",
-            "language_to_english": "英語に切り替え",
-            "language_to_spanish": "スペイン語に切り替え",
-            "scroll_to_projects": "プロジェクトセクションへ移動",
-            "download_cv": "PDF形式でCVをダウンロード",
-            "all_projects": "すべてのアプリを見る",
-            "contact_shortcut": "お問い合わせセクションへ移動",
-            "open_github": "GitHubプロフィールを新しいタブで開く",
-            "open_linkedin": "LinkedInプロフィールを新しいタブで開く",
-            "open_x": "Xプロフィールを新しいタブで開く",
-            "open_instagram": "Instagramプロフィールを新しいタブで開く",
-            "view_live_project": "ライブプロジェクトを新しいタブで開く",
-            "view_repository": "ソースコードを新しいタブで開く",
-            "view_company_site": "ウェブサイトを新しいタブで開く",
-            "technologies_used": "使用技術",
-            "skills_marquee": "主要な言語と技術",
-            "opens_new_tab": "新しいタブで開きます",
-            "theme_enabled_dark": "ダークテーマが有効です",
-            "theme_enabled_light": "ライトテーマが有効です",
-            "language_changed_english": "英語に変更されました",
-            "language_changed_spanish": "スペイン語に変更されました",
-            "menu_expanded": "ナビゲーションメニューが展開されました",
-            "menu_collapsed": "ナビゲーションメニューが閉じられました"
-        },
-        "common": {
-            "view_project": "プロジェクトを見る",
-            "repository": "ソースコード",
-            "coming_soon_title": "近日公開",
-            "coming_soon": "現在、最新プロジェクトを最高の品質に仕上げるために調整中です。近日公開をお楽しみに！"
-        }
+  "home": {
+    "nav": {
+      "home": "ホーム",
+      "projects": "プロジェクト",
+      "experience": "経験",
+      "allwork": "アプリ",
+      "contact": "お問い合わせ"
     },
-    "projects": [
+    "hero": {
+      "subtitle": "フルスタックWeb & モバイル開発者<br>グラフィックデザイナー",
+      "bio": "コーヒーを高品質なコードに変えてきた6年間。",
+      "cta": "プロジェクトを見る",
+      "contact": "連絡する",
+      "download_cv": "履歴書をダウンロード"
+    },
+    "projects_section": {
+      "title": "最近のプロジェクト",
+      "subtitle": "新しく魅力的なプロジェクトを準備中です。お楽しみに！",
+      "view_all": "すべてのアプリを見る"
+    },
+    "experience_section": {
+      "title": "経験",
+      "subtitle": "テクノロジー分野での私のキャリアの歩み。"
+    },
+    "about_section": {
+      "title": "自己紹介",
+      "p1": "私は人生を楽しむ人間で、いつも笑顔で新しい挑戦に立ち向かい、アイデアを現実に変えることが大好きです。学び、成長し、関わるすべてのプロジェクトに貢献することを大切にしています。常に次の冒険に向けて準備万端です！",
+      "p2": "🌱 現在は<strong>機械学習とAI</strong>を深く学んでいます。⚡ また 🎨 <strong>2Dデザイン、⚒️ 3Dモデル、🕹️ ゲーム制作</strong>にも取り組んでいます。",
+      "stats": {
+        "years": "経験年数",
+        "commitment": "コミットメント"
+      }
+    },
+    "skills_section": {
+      "title": "言語とテック"
+    },
+    "contact_section": {
+      "title": "一緒に働きましょう",
+      "desc": "コラボレーションやプロジェクトへの参加に興味がありますか？メッセージを送ってください。できるだけ早く返信します。",
+      "labels": {
+        "name": "名前",
+        "email": "メール",
+        "phone": "電話番号",
+        "message": "メッセージ"
+      },
+      "placeholders": {
+        "name": "あなたの名前",
+        "email": "あなたのメール",
+        "phone": "あなたの電話番号",
+        "message": "プロジェクト詳細 / メッセージ"
+      },
+      "form_help": "フォームに記入いただければ、できるだけ早くご連絡します。",
+      "submit_btn": "メッセージを送る",
+      "success_msg": "メッセージが送信されました！近日中にご連絡します。",
+      "error_msg": "エラーが発生しました。再試行するかソーシャルリンクをご利用ください。"
+    },
+    "footer": {
+      "rights": "❤️ で作成 @albertolicea00"
+    },
+    "accessibility": {
+      "skip_to_content": "メインコンテンツへ移動",
+      "keyboard_help": "Tabキーでリンク、ボタン、フォームを移動できます。ツールチップはホバーまたはフォーカスで表示されます。",
+      "navigation": "メインナビゲーション",
+      "open_menu": "ナビゲーションメニューを開く",
+      "close_menu": "ナビゲーションメニューを閉じる",
+      "theme_to_light": "ライトテーマに切り替え",
+      "theme_to_dark": "ダークテーマに切り替え",
+      "language_to_english": "英語に切り替え",
+      "language_to_spanish": "スペイン語に切り替え",
+      "scroll_to_projects": "プロジェクトセクションへ移動",
+      "download_cv": "PDF形式でCVをダウンロード",
+      "all_projects": "すべてのアプリを見る",
+      "contact_shortcut": "お問い合わせセクションへ移動",
+      "open_github": "GitHubプロフィールを新しいタブで開く",
+      "open_linkedin": "LinkedInプロフィールを新しいタブで開く",
+      "open_x": "Xプロフィールを新しいタブで開く",
+      "open_instagram": "Instagramプロフィールを新しいタブで開く",
+      "view_live_project": "ライブプロジェクトを新しいタブで開く",
+      "view_repository": "ソースコードを新しいタブで開く",
+      "view_company_site": "ウェブサイトを新しいタブで開く",
+      "technologies_used": "使用技術",
+      "skills_marquee": "主要な言語と技術",
+      "opens_new_tab": "新しいタブで開きます",
+      "theme_enabled_dark": "ダークテーマが有効です",
+      "theme_enabled_light": "ライトテーマが有効です",
+      "language_changed_english": "英語に変更されました",
+      "language_changed_spanish": "スペイン語に変更されました",
+      "menu_expanded": "ナビゲーションメニューが展開されました",
+      "menu_collapsed": "ナビゲーションメニューが閉じられました"
+    },
+    "common": {
+      "view_project": "プロジェクトを見る",
+      "repository": "ソースコード",
+      "coming_soon_title": "近日公開",
+      "coming_soon": "現在、最新プロジェクトを最高の品質に仕上げるために調整中です。近日公開をお楽しみに！"
+    }
+  },
+  "projects": [
+    {
+      "id": 1,
+      "title": "BettaHVAC サービス",
+      "description": "見積もり自動生成と顧客管理機能を備えたスケーラブルなHVAC企業向けプラットフォーム。",
+      "image": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "tags": [
+        "Svelte",
+        "Node.js",
+        "CSS"
+      ],
+      "githubUrl": "https://github.com/albertolicea00/bettahvac-landing",
+      "liveUrl": "https://www.bettahvacservices.com/",
+      "featured": false
+    },
+    {
+      "id": 2,
+      "title": "ミゲリンのクレイジーな世界",
+      "description": "没入型デザインとスムーズなアニメーションを備えたダイナミックなエンターテインメント用ランディングページ。",
+      "image": "https://yt3.googleusercontent.com/xktD1rgu2QIivNnnDWVuYuFlchkfdH23Yp4YUbv1-7Y5LIJHLvgEHD-rOgwn8XEskC3vAGzTeg=s160-c-k-c0x00ffffff-no-rj",
+      "tags": [
+        "Astro",
+        "TypeScript",
+        "Tailwind CSS"
+      ],
+      "githubUrl": "https://github.com/albertolicea00/las-locuras-de-miguelin-landing",
+      "liveUrl": "https://las-locuras-de-miguelin-landing.vercel.app/",
+      "featured": false
+    },
+    {
+      "id": 3,
+      "title": "Kristoff ランディングページ",
+      "description": "UX/UIとブランドストーリーテリングに焦点を当てた現代的なVODプラットフォーム用ランディングページ。",
+      "image": "https://yt3.googleusercontent.com/_nwkuUvKJT-ztrUNH1bymp7trvZfDXp07UVV7NJNv-Zfws0Wpnlla9nExFRhYSVNAMeKxt9AHA=s160-c-k-c0x00ffffff-no-rj",
+      "tags": [
+        "Astro",
+        "TypeScript",
+        "Tailwind CSS"
+      ],
+      "githubUrl": "https://github.com/albertolicea00/kristoff-landing",
+      "liveUrl": "https://kristoff-landing.vercel.app/",
+      "featured": false
+    },
+    {
+      "id": 4,
+      "title": "リモートバンキングシステム",
+      "description": "セキュリティ、リモート操作、高パフォーマンスに重点を置いた堅牢なデジタルバンキングソリューション。",
+      "image": "https://github.com/albertolicea00/Banca_Remota/blob/main/Banca_Remota.xcassets/Logo.imageset/logo.png?raw=true",
+      "tags": [
+        "Swift",
+        "iOS"
+      ],
+      "githubUrl": "https://github.com/albertolicea00/Banca_Remota",
+      "liveUrl": "https://github.com/albertolicea00/Banca_Remota",
+      "featured": false
+    }
+  ],
+  "experience": [
+    {
+      "date": "現在",
+      "title": "PinkzebraHome - 機密",
+      "logo": "assets/img/company/pinkzebrahome.webp",
+      "logoWide": true,
+      "desc": "現在、高インパクトな非公開プロジェクトを開発中です。大きなものがまもなく登場します...",
+      "links": [
         {
-            "id": 1,
-            "title": "BettaHVAC サービス",
-            "description": "見積もり自動生成と顧客管理機能を備えたスケーラブルなHVAC企業向けプラットフォーム。",
-            "image": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-            "tags": [
-                "Svelte",
-                "Node.js",
-                "CSS"
-            ],
-            "githubUrl": "https://github.com/albertolicea00/bettahvac-landing",
-            "liveUrl": "https://www.bettahvacservices.com/",
-            "featured": false
-        },
-        {
-            "id": 2,
-            "title": "ミゲリンのクレイジーな世界",
-            "description": "没入型デザインとスムーズなアニメーションを備えたダイナミックなエンターテインメント用ランディングページ。",
-            "image": "https://yt3.googleusercontent.com/xktD1rgu2QIivNnnDWVuYuFlchkfdH23Yp4YUbv1-7Y5LIJHLvgEHD-rOgwn8XEskC3vAGzTeg=s160-c-k-c0x00ffffff-no-rj",
-            "tags": [
-                "Astro",
-                "TypeScript",
-                "Tailwind CSS"
-            ],
-            "githubUrl": "https://github.com/albertolicea00/las-locuras-de-miguelin-landing",
-            "liveUrl": "https://las-locuras-de-miguelin-landing.vercel.app/",
-            "featured": false
-        },
-        {
-            "id": 3,
-            "title": "Kristoff ランディングページ",
-            "description": "UX/UIとブランドストーリーテリングに焦点を当てた現代的なVODプラットフォーム用ランディングページ。",
-            "image": "https://yt3.googleusercontent.com/_nwkuUvKJT-ztrUNH1bymp7trvZfDXp07UVV7NJNv-Zfws0Wpnlla9nExFRhYSVNAMeKxt9AHA=s160-c-k-c0x00ffffff-no-rj",
-            "tags": [
-                "Astro",
-                "TypeScript",
-                "Tailwind CSS"
-            ],
-            "githubUrl": "https://github.com/albertolicea00/kristoff-landing",
-            "liveUrl": "https://kristoff-landing.vercel.app/",
-            "featured": false
-        },
-        {
-            "id": 4,
-            "title": "リモートバンキングシステム",
-            "description": "セキュリティ、リモート操作、高パフォーマンスに重点を置いた堅牢なデジタルバンキングソリューション。",
-            "image": "https://github.com/albertolicea00/Banca_Remota/blob/main/Banca_Remota.xcassets/Logo.imageset/logo.png?raw=true",
-            "tags": [
-                "Swift",
-                "iOS"
-            ],
-            "githubUrl": "https://github.com/albertolicea00/Banca_Remota",
-            "liveUrl": "https://github.com/albertolicea00/Banca_Remota",
-            "featured": false
+          "url": "https://pinkzebrahome.com?repid=1198544",
+          "label": "PinkzebraHome"
         }
-    ],
-    "experience": [
+      ]
+    },
+    {
+      "date": "2024年3月 - 現在",
+      "title": "ソフトウェア開発者 @ Ladetec",
+      "logo": "assets/img/company/ladetec.webp",
+      "desc": "Django、Vue.js、Svelte、Node.jsを使用したAPI統合（Bigcommerce、KillBill）とERP開発。",
+      "links": [
         {
-            "date": "現在",
-            "title": "PinkzebraHome - 機密",
-            "logo": "assets/img/company/pinkzebrahome.webp",
-            "logoWide": true,
-            "desc": "現在、高インパクトな非公開プロジェクトを開発中です。大きなものがまもなく登場します...",
-            "links": [
-                {
-                    "url": "https://pinkzebrahome.com?repid=1198544",
-                    "label": "PinkzebraHome"
-                }
-            ]
-        },
-        {
-            "date": "2024年3月 - 現在",
-            "title": "ソフトウェア開発者 @ Ladetec",
-            "logo": "assets/img/company/ladetec.webp",
-            "desc": "Django、Vue.js、Svelte、Node.jsを使用したAPI統合（Bigcommerce、KillBill）とERP開発。",
-            "links": [
-                {
-                    "url": "https://www.ladetec.com/",
-                    "label": "Ladetec"
-                }
-            ]
-        },
-        {
-            "date": "2024年3月 - 2024年8月",
-            "title": "ソフトウェアメンテナンス @ TOWIT Houston",
-            "logo": "assets/img/company/towithuston.webp",
-            "desc": "社内管理ソフトウェアのバグ修正と新機能の実装により、安定性と日常業務を改善しました。",
-            "links": [
-                {
-                    "url": "https://towithouston.com/",
-                    "label": "TOWIT Houston"
-                }
-            ]
-        },
-        {
-            "date": "2022年3月 - 2024年2月",
-            "title": "ITサポートマネージャー @ Wateke Soluciones",
-            "logo": "assets/img/company/wateketech.svg",
-            "logoWide": true,
-            "logoLight": true,
-            "desc": "Laravel & LivewireでカスタムERPおよびCMSシステムを開発。WordPressサイトとカスタムプラグインを管理。",
-            "links": [
-                {
-                    "url": "https://wateke.tech/",
-                    "label": "Wateke Soluciones Tecnológicas"
-                }
-            ]
-        },
-        {
-            "date": "2022年1月 - 2024年2月",
-            "title": "外部協力者 @ Wateke Travel",
-            "logo": "assets/img/company/wateketravel.webp",
-            "logoWide": true,
-            "logoDark": true,
-            "desc": "Apache CordovaでモバイルアプリをAfter Effectsでインタラクティブなロゴアニメーションを制作しました。",
-            "links": [
-                {
-                    "url": "https://wateke.travel/",
-                    "label": "Wateke Travel"
-                }
-            ]
-        },
-        {
-            "date": "2019年9月 - 2024年1月",
-            "title": "コンピュータ工学 @ Universidad de Camagüey",
-            "logo": "assets/img/company/ucm.webp",
-            "logoWide": true,
-            "logoDark": true,
-            "desc": "コンピュータ工学を卒業し、会計・ファイナンスの1学年課程も修了しました。",
-            "links": [
-                {
-                    "url": "https://www.reduc.edu.cu/",
-                    "label": "Universidad de Camagüey"
-                }
-            ]
+          "url": "https://www.ladetec.com/",
+          "label": "Ladetec"
         }
-    ]
+      ]
+    },
+    {
+      "date": "2024年3月 - 2024年8月",
+      "title": "ソフトウェアメンテナンス @ TOWIT Houston",
+      "logo": "assets/img/company/towithuston.webp",
+      "desc": "社内管理ソフトウェアのバグ修正と新機能の実装により、安定性と日常業務を改善しました。",
+      "links": [
+        {
+          "url": "https://towithouston.com/",
+          "label": "TOWIT Houston"
+        }
+      ]
+    },
+    {
+      "date": "2022年3月 - 2024年2月",
+      "title": "ITサポートマネージャー @ Wateke Soluciones",
+      "logo": "assets/img/company/wateketech.svg",
+      "logoWide": true,
+      "logoLight": true,
+      "desc": "Laravel & LivewireでカスタムERPおよびCMSシステムを開発。WordPressサイトとカスタムプラグインを管理。",
+      "links": [
+        {
+          "url": "https://wateke.tech/",
+          "label": "Wateke Soluciones Tecnológicas"
+        }
+      ]
+    },
+    {
+      "date": "2022年1月 - 2024年2月",
+      "title": "外部協力者 @ Wateke Travel",
+      "logo": "assets/img/company/wateketravel.webp",
+      "logoWide": true,
+      "logoDark": true,
+      "desc": "Apache CordovaでモバイルアプリをAfter Effectsでインタラクティブなロゴアニメーションを制作しました。",
+      "links": [
+        {
+          "url": "https://wateke.travel/",
+          "label": "Wateke Travel"
+        }
+      ]
+    },
+    {
+      "date": "2019年9月 - 2024年1月",
+      "title": "コンピュータ工学 @ Universidad de Camagüey",
+      "logo": "assets/img/company/ucm.webp",
+      "logoWide": true,
+      "logoDark": true,
+      "desc": "コンピュータ工学を卒業し、会計・ファイナンスの1学年課程も修了しました。",
+      "links": [
+        {
+          "url": "https://www.reduc.edu.cu/",
+          "label": "Universidad de Camagüey"
+        }
+      ]
+    }
+  ]
 }

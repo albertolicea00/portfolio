@@ -464,13 +464,13 @@
                 id="contact-form-help"
                 data-i18n="home.contact_section.form_help"
               >
-                The contact form is currently offline. Use the social links or
-                download the CV to get in touch.
+                Fill out the form and I'll get back to you as soon as possible.
               </p>
               <form
                 id="contact-form"
                 class="contact-form"
                 aria-describedby="contact-form-help site-a11y-help"
+                novalidate
               >
                 <div class="form-group">
                   <label
@@ -485,8 +485,6 @@
                     placeholder="Your Name"
                     required
                     data-i18n-placeholder="home.contact_section.placeholders.name"
-                    disabled
-                    aria-disabled="true"
                     autocomplete="name"
                   />
                 </div>
@@ -503,8 +501,6 @@
                     placeholder="Your Email"
                     required
                     data-i18n-placeholder="home.contact_section.placeholders.email"
-                    disabled
-                    aria-disabled="true"
                     autocomplete="email"
                   />
                 </div>
@@ -520,8 +516,6 @@
                     id="phone"
                     placeholder="Your Phone"
                     data-i18n-placeholder="home.contact_section.placeholders.phone"
-                    disabled
-                    aria-disabled="true"
                     autocomplete="tel"
                   />
                 </div>
@@ -538,20 +532,16 @@
                     rows="5"
                     required
                     data-i18n-placeholder="home.contact_section.placeholders.message"
-                    disabled
-                    aria-disabled="true"
                   ></textarea>
                 </div>
+                <div id="contact-form-status" role="status" aria-live="polite" style="display:none"></div>
                 <button
                   type="submit"
+                  id="contact-submit-btn"
                   class="cta-btn"
                   data-i18n="home.contact_section.submit_btn"
-                  disabled
-                  aria-disabled="true"
-                  aria-describedby="contact-form-help"
-                  style="opacity: 0.5; cursor: not-allowed"
                 >
-                  Form Offline
+                  Send Message
                 </button>
               </form>
             </div>

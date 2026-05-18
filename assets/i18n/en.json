@@ -1,236 +1,237 @@
 {
-    "home": {
-        "nav": {
-            "home": "Home",
-            "projects": "Projects",
-            "experience": "Experience",
-            "allwork": "Apps",
-            "contact": "Contact"
-        },
-        "hero": {
-            "subtitle": "Fullstack Web & Mobile Developer<br>Graphic Designer",
-            "bio": "6 years of converting coffee into high-end code.",
-            "cta": "View Projects",
-            "contact": "Contact Me",
-            "download_cv": "Download CV"
-        },
-        "projects_section": {
-            "title": "Recent Projects",
-            "subtitle": "New and exciting projects are being prepared. Stay tuned!",
-            "view_all": "View All Apps"
-        },
-        "experience_section": {
-            "title": "Experience",
-            "subtitle": "My professional journey through technology."
-        },
-        "about_section": {
-            "title": "About Me",
-            "p1": "I’m a life enthusiast, always with a smile on my face and ready to face new challenges and turn ideas into reality. I love to learn, grow, and contribute in every project I participate in. Always ready for the next adventure!",
-            "p2": "🌱 Currently deep-diving into <strong>Machine Learning and IA</strong>. ⚡ Also creating 🎨 <strong>2D designs, ⚒️ 3D models & 🕹️ games</strong>.",
-            "stats": {
-                "years": "Years Exp.",
-                "commitment": "Commitment"
-            }
-        },
-        "skills_section": {
-            "title": "Languages & Tech"
-        },
-        "contact_section": {
-            "title": "Let's Work Together",
-            "desc": "Interested in collaborating or hiring me for your next project? Drop me a message and I'll get back to you as soon as possible.",
-            "labels": {
-                "name": "Name",
-                "email": "Email",
-                "phone": "Phone",
-                "message": "Message"
-            },
-            "placeholders": {
-                "name": "Your Name",
-                "email": "Your Email",
-                "phone": "Your Phone",
-                "message": "Project Details / Message"
-            },
-            "form_help": "The contact form is currently offline. Use the social links or download the CV to get in touch.",
-            "submit_btn": "Form Offline",
-            "success_msg": "Message sent! I will contact you soon."
-        },
-        "footer": {
-            "rights": "Made with ❤️ @albertolicea00"
-        },
-        "accessibility": {
-            "skip_to_content": "Skip to main content",
-            "keyboard_help": "Use the Tab key to move through links, buttons, and form fields. Tooltips appear on hover or keyboard focus.",
-            "navigation": "Primary navigation",
-            "open_menu": "Open navigation menu",
-            "close_menu": "Close navigation menu",
-            "theme_to_light": "Switch to light theme",
-            "theme_to_dark": "Switch to dark theme",
-            "language_to_english": "Switch language to English",
-            "language_to_spanish": "Switch language to Spanish",
-            "scroll_to_projects": "Scroll to projects section",
-            "download_cv": "Download CV in PDF format",
-            "all_projects": "Browse all Apps",
-            "contact_shortcut": "Jump to contact section",
-            "open_github": "Open GitHub profile in a new tab",
-            "open_linkedin": "Open LinkedIn profile in a new tab",
-            "open_x": "Open X profile in a new tab",
-            "open_instagram": "Open Instagram profile in a new tab",
-            "view_live_project": "Open live project in a new tab",
-            "view_repository": "Open source code in a new tab",
-            "view_company_site": "Open website in a new tab",
-            "technologies_used": "Technologies used",
-            "skills_marquee": "Core languages and technologies",
-            "opens_new_tab": "Opens in a new tab",
-            "theme_enabled_dark": "Dark theme enabled",
-            "theme_enabled_light": "Light theme enabled",
-            "language_changed_english": "Language changed to English",
-            "language_changed_spanish": "Language changed to Spanish",
-            "menu_expanded": "Navigation menu expanded",
-            "menu_collapsed": "Navigation menu collapsed"
-        },
-        "common": {
-            "view_project": "View Project",
-            "repository": "Source Code",
-            "coming_soon_title": "Coming Soon",
-            "coming_soon": "I'm currently polishing and refining my latest projects to ensure they meet the highest standards. Check back soon for the full reveal!"
-        }
+  "home": {
+    "nav": {
+      "home": "Home",
+      "projects": "Projects",
+      "experience": "Experience",
+      "allwork": "Apps",
+      "contact": "Contact"
     },
-    "projects": [
+    "hero": {
+      "subtitle": "Fullstack Web & Mobile Developer<br>Graphic Designer",
+      "bio": "6 years of converting coffee into high-end code.",
+      "cta": "View Projects",
+      "contact": "Contact Me",
+      "download_cv": "Download CV"
+    },
+    "projects_section": {
+      "title": "Recent Projects",
+      "subtitle": "New and exciting projects are being prepared. Stay tuned!",
+      "view_all": "View All Apps"
+    },
+    "experience_section": {
+      "title": "Experience",
+      "subtitle": "My professional journey through technology."
+    },
+    "about_section": {
+      "title": "About Me",
+      "p1": "I’m a life enthusiast, always with a smile on my face and ready to face new challenges and turn ideas into reality. I love to learn, grow, and contribute in every project I participate in. Always ready for the next adventure!",
+      "p2": "🌱 Currently deep-diving into <strong>Machine Learning and IA</strong>. ⚡ Also creating 🎨 <strong>2D designs, ⚒️ 3D models & 🕹️ games</strong>.",
+      "stats": {
+        "years": "Years Exp.",
+        "commitment": "Commitment"
+      }
+    },
+    "skills_section": {
+      "title": "Languages & Tech"
+    },
+    "contact_section": {
+      "title": "Let's Work Together",
+      "desc": "Interested in collaborating or hiring me for your next project? Drop me a message and I'll get back to you as soon as possible.",
+      "labels": {
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone",
+        "message": "Message"
+      },
+      "placeholders": {
+        "name": "Your Name",
+        "email": "Your Email",
+        "phone": "Your Phone",
+        "message": "Project Details / Message"
+      },
+      "form_help": "Fill out the form and I'll get back to you as soon as possible.",
+      "submit_btn": "Send Message",
+      "success_msg": "Message sent! I'll get back to you soon.",
+      "error_msg": "Something went wrong. Please try again or use the social links."
+    },
+    "footer": {
+      "rights": "Made with ❤️ @albertolicea00"
+    },
+    "accessibility": {
+      "skip_to_content": "Skip to main content",
+      "keyboard_help": "Use the Tab key to move through links, buttons, and form fields. Tooltips appear on hover or keyboard focus.",
+      "navigation": "Primary navigation",
+      "open_menu": "Open navigation menu",
+      "close_menu": "Close navigation menu",
+      "theme_to_light": "Switch to light theme",
+      "theme_to_dark": "Switch to dark theme",
+      "language_to_english": "Switch language to English",
+      "language_to_spanish": "Switch language to Spanish",
+      "scroll_to_projects": "Scroll to projects section",
+      "download_cv": "Download CV in PDF format",
+      "all_projects": "Browse all Apps",
+      "contact_shortcut": "Jump to contact section",
+      "open_github": "Open GitHub profile in a new tab",
+      "open_linkedin": "Open LinkedIn profile in a new tab",
+      "open_x": "Open X profile in a new tab",
+      "open_instagram": "Open Instagram profile in a new tab",
+      "view_live_project": "Open live project in a new tab",
+      "view_repository": "Open source code in a new tab",
+      "view_company_site": "Open website in a new tab",
+      "technologies_used": "Technologies used",
+      "skills_marquee": "Core languages and technologies",
+      "opens_new_tab": "Opens in a new tab",
+      "theme_enabled_dark": "Dark theme enabled",
+      "theme_enabled_light": "Light theme enabled",
+      "language_changed_english": "Language changed to English",
+      "language_changed_spanish": "Language changed to Spanish",
+      "menu_expanded": "Navigation menu expanded",
+      "menu_collapsed": "Navigation menu collapsed"
+    },
+    "common": {
+      "view_project": "View Project",
+      "repository": "Source Code",
+      "coming_soon_title": "Coming Soon",
+      "coming_soon": "I'm currently polishing and refining my latest projects to ensure they meet the highest standards. Check back soon for the full reveal!"
+    }
+  },
+  "projects": [
+    {
+      "id": 1,
+      "title": "BettaHVAC Services",
+      "description": "Scalable corporate platform for HVAC services, featuring automated quote generation and customer management.",
+      "image": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "tags": [
+        "Svelte",
+        "Node.js",
+        "CSS"
+      ],
+      "githubUrl": "https://github.com/albertolicea00/bettahvac-landing",
+      "liveUrl": "https://www.bettahvacservices.com/",
+      "featured": false
+    },
+    {
+      "id": 2,
+      "title": "Las Locuras de Miguelín",
+      "description": "Highly dynamic entertainment landing page with immersive design and fluid animations.",
+      "image": "https://yt3.googleusercontent.com/xktD1rgu2QIivNnnDWVuYuFlchkfdH23Yp4YUbv1-7Y5LIJHLvgEHD-rOgwn8XEskC3vAGzTeg=s160-c-k-c0x00ffffff-no-rj",
+      "tags": [
+        "Astro",
+        "TypeScript",
+        "Tailwind CSS"
+      ],
+      "githubUrl": "https://github.com/albertolicea00/las-locuras-de-miguelin-landing",
+      "liveUrl": "https://las-locuras-de-miguelin-landing.vercel.app/",
+      "featured": false
+    },
+    {
+      "id": 3,
+      "title": "Kristoff Landing Page",
+      "description": "Modern VOD platform landing page focused on UX/UI excellence and brand storytelling.",
+      "image": "https://yt3.googleusercontent.com/_nwkuUvKJT-ztrUNH1bymp7trvZfDXp07UVV7NJNv-Zfws0Wpnlla9nExFRhYSVNAMeKxt9AHA=s160-c-k-c0x00ffffff-no-rj",
+      "tags": [
+        "Astro",
+        "TypeScript",
+        "Tailwind CSS"
+      ],
+      "githubUrl": "https://github.com/albertolicea00/kristoff-landing",
+      "liveUrl": "https://kristoff-landing.vercel.app/",
+      "featured": false
+    },
+    {
+      "id": 4,
+      "title": "Banca Remota System",
+      "description": "Robust digital banking solution focusing on security, remote operations, and high-performance architecture.",
+      "image": "https://github.com/albertolicea00/Banca_Remota/blob/main/Banca_Remota.xcassets/Logo.imageset/logo.png?raw=true",
+      "tags": [
+        "Swift",
+        "iOS"
+      ],
+      "githubUrl": "https://github.com/albertolicea00/Banca_Remota",
+      "liveUrl": "https://github.com/albertolicea00/Banca_Remota",
+      "featured": false
+    }
+  ],
+  "experience": [
+    {
+      "date": "Present",
+      "title": "PinkzebraHome - Confidential",
+      "logo": "assets/img/company/pinkzebrahome.webp",
+      "logoWide": true,
+      "desc": "Currently developing a private, high-impact project. Something big is coming soon...",
+      "links": [
         {
-            "id": 1,
-            "title": "BettaHVAC Services",
-            "description": "Scalable corporate platform for HVAC services, featuring automated quote generation and customer management.",
-            "image": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-            "tags": [
-                "Svelte",
-                "Node.js",
-                "CSS"
-            ],
-            "githubUrl": "https://github.com/albertolicea00/bettahvac-landing",
-            "liveUrl": "https://www.bettahvacservices.com/",
-            "featured": false
-        },
-        {
-            "id": 2,
-            "title": "Las Locuras de Miguelín",
-            "description": "Highly dynamic entertainment landing page with immersive design and fluid animations.",
-            "image": "https://yt3.googleusercontent.com/xktD1rgu2QIivNnnDWVuYuFlchkfdH23Yp4YUbv1-7Y5LIJHLvgEHD-rOgwn8XEskC3vAGzTeg=s160-c-k-c0x00ffffff-no-rj",
-            "tags": [
-                "Astro",
-                "TypeScript",
-                "Tailwind CSS"
-            ],
-            "githubUrl": "https://github.com/albertolicea00/las-locuras-de-miguelin-landing",
-            "liveUrl": "https://las-locuras-de-miguelin-landing.vercel.app/",
-            "featured": false
-        },
-        {
-            "id": 3,
-            "title": "Kristoff Landing Page",
-            "description": "Modern VOD platform landing page focused on UX/UI excellence and brand storytelling.",
-            "image": "https://yt3.googleusercontent.com/_nwkuUvKJT-ztrUNH1bymp7trvZfDXp07UVV7NJNv-Zfws0Wpnlla9nExFRhYSVNAMeKxt9AHA=s160-c-k-c0x00ffffff-no-rj",
-            "tags": [
-                "Astro",
-                "TypeScript",
-                "Tailwind CSS"
-            ],
-            "githubUrl": "https://github.com/albertolicea00/kristoff-landing",
-            "liveUrl": "https://kristoff-landing.vercel.app/",
-            "featured": false
-        },
-        {
-            "id": 4,
-            "title": "Banca Remota System",
-            "description": "Robust digital banking solution focusing on security, remote operations, and high-performance architecture.",
-            "image": "https://github.com/albertolicea00/Banca_Remota/blob/main/Banca_Remota.xcassets/Logo.imageset/logo.png?raw=true",
-            "tags": [
-                "Swift",
-                "iOS"
-            ],
-            "githubUrl": "https://github.com/albertolicea00/Banca_Remota",
-            "liveUrl": "https://github.com/albertolicea00/Banca_Remota",
-            "featured": false
+          "url": "https://pinkzebrahome.com?repid=1198544",
+          "label": "PinkzebraHome"
         }
-    ],
-    "experience": [
+      ]
+    },
+    {
+      "date": "Mar 2024 - Present",
+      "title": "Software Developer @ Ladetec",
+      "logo": "assets/img/company/ladetec.webp",
+      "desc": "API integration (Bigcommerce, KillBill) and ERP development using Django, Vue.js, Svelte, and Node.js.",
+      "links": [
         {
-            "date": "Present",
-            "title": "PinkzebraHome - Confidential",
-            "logo": "assets/img/company/pinkzebrahome.webp",
-            "logoWide": true,
-            "desc": "Currently developing a private, high-impact project. Something big is coming soon...",
-            "links": [
-                {
-                    "url": "https://pinkzebrahome.com?repid=1198544",
-                    "label": "PinkzebraHome"
-                }
-            ]
-        },
-        {
-            "date": "Mar 2024 - Present",
-            "title": "Software Developer @ Ladetec",
-            "logo": "assets/img/company/ladetec.webp",
-            "desc": "API integration (Bigcommerce, KillBill) and ERP development using Django, Vue.js, Svelte, and Node.js.",
-            "links": [
-                {
-                    "url": "https://www.ladetec.com/",
-                    "label": "Ladetec"
-                }
-            ]
-        },
-        {
-            "date": "Mar 2024 - Aug 2024",
-            "title": "Software Maintenance @ TOWIT Houston",
-            "logo": "assets/img/company/towithuston.webp",
-            "desc": "Implemented bug fixes and delivered new features for the company's management software, improving stability and day-to-day operations.",
-            "links": [
-                {
-                    "url": "https://towithouston.com/",
-                    "label": "TOWIT Houston"
-                }
-            ]
-        },
-        {
-            "date": "Mar 2022 - Feb 2024",
-            "title": "IT Support Manager @ Wateke Soluciones",
-            "logo": "assets/img/company/wateketech.svg",
-            "logoWide": true,
-            "logoLight": true,
-            "desc": "Developed custom ERP and CMS systems using Laravel & Livewire. Managed WordPress sites and custom plugins.",
-            "links": [
-                {
-                    "url": "https://wateke.tech/",
-                    "label": "Wateke Soluciones Tecnológicas"
-                }
-            ]
-        },
-        {
-            "date": "Jan 2022 - Feb 2024",
-            "title": "External Collaborator @ Wateke Travel",
-            "logo": "assets/img/company/wateketravel.webp",
-            "logoWide": true,
-            "logoDark": true,
-            "desc": "Built mobile apps with Apache Cordova and managed interactive logo animations using After Effects.",
-            "links": [
-                {
-                    "url": "https://wateke.travel/",
-                    "label": "Wateke Travel"
-                }
-            ]
-        },
-        {
-            "date": "Sep 2019 - Jan 2024",
-            "title": "Computer Engineering @ Universidad de Camagüey",
-            "logo": "assets/img/company/ucm.webp",
-            "logoWide": true,
-            "logoDark": true,
-            "desc": "Graduated in Computer Engineering and also completed one academic year of Accounting and Finance studies.",
-            "links": [
-                {
-                    "url": "https://www.reduc.edu.cu/",
-                    "label": "Universidad de Camagüey"
-                }
-            ]
+          "url": "https://www.ladetec.com/",
+          "label": "Ladetec"
         }
-    ]
+      ]
+    },
+    {
+      "date": "Mar 2024 - Aug 2024",
+      "title": "Software Maintenance @ TOWIT Houston",
+      "logo": "assets/img/company/towithuston.webp",
+      "desc": "Implemented bug fixes and delivered new features for the company's management software, improving stability and day-to-day operations.",
+      "links": [
+        {
+          "url": "https://towithouston.com/",
+          "label": "TOWIT Houston"
+        }
+      ]
+    },
+    {
+      "date": "Mar 2022 - Feb 2024",
+      "title": "IT Support Manager @ Wateke Soluciones",
+      "logo": "assets/img/company/wateketech.svg",
+      "logoWide": true,
+      "logoLight": true,
+      "desc": "Developed custom ERP and CMS systems using Laravel & Livewire. Managed WordPress sites and custom plugins.",
+      "links": [
+        {
+          "url": "https://wateke.tech/",
+          "label": "Wateke Soluciones Tecnológicas"
+        }
+      ]
+    },
+    {
+      "date": "Jan 2022 - Feb 2024",
+      "title": "External Collaborator @ Wateke Travel",
+      "logo": "assets/img/company/wateketravel.webp",
+      "logoWide": true,
+      "logoDark": true,
+      "desc": "Built mobile apps with Apache Cordova and managed interactive logo animations using After Effects.",
+      "links": [
+        {
+          "url": "https://wateke.travel/",
+          "label": "Wateke Travel"
+        }
+      ]
+    },
+    {
+      "date": "Sep 2019 - Jan 2024",
+      "title": "Computer Engineering @ Universidad de Camagüey",
+      "logo": "assets/img/company/ucm.webp",
+      "logoWide": true,
+      "logoDark": true,
+      "desc": "Graduated in Computer Engineering and also completed one academic year of Accounting and Finance studies.",
+      "links": [
+        {
+          "url": "https://www.reduc.edu.cu/",
+          "label": "Universidad de Camagüey"
+        }
+      ]
+    }
+  ]
 }

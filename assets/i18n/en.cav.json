@@ -50,8 +50,8 @@
                 "phone": "You phone",
                 "message": "Project thing / Message"
             },
-            "form_help": "Form no work now. You use social links or get CV.",
-            "submit_btn": "Form no work",
+            "form_help": "Form you use. Me answer fast.",
+            "submit_btn": "You send message",
             "success_msg": "Message sent! Me contact soon."
         },
         "footer": {
