@@ -10,6 +10,8 @@ export default async function handler(req, res) {
     }
 
     const apiKey = process.env.RESEND_API_KEY;
+    const emailFrom = process.env.RESEND_FROM || 'Portfolio Contact <onboarding@resend.dev>';
+    const emailTo = process.env.RESEND_TO || 'albertolicea00@icloud.com';
     if (!apiKey) {
         return res.status(500).json({ error: 'Email service not configured' });
     }
@@ -22,8 +24,8 @@ export default async function handler(req, res) {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                from: 'Portfolio Contact <onboarding@resend.dev>',
-                to: ['Alberto.Licea@pinkzebrahome.com'],
+                from: emailFrom,
+                to: [emailTo],
                 reply_to: email,
                 subject: `Portfolio contact from ${name}`,
                 html: `
