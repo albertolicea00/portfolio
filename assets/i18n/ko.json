@@ -1,237 +1,266 @@
 {
-  "home": {
-    "nav": {
-      "home": "홈",
-      "projects": "프로젝트",
-      "experience": "경력",
-      "allwork": "앱",
-      "contact": "연락처"
-    },
-    "hero": {
-      "subtitle": "풀스택 웹 & 모바일 개발자<br>그래픽 디자이너",
-      "bio": "커피를 고품질 코드로 변환한 6년의 경험.",
-      "cta": "프로젝트 보기",
-      "contact": "연락하기",
-      "download_cv": "이력서 다운로드"
-    },
-    "projects_section": {
-      "title": "최근 프로젝트",
-      "subtitle": "새롭고 흥미로운 프로젝트들이 준비 중입니다. 기대해 주세요!",
-      "view_all": "모든 앱 보기"
-    },
-    "experience_section": {
-      "title": "경력",
-      "subtitle": "기술 분야에서의 나의 전문적인 여정."
-    },
-    "about_section": {
-      "title": "소개",
-      "p1": "저는 삶을 사랑하는 사람으로, 항상 미소를 띠며 새로운 도전을 받아들이고 아이디어를 현실로 만들 준비가 되어 있습니다. 배우고, 성장하고, 참여하는 모든 프로젝트에 기여하는 것을 좋아합니다. 언제나 다음 모험을 위해 준비되어 있습니다!",
-      "p2": "🌱 현재 <strong>머신 러닝과 AI</strong>를 깊이 탐구하고 있습니다. ⚡ 또한 🎨 <strong>2D 디자인, ⚒️ 3D 모델 및 🕹️ 게임</strong>도 제작하고 있습니다.",
-      "stats": {
-        "years": "경력 연수",
-        "commitment": "헌신"
-      }
-    },
-    "skills_section": {
-      "title": "언어와 테크"
-    },
-    "contact_section": {
-      "title": "함께 일해요",
-      "desc": "다음 프로젝트에서 협업하거나 저를 고용하는 데 관심이 있으신가요? 메시지를 남겨주시면 최대한 빨리 답변드리겠습니다.",
-      "labels": {
-        "name": "이름",
-        "email": "이메일",
-        "phone": "전화번호",
-        "message": "메시지"
-      },
-      "placeholders": {
-        "name": "이름을 입력하세요",
-        "email": "이메일을 입력하세요",
-        "phone": "전화번호를 입력하세요",
-        "message": "프로젝트 세부 사항 / 메시지"
-      },
-      "form_help": "양식을 작성하시면 최대한 빨리 연락드리겠습니다.",
-      "submit_btn": "메시지 보내기",
-      "success_msg": "메시지가 전송되었습니다! 곧 연락드리겠습니다.",
-      "error_msg": "오류가 발생했습니다. 다시 시도하거나 소셜 링크를 이용하세요."
-    },
-    "footer": {
-      "rights": "❤️ 으로 만든 @albertolicea00"
-    },
-    "accessibility": {
-      "skip_to_content": "메인 콘텐츠로 건너뛰기",
-      "keyboard_help": "Tab 키를 사용하여 링크, 버튼, 양식 필드 사이를 이동하세요. 툴팁은 마우스 오버 또는 키보드 포커스 시 나타납니다.",
-      "navigation": "기본 내비게이션",
-      "open_menu": "내비게이션 메뉴 열기",
-      "close_menu": "내비게이션 메뉴 닫기",
-      "theme_to_light": "라이트 테마로 전환",
-      "theme_to_dark": "다크 테마로 전환",
-      "language_to_english": "언어를 영어로 변경",
-      "language_to_spanish": "언어를 스페인어로 변경",
-      "scroll_to_projects": "프로젝트 섹션으로 스크롤",
-      "download_cv": "PDF 형식으로 이력서 다운로드",
-      "all_projects": "모든 앱 탐색",
-      "contact_shortcut": "연락처 섹션으로 이동",
-      "open_github": "새 탭에서 GitHub 프로필 열기",
-      "open_linkedin": "새 탭에서 LinkedIn 프로필 열기",
-      "open_x": "새 탭에서 X 프로필 열기",
-      "open_instagram": "새 탭에서 Instagram 프로필 열기",
-      "view_live_project": "새 탭에서 라이브 프로젝트 열기",
-      "view_repository": "새 탭에서 소스 코드 열기",
-      "view_company_site": "새 탭에서 웹사이트 열기",
-      "technologies_used": "사용된 기술",
-      "skills_marquee": "핵심 언어와 기술",
-      "opens_new_tab": "새 탭에서 열립니다",
-      "theme_enabled_dark": "다크 테마 활성화됨",
-      "theme_enabled_light": "라이트 테마 활성화됨",
-      "language_changed_english": "언어가 영어로 변경되었습니다",
-      "language_changed_spanish": "언어가 스페인어로 변경되었습니다",
-      "menu_expanded": "내비게이션 메뉴가 확장되었습니다",
-      "menu_collapsed": "내비게이션 메뉴가 축소되었습니다"
-    },
-    "common": {
-      "view_project": "프로젝트 보기",
-      "repository": "소스 코드",
-      "coming_soon_title": "곧 공개",
-      "coming_soon": "최신 프로젝트를 최고의 품질로 마무리하는 중입니다. 곧 전체 공개를 기대해 주세요!"
-    }
-  },
-  "projects": [
-    {
-      "id": 1,
-      "title": "BettaHVAC 서비스",
-      "description": "자동 견적 생성 및 고객 관리 기능을 갖춘 HVAC 서비스용 확장 가능한 기업 플랫폼.",
-      "image": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "tags": [
-        "Svelte",
-        "Node.js",
-        "CSS"
-      ],
-      "githubUrl": "https://github.com/albertolicea00/bettahvac-landing",
-      "liveUrl": "https://www.bettahvacservices.com/",
-      "featured": false
-    },
-    {
-      "id": 2,
-      "title": "Miguelín의 엉뚱한 세계",
-      "description": "몰입형 디자인과 유동적인 애니메이션이 특징인 역동적인 엔터테인먼트 랜딩 페이지.",
-      "image": "https://yt3.googleusercontent.com/xktD1rgu2QIivNnnDWVuYuFlchkfdH23Yp4YUbv1-7Y5LIJHLvgEHD-rOgwn8XEskC3vAGzTeg=s160-c-k-c0x00ffffff-no-rj",
-      "tags": [
-        "Astro",
-        "TypeScript",
-        "Tailwind CSS"
-      ],
-      "githubUrl": "https://github.com/albertolicea00/las-locuras-de-miguelin-landing",
-      "liveUrl": "https://las-locuras-de-miguelin-landing.vercel.app/",
-      "featured": false
-    },
-    {
-      "id": 3,
-      "title": "Kristoff 랜딩 페이지",
-      "description": "UX/UI 우수성과 브랜드 스토리텔링에 초점을 맞춘 현대적인 VOD 플랫폼 랜딩 페이지.",
-      "image": "https://yt3.googleusercontent.com/_nwkuUvKJT-ztrUNH1bymp7trvZfDXp07UVV7NJNv-Zfws0Wpnlla9nExFRhYSVNAMeKxt9AHA=s160-c-k-c0x00ffffff-no-rj",
-      "tags": [
-        "Astro",
-        "TypeScript",
-        "Tailwind CSS"
-      ],
-      "githubUrl": "https://github.com/albertolicea00/kristoff-landing",
-      "liveUrl": "https://kristoff-landing.vercel.app/",
-      "featured": false
-    },
-    {
-      "id": 4,
-      "title": "원격 뱅킹 시스템",
-      "description": "보안, 원격 운영 및 고성능 아키텍처에 중점을 둔 강력한 디지털 뱅킹 솔루션.",
-      "image": "https://github.com/albertolicea00/Banca_Remota/blob/main/Banca_Remota.xcassets/Logo.imageset/logo.png?raw=true",
-      "tags": [
-        "Swift",
-        "iOS"
-      ],
-      "githubUrl": "https://github.com/albertolicea00/Banca_Remota",
-      "liveUrl": "https://github.com/albertolicea00/Banca_Remota",
-      "featured": false
-    }
-  ],
-  "experience": [
-    {
-      "date": "현재",
-      "title": "PinkzebraHome - 기밀",
-      "logo": "assets/img/company/pinkzebrahome.webp",
-      "logoWide": true,
-      "desc": "현재 고영향력의 비공개 프로젝트를 개발 중입니다. 곧 큰 발표가 있을 예정입니다...",
-      "links": [
-        {
-          "url": "https://pinkzebrahome.com?repid=1198544",
-          "label": "PinkzebraHome"
+    "home": {
+        "nav": {
+            "home": "홈",
+            "projects": "프로젝트",
+            "experience": "경력",
+            "allwork": "앱",
+            "contact": "연락처"
+        },
+        "hero": {
+            "subtitle": "풀스택 웹 & 모바일 개발자<br>그래픽 디자이너",
+            "bio": "커피를 고품질 코드로 변환한 6년의 경험.",
+            "cta": "프로젝트 보기",
+            "contact": "연락하기",
+            "download_cv": "이력서 다운로드"
+        },
+        "projects_section": {
+            "title": "최근 프로젝트",
+            "subtitle": "새롭고 흥미로운 프로젝트들이 준비 중입니다. 기대해 주세요!",
+            "view_all": "모든 앱 보기"
+        },
+        "experience_section": {
+            "title": "경력",
+            "subtitle": "기술 분야에서의 나의 전문적인 여정."
+        },
+        "about_section": {
+            "title": "소개",
+            "p1": "저는 삶을 사랑하는 사람으로, 항상 미소를 띠며 새로운 도전을 받아들이고 아이디어를 현실로 만들 준비가 되어 있습니다. 배우고, 성장하고, 참여하는 모든 프로젝트에 기여하는 것을 좋아합니다. 언제나 다음 모험을 위해 준비되어 있습니다!",
+            "p2": "🌱 현재 <strong>머신 러닝과 AI</strong>를 깊이 탐구하고 있습니다. ⚡ 또한 🎨 <strong>2D 디자인, ⚒️ 3D 모델 및 🕹️ 게임</strong>도 제작하고 있습니다.",
+            "stats": {
+                "years": "경력 연수",
+                "commitment": "헌신"
+            }
+        },
+        "skills_section": {
+            "title": "언어와 테크"
+        },
+        "contact_section": {
+            "title": "함께 일해요",
+            "desc": "다음 프로젝트에서 협업하거나 저를 고용하는 데 관심이 있으신가요? 메시지를 남겨주시면 최대한 빨리 답변드리겠습니다.",
+            "labels": {
+                "name": "이름",
+                "email": "이메일",
+                "phone": "전화번호",
+                "message": "메시지"
+            },
+            "placeholders": {
+                "name": "이름을 입력하세요",
+                "email": "이메일을 입력하세요",
+                "phone": "전화번호를 입력하세요",
+                "message": "프로젝트 세부 사항 / 메시지"
+            },
+            "form_help": "양식을 작성하시면 최대한 빨리 연락드리겠습니다.",
+            "submit_btn": "메시지 보내기",
+            "success_msg": "메시지가 전송되었습니다! 곧 연락드리겠습니다.",
+            "error_msg": "오류가 발생했습니다. 다시 시도하거나 소셜 링크를 이용하세요."
+        },
+        "footer": {
+            "rights": "❤️ 으로 만든 @albertolicea00"
+        },
+        "accessibility": {
+            "skip_to_content": "메인 콘텐츠로 건너뛰기",
+            "keyboard_help": "Tab 키를 사용하여 링크, 버튼, 양식 필드 사이를 이동하세요. 툴팁은 마우스 오버 또는 키보드 포커스 시 나타납니다.",
+            "navigation": "기본 내비게이션",
+            "open_menu": "내비게이션 메뉴 열기",
+            "close_menu": "내비게이션 메뉴 닫기",
+            "theme_to_light": "라이트 테마로 전환",
+            "theme_to_dark": "다크 테마로 전환",
+            "language_to_english": "언어를 영어로 변경",
+            "language_to_spanish": "언어를 스페인어로 변경",
+            "scroll_to_projects": "프로젝트 섹션으로 스크롤",
+            "download_cv": "PDF 형식으로 이력서 다운로드",
+            "all_projects": "모든 앱 탐색",
+            "contact_shortcut": "연락처 섹션으로 이동",
+            "open_github": "새 탭에서 GitHub 프로필 열기",
+            "open_linkedin": "새 탭에서 LinkedIn 프로필 열기",
+            "open_x": "새 탭에서 X 프로필 열기",
+            "open_instagram": "새 탭에서 Instagram 프로필 열기",
+            "view_live_project": "새 탭에서 라이브 프로젝트 열기",
+            "view_repository": "새 탭에서 소스 코드 열기",
+            "view_company_site": "새 탭에서 웹사이트 열기",
+            "technologies_used": "사용된 기술",
+            "skills_marquee": "핵심 언어와 기술",
+            "opens_new_tab": "새 탭에서 열립니다",
+            "theme_enabled_dark": "다크 테마 활성화됨",
+            "theme_enabled_light": "라이트 테마 활성화됨",
+            "language_changed_english": "언어가 영어로 변경되었습니다",
+            "language_changed_spanish": "언어가 스페인어로 변경되었습니다",
+            "menu_expanded": "내비게이션 메뉴가 확장되었습니다",
+            "menu_collapsed": "내비게이션 메뉴가 축소되었습니다"
+        },
+        "common": {
+            "view_project": "프로젝트 보기",
+            "repository": "소스 코드",
+            "coming_soon_title": "곧 공개",
+            "coming_soon": "최신 프로젝트를 최고의 품질로 마무리하는 중입니다. 곧 전체 공개를 기대해 주세요!"
         }
-      ]
     },
-    {
-      "date": "Mar 2024 - Present",
-      "title": "소프트웨어 개발자 @ Ladetec",
-      "logo": "assets/img/company/ladetec.webp",
-      "desc": "Django, Vue.js, Svelte, Node.js를 사용한 API 통합(Bigcommerce, KillBill) 및 ERP 개발.",
-      "links": [
+    "projects": [
         {
-          "url": "https://www.ladetec.com/",
-          "label": "Ladetec"
-        }
-      ]
-    },
-    {
-      "date": "Mar 2024 - Aug 2024",
-      "title": "소프트웨어 유지보수 @ TOWIT Houston",
-      "logo": "assets/img/company/towithuston.webp",
-      "desc": "회사 관리 소프트웨어의 버그 수정 및 새 기능을 구현하여 안정성과 일상 운영을 개선했습니다.",
-      "links": [
+            "id": 1,
+            "title": "BettaHVAC 서비스",
+            "description": "자동 견적 생성 및 고객 관리 기능을 갖춘 HVAC 서비스용 확장 가능한 기업 플랫폼.",
+            "image": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "tags": [
+                "Svelte",
+                "Node.js",
+                "CSS"
+            ],
+            "githubUrl": "https://github.com/albertolicea00/bettahvac-landing",
+            "liveUrl": "https://www.bettahvacservices.com/",
+            "featured": false
+        },
         {
-          "url": "https://towithouston.com/",
-          "label": "TOWIT Houston"
-        }
-      ]
-    },
-    {
-      "date": "Mar 2022 - Feb 2024",
-      "title": "IT 지원 관리자 @ Wateke Soluciones",
-      "logo": "assets/img/company/wateketech.svg",
-      "logoWide": true,
-      "logoLight": true,
-      "desc": "Laravel & Livewire를 사용한 맞춤형 ERP 및 CMS 시스템 개발. WordPress 사이트 및 커스텀 플러그인 관리.",
-      "links": [
+            "id": 2,
+            "title": "Miguelín의 엉뚱한 세계",
+            "description": "몰입형 디자인과 유동적인 애니메이션이 특징인 역동적인 엔터테인먼트 랜딩 페이지.",
+            "image": "https://yt3.googleusercontent.com/xktD1rgu2QIivNnnDWVuYuFlchkfdH23Yp4YUbv1-7Y5LIJHLvgEHD-rOgwn8XEskC3vAGzTeg=s160-c-k-c0x00ffffff-no-rj",
+            "tags": [
+                "Astro",
+                "TypeScript",
+                "Tailwind CSS"
+            ],
+            "githubUrl": "https://github.com/albertolicea00/las-locuras-de-miguelin-landing",
+            "liveUrl": "https://las-locuras-de-miguelin-landing.vercel.app/",
+            "featured": false
+        },
         {
-          "url": "https://wateke.tech/",
-          "label": "Wateke Soluciones Tecnológicas"
-        }
-      ]
-    },
-    {
-      "date": "Jan 2022 - Feb 2024",
-      "title": "외부 협력자 @ Wateke Travel",
-      "logo": "assets/img/company/wateketravel.webp",
-      "logoWide": true,
-      "logoDark": true,
-      "desc": "Apache Cordova로 모바일 앱을 제작하고 After Effects로 로고 애니메이션을 관리했습니다.",
-      "links": [
+            "id": 3,
+            "title": "Kristoff 랜딩 페이지",
+            "description": "UX/UI 우수성과 브랜드 스토리텔링에 초점을 맞춘 현대적인 VOD 플랫폼 랜딩 페이지.",
+            "image": "https://yt3.googleusercontent.com/_nwkuUvKJT-ztrUNH1bymp7trvZfDXp07UVV7NJNv-Zfws0Wpnlla9nExFRhYSVNAMeKxt9AHA=s160-c-k-c0x00ffffff-no-rj",
+            "tags": [
+                "Astro",
+                "TypeScript",
+                "Tailwind CSS"
+            ],
+            "githubUrl": "https://github.com/albertolicea00/kristoff-landing",
+            "liveUrl": "https://kristoff-landing.vercel.app/",
+            "featured": false
+        },
         {
-          "url": "https://wateke.travel/",
-          "label": "Wateke Travel"
-        }
-      ]
-    },
-    {
-      "date": "Sep 2019 - Jan 2024",
-      "title": "컴퓨터 공학 @ Universidad de Camagüey",
-      "logo": "assets/img/company/ucm.webp",
-      "logoWide": true,
-      "logoDark": true,
-      "desc": "컴퓨터 공학을 졸업하고 회계 및 재무 1학년 과정도 이수했습니다.",
-      "links": [
+            "id": 4,
+            "title": "Banca Remota — 쿠바",
+            "description": "USSD 코드를 이용한 쿠바 뱅킹용 iOS 네이티브 앱. 완전 오프라인으로 작동하며 계좌, 공과금, 암호화 키를 안전하게 로컬에서 관리합니다.",
+            "image": "assets/img/apps/bancaremota.webp",
+            "tags": [
+                "Swift",
+                "iOS",
+                "Xcode"
+            ],
+            "githubUrl": "https://github.com/albertolicea00/BancaRemota_app",
+            "liveUrl": "https://bancaremota.vercel.app/",
+            "featured": true
+        },
         {
-          "url": "https://www.reduc.edu.cu/",
-          "label": "Universidad de Camagüey"
+            "id": 5,
+            "title": "Mivio 미디어 생태계",
+            "description": "궁극의 멀티 플랫폼 미디어 플레이어 생태계. Jellyfin, Plex, SMB, WebDAV로부터 영화와 시리즈를 원활하게 스트리밍하거나 로컬 파일을 자동 커버 생성, 풍부한 메타데이터 분석, 내장 자막 다운로드와 함께 감상하세요.",
+            "image": "assets/img/apps/mivio.webp",
+            "tags": [
+                "HTML5",
+                "Tailwind CSS",
+                "Alpine.js"
+            ],
+            "githubUrl": "https://github.com/albertolicea00/mivio-landing",
+            "liveUrl": "https://mivio.vercel.app/",
+            "featured": true
+        },
+        {
+            "id": 6,
+            "title": "Hide & Seek — 미디어 차단 확장 프로그램",
+            "description": "개인정보 보호에 초점을 맞춘 Manifest V3 브라우저 확장 프로그램. 웹페이지의 이미지와 동영상을 중립 박스로 대체하며, 클릭하여 원래 미디어를 볼 수 있습니다.",
+            "image": "assets/img/apps/hide-n-seek-block-media-addon.webp",
+            "tags": [
+                "JavaScript",
+                "CSS",
+                "확장 프로그램"
+            ],
+            "githubUrl": "https://github.com/albertolicea00/hide-n-seek-block-media-addon",
+            "liveUrl": "https://github.com/albertolicea00/hide-n-seek-block-media-addon",
+            "featured": true
         }
-      ]
-    }
-  ]
+    ],
+    "experience": [
+        {
+            "date": "현재",
+            "title": "PinkzebraHome - 기밀",
+            "logo": "assets/img/company/pinkzebrahome.webp",
+            "logoWide": true,
+            "desc": "현재 고영향력의 비공개 프로젝트를 개발 중입니다. 곧 큰 발표가 있을 예정입니다...",
+            "links": [
+                {
+                    "url": "https://pinkzebrahome.com?repid=1198544",
+                    "label": "PinkzebraHome"
+                }
+            ]
+        },
+        {
+            "date": "Mar 2024 - Present",
+            "title": "소프트웨어 개발자 @ Ladetec",
+            "logo": "assets/img/company/ladetec.webp",
+            "desc": "Django, Vue.js, Svelte, Node.js를 사용한 API 통합(Bigcommerce, KillBill) 및 ERP 개발.",
+            "links": [
+                {
+                    "url": "https://www.ladetec.com/",
+                    "label": "Ladetec"
+                }
+            ]
+        },
+        {
+            "date": "Mar 2024 - Aug 2024",
+            "title": "소프트웨어 유지보수 @ TOWIT Houston",
+            "logo": "assets/img/company/towithuston.webp",
+            "desc": "회사 관리 소프트웨어의 버그 수정 및 새 기능을 구현하여 안정성과 일상 운영을 개선했습니다.",
+            "links": [
+                {
+                    "url": "https://towithouston.com/",
+                    "label": "TOWIT Houston"
+                }
+            ]
+        },
+        {
+            "date": "Mar 2022 - Feb 2024",
+            "title": "IT 지원 관리자 @ Wateke Soluciones",
+            "logo": "assets/img/company/wateketech.svg",
+            "logoWide": true,
+            "logoLight": true,
+            "desc": "Laravel & Livewire를 사용한 맞춤형 ERP 및 CMS 시스템 개발. WordPress 사이트 및 커스텀 플러그인 관리.",
+            "links": [
+                {
+                    "url": "https://wateke.tech/",
+                    "label": "Wateke Soluciones Tecnológicas"
+                }
+            ]
+        },
+        {
+            "date": "Jan 2022 - Feb 2024",
+            "title": "외부 협력자 @ Wateke Travel",
+            "logo": "assets/img/company/wateketravel.webp",
+            "logoWide": true,
+            "logoDark": true,
+            "desc": "Apache Cordova로 모바일 앱을 제작하고 After Effects로 로고 애니메이션을 관리했습니다.",
+            "links": [
+                {
+                    "url": "https://wateke.travel/",
+                    "label": "Wateke Travel"
+                }
+            ]
+        },
+        {
+            "date": "Sep 2019 - Jan 2024",
+            "title": "컴퓨터 공학 @ Universidad de Camagüey",
+            "logo": "assets/img/company/ucm.webp",
+            "logoWide": true,
+            "logoDark": true,
+            "desc": "컴퓨터 공학을 졸업하고 회계 및 재무 1학년 과정도 이수했습니다.",
+            "links": [
+                {
+                    "url": "https://www.reduc.edu.cu/",
+                    "label": "Universidad de Camagüey"
+                }
+            ]
+        }
+    ]
 }

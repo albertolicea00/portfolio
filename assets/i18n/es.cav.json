@@ -100,7 +100,7 @@
             "id": 1,
             "title": "Servicio de BettaHVAC",
             "description": "Hombre hacer sistema grande para aire frío y aire caliente. Cliente pedir precio. Máquina responder. Todos felices.",
-            "image": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "image": "assets/img/apps/bettahvacservices.webp",
             "tags": [
                 "Svelte",
                 "Node.js",
@@ -114,7 +114,7 @@
             "id": 2,
             "title": "Miguelín hacer locuras",
             "description": "Página moverse mucho. Luces, colores, animación. Tribu mirar y decir: ugha, bonito.",
-            "image": "https://yt3.googleusercontent.com/xktD1rgu2QIivNnnDWVuYuFlchkfdH23Yp4YUbv1-7Y5LIJHLvgEHD-rOgwn8XEskC3vAGzTeg=s160-c-k-c0x00ffffff-no-rj",
+            "image": "assets/img/apps/laslocurasdemiguelin.webp",
             "tags": [
                 "Astro",
                 "TypeScript",
@@ -128,7 +128,7 @@
             "id": 3,
             "title": "Kristoff página bonita",
             "description": "Página moderna para videos. Usuario entrar, ver bonito, no perderse en selva.",
-            "image": "https://yt3.googleusercontent.com/_nwkuUvKJT-ztrUNH1bymp7trvZfDXp07UVV7NJNv-Zfws0Wpnlla9nExFRhYSVNAMeKxt9AHA=s160-c-k-c0x00ffffff-no-rj",
+            "image": "assets/img/apps/kristoff.webp",
             "tags": [
                 "Astro",
                 "TypeScript",
@@ -141,15 +141,44 @@
         {
             "id": 4,
             "title": "Banco remoto de tribu",
-            "description": "Sistema de banco fuerte. Seguro como roca. Rápido como tigre con WiFi.",
-            "image": "https://github.com/albertolicea00/Banca_Remota/blob/main/Banca_Remota.xcassets/Logo.imageset/logo.png?raw=true",
+            "description": "Hombre hacer app para iPhone. Controlar banco de tribu con códigos USSD. Sin internet. Seguro como roca.",
+            "image": "assets/img/apps/bancaremota.webp",
             "tags": [
                 "Swift",
-                "iOS"
+                "iOS",
+                "Xcode"
             ],
-            "githubUrl": "https://github.com/albertolicea00/Banca_Remota",
-            "liveUrl": "https://github.com/albertolicea00/Banca_Remota",
-            "featured": false
+            "githubUrl": "https://github.com/albertolicea00/BancaRemota_app",
+            "liveUrl": "https://bancaremota.vercel.app/",
+            "featured": true
+        },
+        {
+            "id": 5,
+            "title": "Mivio cueva multimedia",
+            "description": "El reproductor de video definitivo para muchas pantallas. Ver películas locales o conectar con Jellyfin, Plex, SMB y WebDAV. Descargar portadas bonitas y subtítulos al instante. ¡Súper moderno!",
+            "image": "assets/img/apps/mivio.webp",
+            "tags": [
+                "HTML5",
+                "Tailwind CSS",
+                "Alpine.js"
+            ],
+            "githubUrl": "https://github.com/albertolicea00/mivio-landing",
+            "liveUrl": "https://mivio.vercel.app/",
+            "featured": true
+        },
+        {
+            "id": 6,
+            "title": "Esconder y buscar",
+            "description": "Hombre hacer extensión para navegador. Esconder fotos y videos detrás de piedra. Clic en piedra, ver dibujo original. Seguro y rápido.",
+            "image": "assets/img/apps/hide-n-seek-block-media-addon.webp",
+            "tags": [
+                "JavaScript",
+                "CSS",
+                "Extensión"
+            ],
+            "githubUrl": "https://github.com/albertolicea00/hide-n-seek-block-media-addon",
+            "liveUrl": "https://github.com/albertolicea00/hide-n-seek-block-media-addon",
+            "featured": true
         }
     ],
     "experience": [
