@@ -52,7 +52,8 @@
             },
             "form_help": "Formulario tu usar. Yo responder rápido.",
             "submit_btn": "Enviar señal de humo",
-            "success_msg": "Mensaje enviado. Yo venir pronto."
+            "success_msg": "Mensaje enviado. Yo venir pronto.",
+            "error_msg": "Fuego malo. Envío fallar. Tú intentar otra vez o usar señales de humo."
         },
         "footer": {
             "rights": "Hecho con ❤️ por humano fuerte @albertolicea00"
@@ -174,7 +175,7 @@
             "tags": [
                 "JavaScript",
                 "CSS",
-                "Extensión"
+                "Extension"
             ],
             "githubUrl": "https://github.com/albertolicea00/hide-n-seek-block-media-addon",
             "liveUrl": "https://github.com/albertolicea00/hide-n-seek-block-media-addon",

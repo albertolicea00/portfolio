@@ -115,7 +115,7 @@
             "id": 2,
             "title": "Miguelín 的疯狂世界",
             "description": "具有沉浸式设计和流畅动画的动态娱乐落地页。",
-            "image": "assets/img/apps/laslocurasdemiguelin.jpg",
+            "image": "assets/img/apps/laslocurasdemiguelin.webp",
             "tags": [
                 "Astro",
                 "TypeScript",
@@ -129,7 +129,7 @@
             "id": 3,
             "title": "Kristoff 落地页",
             "description": "专注于 UX/UI 和品牌叙事的现代 VOD 平台落地页。",
-            "image": "assets/img/apps/kristoff.jpg",
+            "image": "assets/img/apps/kristoff.webp",
             "tags": [
                 "Astro",
                 "TypeScript",
@@ -175,7 +175,7 @@
             "tags": [
                 "JavaScript",
                 "CSS",
-                "浏览器插件"
+                "Extension"
             ],
             "githubUrl": "https://github.com/albertolicea00/hide-n-seek-block-media-addon",
             "liveUrl": "https://github.com/albertolicea00/hide-n-seek-block-media-addon",

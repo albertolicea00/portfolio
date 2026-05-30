@@ -115,7 +115,7 @@
             "id": 2,
             "title": "Le follie di Miguelín",
             "description": "Landing page di intrattenimento altamente dinamica con design immersivo e animazioni fluide.",
-            "image": "assets/img/apps/laslocurasdemiguelin.jpg",
+            "image": "assets/img/apps/laslocurasdemiguelin.webp",
             "tags": [
                 "Astro",
                 "TypeScript",
@@ -129,7 +129,7 @@
             "id": 3,
             "title": "Landing Page Kristoff",
             "description": "Landing page moderna per piattaforma VOD focalizzata su UX/UI e storytelling del brand.",
-            "image": "assets/img/apps/kristoff.jpg",
+            "image": "assets/img/apps/kristoff.webp",
             "tags": [
                 "Astro",
                 "TypeScript",
@@ -175,7 +175,7 @@
             "tags": [
                 "JavaScript",
                 "CSS",
-                "Estensione"
+                "Extension"
             ],
             "githubUrl": "https://github.com/albertolicea00/hide-n-seek-block-media-addon",
             "liveUrl": "https://github.com/albertolicea00/hide-n-seek-block-media-addon",

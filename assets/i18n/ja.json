@@ -101,7 +101,7 @@
             "id": 1,
             "title": "BettaHVAC サービス",
             "description": "見積もり自動生成と顧客管理機能を備えたスケーラブルなHVAC企業向けプラットフォーム。",
-            "image": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "image": "assets/img/apps/bettahvacservices.webp",
             "tags": [
                 "Svelte",
                 "Node.js",
@@ -115,7 +115,7 @@
             "id": 2,
             "title": "ミゲリンのクレイジーな世界",
             "description": "没入型デザインとスムーズなアニメーションを備えたダイナミックなエンターテインメント用ランディングページ。",
-            "image": "https://yt3.googleusercontent.com/xktD1rgu2QIivNnnDWVuYuFlchkfdH23Yp4YUbv1-7Y5LIJHLvgEHD-rOgwn8XEskC3vAGzTeg=s160-c-k-c0x00ffffff-no-rj",
+            "image": "assets/img/apps/laslocurasdemiguelin.webp",
             "tags": [
                 "Astro",
                 "TypeScript",
@@ -129,7 +129,7 @@
             "id": 3,
             "title": "Kristoff ランディングページ",
             "description": "UX/UIとブランドストーリーテリングに焦点を当てた現代的なVODプラットフォーム用ランディングページ。",
-            "image": "https://yt3.googleusercontent.com/_nwkuUvKJT-ztrUNH1bymp7trvZfDXp07UVV7NJNv-Zfws0Wpnlla9nExFRhYSVNAMeKxt9AHA=s160-c-k-c0x00ffffff-no-rj",
+            "image": "assets/img/apps/kristoff.webp",
             "tags": [
                 "Astro",
                 "TypeScript",
@@ -175,7 +175,7 @@
             "tags": [
                 "JavaScript",
                 "CSS",
-                "拡張機能"
+                "Extension"
             ],
             "githubUrl": "https://github.com/albertolicea00/hide-n-seek-block-media-addon",
             "liveUrl": "https://github.com/albertolicea00/hide-n-seek-block-media-addon",

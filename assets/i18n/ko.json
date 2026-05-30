@@ -101,7 +101,7 @@
             "id": 1,
             "title": "BettaHVAC 서비스",
             "description": "자동 견적 생성 및 고객 관리 기능을 갖춘 HVAC 서비스용 확장 가능한 기업 플랫폼.",
-            "image": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "image": "assets/img/apps/bettahvacservices.webp",
             "tags": [
                 "Svelte",
                 "Node.js",
@@ -115,7 +115,7 @@
             "id": 2,
             "title": "Miguelín의 엉뚱한 세계",
             "description": "몰입형 디자인과 유동적인 애니메이션이 특징인 역동적인 엔터테인먼트 랜딩 페이지.",
-            "image": "https://yt3.googleusercontent.com/xktD1rgu2QIivNnnDWVuYuFlchkfdH23Yp4YUbv1-7Y5LIJHLvgEHD-rOgwn8XEskC3vAGzTeg=s160-c-k-c0x00ffffff-no-rj",
+            "image": "assets/img/apps/laslocurasdemiguelin.webp",
             "tags": [
                 "Astro",
                 "TypeScript",
@@ -129,7 +129,7 @@
             "id": 3,
             "title": "Kristoff 랜딩 페이지",
             "description": "UX/UI 우수성과 브랜드 스토리텔링에 초점을 맞춘 현대적인 VOD 플랫폼 랜딩 페이지.",
-            "image": "https://yt3.googleusercontent.com/_nwkuUvKJT-ztrUNH1bymp7trvZfDXp07UVV7NJNv-Zfws0Wpnlla9nExFRhYSVNAMeKxt9AHA=s160-c-k-c0x00ffffff-no-rj",
+            "image": "assets/img/apps/kristoff.webp",
             "tags": [
                 "Astro",
                 "TypeScript",
@@ -175,7 +175,7 @@
             "tags": [
                 "JavaScript",
                 "CSS",
-                "확장 프로그램"
+                "Extension"
             ],
             "githubUrl": "https://github.com/albertolicea00/hide-n-seek-block-media-addon",
             "liveUrl": "https://github.com/albertolicea00/hide-n-seek-block-media-addon",

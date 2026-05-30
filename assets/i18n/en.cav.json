@@ -52,7 +52,8 @@
             },
             "form_help": "Form you use. Me answer fast.",
             "submit_btn": "You send message",
-            "success_msg": "Message sent! Me contact soon."
+            "success_msg": "Message sent! Me contact soon.",
+            "error_msg": "Fire bad. Send fail. You try again or send smoke signal."
         },
         "footer": {
             "rights": "Made with ❤️ by strong human"
@@ -102,9 +103,9 @@
             "description": "Me make big business platform. Quotes automatic. Customers managed.",
             "image": "assets/img/apps/bettahvacservices.webp",
             "tags": [
-                "Me Svelte",
-                "Me Node",
-                "Me CSS"
+                "Svelte",
+                "Node.js",
+                "CSS"
             ],
             "githubUrl": "https://github.com/albertolicea00/bettahvac-landing",
             "liveUrl": "https://www.bettahvacservices.com/",
@@ -116,9 +117,9 @@
             "description": "Me make fun page. Big motion. Smooth moving.",
             "image": "assets/img/apps/laslocurasdemiguelin.webp",
             "tags": [
-                "Me Astro",
-                "Me TypeScript",
-                "Me Tailwind"
+                "Astro",
+                "TypeScript",
+                "Tailwind CSS"
             ],
             "githubUrl": "https://github.com/albertolicea00/las-locuras-de-miguelin-landing",
             "liveUrl": "https://las-locuras-de-miguelin-landing.vercel.app/",
@@ -130,9 +131,9 @@
             "description": "Me make modern VOD page. User happy. Brand strong.",
             "image": "assets/img/apps/kristoff.webp",
             "tags": [
-                "Me Astro",
-                "Me TypeScript",
-                "Me Tailwind"
+                "Astro",
+                "TypeScript",
+                "Tailwind CSS"
             ],
             "githubUrl": "https://github.com/albertolicea00/kristoff-landing",
             "liveUrl": "https://kristoff-landing.vercel.app/",
@@ -144,9 +145,9 @@
             "description": "Me build strong iOS bank app. Safe. No internet needed. Storing accounts, bills, and keys in rock.",
             "image": "assets/img/apps/bancaremota.webp",
             "tags": [
-                "Me Swift",
-                "Me iOS",
-                "Me Xcode"
+                "Swift",
+                "iOS",
+                "Xcode"
             ],
             "githubUrl": "https://github.com/albertolicea00/BancaRemota_app",
             "liveUrl": "https://bancaremota.vercel.app/",
@@ -158,9 +159,9 @@
             "description": "Me make ultimate video player for many screens. Play video from rock or stream from Jellyfin, Plex, SMB, WebDAV. Get beautiful covers, info, and subtitles like magic. Very premium!",
             "image": "assets/img/apps/mivio.webp",
             "tags": [
-                "Me HTML5",
-                "Me Tailwind",
-                "Me Alpine"
+                "HTML5",
+                "Tailwind CSS",
+                "Alpine.js"
             ],
             "githubUrl": "https://github.com/albertolicea00/mivio-landing",
             "liveUrl": "https://mivio.vercel.app/",
@@ -172,9 +173,9 @@
             "description": "Me build extension for browser. Hide all photos and videos on web behind rock. Click rock, see original media. No data taken. Very safe!",
             "image": "assets/img/apps/hide-n-seek-block-media-addon.webp",
             "tags": [
-                "Me JS",
-                "Me CSS",
-                "Me Extension"
+                "JavaScript",
+                "CSS",
+                "Extension"
             ],
             "githubUrl": "https://github.com/albertolicea00/hide-n-seek-block-media-addon",
             "liveUrl": "https://github.com/albertolicea00/hide-n-seek-block-media-addon",
