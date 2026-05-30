@@ -17,3 +17,6 @@ Thumbs.db
 .gemini/
 .agents/
 .env
+
+# Temp files
+node_modules

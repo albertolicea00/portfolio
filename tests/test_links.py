@@ -54,7 +54,8 @@ def test_url(url):
         "instagram.com",
         "pinkzebrahome.com",
         "towithouston.com",
-        "github.com/albertolicea00"
+        "github.com/albertolicea00",
+        "wateke.tech"
     ]
     
     is_blacklist = any(domain in url for domain in domain_blacklist_strict_fail)
