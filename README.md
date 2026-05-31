@@ -9,14 +9,18 @@ Responsive portfolio built with plain HTML, CSS, and JavaScript. The site ships 
 - Custom language dropdown with keyboard support
 - Dynamic project and experience rendering from JSON
 - Responsive layout for desktop and mobile
-- Zero runtime dependencies beyond CDN fonts and icons
+- Functional contact form using Vercel serverless functions and Resend
+- Local SVG icons for high-quality, crisp rendering (emoji-free)
+- Zero runtime frontend dependencies beyond CDN fonts
 
 ## Tech Stack
 
 - HTML5
 - CSS3
 - JavaScript (ES6+)
-- Font Awesome
+- **Serverless API:** Vercel Functions (Node.js) & Resend
+- **Automated Testing:** Python (pytest)
+- **CI/CD:** GitHub Actions
 - Google Fonts
 
 ## Project Structure
@@ -26,13 +30,17 @@ Responsive portfolio built with plain HTML, CSS, and JavaScript. The site ships 
 ├── projects.html
 ├── style.css
 ├── script.js
-└── assets/
-    ├── i18n/
-    │   ├── en.json
-    │   ├── es.json
-    │   ├── ...
-    ├── img/
-    └── pdf/
+├── api/                  # Serverless backend functions (Contact form)
+├── assets/
+│   ├── i18n/             # JSON localization files (en.json, es.json)
+│   ├── icons/            # Local SVG icons
+│   ├── img/              # Image assets
+│   └── pdf/              # Document assets (e.g., Resumes)
+├── scripts/              # Helper scripts (translations, icons, etc.)
+├── tests/                # Python tests for structure, links, and assets
+├── .github/workflows/    # CI/CD automation
+├── LICENSE               # MIT License
+└── README.md
 ```
 
 ## Content Model
@@ -51,11 +59,12 @@ Each file in `assets/i18n/` contains:
 - Mirror those changes in the other language files if you want localized versions
 - Add or update entries in the `projects` array to change the portfolio cards
 - Add or update entries in the `experience` array to change the timeline
-- Replace assets in `assets/img/` or `assets/pdf/` when needed
+- Replace assets in `assets/img/`, `assets/icons/`, or `assets/pdf/` when needed
 
 ## Local Preview
 
 Open `index.html` directly in the browser for a quick check, or serve the folder with any static file server if you want to avoid local `fetch` restrictions in stricter browser setups.
+If you need to test the contact form API locally, use Vercel CLI (`vercel dev`) with your `.env` configured.
 
 ## Deployment
 
@@ -64,6 +73,19 @@ This project can be deployed to any static hosting provider, including:
 - GitHub Pages
 - Netlify
 - Vercel
+
+**Note on Contact Form API:**
+The contact form requires a serverless backend. It is pre-configured to use Vercel Serverless Functions (`api/contact.js`) and the [Resend API](https://resend.com) for email delivery.
+
+To enable the contact form:
+1. Deploy the project to **Vercel** or **Netlify**. Both are fully supported out of the box (Vercel uses `api/contact.js` and Netlify uses `netlify/functions/contact.js` via `netlify.toml`).
+2. Get an API Key from [Resend](https://resend.com).
+3. Add the following Environment Variables to your project settings in Vercel or Netlify (and your local `.env` for testing):
+   - `RESEND_API_KEY`: Your Resend API key.
+   - `RESEND_FROM`: The sender email (e.g., `onboarding@resend.dev` or your verified domain).
+   - `RESEND_TO`: The destination email to receive messages.
+
+*(If you deploy to GitHub Pages, the static site will work perfectly, but because GitHub Pages has no backend support, the contact form will require replacing the endpoint with an external service like Formspree or Web3Forms.)*
 
 ## Author
 
