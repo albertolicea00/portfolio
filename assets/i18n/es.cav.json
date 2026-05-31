@@ -9,7 +9,7 @@
         },
         "hero": {
             "subtitle": "Hombre hacer web y móvil<br>También dibujar bonito",
-            "bio": "+7 años. Mucho café. Mucho código. Poco dormir.",
+            "bio": "+{{years}} años. Mucho café. Mucho código. Poco dormir.",
             "cta": "Ver inventos",
             "contact": "Mandar señal de humo",
             "download_cv": "Bajar pergamino CV"

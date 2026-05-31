@@ -9,7 +9,7 @@
         },
         "hero": {
             "subtitle": "Desarrollador Fullstack Web y Móvil<br>Diseñador Gráfico",
-            "bio": "+7 años convirtiendo café en código de alta gama.",
+            "bio": "+{{years}} años convirtiendo café en código de alta gama.",
             "cta": "Ver Proyectos",
             "contact": "Contactame",
             "download_cv": "Descargar CV"

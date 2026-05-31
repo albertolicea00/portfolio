@@ -9,7 +9,7 @@
         },
         "hero": {
             "subtitle": "Fullstack Web- & Mobile-Entwickler<br>Grafikdesigner",
-            "bio": "+7 Jahre Erfahrung darin, Kaffee in hochwertigen Code zu verwandeln.",
+            "bio": "+{{years}} Jahre Erfahrung darin, Kaffee in hochwertigen Code zu verwandeln.",
             "cta": "Projekte ansehen",
             "contact": "Kontakt aufnehmen",
             "download_cv": "Lebenslauf herunterladen"

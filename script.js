@@ -976,23 +976,34 @@ function initLanguage() {
 
 function updatePageText() {
     if (!siteData) return;
+    
+    const completedYears = getCompletedYearsSince(EXPERIENCE_START_DATE);
 
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const path = el.getAttribute('data-i18n');
-        const value = getNestedValue(siteData, path);
-        if (typeof value === 'string') el.innerHTML = value;
+        let value = getNestedValue(siteData, path);
+        if (typeof value === 'string') {
+            value = value.replace(/\{\{years\}\}/g, completedYears);
+            el.innerHTML = value;
+        }
     });
 
     document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
         const path = el.getAttribute('data-i18n-placeholder');
-        const value = getNestedValue(siteData, path);
-        if (typeof value === 'string') el.placeholder = value;
+        let value = getNestedValue(siteData, path);
+        if (typeof value === 'string') {
+            value = value.replace(/\{\{years\}\}/g, completedYears);
+            el.placeholder = value;
+        }
     });
 
     document.querySelectorAll('[data-i18n-tooltip]').forEach(el => {
         const path = el.getAttribute('data-i18n-tooltip');
-        const value = getNestedValue(siteData, path);
-        if (typeof value === 'string') el.setAttribute('data-tooltip', value);
+        let value = getNestedValue(siteData, path);
+        if (typeof value === 'string') {
+            value = value.replace(/\{\{years\}\}/g, completedYears);
+            el.setAttribute('data-tooltip', value);
+        }
     });
 }
 

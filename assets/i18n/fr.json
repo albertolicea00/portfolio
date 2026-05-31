@@ -9,7 +9,7 @@
         },
         "hero": {
             "subtitle": "Développeur Web & Mobile Fullstack<br>Designer Graphique",
-            "bio": "+7 ans à transformer le café en code de haute qualité.",
+            "bio": "+{{years}} ans à transformer le café en code de haute qualité.",
             "cta": "Voir les projets",
             "contact": "Me contacter",
             "download_cv": "Télécharger CV"

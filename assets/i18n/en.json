@@ -9,7 +9,7 @@
         },
         "hero": {
             "subtitle": "Fullstack Web & Mobile Developer<br>Graphic Designer",
-            "bio": "+7 years of converting coffee into high-end code.",
+            "bio": "+{{years}} years of converting coffee into high-end code.",
             "cta": "View Projects",
             "contact": "Contact Me",
             "download_cv": "Download CV"

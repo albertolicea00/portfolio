@@ -9,7 +9,7 @@
         },
         "hero": {
             "subtitle": "Me build web and mobile<br>Me make graphics",
-            "bio": "+7 years. Me drink coffee. Me make code.",
+            "bio": "+{{years}} years. Me drink coffee. Me make code.",
             "cta": "Me see projects",
             "contact": "Talk to me",
             "download_cv": "Me get CV"
