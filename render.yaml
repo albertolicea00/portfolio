@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: alberto-portfolio
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_CHAT_ID
+        sync: false
+      - key: TURNSTILE_SECRET_KEY
+        sync: false

@@ -93,13 +93,11 @@ To enable the contact form:
    - `TELEGRAM_CHAT_ID`: Your Telegram numeric Chat ID.
    - `TURNSTILE_SECRET_KEY`: Your Cloudflare Turnstile Secret Key.
 
-### Self-Hosted PaaS (Coolify, Dokploy, etc.)
+### Self-Hosted PaaS (Coolify, Dokploy) & Container Platforms (Render, Heroku)
 
-If you deploy this project to a self-hosted PaaS like **Coolify** or **Dokploy** as a "Static Site", the HTML/CSS/JS will work perfectly, but the `/api/contact` endpoint will return a 404 error. This is because these platforms do not provide native "Serverless Functions" out of the box for static sites.
+If you deploy this project to platforms like **Coolify**, **Dokploy**, **Render**, or **Heroku**, do NOT deploy it as a "Static Site" (unless you plan to use an external form service). Instead, deploy it as a **Node.js Web Service**.
 
-To fix this, you have two options:
-1. **Use an external service:** Change the form action in `index.html` to an external provider like Formspree or Web3Forms.
-2. **Convert to a Node.js App:** Create a simple `server.js` (e.g., using Express) to serve the static files and handle the `/api/contact` POST request, then deploy the project as a Node.js application instead of a Static Site.
+Thanks to the included `server.js` and `package.json`, these platforms will automatically detect the project as a Node.js application. They will start a native web server that serves both your static portfolio and the backend API on the same domain seamlessly.
 
 *(Similarly, if you deploy to **GitHub Pages**, the static site will work perfectly, but because it has no backend support, you must use an external form service).*
 
