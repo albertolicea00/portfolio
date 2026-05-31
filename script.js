@@ -1521,7 +1521,12 @@ function setupEventListeners() {
                 statusEl.style.color = 'var(--accent, #6ee7b7)';
                 form.reset();
             } else {
-                statusEl.textContent = getLocalizedText('home.contact_section.error_msg', 'Something went wrong. Please try again or use the social links.');
+                let serverError = '';
+                try {
+                    const data = await res.json();
+                    serverError = data.error;
+                } catch(e) {}
+                statusEl.textContent = serverError || getLocalizedText('home.contact_section.error_msg', 'Something went wrong. Please try again or use the social links.');
                 statusEl.style.display = 'block';
                 statusEl.style.color = '#f87171';
             }

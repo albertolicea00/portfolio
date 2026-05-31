@@ -1,13 +1,15 @@
 async function processRequest(payload) {
     const { name, email, phone, message, website, turnstileResponse } = payload;
 
+    // Honeypot: humans will never fill this field
     if (website) {
         console.log('Honeypot triggered, silently dropping request.');
         return { status: 200, body: { success: true } };
     }
 
+    // Cloudflare Turnstile verification
     if (!turnstileResponse) {
-        return { status: 400, body: { error: 'Security verification failed. Please refresh and try again.' } };
+        return { status: 400, body: { error: 'Please complete the security verification before submitting.' } };
     }
 
     try {
@@ -24,13 +26,14 @@ async function processRequest(payload) {
         const turnstileData = await turnstileVerify.json();
         if (!turnstileData.success) {
             console.error('Turnstile verification failed:', turnstileData);
-            return { status: 400, body: { error: 'Security verification failed.' } };
+            return { status: 400, body: { error: 'Security verification failed. Please try again.' } };
         }
     } catch (err) {
         console.error('Error verifying Turnstile:', err);
         return { status: 500, body: { error: 'Failed to verify security challenge' } };
     }
 
+    // Form fields validations 
     if (!name || (!email && !phone) || !message) {
         return { status: 400, body: { error: 'Name, message, and at least one contact method (email or phone) are required' } };
     }
@@ -57,6 +60,7 @@ async function processRequest(payload) {
         return { status: 400, body: { error: 'At least one valid contact method (email or phone) is required' } };
     }
 
+    // Telegram bot integration
     const botToken = process.env.TELEGRAM_BOT_TOKEN;
     const chatId = process.env.TELEGRAM_CHAT_ID;
 
