@@ -114,48 +114,6 @@
     },
     "projects": [
         {
-            "id": 1,
-            "title": "Servicio de BettaHVAC",
-            "description": "Hombre hacer sistema grande para aire frío y aire caliente. Cliente pedir precio. Máquina responder. Todos felices.",
-            "image": "assets/img/apps/bettahvacservices.webp",
-            "tags": [
-                "Svelte",
-                "Node.js",
-                "CSS"
-            ],
-            "githubUrl": "https://github.com/albertolicea00/bettahvac-landing",
-            "liveUrl": "https://www.bettahvacservices.com/",
-            "featured": false
-        },
-        {
-            "id": 2,
-            "title": "Miguelín hacer locuras",
-            "description": "Página moverse mucho. Luces, colores, animación. Tribu mirar y decir: ugha, bonito.",
-            "image": "assets/img/apps/laslocurasdemiguelin.webp",
-            "tags": [
-                "Astro",
-                "TypeScript",
-                "Tailwind CSS"
-            ],
-            "githubUrl": "https://github.com/albertolicea00/las-locuras-de-miguelin-landing",
-            "liveUrl": "https://las-locuras-de-miguelin-landing.vercel.app/",
-            "featured": false
-        },
-        {
-            "id": 3,
-            "title": "Kristoff página bonita",
-            "description": "Página moderna para videos. Usuario entrar, ver bonito, no perderse en selva.",
-            "image": "assets/img/apps/kristoff.webp",
-            "tags": [
-                "Astro",
-                "TypeScript",
-                "Tailwind CSS"
-            ],
-            "githubUrl": "https://github.com/albertolicea00/kristoff-landing",
-            "liveUrl": "https://kristoff-landing.vercel.app/",
-            "featured": false
-        },
-        {
             "id": 4,
             "title": "Banco remoto de tribu",
             "description": "Hombre hacer app para iPhone. Controlar banco de tribu con códigos USSD. Sin internet. Seguro como roca.",
@@ -210,6 +168,48 @@
             "githubUrl": "https://github.com/albertolicea00/CacheCleaner",
             "liveUrl": "https://github.com/albertolicea00/CacheCleaner",
             "featured": true
+        },
+        {
+            "id": 1,
+            "title": "Servicio de BettaHVAC",
+            "description": "Hombre hacer sistema grande para aire frío y aire caliente. Cliente pedir precio. Máquina responder. Todos felices.",
+            "image": "assets/img/apps/bettahvacservices.webp",
+            "tags": [
+                "Svelte",
+                "Node.js",
+                "CSS"
+            ],
+            "githubUrl": "https://github.com/albertolicea00/bettahvac-landing",
+            "liveUrl": "https://www.bettahvacservices.com/",
+            "featured": false
+        },
+        {
+            "id": 2,
+            "title": "Miguelín hacer locuras",
+            "description": "Página moverse mucho. Luces, colores, animación. Tribu mirar y decir: ugha, bonito.",
+            "image": "assets/img/apps/laslocurasdemiguelin.webp",
+            "tags": [
+                "Astro",
+                "TypeScript",
+                "Tailwind CSS"
+            ],
+            "githubUrl": "https://github.com/albertolicea00/las-locuras-de-miguelin-landing",
+            "liveUrl": "https://las-locuras-de-miguelin-landing.vercel.app/",
+            "featured": false
+        },
+        {
+            "id": 3,
+            "title": "Kristoff página bonita",
+            "description": "Página moderna para videos. Usuario entrar, ver bonito, no perderse en selva.",
+            "image": "assets/img/apps/kristoff.webp",
+            "tags": [
+                "Astro",
+                "TypeScript",
+                "Tailwind CSS"
+            ],
+            "githubUrl": "https://github.com/albertolicea00/kristoff-landing",
+            "liveUrl": "https://kristoff-landing.vercel.app/",
+            "featured": false
         }
     ],
     "experience": [

@@ -114,48 +114,6 @@
     },
     "projects": [
         {
-            "id": 1,
-            "title": "Servicios BettaHVAC",
-            "description": "Plataforma corporativa escalable para servicios de climatización, con generación de presupuestos y gestión de clientes.",
-            "image": "assets/img/apps/bettahvacservices.webp",
-            "tags": [
-                "Svelte",
-                "Node.js",
-                "CSS"
-            ],
-            "githubUrl": "https://github.com/albertolicea00/bettahvac-landing",
-            "liveUrl": "https://www.bettahvacservices.com/",
-            "featured": false
-        },
-        {
-            "id": 2,
-            "title": "Las Locuras de Miguelín",
-            "description": "Landing page de entretenimiento altamente dinámica con diseño envolvente y animaciones fluidas.",
-            "image": "assets/img/apps/laslocurasdemiguelin.webp",
-            "tags": [
-                "Astro",
-                "TypeScript",
-                "Tailwind CSS"
-            ],
-            "githubUrl": "https://github.com/albertolicea00/las-locuras-de-miguelin-landing",
-            "liveUrl": "https://las-locuras-de-miguelin-landing.vercel.app/",
-            "featured": false
-        },
-        {
-            "id": 3,
-            "title": "Landing Page Kristoff",
-            "description": "Landing page para plataforma de VOD centrada en la excelencia UI/UX y narrativa de marca.",
-            "image": "assets/img/apps/kristoff.webp",
-            "tags": [
-                "Astro",
-                "TypeScript",
-                "Tailwind CSS"
-            ],
-            "githubUrl": "https://github.com/albertolicea00/kristoff-landing",
-            "liveUrl": "https://kristoff-landing.vercel.app/",
-            "featured": false
-        },
-        {
             "id": 4,
             "title": "Banca Remota — Cuba",
             "description": "Aplicación nativa para iPhone que simplifica las operaciones bancarias cubanas mediante códigos USSD. Funciona 100% offline, almacenando de forma segura tarjetas, cuentas nauta, facturas y claves encriptadas localmente.",
@@ -210,6 +168,48 @@
             "githubUrl": "https://github.com/albertolicea00/CacheCleaner",
             "liveUrl": "https://github.com/albertolicea00/CacheCleaner",
             "featured": true
+        },
+        {
+            "id": 1,
+            "title": "Servicios BettaHVAC",
+            "description": "Plataforma corporativa escalable para servicios de climatización, con generación de presupuestos y gestión de clientes.",
+            "image": "assets/img/apps/bettahvacservices.webp",
+            "tags": [
+                "Svelte",
+                "Node.js",
+                "CSS"
+            ],
+            "githubUrl": "https://github.com/albertolicea00/bettahvac-landing",
+            "liveUrl": "https://www.bettahvacservices.com/",
+            "featured": false
+        },
+        {
+            "id": 2,
+            "title": "Las Locuras de Miguelín",
+            "description": "Landing page de entretenimiento altamente dinámica con diseño envolvente y animaciones fluidas.",
+            "image": "assets/img/apps/laslocurasdemiguelin.webp",
+            "tags": [
+                "Astro",
+                "TypeScript",
+                "Tailwind CSS"
+            ],
+            "githubUrl": "https://github.com/albertolicea00/las-locuras-de-miguelin-landing",
+            "liveUrl": "https://las-locuras-de-miguelin-landing.vercel.app/",
+            "featured": false
+        },
+        {
+            "id": 3,
+            "title": "Landing Page Kristoff",
+            "description": "Landing page para plataforma de VOD centrada en la excelencia UI/UX y narrativa de marca.",
+            "image": "assets/img/apps/kristoff.webp",
+            "tags": [
+                "Astro",
+                "TypeScript",
+                "Tailwind CSS"
+            ],
+            "githubUrl": "https://github.com/albertolicea00/kristoff-landing",
+            "liveUrl": "https://kristoff-landing.vercel.app/",
+            "featured": false
         }
     ],
     "experience": [

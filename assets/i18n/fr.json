@@ -114,48 +114,6 @@
     },
     "projects": [
         {
-            "id": 1,
-            "title": "Services BettaHVAC",
-            "description": "Plateforme d'entreprise évolutive pour services HVAC, avec génération automatique de devis et gestion client.",
-            "image": "assets/img/apps/bettahvacservices.webp",
-            "tags": [
-                "Svelte",
-                "Node.js",
-                "CSS"
-            ],
-            "githubUrl": "https://github.com/albertolicea00/bettahvac-landing",
-            "liveUrl": "https://www.bettahvacservices.com/",
-            "featured": false
-        },
-        {
-            "id": 2,
-            "title": "Les folies de Miguelín",
-            "description": "Landing page de divertissement dynamique avec design immersif et animations fluides.",
-            "image": "assets/img/apps/laslocurasdemiguelin.webp",
-            "tags": [
-                "Astro",
-                "TypeScript",
-                "Tailwind CSS"
-            ],
-            "githubUrl": "https://github.com/albertolicea00/las-locuras-de-miguelin-landing",
-            "liveUrl": "https://las-locuras-de-miguelin-landing.vercel.app/",
-            "featured": false
-        },
-        {
-            "id": 3,
-            "title": "Landing Page Kristoff",
-            "description": "Landing page moderne pour plateforme VOD axée sur UX/UI et storytelling de marque.",
-            "image": "assets/img/apps/kristoff.webp",
-            "tags": [
-                "Astro",
-                "TypeScript",
-                "Tailwind CSS"
-            ],
-            "githubUrl": "https://github.com/albertolicea00/kristoff-landing",
-            "liveUrl": "https://kristoff-landing.vercel.app/",
-            "featured": false
-        },
-        {
             "id": 4,
             "title": "Banca Remota — Cuba",
             "description": "Application iPhone native pour la banque cubaine via codes USSD. Fonctionne entièrement hors ligne, stockant localement les cartes, factures et clés biométriques.",
@@ -210,6 +168,48 @@
             "githubUrl": "https://github.com/albertolicea00/CacheCleaner",
             "liveUrl": "https://github.com/albertolicea00/CacheCleaner",
             "featured": true
+        },
+        {
+            "id": 1,
+            "title": "Services BettaHVAC",
+            "description": "Plateforme d'entreprise évolutive pour services HVAC, avec génération automatique de devis et gestion client.",
+            "image": "assets/img/apps/bettahvacservices.webp",
+            "tags": [
+                "Svelte",
+                "Node.js",
+                "CSS"
+            ],
+            "githubUrl": "https://github.com/albertolicea00/bettahvac-landing",
+            "liveUrl": "https://www.bettahvacservices.com/",
+            "featured": false
+        },
+        {
+            "id": 2,
+            "title": "Les folies de Miguelín",
+            "description": "Landing page de divertissement dynamique avec design immersif et animations fluides.",
+            "image": "assets/img/apps/laslocurasdemiguelin.webp",
+            "tags": [
+                "Astro",
+                "TypeScript",
+                "Tailwind CSS"
+            ],
+            "githubUrl": "https://github.com/albertolicea00/las-locuras-de-miguelin-landing",
+            "liveUrl": "https://las-locuras-de-miguelin-landing.vercel.app/",
+            "featured": false
+        },
+        {
+            "id": 3,
+            "title": "Landing Page Kristoff",
+            "description": "Landing page moderne pour plateforme VOD axée sur UX/UI et storytelling de marque.",
+            "image": "assets/img/apps/kristoff.webp",
+            "tags": [
+                "Astro",
+                "TypeScript",
+                "Tailwind CSS"
+            ],
+            "githubUrl": "https://github.com/albertolicea00/kristoff-landing",
+            "liveUrl": "https://kristoff-landing.vercel.app/",
+            "featured": false
         }
     ],
     "experience": [

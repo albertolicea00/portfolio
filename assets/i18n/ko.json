@@ -114,48 +114,6 @@
     },
     "projects": [
         {
-            "id": 1,
-            "title": "BettaHVAC 서비스",
-            "description": "자동 견적 생성 및 고객 관리 기능을 갖춘 HVAC 서비스용 확장 가능한 기업 플랫폼.",
-            "image": "assets/img/apps/bettahvacservices.webp",
-            "tags": [
-                "Svelte",
-                "Node.js",
-                "CSS"
-            ],
-            "githubUrl": "https://github.com/albertolicea00/bettahvac-landing",
-            "liveUrl": "https://www.bettahvacservices.com/",
-            "featured": false
-        },
-        {
-            "id": 2,
-            "title": "Miguelín의 엉뚱한 세계",
-            "description": "몰입형 디자인과 유동적인 애니메이션이 특징인 역동적인 엔터테인먼트 랜딩 페이지.",
-            "image": "assets/img/apps/laslocurasdemiguelin.webp",
-            "tags": [
-                "Astro",
-                "TypeScript",
-                "Tailwind CSS"
-            ],
-            "githubUrl": "https://github.com/albertolicea00/las-locuras-de-miguelin-landing",
-            "liveUrl": "https://las-locuras-de-miguelin-landing.vercel.app/",
-            "featured": false
-        },
-        {
-            "id": 3,
-            "title": "Kristoff 랜딩 페이지",
-            "description": "UX/UI 우수성과 브랜드 스토리텔링에 초점을 맞춘 현대적인 VOD 플랫폼 랜딩 페이지.",
-            "image": "assets/img/apps/kristoff.webp",
-            "tags": [
-                "Astro",
-                "TypeScript",
-                "Tailwind CSS"
-            ],
-            "githubUrl": "https://github.com/albertolicea00/kristoff-landing",
-            "liveUrl": "https://kristoff-landing.vercel.app/",
-            "featured": false
-        },
-        {
             "id": 4,
             "title": "Banca Remota — 쿠바",
             "description": "USSD 코드를 이용한 쿠바 뱅킹용 iOS 네이티브 앱. 완전 오프라인으로 작동하며 계좌, 공과금, 암호화 키를 안전하게 로컬에서 관리합니다.",
@@ -210,6 +168,48 @@
             "githubUrl": "https://github.com/albertolicea00/CacheCleaner",
             "liveUrl": "https://github.com/albertolicea00/CacheCleaner",
             "featured": true
+        },
+        {
+            "id": 1,
+            "title": "BettaHVAC 서비스",
+            "description": "자동 견적 생성 및 고객 관리 기능을 갖춘 HVAC 서비스용 확장 가능한 기업 플랫폼.",
+            "image": "assets/img/apps/bettahvacservices.webp",
+            "tags": [
+                "Svelte",
+                "Node.js",
+                "CSS"
+            ],
+            "githubUrl": "https://github.com/albertolicea00/bettahvac-landing",
+            "liveUrl": "https://www.bettahvacservices.com/",
+            "featured": false
+        },
+        {
+            "id": 2,
+            "title": "Miguelín의 엉뚱한 세계",
+            "description": "몰입형 디자인과 유동적인 애니메이션이 특징인 역동적인 엔터테인먼트 랜딩 페이지.",
+            "image": "assets/img/apps/laslocurasdemiguelin.webp",
+            "tags": [
+                "Astro",
+                "TypeScript",
+                "Tailwind CSS"
+            ],
+            "githubUrl": "https://github.com/albertolicea00/las-locuras-de-miguelin-landing",
+            "liveUrl": "https://las-locuras-de-miguelin-landing.vercel.app/",
+            "featured": false
+        },
+        {
+            "id": 3,
+            "title": "Kristoff 랜딩 페이지",
+            "description": "UX/UI 우수성과 브랜드 스토리텔링에 초점을 맞춘 현대적인 VOD 플랫폼 랜딩 페이지.",
+            "image": "assets/img/apps/kristoff.webp",
+            "tags": [
+                "Astro",
+                "TypeScript",
+                "Tailwind CSS"
+            ],
+            "githubUrl": "https://github.com/albertolicea00/kristoff-landing",
+            "liveUrl": "https://kristoff-landing.vercel.app/",
+            "featured": false
         }
     ],
     "experience": [
