@@ -36,8 +36,8 @@ Responsive portfolio built with plain HTML, CSS, and JavaScript. The site ships 
 ├── projects.html
 ├── style.css
 ├── script.js
-├── functions/
-│   └── api/              # Unified Serverless backend function (Contact form)
+├── functions/            # Used by Cloudflare Pages during deployment
+├── api/                  # Unified Serverless backend function (Contact form)
 ├── assets/
 │   ├── i18n/             # JSON localization files (en.json, es.json)
 │   ├── icons/            # Local SVG icons
@@ -79,17 +79,13 @@ Then visit `http://localhost:3000`.
 
 ## 🚀 Deployment
 
-This project can be deployed anywhere. It supports a **Multi-Cloud Zero-Config** architecture.
+This project can be deployed anywhere. This portfolio uses a unique "Multi-Cloud Zero-Config" approach for its backend. Instead of duplicating backend code for every cloud provider, the entire API logic lives in a single master file: `api/contact.js`. 
 
-### 🪄 The Multi-Cloud Architecture Trick
-
-Instead of duplicating backend code for every cloud provider, the entire API logic lives in a single master file: `functions/api/contact.js`. 
-Here is how it seamlessly supports all major platforms with zero frontend code changes:
-
-- 🌩️ **Cloudflare Pages:** Natively looks for the `functions/` directory and exposes the file automatically.
-- ▲ **Vercel:** Strictly requires an `api/` directory. The `package.json` includes a `"build"` script that dynamically injects the master file into Vercel's expected structure during deployment.
-- 🔷 **Netlify:** Uses a custom rewrite rule in `netlify.toml` to transparently map `/api/*` to the function.
-- 🐳 **Render / Coolify / Dokploy:** The included `server.js` natively imports the master file and serves it as a standard Node.js Express-like endpoint.
+Here is how it seamlessly supports all major platforms with zero frontend code changes (the frontend simply calls `/api/contact`):
+- **Vercel:** Natively looks for the `api/` directory and exposes the file automatically. This is a true zero-config deployment.
+- **Cloudflare Pages:** Strictly requires a `functions/` directory. To avoid code duplication, the `package.json` includes a `"cloudflare:build"` script (`mkdir -p functions/api && cp api/contact.js functions/api/contact.js`). By setting your Cloudflare Pages build command to `npm run cloudflare:build`, Cloudflare dynamically creates the required folder structure during deployment.
+- **Netlify:** Uses a custom rewrite rule in `netlify.toml` to transparently map `/api/*` to the function.
+- **Render / Coolify / Dokploy:** The included `server.js` natively imports the master file and serves it as a standard Node.js Express-like endpoint.
 
 ### 🔑 Contact Form Environment Variables
 

@@ -4,7 +4,7 @@
   "description": "Portfolio of Alberto Licea",
   "type": "module",
   "scripts": {
-    "build": "mkdir -p api && cp functions/api/contact.js api/contact.js",
+    "cloudflare:build": "mkdir -p functions/api && cp api/contact.js functions/api/contact.js",
     "start": "node server.js"
   },
   "author": "Alberto Licea",
