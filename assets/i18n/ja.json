@@ -185,8 +185,8 @@
         },
         {
             "id": 6,
-            "title": "Hide & Seek — メディアブロック拡張機能",
-            "description": "プライバシー重視のManifest V3ブラウザ拡張機能。ウェブ上の画像や動画を仮のブロックで非表示にし、クリックで元のメディアを表示します。完全ローカルで動作。",
+            "title": "Hide & Seek - Media Blocker",
+            "description": "安全で目立たないウェブブラウジングのための高性能ブラウザ拡張機能。機密性の高い画像、動画、サムネイルを自動的に隠します。",
             "image": "assets/img/apps/hide-n-seek-block-media-addon.webp",
             "tags": [
                 "JavaScript",
@@ -195,6 +195,20 @@
             ],
             "githubUrl": "https://github.com/albertolicea00/hide-n-seek-block-media-addon",
             "liveUrl": "https://github.com/albertolicea00/hide-n-seek-block-media-addon",
+            "featured": true
+        },
+        {
+            "id": 7,
+            "title": "CacheCleaner",
+            "description": "開発者向けのワンクリックブラウザデータクリーナー。Cookie、localStorage、sessionStorage、IndexedDB、CacheStorageを瞬時に消去します。",
+            "image": "assets/img/apps/cache-cleaner-addon.webp",
+            "tags": [
+                "JavaScript",
+                "CSS",
+                "Extension"
+            ],
+            "githubUrl": "https://github.com/albertolicea00/CacheCleaner",
+            "liveUrl": "https://github.com/albertolicea00/CacheCleaner",
             "featured": true
         }
     ],

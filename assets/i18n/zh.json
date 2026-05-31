@@ -185,8 +185,8 @@
         },
         {
             "id": 6,
-            "title": "Hide & Seek — 媒体屏蔽插件",
-            "description": "一款专注于隐私保护的 Manifest V3 浏览器插件，用中性占位符替换网页上的所有媒体。支持点击显示、MutationObserver 动态加载和完全本地化运行。",
+            "title": "Hide & Seek - Media Blocker",
+            "description": "高性能浏览器扩展，旨在帮助您安全隐蔽地浏览网页。自动隐藏敏感的图像、视频和缩略图。",
             "image": "assets/img/apps/hide-n-seek-block-media-addon.webp",
             "tags": [
                 "JavaScript",
@@ -195,6 +195,20 @@
             ],
             "githubUrl": "https://github.com/albertolicea00/hide-n-seek-block-media-addon",
             "liveUrl": "https://github.com/albertolicea00/hide-n-seek-block-media-addon",
+            "featured": true
+        },
+        {
+            "id": 7,
+            "title": "CacheCleaner",
+            "description": "面向开发者的一键式浏览器数据清理工具。瞬间清除 cookies、localStorage、sessionStorage、IndexedDB 和 CacheStorage。",
+            "image": "assets/img/apps/cache-cleaner-addon.webp",
+            "tags": [
+                "JavaScript",
+                "CSS",
+                "Extension"
+            ],
+            "githubUrl": "https://github.com/albertolicea00/CacheCleaner",
+            "liveUrl": "https://github.com/albertolicea00/CacheCleaner",
             "featured": true
         }
     ],

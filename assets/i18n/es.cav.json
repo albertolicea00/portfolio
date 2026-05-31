@@ -185,8 +185,8 @@
         },
         {
             "id": 6,
-            "title": "Esconder y buscar",
-            "description": "Hombre hacer extensión para navegador. Esconder fotos y videos detrás de piedra. Clic en piedra, ver dibujo original. Seguro y rápido.",
+            "title": "Hide & Seek - Media Blocker",
+            "description": "Extensión de navegador de alto rendimiento diseñada para navegar de forma segura y discreta. Oculta automáticamente imágenes, videos y miniaturas sensibles.",
             "image": "assets/img/apps/hide-n-seek-block-media-addon.webp",
             "tags": [
                 "JavaScript",
@@ -195,6 +195,20 @@
             ],
             "githubUrl": "https://github.com/albertolicea00/hide-n-seek-block-media-addon",
             "liveUrl": "https://github.com/albertolicea00/hide-n-seek-block-media-addon",
+            "featured": true
+        },
+        {
+            "id": 7,
+            "title": "CacheCleaner",
+            "description": "Limpiador de datos de navegador con un clic para desarrolladores. Elimina cookies, localStorage, sessionStorage, IndexedDB y CacheStorage al instante.",
+            "image": "assets/img/apps/cache-cleaner-addon.webp",
+            "tags": [
+                "JavaScript",
+                "CSS",
+                "Extension"
+            ],
+            "githubUrl": "https://github.com/albertolicea00/CacheCleaner",
+            "liveUrl": "https://github.com/albertolicea00/CacheCleaner",
             "featured": true
         }
     ],

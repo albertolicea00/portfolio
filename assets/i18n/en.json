@@ -185,8 +185,8 @@
         },
         {
             "id": 6,
-            "title": "Hide & Seek — Block Media Extension",
-            "description": "A privacy-focused browser extension compatible with Manifest V3 that replaces all media with neutral placeholders to hide sensitive content. Features click-to-reveal, dynamic loading support via MutationObserver, and a popup toggle.",
+            "title": "Hide & Seek - Media Blocker",
+            "description": "A high-performance browser extension designed to help you browse the web safely and discreetly. Automatically hides sensitive images, videos, and thumbnails.",
             "image": "assets/img/apps/hide-n-seek-block-media-addon.webp",
             "tags": [
                 "JavaScript",
@@ -195,6 +195,20 @@
             ],
             "githubUrl": "https://github.com/albertolicea00/hide-n-seek-block-media-addon",
             "liveUrl": "https://github.com/albertolicea00/hide-n-seek-block-media-addon",
+            "featured": true
+        },
+        {
+            "id": 7,
+            "title": "CacheCleaner",
+            "description": "One-click browser data cleaner for developers. Sweep away cookies, localStorage, sessionStorage, IndexedDB, and CacheStorage instantly.",
+            "image": "assets/img/apps/cache-cleaner-addon.webp",
+            "tags": [
+                "JavaScript",
+                "CSS",
+                "Extension"
+            ],
+            "githubUrl": "https://github.com/albertolicea00/CacheCleaner",
+            "liveUrl": "https://github.com/albertolicea00/CacheCleaner",
             "featured": true
         }
     ],

@@ -6,7 +6,7 @@
 
 const SUPPORTED_LANGS = ['en', 'en.cav', 'es', 'es.cav', 'de', 'fr', 'it', 'ja', 'ko', 'pt', 'ru', 'zh', 'cat', 'alien'];
 const FALLBACK_LANG = 'en';
-const I18N_ASSET_VERSION = '20260428-2';
+const I18N_ASSET_VERSION = '20260531-1';
 const TECH_NAMES = {
     'html': 'HTML',
     'css': 'CSS',

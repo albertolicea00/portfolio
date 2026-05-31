@@ -185,8 +185,8 @@
         },
         {
             "id": 6,
-            "title": "Hide & Seek — Расширение Блокировки Медиа",
-            "description": "Конфиденциальное расширение для браузера (Manifest V3), скрывающее изображения и видео под нейтральными заглушками. Открытие по клику, видео-лайтбокс и локальная работа.",
+            "title": "Hide & Seek - Media Blocker",
+            "description": "Высокопроизводительное расширение браузера, созданное для безопасного и скрытного серфинга. Автоматически скрывает конфиденциальные изображения, видео и миниатюры.",
             "image": "assets/img/apps/hide-n-seek-block-media-addon.webp",
             "tags": [
                 "JavaScript",
@@ -195,6 +195,20 @@
             ],
             "githubUrl": "https://github.com/albertolicea00/hide-n-seek-block-media-addon",
             "liveUrl": "https://github.com/albertolicea00/hide-n-seek-block-media-addon",
+            "featured": true
+        },
+        {
+            "id": 7,
+            "title": "CacheCleaner",
+            "description": "Очиститель данных браузера в один клик для разработчиков. Мгновенно удаляйте файлы cookie, localStorage, sessionStorage, IndexedDB и CacheStorage.",
+            "image": "assets/img/apps/cache-cleaner-addon.webp",
+            "tags": [
+                "JavaScript",
+                "CSS",
+                "Extension"
+            ],
+            "githubUrl": "https://github.com/albertolicea00/CacheCleaner",
+            "liveUrl": "https://github.com/albertolicea00/CacheCleaner",
             "featured": true
         }
     ],

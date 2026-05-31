@@ -185,8 +185,8 @@
         },
         {
             "id": 6,
-            "title": "Hide & Seek — Medienblocker-Erweiterung",
-            "description": "Eine datenschutzorientierte Browser-Erweiterung (Manifest V3), die alle Webseiten-Medien durch neutrale Platzhalter ersetzt. Bietet Klick-zum-Anzeigen, Lightbox-Overlay und arbeitet komplett offline.",
+            "title": "Hide & Seek - Media Blocker",
+            "description": "Leistungsstarke Browser-Erweiterung für sicheres und diskretes Surfen. Verbirgt automatisch sensible Bilder, Videos und Vorschaubilder.",
             "image": "assets/img/apps/hide-n-seek-block-media-addon.webp",
             "tags": [
                 "JavaScript",
@@ -195,6 +195,20 @@
             ],
             "githubUrl": "https://github.com/albertolicea00/hide-n-seek-block-media-addon",
             "liveUrl": "https://github.com/albertolicea00/hide-n-seek-block-media-addon",
+            "featured": true
+        },
+        {
+            "id": 7,
+            "title": "CacheCleaner",
+            "description": "Ein-Klick-Browserdaten-Reiniger für Entwickler. Löschen Sie Cookies, localStorage, sessionStorage, IndexedDB und CacheStorage sofort.",
+            "image": "assets/img/apps/cache-cleaner-addon.webp",
+            "tags": [
+                "JavaScript",
+                "CSS",
+                "Extension"
+            ],
+            "githubUrl": "https://github.com/albertolicea00/CacheCleaner",
+            "liveUrl": "https://github.com/albertolicea00/CacheCleaner",
             "featured": true
         }
     ],
