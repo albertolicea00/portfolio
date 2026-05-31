@@ -71,6 +71,7 @@ If you need to test the contact form API locally, use Vercel CLI (`vercel dev`) 
 
 This project can be deployed to any static hosting provider, including:
 
+- Cloudflare Pages
 - GitHub Pages
 - Netlify
 - Vercel
@@ -79,7 +80,10 @@ This project can be deployed to any static hosting provider, including:
 The contact form requires a serverless backend. It is pre-configured to use Vercel Serverless Functions (`api/contact.js`) and the [Telegram Bot API](https://core.telegram.org/bots/api) for message delivery.
 
 To enable the contact form:
-1. Deploy the project to **Vercel** or **Netlify**. Both are fully supported out of the box (Vercel uses `api/contact.js` and Netlify uses `netlify/functions/contact.js` via `netlify.toml`).
+1. Deploy the project to **Cloudflare Pages**, **Vercel**, or **Netlify**. All are fully supported out of the box:
+   - **Cloudflare Pages:** Uses `functions/api/contact.js` automatically.
+   - **Vercel:** Uses `api/contact.js` automatically.
+   - **Netlify:** Uses `netlify/functions/contact.js` via `netlify.toml` or `api/contact.js`.
 2. Create a Telegram Bot via [BotFather](https://t.me/botfather) and get your Bot Token.
 3. Find your Chat ID (you can use bots like `@userinfobot` to get your numeric ID).
 4. Create a [Cloudflare Turnstile](https://dash.cloudflare.com/?to=/:account/turnstile) widget for your domain and get your Site Key and Secret Key.
