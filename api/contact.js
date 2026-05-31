@@ -1,45 +1,48 @@
 async function processRequest(payload) {
-    const { name, email, phone, message } = payload;
+    const { name, email, phone, message, website } = payload;
+
+    if (website) {
+        console.log('Honeypot triggered, silently dropping request.');
+        return { status: 200, body: { success: true } };
+    }
 
     if (!name || !email || !message) {
         return { status: 400, body: { error: 'Name, email and message are required' } };
     }
 
-    const apiKey = process.env.RESEND_API_KEY;
-    const emailFrom = process.env.RESEND_FROM || 'Portfolio Contact <onboarding@resend.dev>';
-    const emailTo = process.env.RESEND_TO || 'albertolicea00@icloud.com';
+    const botToken = process.env.TELEGRAM_BOT_TOKEN;
+    const chatId = process.env.TELEGRAM_CHAT_ID;
 
-    if (!apiKey) {
-        return { status: 500, body: { error: 'Email service not configured' } };
+    if (!botToken || !chatId) {
+        return { status: 500, body: { error: 'Telegram service not configured' } };
     }
 
+    const text = `
+📩 New message from your portfolio!
+
+Name: ${name}
+Email: ${email}
+${phone ? `Phone: ${phone}\n` : ''}
+Message:
+${message}
+    `.trim();
+
     try {
-        const response = await fetch('https://api.resend.com/emails', {
+        const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
             method: 'POST',
             headers: {
-                'Authorization': `Bearer ${apiKey}`,
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                from: emailFrom,
-                to: [emailTo],
-                reply_to: [email],
-                subject: `Portfolio contact from ${name}`,
-                html: `
-                    <h2>New message from your portfolio</h2>
-                    <p><strong>Name:</strong> ${escapeHtml(name)}</p>
-                    <p><strong>Email:</strong> ${escapeHtml(email)}</p>
-                    ${phone ? `<p><strong>Phone:</strong> ${escapeHtml(phone)}</p>` : ''}
-                    <p><strong>Message:</strong></p>
-                    <p style="white-space:pre-wrap">${escapeHtml(message)}</p>
-                `,
+                chat_id: chatId,
+                text: text,
             }),
         });
 
         if (!response.ok) {
             const err = await response.json();
-            console.error('Resend error:', JSON.stringify(err));
-            return { status: 500, body: { error: 'Failed to send email', detail: err } };
+            console.error('Telegram error:', JSON.stringify(err));
+            return { status: 500, body: { error: 'Failed to send message', detail: err } };
         }
 
         return { status: 200, body: { success: true } };
@@ -47,14 +50,6 @@ async function processRequest(payload) {
         console.error('Contact handler error:', err);
         return { status: 500, body: { error: 'Internal server error' } };
     }
-}
-
-function escapeHtml(str) {
-    return String(str)
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;');
 }
 
 // ------------------------------------------------------------------

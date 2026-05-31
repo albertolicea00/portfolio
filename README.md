@@ -75,15 +75,15 @@ This project can be deployed to any static hosting provider, including:
 - Vercel
 
 **Note on Contact Form API:**
-The contact form requires a serverless backend. It is pre-configured to use Vercel Serverless Functions (`api/contact.js`) and the [Resend API](https://resend.com) for email delivery.
+The contact form requires a serverless backend. It is pre-configured to use Vercel Serverless Functions (`api/contact.js`) and the [Telegram Bot API](https://core.telegram.org/bots/api) for message delivery.
 
 To enable the contact form:
 1. Deploy the project to **Vercel** or **Netlify**. Both are fully supported out of the box (Vercel uses `api/contact.js` and Netlify uses `netlify/functions/contact.js` via `netlify.toml`).
-2. Get an API Key from [Resend](https://resend.com).
-3. Add the following Environment Variables to your project settings in Vercel or Netlify (and your local `.env` for testing):
-   - `RESEND_API_KEY`: Your Resend API key.
-   - `RESEND_FROM`: The sender email (e.g., `onboarding@resend.dev` or your verified domain).
-   - `RESEND_TO`: The destination email to receive messages.
+2. Create a Telegram Bot via [BotFather](https://t.me/botfather) and get your Bot Token.
+3. Find your Chat ID (you can use bots like `@userinfobot` to get your numeric ID).
+4. Add the following Environment Variables to your project settings in Vercel or Netlify (and your local `.env` for testing):
+   - `TELEGRAM_BOT_TOKEN`: Your Telegram Bot API token.
+   - `TELEGRAM_CHAT_ID`: Your Telegram numeric Chat ID.
 
 *(If you deploy to GitHub Pages, the static site will work perfectly, but because GitHub Pages has no backend support, the contact form will require replacing the endpoint with an external service like Formspree or Web3Forms.)*
 

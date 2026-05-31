@@ -1498,6 +1498,7 @@ function setupEventListeners() {
         const email = form.querySelector('#email').value.trim();
         const phone = form.querySelector('#phone').value.trim();
         const message = form.querySelector('#message').value.trim();
+        const website = form.querySelector('#website')?.value.trim() || '';
 
         if (!name || !email || !message) return;
 
@@ -1509,7 +1510,7 @@ function setupEventListeners() {
             const res = await fetch('/api/contact', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ name, email, phone, message }),
+                body: JSON.stringify({ name, email, phone, message, website }),
             });
 
             if (res.ok) {
