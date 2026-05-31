@@ -136,3 +136,7 @@ module.exports.handler = async function (event, context) {
         body: JSON.stringify(result.body)
     };
 };
+
+// ------------------------------------------------------------------
+// Export raw processor for custom server.js
+module.exports.processRequest = processRequest;

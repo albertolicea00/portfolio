@@ -93,7 +93,15 @@ To enable the contact form:
    - `TELEGRAM_CHAT_ID`: Your Telegram numeric Chat ID.
    - `TURNSTILE_SECRET_KEY`: Your Cloudflare Turnstile Secret Key.
 
-*(If you deploy to GitHub Pages, the static site will work perfectly, but because GitHub Pages has no backend support, the contact form will require replacing the endpoint with an external service like Formspree or Web3Forms.)*
+### Self-Hosted PaaS (Coolify, Dokploy, etc.)
+
+If you deploy this project to a self-hosted PaaS like **Coolify** or **Dokploy** as a "Static Site", the HTML/CSS/JS will work perfectly, but the `/api/contact` endpoint will return a 404 error. This is because these platforms do not provide native "Serverless Functions" out of the box for static sites.
+
+To fix this, you have two options:
+1. **Use an external service:** Change the form action in `index.html` to an external provider like Formspree or Web3Forms.
+2. **Convert to a Node.js App:** Create a simple `server.js` (e.g., using Express) to serve the static files and handle the `/api/contact` POST request, then deploy the project as a Node.js application instead of a Static Site.
+
+*(Similarly, if you deploy to **GitHub Pages**, the static site will work perfectly, but because it has no backend support, you must use an external form service).*
 
 ## Author
 

@@ -1,0 +1,11 @@
+{
+  "name": "alberto-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio of Alberto Licea",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Alberto Licea",
+  "license": "MIT"
+}
