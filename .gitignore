@@ -14,8 +14,6 @@ Thumbs.db
 *.swo
 
 # Project specific
-.gemini/
-.agents/
 .env
 
 # Temp files
