@@ -22,11 +22,10 @@ async function processRequest(payload) {
 
     let phoneDisplay = phone || "";
     if (phone) {
-        const phoneRegex = /^\+?[\d\s\-\(\)]{7,20}$/;
+        const phoneRegex = /^\+[\d\s\-\(\)]{7,20}$/;
         if (!phoneRegex.test(phone)) {
-            phoneDisplay += " ⚠️ (Invalid Format)";
+            phoneDisplay += " ⚠️ (Invalid Format / Missing Country Code)";
         } else hasValidContact = true;
-    }
 
     if (!hasValidContact) {
         return { status: 400, body: { error: 'At least one valid contact method (email or phone) is required' } };
