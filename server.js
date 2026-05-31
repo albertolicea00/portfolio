@@ -36,7 +36,7 @@ const server = http.createServer(async (req, res) => {
             try {
                 const payload = JSON.parse(body);
                 // Call the existing function from api/contact.js
-                const result = await processRequest(payload);
+                const result = await processRequest(payload, process.env);
                 
                 res.writeHead(result.status, { 'Content-Type': 'application/json' });
                 res.end(JSON.stringify(result.body));

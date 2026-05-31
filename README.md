@@ -79,7 +79,18 @@ Then visit `http://localhost:3000`.
 
 ## 🚀 Deployment
 
-This project can be deployed anywhere. This portfolio uses a unique "Multi-Cloud Zero-Config" approach for its backend. Instead of duplicating backend code for every cloud provider, the entire API logic lives in a single master file: `api/contact.js`. 
+This project can be deployed anywhere. It supports a **Multi-Cloud Zero-Config** architecture, meaning it runs seamlessly on:
+- [Vercel](https://vercel.com/)
+- [Cloudflare Pages](https://pages.cloudflare.com/)
+- [Netlify](https://www.netlify.com/)
+- [Render](https://render.com/)
+- [Coolify](https://coolify.io/)
+- [Dokploy](https://dokploy.com/)
+- [GitHub Pages](https://pages.github.com/)
+
+### 🪄 The Multi-Cloud Architecture Trick
+
+This portfolio uses a unique "Multi-Cloud Zero-Config" approach for its backend. Instead of duplicating backend code for every cloud provider, the entire API logic lives in a single master file: `api/contact.js`. 
 
 Here is how it seamlessly supports all major platforms with zero frontend code changes (the frontend simply calls `/api/contact`):
 - **Vercel:** Natively looks for the `api/` directory and exposes the file automatically. This is a true zero-config deployment.
