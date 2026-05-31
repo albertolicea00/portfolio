@@ -1,9 +1,34 @@
 async function processRequest(payload) {
-    const { name, email, phone, message, website } = payload;
+    const { name, email, phone, message, website, turnstileResponse } = payload;
 
     if (website) {
         console.log('Honeypot triggered, silently dropping request.');
         return { status: 200, body: { success: true } };
+    }
+
+    if (!turnstileResponse) {
+        return { status: 400, body: { error: 'Security verification failed. Please refresh and try again.' } };
+    }
+
+    try {
+        const secret = process.env.TURNSTILE_SECRET_KEY;
+        const turnstileVerify = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            body: new URLSearchParams({
+                secret: secret,
+                response: turnstileResponse,
+            }),
+        });
+
+        const turnstileData = await turnstileVerify.json();
+        if (!turnstileData.success) {
+            console.error('Turnstile verification failed:', turnstileData);
+            return { status: 400, body: { error: 'Security verification failed.' } };
+        }
+    } catch (err) {
+        console.error('Error verifying Turnstile:', err);
+        return { status: 500, body: { error: 'Failed to verify security challenge' } };
     }
 
     if (!name || (!email && !phone) || !message) {

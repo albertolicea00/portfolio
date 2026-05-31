@@ -1499,6 +1499,7 @@ function setupEventListeners() {
         const phone = form.querySelector('#phone').value.trim();
         const message = form.querySelector('#message').value.trim();
         const website = form.querySelector('#website')?.value.trim() || '';
+        const turnstileResponse = form.querySelector('[name="cf-turnstile-response"]')?.value || '';
 
         if (!name || (!email && !phone) || !message) return;
 
@@ -1510,7 +1511,7 @@ function setupEventListeners() {
             const res = await fetch('/api/contact', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ name, email, phone, message, website }),
+                body: JSON.stringify({ name, email, phone, message, website, turnstileResponse }),
             });
 
             if (res.ok) {
@@ -1530,6 +1531,9 @@ function setupEventListeners() {
         } finally {
             btn.disabled = false;
             btn.style.opacity = '';
+            if (window.turnstile) {
+                window.turnstile.reset();
+            }
         }
     });
 }
