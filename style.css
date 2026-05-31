@@ -628,6 +628,33 @@ textarea:focus-visible {
   width: 180px;
   height: 180px;
   margin: 0 auto 2rem;
+  border-radius: 50%;
+}
+
+.avatar-container::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    var(--brand-yellow),
+    transparent 25%,
+    var(--brand-yellow) 50%,
+    transparent 75%,
+    var(--brand-yellow) 100%
+  );
+  z-index: 1;
+  animation: spin-avatar 8s linear infinite;
+}
+
+@keyframes spin-avatar {
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .avatar {
@@ -635,7 +662,6 @@ textarea:focus-visible {
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid var(--brand-yellow);
   position: relative;
   z-index: 2;
   background-color: var(--bg-secondary);
@@ -653,7 +679,7 @@ textarea:focus-visible {
   filter: blur(40px);
   opacity: 0.2;
   animation: pulse 3s infinite alternate;
-  z-index: 1;
+  z-index: 0;
 }
 
 @keyframes pulse {
