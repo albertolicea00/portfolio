@@ -119,9 +119,9 @@
             "description": "Нативное приложение для iPhone для кубинского банкинга через USSD-коды. Работает полностью офлайн, обеспечивая безопасность данных.",
             "image": "assets/img/apps/bancaremota.webp",
             "tags": [
-                "Swift",
+                "Cuba",
                 "iOS",
-                "Xcode"
+                "Offline"
             ],
             "githubUrl": "https://github.com/albertolicea00/BancaRemota_app",
             "liveUrl": "https://bancaremota.vercel.app/",
@@ -133,9 +133,12 @@
             "description": "Лучшая мультиплатформенная медиа-экосистема. Транслируйте фильмы и сериалы из Jellyfin, Plex, SMB и WebDAV или воспроизводите локальные файлы с автозагрузкой обложек, расширенных метаданных и встроенной библиотекой субтитров.",
             "image": "assets/img/apps/mivio.webp",
             "tags": [
-                "HTML5",
-                "Tailwind CSS",
-                "Alpine.js"
+                "Smart TV",
+                "Desktop",
+                "macOS",
+                "Android",
+                "iOS",
+                "VR"
             ],
             "githubUrl": "https://github.com/albertolicea00/mivio-landing",
             "liveUrl": "https://mivio.vercel.app/",
@@ -147,9 +150,9 @@
             "description": "Высокопроизводительное расширение браузера, созданное для безопасного и скрытного серфинга. Автоматически скрывает конфиденциальные изображения, видео и миниатюры.",
             "image": "assets/img/apps/hide-n-seek-block-media-addon.webp",
             "tags": [
-                "JavaScript",
-                "CSS",
-                "Extension"
+                "Chrome",
+                "Edge",
+                "Firefox"
             ],
             "githubUrl": "https://github.com/albertolicea00/hide-n-seek-block-media-addon",
             "liveUrl": "https://github.com/albertolicea00/hide-n-seek-block-media-addon",
@@ -161,9 +164,9 @@
             "description": "Очиститель данных браузера в один клик для разработчиков. Мгновенно удаляйте файлы cookie, localStorage, sessionStorage, IndexedDB и CacheStorage.",
             "image": "assets/img/apps/cache-cleaner-addon.webp",
             "tags": [
-                "JavaScript",
-                "CSS",
-                "Extension"
+                "Chrome",
+                "Edge",
+                "Firefox"
             ],
             "githubUrl": "https://github.com/albertolicea00/cache-cleaner-addon",
             "liveUrl": "https://github.com/albertolicea00/cache-cleaner-addon",

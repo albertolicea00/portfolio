@@ -119,9 +119,9 @@
             "description": "Aplicativo iPhone nativo para transações bancárias cubanas via códigos USSD. Funciona totalmente offline, gerenciando contas de forma segura.",
             "image": "assets/img/apps/bancaremota.webp",
             "tags": [
-                "Swift",
+                "Cuba",
                 "iOS",
-                "Xcode"
+                "Offline"
             ],
             "githubUrl": "https://github.com/albertolicea00/BancaRemota_app",
             "liveUrl": "https://bancaremota.vercel.app/",
@@ -133,9 +133,12 @@
             "description": "O ecossistema definitivo de reprodução de mídia multiplataforma. Transmita filmes e séries perfeitamente a partir do Jellyfin, Plex, SMB e WebDAV, ou reproduza arquivos locais com download automático de capas, metadados ricos e biblioteca integrada de legendas.",
             "image": "assets/img/apps/mivio.webp",
             "tags": [
-                "HTML5",
-                "Tailwind CSS",
-                "Alpine.js"
+                "Smart TV",
+                "Desktop",
+                "macOS",
+                "Android",
+                "iOS",
+                "VR"
             ],
             "githubUrl": "https://github.com/albertolicea00/mivio-landing",
             "liveUrl": "https://mivio.vercel.app/",
@@ -147,9 +150,9 @@
             "description": "Extensão de navegador de alto desempenho projetada para ajudá-lo a navegar na web de forma segura e discreta. Oculta automaticamente imagens, vídeos e miniaturas sensíveis.",
             "image": "assets/img/apps/hide-n-seek-block-media-addon.webp",
             "tags": [
-                "JavaScript",
-                "CSS",
-                "Extension"
+                "Chrome",
+                "Edge",
+                "Firefox"
             ],
             "githubUrl": "https://github.com/albertolicea00/hide-n-seek-block-media-addon",
             "liveUrl": "https://github.com/albertolicea00/hide-n-seek-block-media-addon",
@@ -161,9 +164,9 @@
             "description": "Limpador de dados de navegador com um clique para desenvolvedores. Limpe cookies, localStorage, sessionStorage, IndexedDB e CacheStorage instantaneamente.",
             "image": "assets/img/apps/cache-cleaner-addon.webp",
             "tags": [
-                "JavaScript",
-                "CSS",
-                "Extension"
+                "Chrome",
+                "Edge",
+                "Firefox"
             ],
             "githubUrl": "https://github.com/albertolicea00/cache-cleaner-addon",
             "liveUrl": "https://github.com/albertolicea00/cache-cleaner-addon",

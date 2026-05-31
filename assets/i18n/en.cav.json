@@ -119,9 +119,9 @@
             "description": "Me build strong iOS bank app. Safe. No internet needed. Storing accounts, bills, and keys in rock.",
             "image": "assets/img/apps/bancaremota.webp",
             "tags": [
-                "Swift",
+                "Cuba",
                 "iOS",
-                "Xcode"
+                "Offline"
             ],
             "githubUrl": "https://github.com/albertolicea00/BancaRemota_app",
             "liveUrl": "https://bancaremota.vercel.app/",
@@ -133,9 +133,12 @@
             "description": "Me make ultimate video player for many screens. Play video from rock or stream from Jellyfin, Plex, SMB, WebDAV. Get beautiful covers, info, and subtitles like magic. Very premium!",
             "image": "assets/img/apps/mivio.webp",
             "tags": [
-                "HTML5",
-                "Tailwind CSS",
-                "Alpine.js"
+                "Smart TV",
+                "Desktop",
+                "macOS",
+                "Android",
+                "iOS",
+                "VR"
             ],
             "githubUrl": "https://github.com/albertolicea00/mivio-landing",
             "liveUrl": "https://mivio.vercel.app/",
@@ -147,9 +150,9 @@
             "description": "A high-performance browser extension designed to help you browse the web safely and discreetly. Automatically hides sensitive images, videos, and thumbnails.",
             "image": "assets/img/apps/hide-n-seek-block-media-addon.webp",
             "tags": [
-                "JavaScript",
-                "CSS",
-                "Extension"
+                "Chrome",
+                "Edge",
+                "Firefox"
             ],
             "githubUrl": "https://github.com/albertolicea00/hide-n-seek-block-media-addon",
             "liveUrl": "https://github.com/albertolicea00/hide-n-seek-block-media-addon",
@@ -161,9 +164,9 @@
             "description": "One-click browser data cleaner for developers. Sweep away cookies, localStorage, sessionStorage, IndexedDB, and CacheStorage instantly.",
             "image": "assets/img/apps/cache-cleaner-addon.webp",
             "tags": [
-                "JavaScript",
-                "CSS",
-                "Extension"
+                "Chrome",
+                "Edge",
+                "Firefox"
             ],
             "githubUrl": "https://github.com/albertolicea00/cache-cleaner-addon",
             "liveUrl": "https://github.com/albertolicea00/cache-cleaner-addon",

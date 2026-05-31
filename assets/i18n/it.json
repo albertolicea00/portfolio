@@ -119,9 +119,9 @@
             "description": "App iPhone nativa per la banca cubana tramite codici USSD. Funziona completamente offline, consentendo di gestire conti e chiavi in sicurezza.",
             "image": "assets/img/apps/bancaremota.webp",
             "tags": [
-                "Swift",
+                "Cuba",
                 "iOS",
-                "Xcode"
+                "Offline"
             ],
             "githubUrl": "https://github.com/albertolicea00/BancaRemota_app",
             "liveUrl": "https://bancaremota.vercel.app/",
@@ -133,9 +133,12 @@
             "description": "L'ecosistema di riproduzione multimediale multipiattaforma definitivo. Riproduci in streaming film e serie in modo fluido da Jellyfin, Plex, SMB e WebDAV o riproduci file locali con download automatico di copertine, metadati e sottotitoli integrati.",
             "image": "assets/img/apps/mivio.webp",
             "tags": [
-                "HTML5",
-                "Tailwind CSS",
-                "Alpine.js"
+                "Smart TV",
+                "Desktop",
+                "macOS",
+                "Android",
+                "iOS",
+                "VR"
             ],
             "githubUrl": "https://github.com/albertolicea00/mivio-landing",
             "liveUrl": "https://mivio.vercel.app/",
@@ -147,9 +150,9 @@
             "description": "Estensione del browser ad alte prestazioni progettata per navigare in modo sicuro e discreto. Nasconde automaticamente immagini, video e miniature sensibili.",
             "image": "assets/img/apps/hide-n-seek-block-media-addon.webp",
             "tags": [
-                "JavaScript",
-                "CSS",
-                "Extension"
+                "Chrome",
+                "Edge",
+                "Firefox"
             ],
             "githubUrl": "https://github.com/albertolicea00/hide-n-seek-block-media-addon",
             "liveUrl": "https://github.com/albertolicea00/hide-n-seek-block-media-addon",
@@ -161,9 +164,9 @@
             "description": "Pulitore di dati del browser con un clic per sviluppatori. Cancella istantaneamente cookie, localStorage, sessionStorage, IndexedDB e CacheStorage.",
             "image": "assets/img/apps/cache-cleaner-addon.webp",
             "tags": [
-                "JavaScript",
-                "CSS",
-                "Extension"
+                "Chrome",
+                "Edge",
+                "Firefox"
             ],
             "githubUrl": "https://github.com/albertolicea00/cache-cleaner-addon",
             "liveUrl": "https://github.com/albertolicea00/cache-cleaner-addon",

@@ -119,9 +119,9 @@
             "description": "适用于古巴银行的 iOS 原生应用，通过 USSD 代码进行操作。完全离线运行，安全地在本地管理银行账户、账单和密码。",
             "image": "assets/img/apps/bancaremota.webp",
             "tags": [
-                "Swift",
+                "Cuba",
                 "iOS",
-                "Xcode"
+                "Offline"
             ],
             "githubUrl": "https://github.com/albertolicea00/BancaRemota_app",
             "liveUrl": "https://bancaremota.vercel.app/",
@@ -133,9 +133,12 @@
             "description": "终极跨平台媒体播放器生态系统。无缝从 Jellyfin、Plex、SMB 和 WebDAV 传输电影与剧集，或直接播放本地文件，支持自动刮削海报墙、丰富的元数据解析以及内置字幕下载。",
             "image": "assets/img/apps/mivio.webp",
             "tags": [
-                "HTML5",
-                "Tailwind CSS",
-                "Alpine.js"
+                "Smart TV",
+                "Desktop",
+                "macOS",
+                "Android",
+                "iOS",
+                "VR"
             ],
             "githubUrl": "https://github.com/albertolicea00/mivio-landing",
             "liveUrl": "https://mivio.vercel.app/",
@@ -147,9 +150,9 @@
             "description": "高性能浏览器扩展，旨在帮助您安全隐蔽地浏览网页。自动隐藏敏感的图像、视频和缩略图。",
             "image": "assets/img/apps/hide-n-seek-block-media-addon.webp",
             "tags": [
-                "JavaScript",
-                "CSS",
-                "Extension"
+                "Chrome",
+                "Edge",
+                "Firefox"
             ],
             "githubUrl": "https://github.com/albertolicea00/hide-n-seek-block-media-addon",
             "liveUrl": "https://github.com/albertolicea00/hide-n-seek-block-media-addon",
@@ -161,9 +164,9 @@
             "description": "面向开发者的一键式浏览器数据清理工具。瞬间清除 cookies、localStorage、sessionStorage、IndexedDB 和 CacheStorage。",
             "image": "assets/img/apps/cache-cleaner-addon.webp",
             "tags": [
-                "JavaScript",
-                "CSS",
-                "Extension"
+                "Chrome",
+                "Edge",
+                "Firefox"
             ],
             "githubUrl": "https://github.com/albertolicea00/cache-cleaner-addon",
             "liveUrl": "https://github.com/albertolicea00/cache-cleaner-addon",
