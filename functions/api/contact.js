@@ -1,4 +1,4 @@
-async function processRequest(payload, env) {
+export async function processRequest(payload, env) {
     const { name, email, phone, message, website, turnstileResponse } = payload;
 
     // Honeypot: humans will never fill this field
@@ -121,4 +121,40 @@ export async function onRequestPost({ request, env }) {
             headers: { 'Content-Type': 'application/json' }
         });
     }
+}
+
+// ------------------------------------------------------------------
+// VERCEL HANDLER
+// ------------------------------------------------------------------
+export default async function (req, res) {
+    if (req.method !== 'POST') {
+        return res.status(405).json({ error: 'Method not allowed' });
+    }
+    // Vercel environment variables are in process.env
+    const result = await processRequest(req.body || {}, process.env);
+    return res.status(result.status).json(result.body);
+}
+
+// ------------------------------------------------------------------
+// NETLIFY HANDLER
+// ------------------------------------------------------------------
+export async function handler(event, context) {
+    if (event.httpMethod !== 'POST') {
+        return { statusCode: 405, body: JSON.stringify({ error: 'Method not allowed' }) };
+    }
+    
+    let body = {};
+    try { 
+        body = JSON.parse(event.body || '{}'); 
+    } catch(e) { 
+        return { statusCode: 400, body: JSON.stringify({ error: 'Invalid JSON' }) }; 
+    }
+    
+    // Netlify environment variables are in process.env
+    const result = await processRequest(body, process.env);
+    return {
+        statusCode: result.status,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(result.body)
+    };
 }

@@ -2,8 +2,9 @@
   "name": "alberto-portfolio",
   "version": "1.0.0",
   "description": "Portfolio of Alberto Licea",
-  "main": "server.js",
+  "type": "module",
   "scripts": {
+    "build": "mkdir -p api && cp functions/api/contact.js api/contact.js",
     "start": "node server.js"
   },
   "author": "Alberto Licea",

@@ -101,6 +101,16 @@ Thanks to the included `server.js` and `package.json`, these platforms will auto
 
 *(Similarly, if you deploy to **GitHub Pages**, the static site will work perfectly, but because it has no backend support, you must use an external form service).*
 
+## 🪄 The Multi-Cloud Architecture Trick
+
+This portfolio uses a unique "Multi-Cloud Zero-Config" approach for its backend. Instead of duplicating backend code for every cloud provider, the entire API logic lives in a single master file: `functions/api/contact.js`. 
+
+Here is how it seamlessly supports all major platforms with zero frontend code changes (the frontend simply calls `/api/contact`):
+- **Cloudflare Pages:** Natively looks for the `functions/` directory and exposes the file automatically at `/api/contact`.
+- **Vercel:** Strictly requires an `api/` directory. To avoid code duplication, the `package.json` includes a `"build"` script (`mkdir -p api && cp functions/api/contact.js api/contact.js`) which dynamically injects the master file into Vercel's expected structure during deployment.
+- **Netlify:** Uses a custom rewrite rule in `netlify.toml` to transparently map `/api/*` to `/.netlify/functions/api/:splat`.
+- **Render / Dokploy:** The included `server.js` natively imports the master file and serves it as a standard Express-like POST endpoint.
+
 ## Author
 
 [Alberto Licea](https://github.com/albertolicea00)
