@@ -68,7 +68,8 @@
             "form_help": "Füllen Sie das Formular aus und ich melde mich so schnell wie möglich.",
             "submit_btn": "Nachricht senden",
             "success_msg": "Nachricht gesendet! Ich melde mich bald.",
-            "error_msg": "Etwas ist schiefgelaufen. Bitte versuche es erneut oder nutze die sozialen Links."
+            "error_msg": "Etwas ist schiefgelaufen. Bitte versuche es erneut oder nutze die sozialen Links.",
+            "submit_btn_tooltip": "Klicken, um deine Nachricht zu senden"
         },
         "footer": {
             "rights": "Erstellt mit ❤️ @albertolicea00"

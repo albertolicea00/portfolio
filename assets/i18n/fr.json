@@ -68,7 +68,8 @@
             "form_help": "Remplissez le formulaire et je vous répondrai dès que possible.",
             "submit_btn": "Envoyer le message",
             "success_msg": "Message envoyé ! Je vous répondrai bientôt.",
-            "error_msg": "Une erreur s'est produite. Réessayez ou utilisez les liens sociaux."
+            "error_msg": "Une erreur s'est produite. Réessayez ou utilisez les liens sociaux.",
+            "submit_btn_tooltip": "Cliquez pour envoyer votre message"
         },
         "footer": {
             "rights": "Réalisé avec ❤️ @albertolicea00"

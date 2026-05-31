@@ -68,7 +68,8 @@
             "form_help": "Form you use. Me answer fast.",
             "submit_btn": "You send message",
             "success_msg": "Message sent! Me contact soon.",
-            "error_msg": "Fire bad. Send fail. You try again or send smoke signal."
+            "error_msg": "Fire bad. Send fail. You try again or send smoke signal.",
+            "submit_btn_tooltip": "You click. Me get word."
         },
         "footer": {
             "rights": "Made with ❤️ by strong human"

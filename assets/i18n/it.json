@@ -68,7 +68,8 @@
             "form_help": "Compila il modulo e ti risponderò il prima possibile.",
             "submit_btn": "Invia Messaggio",
             "success_msg": "Messaggio inviato! Ti risponderò presto.",
-            "error_msg": "Qualcosa è andato storto. Riprova o usa i link social."
+            "error_msg": "Qualcosa è andato storto. Riprova o usa i link social.",
+            "submit_btn_tooltip": "Clicca per inviare il tuo messaggio"
         },
         "footer": {
             "rights": "Realizzato con ❤️ @albertolicea00"

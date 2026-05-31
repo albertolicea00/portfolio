@@ -68,7 +68,8 @@
             "form_help": "Fill out the form and I'll get back to you as soon as possible.",
             "submit_btn": "Send Message",
             "success_msg": "Message sent! I'll get back to you soon.",
-            "error_msg": "Something went wrong. Please try again or use the social links."
+            "error_msg": "Something went wrong. Please try again or use the social links.",
+            "submit_btn_tooltip": "Click to send your message"
         },
         "footer": {
             "rights": "Made with ❤️ @albertolicea00"

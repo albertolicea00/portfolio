@@ -68,7 +68,8 @@
             "form_help": "填写表格，我会尽快与您联系。",
             "submit_btn": "发送消息",
             "success_msg": "消息已发送！我会尽快与您联系。",
-            "error_msg": "出现错误，请重试或使用社交链接。"
+            "error_msg": "出现错误，请重试或使用社交链接。",
+            "submit_btn_tooltip": "点击发送您的信息"
         },
         "footer": {
             "rights": "用 ❤️ 制作 @albertolicea00"

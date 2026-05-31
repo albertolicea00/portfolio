@@ -68,7 +68,8 @@
             "form_help": "Preencha o formulário e entrarei em contato o mais rápido possível.",
             "submit_btn": "Enviar Mensagem",
             "success_msg": "Mensagem enviada! Entrarei em contato em breve.",
-            "error_msg": "Algo deu errado. Tente novamente ou use os links sociais."
+            "error_msg": "Algo deu errado. Tente novamente ou use os links sociais.",
+            "submit_btn_tooltip": "Clique para enviar sua mensagem"
         },
         "footer": {
             "rights": "Feito com ❤️ @albertolicea00"

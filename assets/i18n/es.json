@@ -68,7 +68,8 @@
             "form_help": "Rellena el formulario y me pondré en contacto contigo lo antes posible.",
             "submit_btn": "Enviar Mensaje",
             "success_msg": "¡Mensaje enviado! Me pondré en contacto contigo pronto.",
-            "error_msg": "Algo salió mal. Por favor intenta de nuevo o usa los enlaces sociales."
+            "error_msg": "Algo salió mal. Por favor intenta de nuevo o usa los enlaces sociales.",
+            "submit_btn_tooltip": "Haz clic para enviar tu mensaje"
         },
         "footer": {
             "rights": "Hecho con ❤️ por @albertolicea00"

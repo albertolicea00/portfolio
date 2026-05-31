@@ -68,7 +68,8 @@
             "form_help": "Formulario tu usar. Yo responder rápido.",
             "submit_btn": "Enviar señal de humo",
             "success_msg": "Mensaje enviado. Yo venir pronto.",
-            "error_msg": "Fuego malo. Envío fallar. Tú intentar otra vez o usar señales de humo."
+            "error_msg": "Fuego malo. Envío fallar. Tú intentar otra vez o usar señales de humo.",
+            "submit_btn_tooltip": "Tú dar clic. Yo recibir mensaje."
         },
         "footer": {
             "rights": "Hecho con ❤️ por humano fuerte @albertolicea00"
