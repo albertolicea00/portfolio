@@ -1753,3 +1753,7 @@ textarea:focus-visible {
     animation: none !important;
   }
 }
+
+.bmc-link:hover img {
+  transform: scale(1.05);
+}
