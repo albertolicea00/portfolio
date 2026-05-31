@@ -130,7 +130,7 @@
         {
             "id": 5,
             "title": "Ecosistema Mivio",
-            "description": "El reproductor de video multiplataforma definitivo. Transmite películas y series sin esfuerzo desde Jellyfin, Plex, SMB o WebDAV, o reproduce archivos locales con descarga automática de carátulas, metadatos enriquecidos y biblioteca integrada de subtítulos.",
+            "description": "El reproductor multimedia multiplataforma definitivo. Transmite desde Jellyfin, Plex o WebDAV, y reproduce archivos locales con carátulas y subtítulos automáticos.",
             "image": "assets/img/apps/mivio.webp",
             "tags": [
                 "Smart TV",
@@ -178,6 +178,7 @@
             "description": "Plataforma corporativa escalable para servicios de climatización, con generación de presupuestos y gestión de clientes.",
             "image": "assets/img/apps/bettahvacservices.webp",
             "tags": [
+                "Web",
                 "Svelte",
                 "Node.js",
                 "CSS"
@@ -192,6 +193,7 @@
             "description": "Landing page de entretenimiento altamente dinámica con diseño envolvente y animaciones fluidas.",
             "image": "assets/img/apps/laslocurasdemiguelin.webp",
             "tags": [
+                "Web",
                 "Astro",
                 "TypeScript",
                 "Tailwind CSS"
@@ -206,6 +208,7 @@
             "description": "Landing page para plataforma de VOD centrada en la excelencia UI/UX y narrativa de marca.",
             "image": "assets/img/apps/kristoff.webp",
             "tags": [
+                "Web",
                 "Astro",
                 "TypeScript",
                 "Tailwind CSS"

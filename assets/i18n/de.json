@@ -130,7 +130,7 @@
         {
             "id": 5,
             "title": "Mivio-Ökosystem",
-            "description": "Das ultimative plattformübergreifende Mediaplayer-Ökosystem. Streamen Sie Filme und Serien nahtlos von Jellyfin, Plex, SMB und WebDAV oder spielen Sie lokale Dateien ab, komplett mit automatischer Cover-Erstellung, detaillierten Metadaten und integriertem Untertitel-Download.",
+            "description": "Der ultimative Multi-Plattform-Mediaplayer. Streamen Sie von Jellyfin, Plex oder WebDAV und spielen Sie lokale Dateien mit automatischen Covern und Untertiteln ab.",
             "image": "assets/img/apps/mivio.webp",
             "tags": [
                 "Smart TV",
@@ -178,6 +178,7 @@
             "description": "Skalierbare Unternehmensplattform für HVAC-Dienstleistungen mit automatisierter Angebotserstellung und Kundenverwaltung.",
             "image": "assets/img/apps/bettahvacservices.webp",
             "tags": [
+                "Web",
                 "Svelte",
                 "Node.js",
                 "CSS"
@@ -192,6 +193,7 @@
             "description": "Dynamische Entertainment-Landingpage mit immersivem Design und flüssigen Animationen.",
             "image": "assets/img/apps/laslocurasdemiguelin.webp",
             "tags": [
+                "Web",
                 "Astro",
                 "TypeScript",
                 "Tailwind CSS"
@@ -206,6 +208,7 @@
             "description": "Moderne VOD-Plattform-Landingpage mit Fokus auf UX/UI und Marken-Storytelling.",
             "image": "assets/img/apps/kristoff.webp",
             "tags": [
+                "Web",
                 "Astro",
                 "TypeScript",
                 "Tailwind CSS"

@@ -130,7 +130,7 @@
         {
             "id": 5,
             "title": "Mivio 媒体生态系统",
-            "description": "终极跨平台媒体播放器生态系统。无缝从 Jellyfin、Plex、SMB 和 WebDAV 传输电影与剧集，或直接播放本地文件，支持自动刮削海报墙、丰富的元数据解析以及内置字幕下载。",
+            "description": "终极多平台媒体播放器。从 Jellyfin、Plex 或 WebDAV 流式传输，并使用自动封面和字幕播放本地文件。",
             "image": "assets/img/apps/mivio.webp",
             "tags": [
                 "Smart TV",
@@ -178,6 +178,7 @@
             "description": "面向 HVAC 服务的可扩展 enterprise 平台，具备自动报价生成和客户管理功能。",
             "image": "assets/img/apps/bettahvacservices.webp",
             "tags": [
+                "Web",
                 "Svelte",
                 "Node.js",
                 "CSS"
@@ -192,6 +193,7 @@
             "description": "具有沉浸式设计和流畅动画的动态娱乐落地页。",
             "image": "assets/img/apps/laslocurasdemiguelin.webp",
             "tags": [
+                "Web",
                 "Astro",
                 "TypeScript",
                 "Tailwind CSS"
@@ -206,6 +208,7 @@
             "description": "专注于 UX/UI 和品牌叙事的现代 VOD 平台落地页。",
             "image": "assets/img/apps/kristoff.webp",
             "tags": [
+                "Web",
                 "Astro",
                 "TypeScript",
                 "Tailwind CSS"

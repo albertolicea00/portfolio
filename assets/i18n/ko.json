@@ -130,7 +130,7 @@
         {
             "id": 5,
             "title": "Mivio 미디어 생태계",
-            "description": "궁극의 멀티 플랫폼 미디어 플레이어 생태계. Jellyfin, Plex, SMB, WebDAV로부터 영화와 시리즈를 원활하게 스트리밍하거나 로컬 파일을 자동 커버 생성, 풍부한 메타데이터 분석, 내장 자막 다운로드와 함께 감상하세요.",
+            "description": "최고의 멀티 플랫폼 미디어 플레이어. Jellyfin, Plex 또는 WebDAV에서 스트리밍하고 자동 아트워크 및 자막과 함께 로컬 파일을 재생합니다.",
             "image": "assets/img/apps/mivio.webp",
             "tags": [
                 "Smart TV",
@@ -178,6 +178,7 @@
             "description": "자동 견적 생성 및 고객 관리 기능을 갖춘 HVAC 서비스용 확장 가능한 기업 플랫폼.",
             "image": "assets/img/apps/bettahvacservices.webp",
             "tags": [
+                "Web",
                 "Svelte",
                 "Node.js",
                 "CSS"
@@ -192,6 +193,7 @@
             "description": "몰입형 디자인과 유동적인 애니메이션이 특징인 역동적인 엔터테인먼트 랜딩 페이지.",
             "image": "assets/img/apps/laslocurasdemiguelin.webp",
             "tags": [
+                "Web",
                 "Astro",
                 "TypeScript",
                 "Tailwind CSS"
@@ -206,6 +208,7 @@
             "description": "UX/UI 우수성과 브랜드 스토리텔링에 초점을 맞춘 현대적인 VOD 플랫폼 랜딩 페이지.",
             "image": "assets/img/apps/kristoff.webp",
             "tags": [
+                "Web",
                 "Astro",
                 "TypeScript",
                 "Tailwind CSS"

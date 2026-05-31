@@ -1282,8 +1282,7 @@ textarea:focus-visible {
 }
 
 .project-tags {
-  display: flex; /* TODO */
-  display: none !important;
+  display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
   margin-bottom: 1.5rem;

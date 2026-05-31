@@ -130,7 +130,7 @@
         {
             "id": 5,
             "title": "Экосистема Mivio",
-            "description": "Лучшая мультиплатформенная медиа-экосистема. Транслируйте фильмы и сериалы из Jellyfin, Plex, SMB и WebDAV или воспроизводите локальные файлы с автозагрузкой обложек, расширенных метаданных и встроенной библиотекой субтитров.",
+            "description": "Лучший мультиплатформенный медиаплеер. Смотрите потоковое видео с Jellyfin, Plex или WebDAV, а также локальные файлы с автоматическими обложками и субтитрами.",
             "image": "assets/img/apps/mivio.webp",
             "tags": [
                 "Smart TV",
@@ -178,6 +178,7 @@
             "description": "Масштабируемая корпоративная платформа для HVAC-услуг с автоматической генерацией предложений и управлением клиентами.",
             "image": "assets/img/apps/bettahvacservices.webp",
             "tags": [
+                "Web",
                 "Svelte",
                 "Node.js",
                 "CSS"
@@ -192,6 +193,7 @@
             "description": "Динамичная развлекательная лендинг-страница с погружающим дизайном и плавными анимациями.",
             "image": "assets/img/apps/laslocurasdemiguelin.webp",
             "tags": [
+                "Web",
                 "Astro",
                 "TypeScript",
                 "Tailwind CSS"
@@ -206,6 +208,7 @@
             "description": "Современная лендинг-страница для VOD-платформы с упором на UX/UI и сторителлинг бренда.",
             "image": "assets/img/apps/kristoff.webp",
             "tags": [
+                "Web",
                 "Astro",
                 "TypeScript",
                 "Tailwind CSS"

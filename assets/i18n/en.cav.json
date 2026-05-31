@@ -130,7 +130,7 @@
         {
             "id": 5,
             "title": "Me Mivio Ecosystem",
-            "description": "Me make ultimate video player for many screens. Play video from rock or stream from Jellyfin, Plex, SMB, WebDAV. Get beautiful covers, info, and subtitles like magic. Very premium!",
+            "description": "The ultimate multi-platform media player. Stream from Jellyfin, Plex, or WebDAV, and play local files with automatic artwork and subtitles.",
             "image": "assets/img/apps/mivio.webp",
             "tags": [
                 "Smart TV",
@@ -178,6 +178,7 @@
             "description": "Me make big business platform. Quotes automatic. Customers managed.",
             "image": "assets/img/apps/bettahvacservices.webp",
             "tags": [
+                "Web",
                 "Svelte",
                 "Node.js",
                 "CSS"
@@ -192,6 +193,7 @@
             "description": "Me make fun page. Big motion. Smooth moving.",
             "image": "assets/img/apps/laslocurasdemiguelin.webp",
             "tags": [
+                "Web",
                 "Astro",
                 "TypeScript",
                 "Tailwind CSS"
@@ -206,6 +208,7 @@
             "description": "Me make modern VOD page. User happy. Brand strong.",
             "image": "assets/img/apps/kristoff.webp",
             "tags": [
+                "Web",
                 "Astro",
                 "TypeScript",
                 "Tailwind CSS"
