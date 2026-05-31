@@ -51,6 +51,7 @@ async function processRequest(payload) {
         if (!phoneRegex.test(phone)) {
             phoneDisplay += " ⚠️ (Invalid Format / Missing Country Code)";
         } else hasValidContact = true;
+    }
 
     if (!hasValidContact) {
         return { status: 400, body: { error: 'At least one valid contact method (email or phone) is required' } };
