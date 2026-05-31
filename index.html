@@ -469,7 +469,6 @@
                 id="contact-form"
                 class="contact-form"
                 aria-describedby="contact-form-help site-a11y-help"
-                novalidate
               >
                 <!-- Honeypot field -->
                 <div style="display:none" aria-hidden="true">
@@ -503,7 +502,6 @@
                     type="email"
                     id="email"
                     placeholder="Your Email"
-                    required
                     data-i18n-placeholder="home.contact_section.placeholders.email"
                     autocomplete="email"
                   />
@@ -521,6 +519,7 @@
                     placeholder="Your Phone"
                     data-i18n-placeholder="home.contact_section.placeholders.phone"
                     autocomplete="tel"
+                    pattern="^\+?[\d\s\-\(\)]{7,20}$"
                   />
                 </div>
                 <div class="form-group">

@@ -6,8 +6,30 @@ async function processRequest(payload) {
         return { status: 200, body: { success: true } };
     }
 
-    if (!name || !email || !message) {
-        return { status: 400, body: { error: 'Name, email and message are required' } };
+    if (!name || (!email && !phone) || !message) {
+        return { status: 400, body: { error: 'Name, message, and at least one contact method (email or phone) are required' } };
+    }
+
+    let hasValidContact = false;
+
+    let emailDisplay = email || "";
+    if (email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            emailDisplay += " ⚠️ (Invalid Format)";
+        } else hasValidContact = true;
+    }
+
+    let phoneDisplay = phone || "";
+    if (phone) {
+        const phoneRegex = /^\+?[\d\s\-\(\)]{7,20}$/;
+        if (!phoneRegex.test(phone)) {
+            phoneDisplay += " ⚠️ (Invalid Format)";
+        } else hasValidContact = true;
+    }
+
+    if (!hasValidContact) {
+        return { status: 400, body: { error: 'At least one valid contact method (email or phone) is required' } };
     }
 
     const botToken = process.env.TELEGRAM_BOT_TOKEN;
@@ -21,8 +43,8 @@ async function processRequest(payload) {
 📩 New message from your portfolio!
 
 Name: ${name}
-Email: ${email}
-${phone ? `Phone: ${phone}\n` : ''}
+${email ? `Email: ${emailDisplay}\n` : ''}
+${phone ? `Phone: ${phoneDisplay}\n` : ''}
 Message:
 ${message}
     `.trim();

@@ -1500,7 +1500,7 @@ function setupEventListeners() {
         const message = form.querySelector('#message').value.trim();
         const website = form.querySelector('#website')?.value.trim() || '';
 
-        if (!name || !email || !message) return;
+        if (!name || (!email && !phone) || !message) return;
 
         btn.disabled = true;
         btn.style.opacity = '0.7';
