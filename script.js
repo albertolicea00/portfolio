@@ -7,22 +7,84 @@
 const SUPPORTED_LANGS = ['en', 'en.cav', 'es', 'es.cav', 'de', 'fr', 'it', 'ja', 'ko', 'pt', 'ru', 'zh', 'cat', 'alien'];
 const FALLBACK_LANG = 'en';
 const I18N_ASSET_VERSION = '20260428-2';
-const SKILLS_MARQUEE_ITEMS = [
-    'JavaScript',
-    'TypeScript',
-    'Python',
-    'Django',
-    'Node.js',
-    'Svelte',
-    'Astro',
-    'Vue',
-    'Laravel',
-    'Livewire',
-    'Swift',
-    'Tailwind CSS',
-    'WordPress',
-    'BigCommerce'
+const TECH_NAMES = {
+    'html': 'HTML',
+    'css': 'CSS',
+    'english': 'English',
+    'spanish': 'Español',
+    'csharp': 'C#',
+    'react-native': 'React Native',
+    'android-studio': 'Android Studio',
+    'nodejs': 'Node.js',
+    'mariadb': 'MariaDB',
+    'mssql': 'MS SQL',
+    'postgresql': 'PostgreSQL',
+    'mysql': 'MySQL',
+    'mongodb': 'MongoDB',
+    'sqlite': 'SQLite',
+    'aws': 'AWS',
+    'php': 'PHP',
+    'sql': 'SQL',
+    'livewire': 'Livewire',
+    'tailwind': 'Tailwind CSS',
+    'sass': 'Sass',
+    'vue': 'Vue.js',
+    'react': 'React',
+    'svelte': 'Svelte',
+    'astro': 'Astro',
+    'alpine': 'Alpine.js',
+    'django': 'Django',
+    'flask': 'Flask',
+    'express': 'Express.js',
+    'laravel': 'Laravel',
+    'firebase': 'Firebase',
+    'cordova': 'Cordova',
+    'xcode': 'Xcode',
+    'docker': 'Docker',
+    'azure': 'Azure',
+    'jenkins': 'Jenkins',
+    'git': 'Git',
+    'postman': 'Postman',
+    'linux': 'Linux',
+    'figma': 'Figma',
+    'procreate': 'Procreate',
+    'krita': 'Krita',
+    'canva': 'Canva',
+    'photoshop': 'Photoshop',
+    'illustrator': 'Illustrator',
+    'coreldraw': 'CorelDRAW',
+    'blender': 'Blender',
+    'autograph': 'Autograph',
+    'premiere-pro': 'Premiere Pro',
+    'after-effects': 'After Effects',
+    'unity': 'Unity',
+    'unreal-engine': 'Unreal Engine',
+    'pygame': 'Pygame',
+    'renpy': 'Ren\'Py',
+    'python': 'Python',
+    'javascript': 'JavaScript',
+    'typescript': 'TypeScript',
+    'swift': 'Swift',
+    'kotlin': 'Kotlin',
+    'java': 'Java',
+    'bash': 'Bash'
+};
+
+const TECH_CATEGORIES = [
+    { id: 'code', i18n: 'home.skills_section.categories.code', label: 'Programming & Languages', items: ["english", "spanish", "python", "javascript", "html", "css", "typescript", "swift", "kotlin", "java", "php", "csharp", "sql", "bash"] },
+    { id: 'frontend', i18n: 'home.skills_section.categories.frontend', label: 'Frontend', items: ["react", "vue", "svelte", "astro", "alpine", "livewire", "tailwind", "sass", "bootstrap"] },
+    { id: 'backend', i18n: 'home.skills_section.categories.backend', label: 'Backend', items: ["django", "flask", "nodejs", "express", "laravel", "firebase"] },
+    { id: 'mobile', i18n: 'home.skills_section.categories.mobile', label: 'Mobile', items: ["react-native", "cordova", "android-studio", "xcode"] },
+    { id: 'databases', i18n: 'home.skills_section.categories.databases', label: 'Databases', items: ["postgresql", "mysql", "mongodb", "sqlite", "mariadb", "mssql"] },
+    { id: 'devopsTools', i18n: 'home.skills_section.categories.devopsTools', label: 'DevOps & Tools', items: ["docker", "aws", "azure", "jenkins", "git", "postman", "linux"] },
+    { id: 'design', i18n: 'home.skills_section.categories.design', label: 'Design', items: ["figma", "procreate", "krita", "canva", "photoshop", "illustrator", "coreldraw"] },
+    { id: 'animationAndVideo', i18n: 'home.skills_section.categories.animationAndVideo', label: 'Animation & Video', items: ["blender", "autograph", "premiere-pro", "after-effects"] },
+    { id: 'gaming', i18n: 'home.skills_section.categories.gaming', label: 'Gaming', items: ["unity", "unreal-engine", "pygame", "renpy"] }
 ];
+
+function formatTechName(key) {
+    return TECH_NAMES[key] || key.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+}
 const EXPERIENCE_START_DATE = { year: 2019, month: 0, day: 1 };
 const LANGUAGE_CONTROL_LABELS = {
     en: 'Select language',
@@ -926,34 +988,92 @@ function updatePageText() {
         const value = getNestedValue(siteData, path);
         if (typeof value === 'string') el.placeholder = value;
     });
+
+    document.querySelectorAll('[data-i18n-tooltip]').forEach(el => {
+        const path = el.getAttribute('data-i18n-tooltip');
+        const value = getNestedValue(siteData, path);
+        if (typeof value === 'string') el.setAttribute('data-tooltip', value);
+    });
 }
 
 function renderDynamicContent() {
     if (!siteData) return;
-    renderSkillsMarquee();
+    renderTechStack();
     renderProjects();
     renderExperience();
 }
 
-function renderSkillsMarquee() {
-    const track = document.getElementById('skills-track');
-    const marquee = document.getElementById('skills-marquee');
-    if (!track || !marquee) return;
+function renderTechStack() {
+    const container = document.getElementById('tech-stack-container');
+    if (!container) return;
 
-    const skillsA11y = getLocalizedText('home.accessibility.skills_marquee', 'Core languages and technologies');
-    const itemMarkup = SKILLS_MARQUEE_ITEMS.map(skill => (
-        `<span class="skill-pill" role="listitem">${skill}</span>`
-    )).join('');
-
-    track.innerHTML = `
-        <div class="skills-track-group" role="list">
-            ${itemMarkup}
-        </div>
-        <div class="skills-track-group" aria-hidden="true">
-            ${itemMarkup}
+    let html = '';
+    TECH_CATEGORIES.forEach((category, index) => {
+        const isHidden = index > 0 ? 'is-hidden' : '';
+        const chipsHtml = category.items.map(item => {
+            const name = formatTechName(item);
+            return `
+                <div class="tech-chip" role="listitem">
+                    <img src="assets/icons/tech/${item}.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy">
+                    <span>${name}</span>
+                </div>
+            `;
+        }).join('');
+        
+        const categoryLabel = getLocalizedText(category.i18n, category.label);
+        html += `
+            <div class="tech-category ${isHidden}" data-tech-category>
+                <h4 class="tech-category-title" data-i18n="${category.i18n}">${categoryLabel}</h4>
+                <div class="tech-chips" role="list" aria-label="${categoryLabel}">
+                    ${chipsHtml}
+                </div>
+            </div>
+        `;
+    });
+    
+    // Add Ver más button
+    const btnText = getLocalizedText('home.skills_section.view_more', 'View More');
+    const tooltipText = getLocalizedText('home.skills_section.view_more_tooltip', 'Click to expand');
+    html += `
+        <div class="tech-expand-container">
+            <button class="tech-expand-btn pulse-animation" id="tech-expand-btn" data-i18n-tooltip="home.skills_section.view_more_tooltip" data-tooltip="${tooltipText}">
+                <span id="tech-expand-text" data-i18n="home.skills_section.view_more">${btnText}</span>
+            </button>
         </div>
     `;
-    marquee.setAttribute('aria-label', skillsA11y);
+    
+    container.innerHTML = html;
+
+    const expandBtn = document.getElementById('tech-expand-btn');
+    if (expandBtn) {
+        expandBtn.addEventListener('click', () => {
+            const hiddenCats = container.querySelectorAll('.tech-category.is-hidden');
+            const isExpanded = hiddenCats.length === 0;
+            
+            if (isExpanded) {
+                // Collapse
+                const allCats = container.querySelectorAll('[data-tech-category]');
+                allCats.forEach((cat, idx) => {
+                    if (idx > 0) cat.classList.add('is-hidden');
+                });
+                const textEl = document.getElementById('tech-expand-text');
+                textEl.setAttribute('data-i18n', 'home.skills_section.view_more');
+                textEl.textContent = getLocalizedText('home.skills_section.view_more', 'View More');
+                expandBtn.setAttribute('data-i18n-tooltip', 'home.skills_section.view_more_tooltip');
+                expandBtn.setAttribute('data-tooltip', getLocalizedText('home.skills_section.view_more_tooltip', 'Click to expand'));
+                expandBtn.classList.add('pulse-animation');
+            } else {
+                // Expand
+                hiddenCats.forEach(cat => cat.classList.remove('is-hidden'));
+                const textEl = document.getElementById('tech-expand-text');
+                textEl.setAttribute('data-i18n', 'home.skills_section.view_less');
+                textEl.textContent = getLocalizedText('home.skills_section.view_less', 'View Less');
+                expandBtn.setAttribute('data-i18n-tooltip', 'home.skills_section.view_less_tooltip');
+                expandBtn.setAttribute('data-tooltip', getLocalizedText('home.skills_section.view_less_tooltip', 'Click to collapse'));
+                expandBtn.classList.remove('pulse-animation');
+            }
+        });
+    }
 }
 
 function renderProjects() {

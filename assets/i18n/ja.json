@@ -33,7 +33,22 @@
             }
         },
         "skills_section": {
-            "title": "言語とテック"
+            "title": "言語とテック",
+            "view_more": "もっと見る",
+            "view_less": "一部を表示",
+            "view_more_tooltip": "クリックして展開",
+            "view_less_tooltip": "クリックして折りたたむ",
+            "categories": {
+                "code": "プログラミングと言語",
+                "frontend": "フロントエンド",
+                "backend": "バックエンド",
+                "mobile": "モバイル",
+                "databases": "データベース",
+                "devopsTools": "DevOps & ツール",
+                "design": "デザイン",
+                "animationAndVideo": "アニメーションとビデオ",
+                "gaming": "ゲーム"
+            }
         },
         "contact_section": {
             "title": "一緒に働きましょう",

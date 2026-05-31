@@ -33,7 +33,22 @@
             }
         },
         "skills_section": {
-            "title": "언어와 테크"
+            "title": "언어와 테크",
+            "view_more": "더 보기",
+            "view_less": "간략히 보기",
+            "view_more_tooltip": "클릭하여 펼치기",
+            "view_less_tooltip": "클릭하여 접기",
+            "categories": {
+                "code": "프로그래밍 및 언어",
+                "frontend": "프론트엔드",
+                "backend": "백엔드",
+                "mobile": "모바일",
+                "databases": "데이터베이스",
+                "devopsTools": "DevOps 및 도구",
+                "design": "디자인",
+                "animationAndVideo": "애니메이션 및 비디오",
+                "gaming": "게임"
+            }
         },
         "contact_section": {
             "title": "함께 일해요",

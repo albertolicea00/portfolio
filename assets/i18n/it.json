@@ -9,7 +9,7 @@
         },
         "hero": {
             "subtitle": "Sviluppatore Web & Mobile Fullstack<br>Designer Grafico",
-            "bio": "6 anni a trasformare il caffè in codice di alta qualità.",
+            "bio": "+7 anni a trasformare il caffè in codice di alta qualità.",
             "cta": "Vedi progetti",
             "contact": "Contattami",
             "download_cv": "Scarica CV"
@@ -33,7 +33,22 @@
             }
         },
         "skills_section": {
-            "title": "Linguaggi & Tech"
+            "title": "Linguaggi & Tech",
+            "view_more": "Vedi di più",
+            "view_less": "Vedi di meno",
+            "view_more_tooltip": "Clicca per espandere",
+            "view_less_tooltip": "Clicca per comprimere",
+            "categories": {
+                "code": "Programmazione e Linguaggi",
+                "frontend": "Frontend",
+                "backend": "Backend",
+                "mobile": "Mobile",
+                "databases": "Database",
+                "devopsTools": "DevOps e Strumenti",
+                "design": "Design",
+                "animationAndVideo": "Animazione e Video",
+                "gaming": "Giochi"
+            }
         },
         "contact_section": {
             "title": "Lavoriamo insieme",

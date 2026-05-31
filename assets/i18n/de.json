@@ -9,7 +9,7 @@
         },
         "hero": {
             "subtitle": "Fullstack Web- & Mobile-Entwickler<br>Grafikdesigner",
-            "bio": "6 Jahre Erfahrung darin, Kaffee in hochwertigen Code zu verwandeln.",
+            "bio": "+7 Jahre Erfahrung darin, Kaffee in hochwertigen Code zu verwandeln.",
             "cta": "Projekte ansehen",
             "contact": "Kontakt aufnehmen",
             "download_cv": "Lebenslauf herunterladen"
@@ -33,7 +33,22 @@
             }
         },
         "skills_section": {
-            "title": "Sprachen & Tech"
+            "title": "Sprachen & Tech",
+            "view_more": "Mehr anzeigen",
+            "view_less": "Weniger anzeigen",
+            "view_more_tooltip": "Klicken zum Erweitern",
+            "view_less_tooltip": "Klicken zum Reduzieren",
+            "categories": {
+                "code": "Programmierung & Sprachen",
+                "frontend": "Frontend",
+                "backend": "Backend",
+                "mobile": "Mobile",
+                "databases": "Datenbanken",
+                "devopsTools": "DevOps & Tools",
+                "design": "Design",
+                "animationAndVideo": "Animation & Video",
+                "gaming": "Gaming"
+            }
         },
         "contact_section": {
             "title": "Lass uns zusammenarbeiten",

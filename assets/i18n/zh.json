@@ -9,7 +9,7 @@
         },
         "hero": {
             "subtitle": "全栈 Web & 移动开发者<br>平面设计师",
-            "bio": "6 年将咖啡转化为高质量代码的经验。",
+            "bio": "+7 年将咖啡转化为高质量代码的经验。",
             "cta": "查看项目",
             "contact": "联系我",
             "download_cv": "下载简历"
@@ -33,7 +33,22 @@
             }
         },
         "skills_section": {
-            "title": "语言与技术"
+            "title": "语言与技术",
+            "view_more": "查看更多",
+            "view_less": "收起",
+            "view_more_tooltip": "点击展开",
+            "view_less_tooltip": "点击折叠",
+            "categories": {
+                "code": "编程与语言",
+                "frontend": "前端",
+                "backend": "后端",
+                "mobile": "移动端",
+                "databases": "数据库",
+                "devopsTools": "DevOps与工具",
+                "design": "设计",
+                "animationAndVideo": "动画与视频",
+                "gaming": "游戏"
+            }
         },
         "contact_section": {
             "title": "一起合作吧",

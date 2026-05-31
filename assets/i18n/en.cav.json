@@ -9,7 +9,7 @@
         },
         "hero": {
             "subtitle": "Me build web and mobile<br>Me make graphics",
-            "bio": "6 years. Me drink coffee. Me make code.",
+            "bio": "+7 years. Me drink coffee. Me make code.",
             "cta": "Me see projects",
             "contact": "Talk to me",
             "download_cv": "Me get CV"
@@ -33,7 +33,22 @@
             }
         },
         "skills_section": {
-            "title": "Code Tools"
+            "title": "Code Tools",
+            "view_more": "Me see more",
+            "view_less": "Me see less",
+            "view_more_tooltip": "You click, me show more",
+            "view_less_tooltip": "You click, me show less",
+            "categories": {
+                "code": "Words for Code",
+                "frontend": "Front Side",
+                "backend": "Back Side",
+                "mobile": "Phone Box",
+                "databases": "Data Rocks",
+                "devopsTools": "Build Tools",
+                "design": "Pretty Pictures",
+                "animationAndVideo": "Moving Pictures",
+                "gaming": "Fun Games"
+            }
         },
         "contact_section": {
             "title": "Me work with you",

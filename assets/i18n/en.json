@@ -9,7 +9,7 @@
         },
         "hero": {
             "subtitle": "Fullstack Web & Mobile Developer<br>Graphic Designer",
-            "bio": "6 years of converting coffee into high-end code.",
+            "bio": "+7 years of converting coffee into high-end code.",
             "cta": "View Projects",
             "contact": "Contact Me",
             "download_cv": "Download CV"
@@ -33,7 +33,22 @@
             }
         },
         "skills_section": {
-            "title": "Languages & Tech"
+            "title": "Languages & Tech",
+            "view_more": "View More",
+            "view_less": "View Less",
+            "categories": {
+                "code": "Programming & Languages",
+                "frontend": "Frontend",
+                "backend": "Backend",
+                "mobile": "Mobile",
+                "databases": "Databases",
+                "devopsTools": "DevOps & Tools",
+                "design": "Design",
+                "animationAndVideo": "Animation & Video",
+                "gaming": "Gaming"
+            },
+            "view_more_tooltip": "Click to expand",
+            "view_less_tooltip": "Click to collapse"
         },
         "contact_section": {
             "title": "Let's Work Together",

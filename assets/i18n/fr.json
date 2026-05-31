@@ -9,7 +9,7 @@
         },
         "hero": {
             "subtitle": "Développeur Web & Mobile Fullstack<br>Designer Graphique",
-            "bio": "6 ans à transformer le café en code de haute qualité.",
+            "bio": "+7 ans à transformer le café en code de haute qualité.",
             "cta": "Voir les projets",
             "contact": "Me contacter",
             "download_cv": "Télécharger CV"
@@ -33,7 +33,22 @@
             }
         },
         "skills_section": {
-            "title": "Langages & Tech"
+            "title": "Langages & Tech",
+            "view_more": "Voir plus",
+            "view_less": "Voir moins",
+            "view_more_tooltip": "Cliquez pour développer",
+            "view_less_tooltip": "Cliquez pour réduire",
+            "categories": {
+                "code": "Programmation & Langages",
+                "frontend": "Frontend",
+                "backend": "Backend",
+                "mobile": "Mobile",
+                "databases": "Bases de données",
+                "devopsTools": "DevOps & Outils",
+                "design": "Design",
+                "animationAndVideo": "Animation & Vidéo",
+                "gaming": "Jeux vidéo"
+            }
         },
         "contact_section": {
             "title": "Travaillons ensemble",

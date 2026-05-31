@@ -9,7 +9,7 @@
         },
         "hero": {
             "subtitle": "Hombre hacer web y móvil<br>También dibujar bonito",
-            "bio": "6 años. Mucho café. Mucho código. Poco dormir.",
+            "bio": "+7 años. Mucho café. Mucho código. Poco dormir.",
             "cta": "Ver inventos",
             "contact": "Mandar señal de humo",
             "download_cv": "Bajar pergamino CV"
@@ -33,7 +33,22 @@
             }
         },
         "skills_section": {
-            "title": "Código y herramientas"
+            "title": "Código y herramientas",
+            "view_more": "Yo ver más",
+            "view_less": "Yo ver menos",
+            "view_more_tooltip": "Tú dar clic, yo mostrar más",
+            "view_less_tooltip": "Tú dar clic, yo mostrar menos",
+            "categories": {
+                "code": "Palabras pa Código",
+                "frontend": "Lado de al Frente",
+                "backend": "Lado de Atrás",
+                "mobile": "Caja Mágica",
+                "databases": "Piedras de Datos",
+                "devopsTools": "Herramientas Construir",
+                "design": "Dibujos Bonitos",
+                "animationAndVideo": "Dibujos que Mueven",
+                "gaming": "Juegos Divertidos"
+            }
         },
         "contact_section": {
             "title": "Yo trabajar contigo",
