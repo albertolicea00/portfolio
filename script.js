@@ -1499,7 +1499,8 @@ function setupEventListeners() {
         const phone = form.querySelector('#phone').value.trim();
         const message = form.querySelector('#message').value.trim();
         const website = form.querySelector('#website')?.value.trim() || '';
-        const turnstileResponse = form.querySelector('[name="cf-turnstile-response"]')?.value || '';
+        const formData = new FormData(form);
+        const turnstileResponse = formData.get('cf-turnstile-response') || '';
 
         if (!name || (!email && !phone) || !message) return;
 
