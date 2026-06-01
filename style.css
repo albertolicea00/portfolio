@@ -1244,6 +1244,44 @@ textarea:focus-visible {
   gap: 2.5rem;
 }
 
+#recent-projects-container {
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  padding: 0 4rem;
+  box-sizing: border-box;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+@media (min-width: 1600px) {
+  #recent-projects-container {
+    width: 1600px;
+    max-width: 1600px;
+    margin-left: calc(50% - 800px);
+  }
+}
+
+@media (max-width: 1400px) {
+  #recent-projects-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #recent-projects-container {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #recent-projects-container {
+    padding: 0 1rem;
+  }
+}
+
 .project-card {
   background: var(--glass-bg);
   border-radius: 20px;
@@ -1316,6 +1354,7 @@ textarea:focus-visible {
 .project-links {
   display: flex;
   align-items: stretch;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
