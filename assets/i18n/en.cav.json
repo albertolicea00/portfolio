@@ -130,7 +130,7 @@
         {
             "id": 5,
             "title": "Me Mivio Ecosystem",
-            "description": "The ultimate multi-platform media player. Stream from Jellyfin, Plex, or WebDAV, and play local files with automatic artwork and subtitles.",
+            "description": "Magic box for moving pictures. Bring from Jellyfin, Plex, or WebDAV. Pictures get words magically.",
             "image": "assets/img/apps/mivio.webp",
             "tags": [
                 "Smart TV",
@@ -146,8 +146,8 @@
         },
         {
             "id": 6,
-            "title": "Hide & Seek - Media Blocker",
-            "description": "A high-performance browser extension designed to help you browse the web safely and discreetly. Automatically hides sensitive images, videos, and thumbnails.",
+            "title": "Me Hide & Seek",
+            "description": "Fast tool for light box. You look safe. Tool hide bad pictures and videos from eyes.",
             "image": "assets/img/apps/hide-n-seek-block-media-addon.webp",
             "tags": [
                 "Chrome",
@@ -160,8 +160,8 @@
         },
         {
             "id": 7,
-            "title": "CacheCleaner",
-            "description": "One-click browser data cleaner for developers. Sweep away cookies, localStorage, sessionStorage, IndexedDB, and CacheStorage instantly.",
+            "title": "Me clean trash",
+            "description": "Me hit button and clean light box. Smash cookies, memory stones, and fast data away.",
             "image": "assets/img/apps/cache-cleaner-addon.webp",
             "tags": [
                 "Chrome",

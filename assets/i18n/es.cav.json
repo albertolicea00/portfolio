@@ -130,7 +130,7 @@
         {
             "id": 5,
             "title": "Mivio cueva multimedia",
-            "description": "El reproductor multimedia multiplataforma definitivo. Transmite desde Jellyfin, Plex o WebDAV, y reproduce archivos locales con carátulas y subtítulos automáticos.",
+            "description": "Caja mágica para ver pinturas que mueven. Traer de Jellyfin, Plex o WebDAV. Pinturas poner letras solas.",
             "image": "assets/img/apps/mivio.webp",
             "tags": [
                 "Smart TV",
@@ -146,8 +146,8 @@
         },
         {
             "id": 6,
-            "title": "Hide & Seek - Media Blocker",
-            "description": "Extensión de navegador de alto rendimiento diseñada para navegar de forma segura y discreta. Oculta automáticamente imágenes, videos y miniaturas sensibles.",
+            "title": "Hombre Ocultar y Buscar",
+            "description": "Herramienta rápida para caja de luz. Tú mirar seguro. Ocultar dibujos raros y videos que ojos no querer ver.",
             "image": "assets/img/apps/hide-n-seek-block-media-addon.webp",
             "tags": [
                 "Chrome",
@@ -160,8 +160,8 @@
         },
         {
             "id": 7,
-            "title": "CacheCleaner",
-            "description": "Limpiador de datos de navegador con un clic para desarrolladores. Elimina cookies, localStorage, sessionStorage, IndexedDB y CacheStorage al instante.",
+            "title": "Hombre limpiar basura",
+            "description": "Hombre golpear botón y limpiar caja de luz. Borrar galletas, piedras de memoria y datos rápido.",
             "image": "assets/img/apps/cache-cleaner-addon.webp",
             "tags": [
                 "Chrome",
