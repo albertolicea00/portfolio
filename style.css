@@ -1282,6 +1282,37 @@ textarea:focus-visible {
   }
 }
 
+/* All Projects Container layout */
+#all-projects-container {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  max-width: 2400px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1920px) {
+  #all-projects-container {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1450px) {
+  #all-projects-container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 992px) {
+  #all-projects-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  #all-projects-container {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 .project-card {
   background: var(--glass-bg);
   border-radius: 20px;
