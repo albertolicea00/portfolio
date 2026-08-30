@@ -113,3 +113,16 @@ If you deploy this project to platforms like **Coolify**, **Dokploy**, **Render*
 Thanks to the included `server.js` and `package.json`, these platforms will automatically start a native web server that serves both your static portfolio and the backend API on the same domain seamlessly.
 
 *(Note: If you deploy to **GitHub Pages**, the static site will work perfectly, but because GitHub Pages has no backend support, you must use an external form service like Formspree).*
+
+
+## ...Testing Search Engine Optimization.
+
+[![Google](https://img.shields.io/badge/Google-Search-blue?logo=google)](https://www.google.com/search?q=albertolicea00)
+[![Brave](https://img.shields.io/badge/Brave-Search-orange?logo=brave)](https://search.brave.com/search?q=albertolicea00)
+[![DuckDuckGo](https://img.shields.io/badge/DuckDuckGo-Search-orange?logo=duckduckgo)](https://duckduckgo.com/?q=albertolicea00)
+[![Bing](https://img.shields.io/badge/Bing-Search-008373?logo=bing)](https://www.bing.com/search?q=albertolicea00)
+[![Yahoo](https://img.shields.io/badge/Yahoo-Search-6001D2?logo=yahoo)](https://search.yahoo.com/search?p=albertolicea00)
+[![Yandex](https://img.shields.io/badge/Yandex-Search-red?logo=yandex)](https://yandex.com/search/?text=albertolicea00)
+[![Baidu](https://img.shields.io/badge/Baidu-Search-2932E1?logo=baidu)](https://www.baidu.com/s?wd=albertolicea00)
+
+
