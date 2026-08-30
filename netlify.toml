@@ -1,6 +1,9 @@
 [build]
   functions = "api"
 
+[build.environment]
+  SECRETS_SCAN_OMIT_KEYS = "TURNSTILE_SITE_ID"
+
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/:splat"
