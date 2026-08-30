@@ -105,7 +105,7 @@ This portfolio uses a unique "Multi-Cloud Zero-Config" approach for its backend.
 Here is how it seamlessly supports all major platforms with zero frontend code changes (the frontend simply calls `/api/contact`):
 - **Vercel:** Natively looks for the `api/` directory and exposes the file automatically. This is a true zero-config deployment.
 - **Cloudflare Pages:** Strictly requires a `functions/` directory. To avoid code duplication, the `package.json` includes a `"cloudflare:build"` script (`mkdir -p functions/api && cp api/contact.js functions/api/contact.js`). By setting your Cloudflare Pages build command to `npm run cloudflare:build`, Cloudflare dynamically creates the required folder structure during deployment.
-- **Netlify:** Uses a custom rewrite rule in `netlify.toml` to transparently map `/api/*` to the function.
+- **Netlify:** `netlify/functions/contact.js` is a thin wrapper that imports `processRequest` from the master file and exposes it as a classic (`event`, `context`) handler. It has to live in its own file with no `export default`, because Netlify's function bundler treats any module with a default export as its newer Request/Response-style (v2) API and would otherwise route around the named `handler` export. `netlify.toml` points `functions` at that directory and rewrites `/api/*` to `/.netlify/functions/:splat`.
 - **Render / Coolify / Dokploy:** The included `server.js` natively imports the master file and serves it as a standard Node.js Express-like endpoint.
 
 ### 🔑 Contact Form Environment Variables

@@ -1,5 +1,5 @@
 [build]
-  functions = "api"
+  functions = "functions/netlify"
 
 [build.environment]
   SECRETS_SCAN_OMIT_KEYS = "TURNSTILE_SITE_ID"

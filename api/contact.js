@@ -138,23 +138,6 @@ export default async function (req, res) {
 // ------------------------------------------------------------------
 // NETLIFY HANDLER
 // ------------------------------------------------------------------
-export async function handler(event, context) {
-    if (event.httpMethod !== 'POST') {
-        return { statusCode: 405, body: JSON.stringify({ error: 'Method not allowed' }) };
-    }
-    
-    let body = {};
-    try { 
-        body = JSON.parse(event.body || '{}'); 
-    } catch(e) { 
-        return { statusCode: 400, body: JSON.stringify({ error: 'Invalid JSON' }) }; 
-    }
-    
-    // Netlify environment variables are in process.env
-    const result = await processRequest(body, process.env);
-    return {
-        statusCode: result.status,
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(result.body)
-    };
-}
+// See netlify/functions/contact.js — kept in its own file (no `export
+// default`) so Netlify's bundler doesn't mistake this module for a v2
+// (Request/Response) function and route around this handler.
