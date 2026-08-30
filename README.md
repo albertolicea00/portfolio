@@ -1,12 +1,14 @@
 # @albertolicea00's Portfolio
 
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=flat-square&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=flat-square&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=flat-square&logo=javascript&logoColor=%23F7DF1E)
-![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=flat-square&logo=node.js&logoColor=white)
-![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=flat-square&logo=Cloudflare&logoColor=white)
+[![Google](https://img.shields.io/badge/Google-Search-blue?logo=google)](https://www.google.com/search?q=albertolicea00)
+[![Brave](https://img.shields.io/badge/Brave-Search-orange?logo=brave)](https://search.brave.com/search?q=albertolicea00)
+[![DuckDuckGo](https://img.shields.io/badge/DuckDuckGo-Search-orange?logo=duckduckgo)](https://duckduckgo.com/?q=albertolicea00)
+[![Bing](https://img.shields.io/badge/Bing-Search-008373?logo=bing)](https://www.bing.com/search?q=albertolicea00)
+[![Yahoo](https://img.shields.io/badge/Yahoo-Search-6001D2?logo=yahoo)](https://search.yahoo.com/search?p=albertolicea00)
+[![Yandex](https://img.shields.io/badge/Yandex-Search-red?logo=yandex)](https://yandex.com/search/?text=albertolicea00)
+[![Baidu](https://img.shields.io/badge/Baidu-Search-2932E1?logo=baidu)](https://www.baidu.com/s?wd=albertolicea00)
 
-Responsive portfolio built with plain HTML, CSS, and JavaScript. The site ships as a pure static frontend with no build step and loads its UI copy and dynamic sections from per-language JSON files in `assets/i18n/`.
+Responsive portfolio built with plain **HTML**, **CSS**, and **JavaScript**. The site ships as a pure static frontend with no build step and loads its UI copy and dynamic sections from per-language JSON files in `assets/i18n/`.
 
 ## ✨ Features
 
@@ -113,16 +115,3 @@ If you deploy this project to platforms like **Coolify**, **Dokploy**, **Render*
 Thanks to the included `server.js` and `package.json`, these platforms will automatically start a native web server that serves both your static portfolio and the backend API on the same domain seamlessly.
 
 *(Note: If you deploy to **GitHub Pages**, the static site will work perfectly, but because GitHub Pages has no backend support, you must use an external form service like Formspree).*
-
-
-## ...Testing Search Engine Optimization.
-
-[![Google](https://img.shields.io/badge/Google-Search-blue?logo=google)](https://www.google.com/search?q=albertolicea00)
-[![Brave](https://img.shields.io/badge/Brave-Search-orange?logo=brave)](https://search.brave.com/search?q=albertolicea00)
-[![DuckDuckGo](https://img.shields.io/badge/DuckDuckGo-Search-orange?logo=duckduckgo)](https://duckduckgo.com/?q=albertolicea00)
-[![Bing](https://img.shields.io/badge/Bing-Search-008373?logo=bing)](https://www.bing.com/search?q=albertolicea00)
-[![Yahoo](https://img.shields.io/badge/Yahoo-Search-6001D2?logo=yahoo)](https://search.yahoo.com/search?p=albertolicea00)
-[![Yandex](https://img.shields.io/badge/Yandex-Search-red?logo=yandex)](https://yandex.com/search/?text=albertolicea00)
-[![Baidu](https://img.shields.io/badge/Baidu-Search-2932E1?logo=baidu)](https://www.baidu.com/s?wd=albertolicea00)
-
-
