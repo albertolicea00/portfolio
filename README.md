@@ -1,10 +1,10 @@
 # @albertolicea00's Portfolio
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-000000?logo=github&logoColor=white)](https://albertolicea00.github.io/portfolio/)
-[![Cloudflare Pages](https://img.shields.io/badge/Cloudflare%20Pages-F38020?logo=cloudflare&logoColor=white)](https://pages.cloudflare.com/)
+[![Cloudflare Pages](https://img.shields.io/badge/Cloudflare%20Pages-F38020?logo=cloudflare&logoColor=white)](https://albertolicea00.pages.dev/)
 [![Vercel](https://img.shields.io/badge/Vercel-000000?logo=vercel&logoColor=white)](https://albertolicea00.vercel.app/)
-[![Render](https://img.shields.io/badge/Render-0099E5?logo=render&logoColor=white)](https://render.com/)
-[![Netlify](https://img.shields.io/badge/Netlify-00C7B7?logo=netlify&logoColor=white)](https://app.netlify.com/)
+[![Render](https://img.shields.io/badge/Render-0099E5?logo=render&logoColor=white)](https://albertolicea00.onrender.com)
+[![Netlify](https://img.shields.io/badge/Netlify-00C7B7?logo=netlify&logoColor=white)](https://albertolicea00.netlify.app)
 
 Responsive portfolio built with plain **HTML**, **CSS**, and **JavaScript**. The site ships as a pure static frontend with no build step and loads its UI copy and dynamic sections from per-language JSON files in `assets/i18n/`.
 
