@@ -6,6 +6,8 @@
 [![Render](https://img.shields.io/badge/Render-0099E5?logo=render&logoColor=white)](https://albertolicea00.onrender.com)
 [![Netlify](https://img.shields.io/badge/Netlify-00C7B7?logo=netlify&logoColor=white)](https://albertolicea00.netlify.app)
 
+> **Note:** The `redirect` branch (https://github.com/albertolicea00/portfolio/tree/redirect) holds a zero-config static redirect to Vercel, for hosts where you don't want to manage env vars/functions.
+
 Responsive portfolio built with plain **HTML**, **CSS**, and **JavaScript**. The site ships as a pure static frontend with no build step and loads its UI copy and dynamic sections from per-language JSON files in `assets/i18n/`.
 
 [![DuckDuckGo](https://img.shields.io/badge/DuckDuckGo-FF6600?logo=duckduckgo&logoColor=white)](https://duckduckgo.com/?q=albertolicea00)
