@@ -1,14 +1,20 @@
 # @albertolicea00's Portfolio
 
-[![Google](https://img.shields.io/badge/Google-Search-blue?logo=google)](https://www.google.com/search?q=albertolicea00)
-[![Brave](https://img.shields.io/badge/Brave-Search-orange?logo=brave)](https://search.brave.com/search?q=albertolicea00)
-[![DuckDuckGo](https://img.shields.io/badge/DuckDuckGo-Search-orange?logo=duckduckgo)](https://duckduckgo.com/?q=albertolicea00)
-[![Bing](https://img.shields.io/badge/Bing-Search-008373?logo=bing)](https://www.bing.com/search?q=albertolicea00)
-[![Yahoo](https://img.shields.io/badge/Yahoo-Search-6001D2?logo=yahoo)](https://search.yahoo.com/search?p=albertolicea00)
-[![Yandex](https://img.shields.io/badge/Yandex-Search-red?logo=yandex)](https://yandex.com/search/?text=albertolicea00)
-[![Baidu](https://img.shields.io/badge/Baidu-Search-2932E1?logo=baidu)](https://www.baidu.com/s?wd=albertolicea00)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-000000?logo=github&logoColor=white)](https://albertolicea00.github.io/portfolio/)
+[![Cloudflare Pages](https://img.shields.io/badge/Cloudflare%20Pages-F38020?logo=cloudflare&logoColor=white)](https://pages.cloudflare.com/)
+[![Vercel](https://img.shields.io/badge/Vercel-000000?logo=vercel&logoColor=white)](https://albertolicea00.vercel.app/)
+[![Render](https://img.shields.io/badge/Render-0099E5?logo=render&logoColor=white)](https://render.com/)
+[![Netlify](https://img.shields.io/badge/Netlify-00C7B7?logo=netlify&logoColor=white)](https://app.netlify.com/)
 
 Responsive portfolio built with plain **HTML**, **CSS**, and **JavaScript**. The site ships as a pure static frontend with no build step and loads its UI copy and dynamic sections from per-language JSON files in `assets/i18n/`.
+
+[![DuckDuckGo](https://img.shields.io/badge/DuckDuckGo-FF6600?logo=duckduckgo&logoColor=white)](https://duckduckgo.com/?q=albertolicea00)
+[![Google](https://img.shields.io/badge/Google-4285F4?logo=google&logoColor=white)](https://www.google.com/search?q=albertolicea00)
+[![Brave](https://img.shields.io/badge/Brave-FB542B?logo=brave&logoColor=white)](https://search.brave.com/search?q=albertolicea00)
+[![Bing](https://img.shields.io/badge/Bing-008373?logo=bing&logoColor=white)](https://www.bing.com/search?q=albertolicea00)
+[![Yahoo](https://img.shields.io/badge/Yahoo-6001D2?logo=yahoo&logoColor=white)](https://search.yahoo.com/search?p=albertolicea00)
+[![Yandex](https://img.shields.io/badge/Yandex-E00000?logo=yandex&logoColor=white)](https://yandex.com/search/?text=albertolicea00)
+[![Baidu](https://img.shields.io/badge/Baidu-2932E1?logo=baidu&logoColor=white)](https://www.baidu.com/s?wd=albertolicea00)
 
 ## ✨ Features
 
