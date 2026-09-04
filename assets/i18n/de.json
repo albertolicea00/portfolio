@@ -155,7 +155,7 @@
                 "Firefox"
             ],
             "githubUrl": "https://github.com/albertolicea00/hide-n-seek-block-media-addon",
-            "liveUrl": "https://github.com/albertolicea00/hide-n-seek-block-media-addon",
+            "liveUrl": "https://addons.mozilla.org/en-US/firefox/addon/hidenseek/",
             "featured": true
         },
         {
@@ -169,7 +169,7 @@
                 "Firefox"
             ],
             "githubUrl": "https://github.com/albertolicea00/cache-cleaner-addon",
-            "liveUrl": "https://github.com/albertolicea00/cache-cleaner-addon",
+            "liveUrl": "https://addons.mozilla.org/en-US/firefox/addon/cacheflux/",
             "featured": false
         },
         {
