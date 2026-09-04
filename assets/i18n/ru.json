@@ -170,6 +170,34 @@
             ],
             "githubUrl": "https://github.com/albertolicea00/cache-cleaner-addon",
             "liveUrl": "https://github.com/albertolicea00/cache-cleaner-addon",
+            "featured": false
+        },
+        {
+            "id": 8,
+            "title": "M3U8 Detector",
+            "description": "Высокопроизводительное расширение браузера, которое обнаруживает и разрешает HLS (.m3u8) видеопотоки, обходя IP-блокировки, и экспортирует готовые скрипты для ffmpeg, shell и Google Colab.",
+            "image": "assets/img/apps/m3u8-detector.webp",
+            "tags": [
+                "Chrome",
+                "Firefox",
+                "HLS"
+            ],
+            "githubUrl": "https://github.com/albertolicea00/m3u8-detector",
+            "liveUrl": "https://addons.mozilla.org/en-US/firefox/addon/m3u8-detector",
+            "featured": false
+        },
+        {
+            "id": 9,
+            "title": "linkXlink",
+            "description": "PWA в стиле Tinder для просмотра профилей людей с помощью горизонтальных карточек и прямой ссылкой на WhatsApp.",
+            "image": "assets/img/apps/linkxlink.webp",
+            "tags": [
+                "Web",
+                "React",
+                "PWA"
+            ],
+            "githubUrl": "https://github.com/albertolicea00/linkXlink",
+            "liveUrl": "https://linkxlink.vercel.app",
             "featured": true
         },
         {
