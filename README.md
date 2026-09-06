@@ -82,10 +82,14 @@ Each file in `assets/i18n/` contains:
 Open `index.html` directly in the browser for a quick check, or serve the folder with any static file server. 
 To test the full API and contact form locally, run the included server:
 ```bash
-npm install
-npm start
+make start
 ```
 Then visit `http://localhost:3000`.
+
+Run the Python test suite with:
+```bash
+make test
+```
 
 ## 🚀 Deployment
 
@@ -100,13 +104,13 @@ This project can be deployed anywhere. It supports a **Multi-Cloud Zero-Config**
 
 ### 🪄 The Multi-Cloud Architecture Trick
 
-This portfolio uses a unique "Multi-Cloud Zero-Config" approach for its backend. Instead of duplicating backend code for every cloud provider, the entire API logic lives in a single master file: `api/contact.js`. 
+This portfolio uses a unique "Multi-Cloud Zero-Config" approach for its backend. Instead of duplicating backend code for every cloud provider, the entire API logic lives in a single master file: `api/contact.mjs`. 
 
 Here is how it seamlessly supports all major platforms with zero frontend code changes (the frontend simply calls `/api/contact`):
 - **Vercel:** Natively looks for the `api/` directory and exposes the file automatically. This is a true zero-config deployment.
-- **Cloudflare Pages:** Strictly requires a `functions/` directory. To avoid code duplication, the `package.json` includes a `"cloudflare:build"` script (`mkdir -p functions/api && cp api/contact.js functions/api/contact.js`). By setting your Cloudflare Pages build command to `npm run cloudflare:build`, Cloudflare dynamically creates the required folder structure during deployment.
-- **Netlify:** `netlify/functions/contact.js` is a thin wrapper that imports `processRequest` from the master file and exposes it as a classic (`event`, `context`) handler. It has to live in its own file with no `export default`, because Netlify's function bundler treats any module with a default export as its newer Request/Response-style (v2) API and would otherwise route around the named `handler` export. `netlify.toml` points `functions` at that directory and rewrites `/api/*` to `/.netlify/functions/:splat`.
-- **Render / Coolify / Dokploy:** The included `server.js` natively imports the master file and serves it as a standard Node.js Express-like endpoint.
+- **Cloudflare Pages:** Strictly requires a `functions/` directory. To avoid code duplication, the `Makefile` includes a `build` target (`mkdir -p functions/api && cp api/contact.mjs functions/api/contact.mjs`). By setting your Cloudflare Pages build command to `make build`, Cloudflare dynamically creates the required folder structure during deployment.
+- **Netlify:** `functions/netlify/contact.mjs` is a thin wrapper that imports `processRequest` from the master file and exposes it as a classic (`event`, `context`) handler. It has to live in its own file with no `export default`, because Netlify's function bundler treats any module with a default export as its newer Request/Response-style (v2) API and would otherwise route around the named `handler` export. `netlify.toml` points `functions` at that directory and rewrites `/api/*` to `/.netlify/functions/:splat`.
+- **Render / Coolify / Dokploy:** The included `server.mjs` natively imports the master file and serves it as a standard Node.js Express-like endpoint.
 
 ### 🔑 Contact Form Environment Variables
 
@@ -120,6 +124,6 @@ Regardless of where you deploy, the contact form requires the following environm
 ### 🏢 Self-Hosted PaaS (Coolify, Dokploy) & Container Platforms (Render, Heroku)
 
 If you deploy this project to platforms like **Coolify**, **Dokploy**, **Render**, or **Heroku**, do NOT deploy it as a "Static Site". Instead, deploy it as a **Node.js Web Service**.
-Thanks to the included `server.js` and `package.json`, these platforms will automatically start a native web server that serves both your static portfolio and the backend API on the same domain seamlessly.
+Thanks to the included `server.mjs` and `Makefile` (`make start`), these platforms will automatically start a native web server that serves both your static portfolio and the backend API on the same domain seamlessly.
 
 *(Note: If you deploy to **GitHub Pages**, the static site will work perfectly, but because GitHub Pages has no backend support, you must use an external form service like Formspree).*

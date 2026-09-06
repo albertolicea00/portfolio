@@ -1,4 +1,4 @@
-import { processRequest } from '../../api/contact.js';
+import { processRequest } from '../../api/contact.mjs';
 
 export async function handler(event, context) {
     if (event.httpMethod !== 'POST') {

@@ -21,4 +21,4 @@ jobs:
 
     - name: Run Modular Verification Suite
       run: |
-        python3 tests/run_all.py
+        make test

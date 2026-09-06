@@ -2,8 +2,8 @@ services:
   - type: web
     name: alberto-portfolio
     env: node
-    buildCommand: npm install
-    startCommand: npm start
+    buildCommand: make build
+    startCommand: make start
     envVars:
       - key: TELEGRAM_BOT_TOKEN
         sync: false
