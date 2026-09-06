@@ -1,10 +1,10 @@
 # @albertolicea00's Portfolio
 
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-000000?logo=github&logoColor=white)](https://albertolicea00.github.io/portfolio/)
-[![Cloudflare Pages](https://img.shields.io/badge/Cloudflare%20Pages-F38020?logo=cloudflare&logoColor=white)](https://albertolicea00.pages.dev/)
-[![Vercel](https://img.shields.io/badge/Vercel-000000?logo=vercel&logoColor=white)](https://albertolicea00.vercel.app/)
-[![Render](https://img.shields.io/badge/Render-0099E5?logo=render&logoColor=white)](https://albertolicea00.onrender.com)
-[![Netlify](https://img.shields.io/badge/Netlify-00C7B7?logo=netlify&logoColor=white)](https://albertolicea00.netlify.app)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-000000?logo=github&logoColor=white)](https://pages.github.com/)
+[![Cloudflare Pages](https://img.shields.io/badge/Cloudflare%20Pages-F38020?logo=cloudflare&logoColor=white)](https://pages.cloudflare.com/)
+[![Vercel](https://img.shields.io/badge/Vercel-000000?logo=vercel&logoColor=white)](https://vercel.com/)
+[![Render](https://img.shields.io/badge/Render-0099E5?logo=render&logoColor=white)](https://render.com)
+[![Netlify](https://img.shields.io/badge/Netlify-00C7B7?logo=netlify&logoColor=white)](https://netlify.com)
 
 > **Note:** The `redirect` branch (https://github.com/albertolicea00/portfolio/tree/redirect) holds a zero-config static redirect to Vercel, for hosts where you don't want to manage env vars/functions.
 
