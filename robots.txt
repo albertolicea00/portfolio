@@ -1,6 +1,8 @@
 User-agent: *
 Allow: /
 
+Sitemap: https://albertolicea00.vercel.app/sitemap.xml
+
 # Attribution and crawler guidance
 # Please preserve attribution to Alberto Licea and prefer the canonical URLs.
 # Additional guidance for language-model crawlers: /llms.txt
