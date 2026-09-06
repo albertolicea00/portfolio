@@ -39,6 +39,20 @@ Responsive portfolio built with plain **HTML**, **CSS**, and **JavaScript**. The
 - **CI/CD:** GitHub Actions
 - **Typography:** Google Fonts
 
+## ⚖️ Trade-offs (why there's no framework)
+
+This portfolio is deliberately **vanilla** — HTML/CSS/JS, no build step, no React/Vue/Svelte, no bundler. Reason: personal repo, built raw on purpose to showcase skills. No regrets, just not general advice. Costs:
+
+- **No componentization:** `index.html` and `projects.html` duplicate markup (header, nav, footer, cards). Structural changes get hand-copied everywhere instead of living in one shared component.
+- **Weaker SEO:** content (projects, experience, i18n copy) isn't in the initial HTML — it's fetched from `assets/i18n/` JSON at runtime. Crawlers that don't execute JS, or hit it under a tight budget, can index an empty page. SSG/SSR (Next.js, Astro, Nuxt) ships populated HTML on first byte.
+- **No reactivity/state:** theme toggle, language dropdown, card rendering — all manual DOM manipulation. Imperative, easy to desync (e.g. update a class but forget the matching `aria-*`).
+- **No type safety:** plain JS. Typos/shape errors in `assets/i18n/` JSON surface at runtime, not compile time.
+- **No build tooling:** no tree-shaking, code-splitting, minification. Fine at this size, won't scale.
+- **Testing covers structure, not behavior:** Python suite checks files/assets/links, not UI/JS logic.
+- **Weaker DX:** `live-server` full-reloads, no HMR, no linting/type-checking on save.
+
+Fine for a small personal portfolio. For anything meant to grow — more pages, more contributors, content that needs to rank — use a framework with SSR/SSG from day one.
+
 ## 📁 Project Structure
 
 ```bash
