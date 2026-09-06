@@ -41,6 +41,8 @@ Responsive portfolio built with plain **HTML**, **CSS**, and **JavaScript**. The
 
 ## ⚖️ Trade-offs (why there's no framework)
 
+> Tracked in [#6](https://github.com/albertolicea00/portfolio/issues/6).
+
 This portfolio is deliberately **vanilla** — HTML/CSS/JS, no build step, no React/Vue/Svelte, no bundler. Reason: personal repo, built raw on purpose to showcase skills. No regrets, just not general advice. Costs:
 
 - **No componentization:** `index.html` and `projects.html` duplicate markup (header, nav, footer, cards). Structural changes get hand-copied everywhere instead of living in one shared component.
