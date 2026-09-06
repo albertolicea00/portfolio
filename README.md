@@ -21,7 +21,7 @@ Responsive portfolio built with plain **HTML**, **CSS**, and **JavaScript**. The
 ## ✨ Features
 
 - 🌓 **Theme Toggle:** Light and dark mode support
-- 🌍 **Localization:** Multi-language interface with automatic browser detection and English fallback
+- 🌍 **Localization:** English is static in the HTML; other languages load on demand via a `?lang=` URL parameter
 - ⌨️ **Accessibility:** Custom language dropdown with keyboard support
 - 🗂️ **Dynamic Content:** Project and experience sections rendered dynamically from JSON
 - 📱 **Responsive:** Fluid layout optimized for desktop, tablet, and mobile
@@ -104,11 +104,13 @@ Each file in `assets/i18n/` contains:
 - `projects`: Project cards rendered on the home page and projects page
 - `experience`: Timeline entries rendered dynamically
 
-`script.js` loads `assets/i18n/{lang}.json`, applies translated UI strings, and falls back to `en.json` if a language file cannot be loaded.
+`script.js` loads `assets/i18n/{lang}.json` and applies translated UI strings when a visitor picks a non-English language via `?lang=`. English itself isn't one of these files at all — it's static markup in `index.html`/`projects.html`, so there's nothing to fetch or fall back to for the default case, and no English JSON file exists anywhere in the repo.
+
+`scripts/html_i18n_baseline.py` reads that static English markup directly (no JSON involved) to build the same `{home, projects, experience}` shape the old `en.json` used to provide. `tests/test_structure.py`, `tests/test_assets.py`, and `scripts/validate_translations.py` all import it as their English baseline for comparing the other language files — so editing `index.html`/`projects.html` is editing the baseline. `script.js`'s cat/alien joke-language generators independently read the live DOM the same way, at runtime, in the browser.
 
 ## 🔄 Updating Content
 
-1. Edit `assets/i18n/en.json` to update the default English content.
+1. Edit the static English text directly in `index.html`/`projects.html` — that's the only place English content lives. `make test` will flag it if a project/experience entry drifts out of sync between the two pages, or if a locale file's structure no longer lines up.
 2. Mirror those changes in the other language files (`es.json`, etc.) if you want localized versions.
 3. Add or update entries in the `projects` array to change the portfolio cards.
 4. Add or update entries in the `experience` array to change the timeline.

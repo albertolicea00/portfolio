@@ -7,6 +7,9 @@ import sys
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 I18N_DIR = os.path.join(ROOT_DIR, "assets", "i18n")
 
+sys.path.insert(0, os.path.join(ROOT_DIR, "scripts"))
+from html_i18n_baseline import build_baseline_from_html
+
 def print_success(message):
     print(f"\033[92m✔ {message}\033[0m")
 
@@ -52,16 +55,30 @@ def main():
     
     json_files = [f for f in os.listdir(I18N_DIR) if f.endswith(".json")]
     json_files.sort()
-    
+
     overall_success = True
-    
+
+    # English isn't a JSON file to check anymore — it's read straight from
+    # index.html/projects.html, which is also where its image/logo paths
+    # live, so check those the same way as any other locale.
+    print("Checking assets referenced in: 'index.html / projects.html (English)'")
+    errors = verify_assets_exist(build_baseline_from_html(ROOT_DIR))
+    if errors:
+        print_failure("Local assets missing in the static English HTML:")
+        for err in errors:
+            print(f"  - {err}")
+        overall_success = False
+    else:
+        print_success("All local assets exist on disk")
+    print()
+
     for f_name in json_files:
         f_path = os.path.join(I18N_DIR, f_name)
         data = load_json(f_path)
-        
+
         print(f"Checking assets referenced in: '{f_name}'")
         errors = verify_assets_exist(data)
-        
+
         if errors:
             print_failure(f"Local assets missing in '{f_name}':")
             for err in errors:
@@ -70,7 +87,7 @@ def main():
         else:
             print_success("All local assets exist on disk")
         print()
-        
+
     if overall_success:
         print_success("Asset integrity test completed successfully!")
         sys.exit(0)

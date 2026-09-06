@@ -9,6 +9,8 @@ import time
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 I18N_DIR = os.path.join(ROOT_DIR, "assets", "i18n")
 
+from html_i18n_baseline import build_baseline_from_html
+
 # Try to import deep-translator, with friendly diagnostic help if not installed
 try:
     from deep_translator import GoogleTranslator, MyMemoryTranslator
@@ -216,15 +218,11 @@ def main():
         print("Tip: Run this script with the \033[1m--fix\033[0m flag to automatically translate")
         print("     and repair any untranslated fields using Google & MyMemory translation fallback.\n")
         
-    en_path = os.path.join(I18N_DIR, "en.json")
-    if not os.path.exists(en_path):
-        print(f"\033[91mError: Baseline en.json not found at {en_path}!\033[0m")
-        sys.exit(1)
-        
-    with open(en_path, "r", encoding="utf-8") as f:
-        en_data = json.load(f)
-        
-    target_files = [f for f in os.listdir(I18N_DIR) if f.endswith(".json") and f not in ["en.json", "en.cav.json", "es.cav.json"]]
+    # English isn't a JSON file anymore — the baseline is read straight from
+    # the static English markup in index.html/projects.html.
+    en_data = build_baseline_from_html(ROOT_DIR)
+
+    target_files = [f for f in os.listdir(I18N_DIR) if f.endswith(".json") and f not in ["en.cav.json", "es.cav.json"]]
     target_files.sort()
     
     all_clean = True

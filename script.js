@@ -1,90 +1,22 @@
 /**
  * PORTFOLIO ARCHITECTURE
- * Loads the active language on demand and preloads the rest in the background.
- * Auto-detects browser language (navigator.language) with fallback to 'en'.
+ * English is static in the HTML (no fetch/render, no fallback logic — it's
+ * just what's already there). The URL is the only source of truth for which
+ * other language to show: a ?lang=<code> query param. No param (or one that
+ * doesn't match a supported language) means the DOM is left exactly as-is.
+ * Picking a language navigates to that URL (a real page load); nothing is
+ * swapped in place. Languages preload in the background after load so a
+ * later switch's fetch is served from the HTTP cache instantly.
  */
 
-const SUPPORTED_LANGS = ['en', 'en.cav', 'es', 'es.cav', 'de', 'fr', 'it', 'ja', 'ko', 'pt', 'ru', 'zh', 'cat', 'alien'];
-const FALLBACK_LANG = 'en';
+// 'en' is intentionally absent: English is static in the HTML, not a
+// fetchable JSON language (see hydrateInitialContent/navigateToLanguage below).
+const SUPPORTED_LANGS = ['en.cav', 'es', 'es.cav', 'de', 'fr', 'it', 'ja', 'ko', 'pt', 'ru', 'zh', 'cat', 'alien'];
+const DEFAULT_LANG = 'en';
 const I18N_ASSET_VERSION = '20260531-1';
-const TECH_NAMES = {
-    'html': 'HTML',
-    'css': 'CSS',
-    'english': 'English',
-    'spanish': 'Español',
-    'csharp': 'C#',
-    'react-native': 'React Native',
-    'android-studio': 'Android Studio',
-    'nodejs': 'Node.js',
-    'mariadb': 'MariaDB',
-    'mssql': 'MS SQL',
-    'postgresql': 'PostgreSQL',
-    'mysql': 'MySQL',
-    'mongodb': 'MongoDB',
-    'sqlite': 'SQLite',
-    'aws': 'AWS',
-    'php': 'PHP',
-    'sql': 'SQL',
-    'livewire': 'Livewire',
-    'tailwind': 'Tailwind CSS',
-    'sass': 'Sass',
-    'vue': 'Vue.js',
-    'react': 'React',
-    'svelte': 'Svelte',
-    'astro': 'Astro',
-    'alpine': 'Alpine.js',
-    'django': 'Django',
-    'flask': 'Flask',
-    'express': 'Express.js',
-    'laravel': 'Laravel',
-    'firebase': 'Firebase',
-    'cordova': 'Cordova',
-    'xcode': 'Xcode',
-    'docker': 'Docker',
-    'azure': 'Azure',
-    'jenkins': 'Jenkins',
-    'git': 'Git',
-    'postman': 'Postman',
-    'linux': 'Linux',
-    'figma': 'Figma',
-    'procreate': 'Procreate',
-    'krita': 'Krita',
-    'canva': 'Canva',
-    'photoshop': 'Photoshop',
-    'illustrator': 'Illustrator',
-    'coreldraw': 'CorelDRAW',
-    'blender': 'Blender',
-    'autograph': 'Autograph',
-    'premiere-pro': 'Premiere Pro',
-    'after-effects': 'After Effects',
-    'unity': 'Unity',
-    'unreal-engine': 'Unreal Engine',
-    'pygame': 'Pygame',
-    'renpy': 'Ren\'Py',
-    'python': 'Python',
-    'javascript': 'JavaScript',
-    'typescript': 'TypeScript',
-    'swift': 'Swift',
-    'kotlin': 'Kotlin',
-    'java': 'Java',
-    'bash': 'Bash'
-};
-
-const TECH_CATEGORIES = [
-    { id: 'code', i18n: 'home.skills_section.categories.code', label: 'Programming & Languages', items: ["english", "spanish", "python", "javascript", "html", "css", "typescript", "swift", "kotlin", "java", "php", "csharp", "sql", "bash"] },
-    { id: 'frontend', i18n: 'home.skills_section.categories.frontend', label: 'Frontend', items: ["react", "vue", "svelte", "astro", "alpine", "livewire", "tailwind", "sass", "bootstrap"] },
-    { id: 'backend', i18n: 'home.skills_section.categories.backend', label: 'Backend', items: ["django", "flask", "nodejs", "express", "laravel", "firebase"] },
-    { id: 'mobile', i18n: 'home.skills_section.categories.mobile', label: 'Mobile', items: ["react-native", "cordova", "android-studio", "xcode"] },
-    { id: 'databases', i18n: 'home.skills_section.categories.databases', label: 'Databases', items: ["postgresql", "mysql", "mongodb", "sqlite", "mariadb", "mssql"] },
-    { id: 'devopsTools', i18n: 'home.skills_section.categories.devopsTools', label: 'DevOps & Tools', items: ["docker", "aws", "azure", "jenkins", "git", "postman", "linux"] },
-    { id: 'design', i18n: 'home.skills_section.categories.design', label: 'Design', items: ["figma", "procreate", "krita", "canva", "photoshop", "illustrator", "coreldraw"] },
-    { id: 'animationAndVideo', i18n: 'home.skills_section.categories.animationAndVideo', label: 'Animation & Video', items: ["blender", "autograph", "premiere-pro", "after-effects"] },
-    { id: 'gaming', i18n: 'home.skills_section.categories.gaming', label: 'Gaming', items: ["unity", "unreal-engine", "pygame", "renpy"] }
-];
-
-function formatTechName(key) {
-    return TECH_NAMES[key] || key.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
-}
+// Tech-stack chip names/categories are static HTML now (never translated),
+// so the TECH_NAMES/TECH_CATEGORIES lookup tables that used to drive
+// renderTechStack() no longer have a caller — removed along with it.
 const EXPERIENCE_START_DATE = { year: 2019, month: 0, day: 1 };
 const LANGUAGE_CONTROL_LABELS = {
     en: 'Select language',
@@ -150,14 +82,7 @@ const UI_GLYPHS = {
     themeDark: '\u263e',
     themeLight: '\u2600',
     menuClosed: '\u2630',
-    menuOpen: '\u2715',
-    external: {
-        type: 'sprite',
-        id: 'icon-external'
-    },
-    arrowRight: '\u2192',
-    download: '\u2193',
-    tools: '\ud83d\udee0'
+    menuOpen: '\u2715'
 };
 
 let siteData = null;
@@ -173,6 +98,59 @@ function getLanguageAssetPath(lang) {
     return `assets/i18n/${lang}.json?v=${I18N_ASSET_VERSION}`;
 }
 
+// The cat/alien generators need real English sentences to mutate. Rather
+// than fetch a separate JSON copy of English (a second source of truth to
+// keep in sync with the HTML), this reads the static English page itself —
+// the same DOM every visitor already has — once, before anything can have
+// changed it, and caches that snapshot for the rest of the session.
+let capturedEnglishSourceData = null;
+
+function setNestedPath(obj, path, value) {
+    const parts = path.split('.');
+    let node = obj;
+    for (let i = 0; i < parts.length - 1; i += 1) {
+        node = node[parts[i]] ??= {};
+    }
+    node[parts[parts.length - 1]] = value;
+}
+
+function captureEnglishSourceFromDom() {
+    if (capturedEnglishSourceData) return capturedEnglishSourceData;
+
+    const home = {};
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        setNestedPath(home, el.getAttribute('data-i18n'), el.innerHTML.trim());
+    });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        setNestedPath(home, el.getAttribute('data-i18n-placeholder'), el.placeholder);
+    });
+    document.querySelectorAll('[data-i18n-tooltip]').forEach(el => {
+        setNestedPath(home, el.getAttribute('data-i18n-tooltip'), el.getAttribute('data-tooltip') || el.textContent.trim());
+    });
+
+    const projects = Array.from(document.querySelectorAll('.project-title')).map(titleEl => {
+        const card = titleEl.closest('.project-card');
+        return {
+            id: Number(titleEl.id.replace('project-title-', '')),
+            title: titleEl.innerHTML,
+            description: card?.querySelector('.project-desc')?.innerHTML || '',
+            tags: Array.from(card?.querySelectorAll('.tag') || []).map(tag => tag.textContent)
+        };
+    });
+
+    const experience = Array.from(document.querySelectorAll('.timeline-item')).map(item => ({
+        date: item.querySelector('.timeline-date')?.textContent || '',
+        title: item.querySelector('h3')?.innerHTML || '',
+        desc: item.querySelector('p')?.innerHTML || '',
+        links: Array.from(item.querySelectorAll('.timeline-link')).map(link => ({
+            label: link.querySelector('span:not(.inline-icon)')?.textContent || ''
+        }))
+    }));
+
+    capturedEnglishSourceData = { home, projects, experience };
+    return capturedEnglishSourceData;
+}
+
 function getBaseLanguage(lang = currentLang) {
     return lang.split('.')[0];
 }
@@ -183,14 +161,15 @@ function getDocumentLanguageCode(lang = currentLang) {
 }
 
 function getLanguageConfigValue(map, lang = currentLang) {
-    return map[lang] || map[getBaseLanguage(lang)] || map[FALLBACK_LANG];
+    return map[lang] || map[getBaseLanguage(lang)] || map[DEFAULT_LANG];
 }
 
 function detectLanguage() {
-    const saved = localStorage.getItem('lang');
-    if (saved && SUPPORTED_LANGS.includes(saved)) return saved;
-    const nav = (navigator.language || 'en').split('-')[0].toLowerCase();
-    return SUPPORTED_LANGS.includes(nav) ? nav : FALLBACK_LANG;
+    // The URL is the only source of truth for which language to show — no
+    // localStorage, no browser-locale guessing. No ?lang= (or an
+    // unrecognized one) means: leave the DOM exactly as it already is.
+    const requested = new URLSearchParams(window.location.search).get('lang');
+    return requested && SUPPORTED_LANGS.includes(requested) ? requested : DEFAULT_LANG;
 }
 
 async function loadLanguage(lang) {
@@ -206,10 +185,9 @@ async function loadLanguage(lang) {
             console.warn(`Failed to load i18n/${lang}.json, falling back to ${baseLang}`);
             return loadLanguage(baseLang);
         }
-        if (lang !== FALLBACK_LANG) {
-            console.warn(`Failed to load i18n/${lang}.json, falling back to ${FALLBACK_LANG}`);
-            return loadLanguage(FALLBACK_LANG);
-        }
+        // No further fallback: English isn't a fetchable i18n file anymore
+        // (it's static in the HTML). Callers catch this and leave the
+        // static English page as-is.
         throw new Error('Failed to load i18n data');
     }
 }
@@ -238,7 +216,7 @@ async function fetchConcreteLanguage(lang) {
 async function loadSyntheticLanguage(lang) {
     if (syntheticLanguageCache[lang]) return syntheticLanguageCache[lang];
 
-    const baseData = await loadLanguage(FALLBACK_LANG);
+    const baseData = captureEnglishSourceFromDom();
     const generator = SYNTHETIC_LANGUAGE_GENERATORS[lang];
     const generatedData = generator(baseData);
     syntheticLanguageCache[lang] = generatedData;
@@ -377,14 +355,6 @@ function getLocalizedText(path, fallback = '') {
     return typeof value === 'string' ? value : fallback;
 }
 
-function escapeHtmlAttribute(value) {
-    return String(value)
-        .replace(/&/g, '&amp;')
-        .replace(/"/g, '&quot;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;');
-}
-
 function getSamePageHashTarget(link) {
     if (!(link instanceof HTMLAnchorElement)) return null;
 
@@ -396,27 +366,6 @@ function getSamePageHashTarget(link) {
     const targetId = decodeURIComponent(url.hash.slice(1));
     if (!targetId) return null;
     return document.getElementById(targetId);
-}
-
-function getInlineIconMarkup(name, className = 'inline-icon') {
-    const glyph = UI_GLYPHS[name];
-    if (!glyph) return '';
-
-    if (typeof glyph === 'string') {
-        return `<span class="${className}" aria-hidden="true">${glyph}</span>`;
-    }
-
-    if (glyph.type === 'sprite') {
-        return `
-            <span class="${className}" aria-hidden="true">
-                <svg class="glyph-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                    <use href="assets/icons/social-sprite.svg#${glyph.id}"></use>
-                </svg>
-            </span>
-        `;
-    }
-
-    return '';
 }
 
 function announceStatus(message) {
@@ -472,19 +421,21 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 async function hydrateInitialContent() {
+    // English is already fully rendered as static markup in the HTML (SEO:
+    // crawlers and first paint get real English content with no JS/JSON
+    // round-trip). Only fetch and render when the URL asked for a different
+    // language (see detectLanguage/navigateToLanguage).
+    if (currentLang === DEFAULT_LANG) {
+        scheduleBackgroundLanguagePreload();
+        return;
+    }
+
     try {
         siteData = await loadLanguage(currentLang);
-
-        if (currentLang === FALLBACK_LANG) {
-            updatePageText();
-            renderDynamicContent();
-            syncAccessibilityUI();
-        } else {
-            initLanguage();
-            renderDynamicContent();
-            syncAccessibilityUI();
-        }
-
+        initLanguage();
+        renderDynamicContent();
+        syncAccessibilityUI();
+        announceStatus(getLanguageConfigValue(LANGUAGE_CHANGED_LABELS) || 'Language changed');
         scheduleBackgroundLanguagePreload();
     } catch (error) {
         console.error('Error loading i18n data:', error);
@@ -500,6 +451,9 @@ function initApp() {
     initTooltipPositioning();
     initCursorParticles();
     updateExperienceYearsStat();
+    // Cards are static HTML now and never get torn down on a language
+    // switch, so this only ever needs to run once, here — not per-render.
+    initScrollAnimations();
 
     const yearSpan = document.getElementById('year');
     if (yearSpan) yearSpan.textContent = new Date().getFullYear();
@@ -950,22 +904,19 @@ function updateLanguageUI() {
     updateTokenSaverUI();
 }
 
-async function changeLanguage(nextLang) {
-    const targetLang = SUPPORTED_LANGS.includes(nextLang) ? nextLang : FALLBACK_LANG;
-
-    try {
-        siteData = await loadLanguage(targetLang);
-        currentLang = targetLang;
-    } catch {
-        currentLang = FALLBACK_LANG;
-        siteData = await loadLanguage(FALLBACK_LANG);
+// Picking a language is a real navigation, not an in-place fetch+swap: the
+// URL is the only state that matters, so a switch just sets/clears ?lang=
+// and reloads. hydrateInitialContent() (which runs on every load) does the
+// actual fetch+render for whatever the URL asks for.
+function navigateToLanguage(lang) {
+    const targetLang = SUPPORTED_LANGS.includes(lang) ? lang : DEFAULT_LANG;
+    const url = new URL(window.location.href);
+    if (targetLang === DEFAULT_LANG) {
+        url.searchParams.delete('lang');
+    } else {
+        url.searchParams.set('lang', targetLang);
     }
-
-    localStorage.setItem('lang', currentLang);
-    initLanguage();
-    renderDynamicContent();
-    syncAccessibilityUI();
-    announceStatus(getLanguageConfigValue(LANGUAGE_CHANGED_LABELS) || 'Language changed');
+    window.location.href = url.toString();
 }
 
 function initLanguage() {
@@ -1009,213 +960,90 @@ function updatePageText() {
 
 function renderDynamicContent() {
     if (!siteData) return;
-    renderTechStack();
+    // Tech-stack chips are static HTML (never translated: tech names stay the
+    // same in every language) and the category headers already carry
+    // data-i18n attributes, so updatePageText() alone keeps them in sync —
+    // no render step needed for that section anymore.
     renderProjects();
     renderExperience();
 }
 
-function renderTechStack() {
-    const container = document.getElementById('tech-stack-container');
-    if (!container) return;
-
-    let html = '';
-    TECH_CATEGORIES.forEach((category, index) => {
-        const isHidden = index > 0 ? 'is-hidden' : '';
-        const chipsHtml = category.items.map(item => {
-            const name = formatTechName(item);
-            return `
-                <div class="tech-chip" role="listitem">
-                    <img src="assets/icons/tech/${item}.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy">
-                    <span>${name}</span>
-                </div>
-            `;
-        }).join('');
-        
-        const categoryLabel = getLocalizedText(category.i18n, category.label);
-        html += `
-            <div class="tech-category ${isHidden}" data-tech-category>
-                <h4 class="tech-category-title" data-i18n="${category.i18n}">${categoryLabel}</h4>
-                <div class="tech-chips" role="list" aria-label="${categoryLabel}">
-                    ${chipsHtml}
-                </div>
-            </div>
-        `;
-    });
-    
-    // Add Ver más button
-    const btnText = getLocalizedText('home.skills_section.view_more', 'View More');
-    const tooltipText = getLocalizedText('home.skills_section.view_more_tooltip', 'Click to expand');
-    html += `
-        <div class="tech-expand-container">
-            <button class="tech-expand-btn pulse-animation" id="tech-expand-btn" data-i18n-tooltip="home.skills_section.view_more_tooltip" data-tooltip="${tooltipText}">
-                <span id="tech-expand-text" data-i18n="home.skills_section.view_more">${btnText}</span>
-            </button>
-        </div>
-    `;
-    
-    container.innerHTML = html;
-
-    const expandBtn = document.getElementById('tech-expand-btn');
-    if (expandBtn) {
-        expandBtn.addEventListener('click', () => {
-            const hiddenCats = container.querySelectorAll('.tech-category.is-hidden');
-            const isExpanded = hiddenCats.length === 0;
-            
-            if (isExpanded) {
-                // Collapse
-                const allCats = container.querySelectorAll('[data-tech-category]');
-                allCats.forEach((cat, idx) => {
-                    if (idx > 0) cat.classList.add('is-hidden');
-                });
-                const textEl = document.getElementById('tech-expand-text');
-                textEl.setAttribute('data-i18n', 'home.skills_section.view_more');
-                textEl.textContent = getLocalizedText('home.skills_section.view_more', 'View More');
-                expandBtn.setAttribute('data-i18n-tooltip', 'home.skills_section.view_more_tooltip');
-                expandBtn.setAttribute('data-tooltip', getLocalizedText('home.skills_section.view_more_tooltip', 'Click to expand'));
-                expandBtn.classList.add('pulse-animation');
-            } else {
-                // Expand
-                hiddenCats.forEach(cat => cat.classList.remove('is-hidden'));
-                const textEl = document.getElementById('tech-expand-text');
-                textEl.setAttribute('data-i18n', 'home.skills_section.view_less');
-                textEl.textContent = getLocalizedText('home.skills_section.view_less', 'View Less');
-                expandBtn.setAttribute('data-i18n-tooltip', 'home.skills_section.view_less_tooltip');
-                expandBtn.setAttribute('data-tooltip', getLocalizedText('home.skills_section.view_less_tooltip', 'Click to collapse'));
-                expandBtn.classList.remove('pulse-animation');
-            }
-        });
-    }
-}
-
+// Project/experience cards are static HTML now (baked into index.html /
+// projects.html). Their DOM shape never differs between languages — only
+// the text does (structure/count parity across locales is enforced by
+// tests/test_structure.py) — so a language switch just swaps text on the
+// existing nodes instead of tearing down and rebuilding the cards.
 function renderProjects() {
-    const recentProjectsContainer = document.getElementById('recent-projects-container');
-    const allProjectsContainer = document.getElementById('all-projects-container');
-
-    if (!recentProjectsContainer && !allProjectsContainer) return;
-
-    const containers = [
-        { el: recentProjectsContainer, filter: p => p.featured },
-        { el: allProjectsContainer, filter: () => true }
-    ];
+    if (!siteData) return;
 
     const viewProjectLabel = getLocalizedText('home.common.view_project', 'View Project');
     const repoLabel = getLocalizedText('home.common.repository', 'Repository');
     const liveProjectA11y = getLocalizedText('home.accessibility.view_live_project', 'Open live project in a new tab');
     const repoA11y = getLocalizedText('home.accessibility.view_repository', 'Open repository in a new tab');
     const technologiesLabel = getLocalizedText('home.accessibility.technologies_used', 'Technologies used');
-    const comingSoonTitle = getLocalizedText('home.common.coming_soon_title', 'Coming Soon');
-    const comingSoonText = getLocalizedText('home.common.coming_soon', 'Coming soon!');
 
-    containers.forEach(item => {
-        if (!item.el) return;
-        item.el.innerHTML = '';
-        const filteredProjects = siteData.projects.filter(item.filter);
+    siteData.projects.forEach(project => {
+        const titleEl = document.getElementById(`project-title-${project.id}`);
+        if (!titleEl) return; // not shown on this page (e.g. non-featured on the homepage)
+        const card = titleEl.closest('.project-card');
 
-        if (filteredProjects.length === 0) {
-            const comingSoon = document.createElement('div');
-            comingSoon.className = 'coming-soon-box glass-panel';
-            comingSoon.style.cssText = 'padding:4rem;width:100%;grid-column:1/-1;text-align:center';
-            comingSoon.innerHTML = `
-                ${getInlineIconMarkup('tools', 'coming-soon-icon')}
-                <h3 style="font-size:1.8rem;margin-bottom:1rem;">${comingSoonTitle}</h3>
-                <p style="opacity:0.8;font-size:1.1rem;">${comingSoonText}</p>
-            `;
-            item.el.appendChild(comingSoon);
-            return;
+        titleEl.innerHTML = project.title;
+
+        const descEl = document.getElementById(`project-desc-${project.id}`);
+        if (descEl) descEl.innerHTML = project.description;
+
+        const figcaption = card.querySelector('figcaption');
+        if (figcaption) figcaption.textContent = project.description || project.title;
+
+        const tagsEl = card.querySelector('.project-tags');
+        if (tagsEl) {
+            tagsEl.setAttribute('aria-label', `${technologiesLabel}: ${project.tags.join(', ')}`);
+            tagsEl.innerHTML = project.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
         }
 
-        filteredProjects.forEach(project => {
-            const card = document.createElement('article');
-            card.className = 'project-card';
-            const titleId = `project-title-${project.id}`;
-            const descId = `project-desc-${project.id}`;
-            const imageCaptionId = `project-image-caption-${project.id}`;
-            const tagsHtml = project.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
-            const projectTitle = project.title;
-            const projectDescription = project.description;
-            const techList = project.tags.join(', ');
-            const projectImageCaption = projectDescription || projectTitle;
-            const safeProjectImageCaption = escapeHtmlAttribute(projectImageCaption);
-
-            card.innerHTML = `
-                <figure class="project-img-container" role="img" aria-labelledby="${titleId}" aria-describedby="${imageCaptionId}">
-                    <img src="${project.image}" alt="" aria-hidden="true" class="project-img" loading="lazy" decoding="async">
-                    <figcaption id="${imageCaptionId}" class="sr-only">${safeProjectImageCaption}</figcaption>
-                </figure>
-                <div class="project-content">
-                    <h3 class="project-title" id="${titleId}">${projectTitle}</h3>
-                    <div class="project-tags" aria-label="${technologiesLabel}: ${techList}">${tagsHtml}</div>
-                    <p class="project-desc" id="${descId}">${projectDescription}</p>
-                    <div class="project-links">
-                        <a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--primary" aria-label="${liveProjectA11y}: ${projectTitle}" data-tooltip="${liveProjectA11y}: ${projectTitle}">
-                            ${getInlineIconMarkup('external')} ${viewProjectLabel}
-                        </a>
-                        <a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--secondary" aria-label="${repoA11y}: ${projectTitle}" data-tooltip="${repoA11y}: ${projectTitle}">
-                            ${getInlineIconMarkup('external')} ${repoLabel}
-                        </a>
-                    </div>
-                </div>
-            `;
-            card.setAttribute('aria-labelledby', titleId);
-            card.setAttribute('aria-describedby', descId);
-            item.el.appendChild(card);
-        });
+        const [liveLink, repoLink] = card.querySelectorAll('.project-btn');
+        if (liveLink) {
+            liveLink.setAttribute('aria-label', `${liveProjectA11y}: ${project.title}`);
+            liveLink.setAttribute('data-tooltip', `${liveProjectA11y}: ${project.title}`);
+            const label = liveLink.querySelector('.project-btn-label');
+            if (label) label.textContent = viewProjectLabel;
+        }
+        if (repoLink) {
+            repoLink.setAttribute('aria-label', `${repoA11y}: ${project.title}`);
+            repoLink.setAttribute('data-tooltip', `${repoA11y}: ${project.title}`);
+            const label = repoLink.querySelector('.project-btn-label');
+            if (label) label.textContent = repoLabel;
+        }
     });
-    initScrollAnimations();
 }
 
 function renderExperience() {
-    const container = document.getElementById('experience-timeline');
-    if (!container) return;
-
-    container.innerHTML = '';
+    if (!siteData) return;
     const websiteA11y = getLocalizedText('home.accessibility.view_company_site', 'Open website in a new tab');
 
     siteData.experience.forEach((exp, index) => {
-        const logoClasses = [
-            'timeline-logo-frame',
-            exp.logoWide ? 'is-wide' : '',
-            exp.logoDark ? 'is-dark' : '',
-            exp.logoLight ? 'is-light' : ''
-        ].filter(Boolean).join(' ');
-        const titleId = `timeline-title-${index}`;
-        const descId = `timeline-desc-${index}`;
+        const titleEl = document.getElementById(`timeline-title-${index}`);
+        if (!titleEl) return;
+        const item = titleEl.closest('.timeline-item');
 
-        const logoHtml = exp.logo ? `
-            <div class="${logoClasses}" aria-hidden="true">
-                <img src="${exp.logo}" alt="" aria-hidden="true" class="timeline-logo" loading="lazy" decoding="async">
-            </div>
-        ` : '';
+        const dateEl = item?.querySelector('.timeline-date');
+        if (dateEl) dateEl.textContent = exp.date;
 
-        const linksHtml = (exp.links || []).map(link => {
+        titleEl.innerHTML = exp.title;
+
+        const descEl = document.getElementById(`timeline-desc-${index}`);
+        if (descEl) descEl.innerHTML = exp.desc;
+
+        const linkEls = item?.querySelectorAll('.timeline-link') || [];
+        (exp.links || []).forEach((link, linkIndex) => {
+            const linkEl = linkEls[linkIndex];
+            if (!linkEl) return;
             const label = typeof link.label === 'string' ? link.label : link.url;
-            return `
-                <a href="${link.url}" target="_blank" rel="noopener noreferrer" class="timeline-link" aria-label="${websiteA11y}: ${label}" data-tooltip="${websiteA11y}: ${label}">
-                    ${getInlineIconMarkup('external')}
-                    <span>${label}</span>
-                </a>
-            `;
-        }).join('');
-
-        const item = document.createElement('article');
-        item.className = 'timeline-item';
-        item.innerHTML = `
-            <div class="timeline-dot" aria-hidden="true"></div>
-            <div class="timeline-date">${exp.date}</div>
-            <div class="timeline-content glass-panel">
-                <div class="timeline-header">
-                    ${logoHtml}
-                    <div class="timeline-copy">
-                        <h3 id="${titleId}">${exp.title}</h3>
-                        <p id="${descId}">${exp.desc}</p>
-                    </div>
-                </div>
-                ${linksHtml ? `<div class="timeline-links">${linksHtml}</div>` : ''}
-            </div>
-        `;
-        item.setAttribute('aria-labelledby', titleId);
-        item.setAttribute('aria-describedby', descId);
-        container.appendChild(item);
+            linkEl.setAttribute('aria-label', `${websiteA11y}: ${label}`);
+            linkEl.setAttribute('data-tooltip', `${websiteA11y}: ${label}`);
+            const labelEl = linkEl.querySelector('span:not(.inline-icon)');
+            if (labelEl) labelEl.textContent = label;
+        });
     });
 }
 
@@ -1328,6 +1156,36 @@ function setupEventListeners() {
     const { langToggle, langDropdown, langOptions } = getLanguageElements();
     const { tokenSaverToggles } = getTokenSaverElements();
 
+    // Tech-stack expand/collapse: the categories are static HTML and persist
+    // across language switches, so this listener is attached once, here,
+    // instead of being re-attached on every render.
+    const techStackContainer = document.getElementById('tech-stack-container');
+    const techExpandBtn = document.getElementById('tech-expand-btn');
+    techExpandBtn?.addEventListener('click', () => {
+        const hiddenCats = techStackContainer.querySelectorAll('.tech-category.is-hidden');
+        const isExpanded = hiddenCats.length === 0;
+        const textEl = document.getElementById('tech-expand-text');
+
+        if (isExpanded) {
+            const allCats = techStackContainer.querySelectorAll('[data-tech-category]');
+            allCats.forEach((cat, idx) => {
+                if (idx > 0) cat.classList.add('is-hidden');
+            });
+            textEl.setAttribute('data-i18n', 'home.skills_section.view_more');
+            textEl.textContent = getLocalizedText('home.skills_section.view_more', 'View More');
+            techExpandBtn.setAttribute('data-i18n-tooltip', 'home.skills_section.view_more_tooltip');
+            techExpandBtn.setAttribute('data-tooltip', getLocalizedText('home.skills_section.view_more_tooltip', 'Click to expand'));
+            techExpandBtn.classList.add('pulse-animation');
+        } else {
+            hiddenCats.forEach(cat => cat.classList.remove('is-hidden'));
+            textEl.setAttribute('data-i18n', 'home.skills_section.view_less');
+            textEl.textContent = getLocalizedText('home.skills_section.view_less', 'View Less');
+            techExpandBtn.setAttribute('data-i18n-tooltip', 'home.skills_section.view_less_tooltip');
+            techExpandBtn.setAttribute('data-tooltip', getLocalizedText('home.skills_section.view_less_tooltip', 'Click to collapse'));
+            techExpandBtn.classList.remove('pulse-animation');
+        }
+    });
+
     const setMenuState = (isOpen, shouldAnnounce = false) => {
         if (!navLinks || !menuToggle) return;
         navLinks.classList.toggle('active', isOpen);
@@ -1349,12 +1207,6 @@ function setupEventListeners() {
         const startIndex = currentIndex >= 0 ? currentIndex : fallbackIndex >= 0 ? fallbackIndex : 0;
         const nextIndex = (startIndex + direction + langOptions.length) % langOptions.length;
         langOptions[nextIndex]?.focus();
-    };
-
-    const handleLanguageSelection = async lang => {
-        if (!lang) return;
-        await changeLanguage(lang);
-        setLanguageMenuState(false);
     };
 
     // Theme Toggle
@@ -1387,26 +1239,23 @@ function setupEventListeners() {
         focusLanguageOption();
     });
 
-    langDropdown?.addEventListener('click', async event => {
+    langDropdown?.addEventListener('click', event => {
         const option = event.target.closest('[data-lang]');
-        if (!option) return;
-        await handleLanguageSelection(option.dataset.lang);
-        langToggle?.focus();
+        if (option?.dataset.lang) navigateToLanguage(option.dataset.lang);
     });
 
     tokenSaverToggles.forEach(tokenSaverToggle => {
-        tokenSaverToggle.addEventListener('click', async () => {
+        tokenSaverToggle.addEventListener('click', () => {
             const baseLang = getBaseLanguage(currentLang);
             const tokenSaverConfig = TOKEN_SAVER_VARIANTS[baseLang];
             if (!tokenSaverConfig) return;
 
             const nextLang = currentLang === tokenSaverConfig.variant ? baseLang : tokenSaverConfig.variant;
-            await handleLanguageSelection(nextLang);
-            tokenSaverToggle.focus();
+            navigateToLanguage(nextLang);
         });
     });
 
-    langDropdown?.addEventListener('keydown', async event => {
+    langDropdown?.addEventListener('keydown', event => {
         const option = event.target.closest('[data-lang]');
         if (!option) return;
 
@@ -1436,8 +1285,7 @@ function setupEventListeners() {
 
         if (event.key === 'Enter' || event.key === ' ') {
             event.preventDefault();
-            await handleLanguageSelection(option.dataset.lang);
-            langToggle?.focus();
+            if (option.dataset.lang) navigateToLanguage(option.dataset.lang);
             return;
         }
 

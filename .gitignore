@@ -18,6 +18,7 @@ Thumbs.db
 
 # Temp files
 node_modules
+*.pyc
 
 # Build artifact from `make build` (Cloudflare Pages)
 functions/api/contact.mjs
