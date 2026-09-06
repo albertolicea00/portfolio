@@ -41,22 +41,43 @@ Responsive portfolio built with plain **HTML**, **CSS**, and **JavaScript**. The
 
 ## 📁 Project Structure
 
-```text
+```bash
 ├── index.html
 ├── projects.html
 ├── style.css
 ├── script.js
-├── functions/            # Used by Cloudflare Pages during deployment
-├── api/                  # Unified Serverless backend function (Contact form)
+├── server.mjs              # Local dev server + Node backend for Render/Coolify/Dokploy
+├── Makefile                 # build, start, dev, test, and helper-script targets
+├── functions/
+│   ├── api/                # Build output for Cloudflare Pages (`make build` copies contact.mjs here)
+│   └── netlify/            # Netlify Functions wrapper around contact.mjs
+├── api/
+│   └── contact.mjs         # Master serverless handler, reused by every deployment target
 ├── assets/
-│   ├── i18n/             # JSON localization files (en.json, es.json)
-│   ├── icons/            # Local SVG icons
-│   ├── img/              # Image assets
-│   └── pdf/              # Document assets (e.g., Resumes)
-├── scripts/              # Helper scripts (translations, icons, etc.)
-├── tests/                # Python tests for structure, links, and assets
-├── .github/workflows/    # CI/CD automation
-├── LICENSE               # MIT License
+│   ├── i18n/               # Per-language JSON content (en, es, de, fr, it, ja, ko, pt, ru, zh)
+│   ├── icons/
+│   │   ├── tech/           # Local tech-stack SVG icons
+│   │   ├── social/         # Social platform icons + social-sprite.svg
+│   │   ├── flags/           # Language-switcher flag icons
+│   │   └── emojis/         # Local emoji replacements (SVG)
+│   ├── img/                # avatar, hero background, apps/ and company/ screenshots
+│   └── pdf/                # CV....pdf
+├── scripts/                # Standalone helper scripts (not shipped with the site)
+│   ├── fetch_icons.py      # Downloads missing tech icons via simple-icons
+│   ├── validate_translations.py    # Audits assets/i18n/ for missing/duplicate/untranslated keys
+│   └── package.json        # simple-icons dependency used by fetch_icons.py
+├── tests/                  # Python test suite
+│   ├── run_all.py          # Orchestrator (`make test`)
+│   ├── test_structure.py
+│   ├── test_assets.py
+│   └── test_links.py
+├── .github/workflows/test.yml  # CI: runs the test suite on push/PR
+├── netlify.toml            # Netlify functions + /api/* redirect config
+├── vercel.json             # Vercel config
+├── render.yaml             # Render deployment config
+├── robots.txt / sitemap.xml    # SEO
+├── llms.txt
+├── LICENSE                 # MIT License
 └── README.md
 ```
 
@@ -79,7 +100,12 @@ Each file in `assets/i18n/` contains:
 
 ## 💻 Local Preview
 
-Open `index.html` directly in the browser for a quick check, or serve the folder with any static file server. 
+Open `index.html` directly in the browser for a quick check, or serve the folder with auto-reload:
+```bash
+make dev
+```
+This runs `live-server` and opens the browser automatically.
+
 To test the full API and contact form locally, run the included server:
 ```bash
 make start
@@ -90,6 +116,7 @@ Run the Python test suite with:
 ```bash
 make test
 ```
+Or run a single suite (`make test-structure`, `make test-assets`, `make test-links`). Helper scripts are available too: `make fetch-icons` and `make validate-translations`.
 
 ## 🚀 Deployment
 
