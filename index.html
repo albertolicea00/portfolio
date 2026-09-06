@@ -78,7 +78,6 @@
     <link rel="canonical" href="https://albertolicea00.vercel.app/" />
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <link rel="preload" as="image" href="assets/img/avatar.webp" />
-    <link rel="preload" as="fetch" href="assets/i18n/en.json?v=20260428-2" />
     <link rel="icon" type="image/png" href="assets/img/avatar.png" />
   </head>
   <body class="dark-theme">
@@ -118,7 +117,7 @@
 
     <nav class="navbar" id="site-navigation" aria-label="Primary navigation">
       <div class="nav-container">
-        <a href="index.html" class="logo"
+        <a href="index.html" class="logo" aria-label="Home"
           ><span>@</span>albertolicea00<span>.</span></a
         >
         <ul class="nav-links" id="primary-navigation">
@@ -145,6 +144,8 @@
               class="theme-toggle"
               id="theme-toggle"
               type="button"
+              aria-label="Switch to light theme"
+              data-tooltip="Switch to light theme"
               aria-describedby="site-a11y-help"
             >
               <span class="toggle-glyph" aria-hidden="true">☾</span>
@@ -194,7 +195,8 @@
           <button
             class="menu-toggle"
             type="button"
-            aria-label="Open menu"
+            aria-label="Open navigation menu"
+            data-tooltip="Open navigation menu"
             aria-controls="primary-navigation"
             aria-expanded="false"
             aria-describedby="site-a11y-help"
@@ -247,6 +249,8 @@
               rel="noopener noreferrer"
               class="social-icon"
               data-social="github"
+              aria-label="Open GitHub profile in a new tab"
+              data-tooltip="Open GitHub profile in a new tab"
               aria-describedby="site-a11y-help"
               ><svg class="social-icon-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
                 <use href="assets/icons/social-sprite.svg#icon-github"></use></svg
@@ -257,6 +261,8 @@
               rel="noopener noreferrer"
               class="social-icon"
               data-social="linkedin"
+              aria-label="Open LinkedIn profile in a new tab"
+              data-tooltip="Open LinkedIn profile in a new tab"
               aria-describedby="site-a11y-help"
               ><svg class="social-icon-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
                 <use href="assets/icons/social-sprite.svg#icon-linkedin"></use></svg
@@ -266,6 +272,8 @@
               class="outline-btn"
               id="hero-contact-link"
               data-i18n="home.hero.contact"
+              aria-label="Jump to contact section"
+              data-tooltip="Jump to contact section"
               aria-describedby="site-a11y-help"
               >Contact Me</a
             >
@@ -275,6 +283,8 @@
               class="outline-btn"
               id="download-cv-link"
               style="border-color: var(--brand-yellow)"
+              aria-label="Download CV in PDF format"
+              data-tooltip="Download CV in PDF format"
               aria-describedby="site-a11y-help"
               ><span class="inline-icon" aria-hidden="true">↓</span>
               <span data-i18n="home.hero.download_cv">Download CV</span></a
@@ -285,7 +295,8 @@
           href="#projects"
           class="scroll-indicator"
           id="scroll-projects-link"
-          aria-label="Scroll down"
+          aria-label="Scroll to projects section"
+          data-tooltip="Scroll to projects section"
           aria-describedby="site-a11y-help"
         >
           <div class="mouse" aria-hidden="true">
@@ -321,7 +332,82 @@
             A selection of my latest work in web, mobile, and design.
           </p>
           <div class="projects-grid" id="recent-projects-container">
-            <!-- Top projects injected by script.js -->
+            <article class="project-card" aria-labelledby="project-title-4" aria-describedby="project-desc-4">
+              <figure class="project-img-container" role="img" aria-labelledby="project-title-4" aria-describedby="project-image-caption-4">
+                <img src="assets/img/apps/bancaremota.webp" alt="" aria-hidden="true" class="project-img" loading="lazy" decoding="async">
+                <figcaption id="project-image-caption-4" class="sr-only">Native iPhone app for Cuban banking via USSD codes. Works entirely offline, storing cards, nauta accounts, utility bills, and biometric-protected keys locally.</figcaption>
+              </figure>
+              <div class="project-content">
+                <h3 class="project-title" id="project-title-4">Banca Remota — Cuba</h3>
+                <div class="project-tags" aria-label="Technologies used: Cuba, iOS, Offline"><span class="tag">Cuba</span><span class="tag">iOS</span><span class="tag">Offline</span></div>
+                <p class="project-desc" id="project-desc-4">Native iPhone app for Cuban banking via USSD codes. Works entirely offline, storing cards, nauta accounts, utility bills, and biometric-protected keys locally.</p>
+                <div class="project-links">
+                  <a href="https://bancaremota.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--primary" aria-label="Open live project in a new tab: Banca Remota — Cuba" data-tooltip="Open live project in a new tab: Banca Remota — Cuba">
+                    <span class="inline-icon" aria-hidden="true"><svg class="glyph-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="assets/icons/social-sprite.svg#icon-external"></use></svg></span> <span class="project-btn-label">View Project</span>
+                  </a>
+                  <a href="https://github.com/albertolicea00/BancaRemota_app" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--secondary" aria-label="Open source code in a new tab: Banca Remota — Cuba" data-tooltip="Open source code in a new tab: Banca Remota — Cuba">
+                    <span class="inline-icon" aria-hidden="true"><svg class="glyph-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="assets/icons/social-sprite.svg#icon-external"></use></svg></span> <span class="project-btn-label">Source Code</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <article class="project-card" aria-labelledby="project-title-5" aria-describedby="project-desc-5">
+              <figure class="project-img-container" role="img" aria-labelledby="project-title-5" aria-describedby="project-image-caption-5">
+                <img src="assets/img/apps/mivio.webp" alt="" aria-hidden="true" class="project-img" loading="lazy" decoding="async">
+                <figcaption id="project-image-caption-5" class="sr-only">The ultimate multi-platform media player. Stream from Jellyfin, Plex, or WebDAV, and play local files with automatic artwork and subtitles.</figcaption>
+              </figure>
+              <div class="project-content">
+                <h3 class="project-title" id="project-title-5">Mivio Ecosystem</h3>
+                <div class="project-tags" aria-label="Technologies used: Smart TV, Desktop, macOS, Android, iOS, VR"><span class="tag">Smart TV</span><span class="tag">Desktop</span><span class="tag">macOS</span><span class="tag">Android</span><span class="tag">iOS</span><span class="tag">VR</span></div>
+                <p class="project-desc" id="project-desc-5">The ultimate multi-platform media player. Stream from Jellyfin, Plex, or WebDAV, and play local files with automatic artwork and subtitles.</p>
+                <div class="project-links">
+                  <a href="https://mivio.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--primary" aria-label="Open live project in a new tab: Mivio Ecosystem" data-tooltip="Open live project in a new tab: Mivio Ecosystem">
+                    <span class="inline-icon" aria-hidden="true"><svg class="glyph-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="assets/icons/social-sprite.svg#icon-external"></use></svg></span> <span class="project-btn-label">View Project</span>
+                  </a>
+                  <a href="https://github.com/albertolicea00/mivio-landing" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--secondary" aria-label="Open source code in a new tab: Mivio Ecosystem" data-tooltip="Open source code in a new tab: Mivio Ecosystem">
+                    <span class="inline-icon" aria-hidden="true"><svg class="glyph-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="assets/icons/social-sprite.svg#icon-external"></use></svg></span> <span class="project-btn-label">Source Code</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <article class="project-card" aria-labelledby="project-title-6" aria-describedby="project-desc-6">
+              <figure class="project-img-container" role="img" aria-labelledby="project-title-6" aria-describedby="project-image-caption-6">
+                <img src="assets/img/apps/hide-n-seek-block-media-addon.webp" alt="" aria-hidden="true" class="project-img" loading="lazy" decoding="async">
+                <figcaption id="project-image-caption-6" class="sr-only">A high-performance browser extension designed to help you browse the web safely and discreetly. Automatically hides sensitive images, videos, and thumbnails.</figcaption>
+              </figure>
+              <div class="project-content">
+                <h3 class="project-title" id="project-title-6">Hide &amp; Seek - Media Blocker</h3>
+                <div class="project-tags" aria-label="Technologies used: Chrome, Edge, Firefox"><span class="tag">Chrome</span><span class="tag">Edge</span><span class="tag">Firefox</span></div>
+                <p class="project-desc" id="project-desc-6">A high-performance browser extension designed to help you browse the web safely and discreetly. Automatically hides sensitive images, videos, and thumbnails.</p>
+                <div class="project-links">
+                  <a href="https://addons.mozilla.org/en-US/firefox/addon/hidenseek/" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--primary" aria-label="Open live project in a new tab: Hide &amp; Seek - Media Blocker" data-tooltip="Open live project in a new tab: Hide &amp; Seek - Media Blocker">
+                    <span class="inline-icon" aria-hidden="true"><svg class="glyph-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="assets/icons/social-sprite.svg#icon-external"></use></svg></span> <span class="project-btn-label">View Project</span>
+                  </a>
+                  <a href="https://github.com/albertolicea00/hide-n-seek-block-media-addon" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--secondary" aria-label="Open source code in a new tab: Hide &amp; Seek - Media Blocker" data-tooltip="Open source code in a new tab: Hide &amp; Seek - Media Blocker">
+                    <span class="inline-icon" aria-hidden="true"><svg class="glyph-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="assets/icons/social-sprite.svg#icon-external"></use></svg></span> <span class="project-btn-label">Source Code</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <article class="project-card" aria-labelledby="project-title-9" aria-describedby="project-desc-9">
+              <figure class="project-img-container" role="img" aria-labelledby="project-title-9" aria-describedby="project-image-caption-9">
+                <img src="assets/img/apps/linkxlink.webp" alt="" aria-hidden="true" class="project-img" loading="lazy" decoding="async">
+                <figcaption id="project-image-caption-9" class="sr-only">Tinder-style PWA for browsing people profiles with swipeable horizontal cards and one-tap direct WhatsApp connect links.</figcaption>
+              </figure>
+              <div class="project-content">
+                <h3 class="project-title" id="project-title-9">linkXlink</h3>
+                <div class="project-tags" aria-label="Technologies used: Web, React, PWA"><span class="tag">Web</span><span class="tag">React</span><span class="tag">PWA</span></div>
+                <p class="project-desc" id="project-desc-9">Tinder-style PWA for browsing people profiles with swipeable horizontal cards and one-tap direct WhatsApp connect links.</p>
+                <div class="project-links">
+                  <a href="https://linkxlink.vercel.app" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--primary" aria-label="Open live project in a new tab: linkXlink" data-tooltip="Open live project in a new tab: linkXlink">
+                    <span class="inline-icon" aria-hidden="true"><svg class="glyph-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="assets/icons/social-sprite.svg#icon-external"></use></svg></span> <span class="project-btn-label">View Project</span>
+                  </a>
+                  <a href="https://github.com/albertolicea00/linkXlink" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--secondary" aria-label="Open source code in a new tab: linkXlink" data-tooltip="Open source code in a new tab: linkXlink">
+                    <span class="inline-icon" aria-hidden="true"><svg class="glyph-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="assets/icons/social-sprite.svg#icon-external"></use></svg></span> <span class="project-btn-label">Source Code</span>
+                  </a>
+                </div>
+              </div>
+            </article>
           </div>
           <div
             class="view-all-container"
@@ -331,6 +417,8 @@
               href="projects.html"
               class="outline-btn"
               id="view-all-projects-link"
+              aria-label="Browse all Apps"
+              data-tooltip="Browse all Apps"
               aria-describedby="site-a11y-help"
               ><span data-i18n="home.projects_section.view_all"
                 >View All Apps</span
@@ -364,7 +452,132 @@
             Over a decade of building digital experiences.
           </p>
           <div class="timeline" id="experience-timeline">
-            <!-- Timeline injected by script.js -->
+            <article class="timeline-item" aria-labelledby="timeline-title-0" aria-describedby="timeline-desc-0">
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <div class="timeline-date">Present</div>
+              <div class="timeline-content glass-panel">
+                <div class="timeline-header">
+                  <div class="timeline-logo-frame is-wide" aria-hidden="true">
+                    <img src="assets/img/company/pinkzebrahome.webp" alt="" aria-hidden="true" class="timeline-logo" loading="lazy" decoding="async">
+                  </div>
+                  <div class="timeline-copy">
+                    <h3 id="timeline-title-0">PinkzebraHome - Confidential</h3>
+                    <p id="timeline-desc-0">Currently developing a private, high-impact project. Something big is coming soon...</p>
+                  </div>
+                </div>
+                <div class="timeline-links">
+                  <a href="https://pinkzebrahome.com?repid=1198544" target="_blank" rel="noopener noreferrer" class="timeline-link" aria-label="Open website in a new tab: PinkzebraHome" data-tooltip="Open website in a new tab: PinkzebraHome">
+                    <span class="inline-icon" aria-hidden="true"><svg class="glyph-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="assets/icons/social-sprite.svg#icon-external"></use></svg></span>
+                    <span>PinkzebraHome</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <article class="timeline-item" aria-labelledby="timeline-title-1" aria-describedby="timeline-desc-1">
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <div class="timeline-date">Mar 2024 - Present</div>
+              <div class="timeline-content glass-panel">
+                <div class="timeline-header">
+                  <div class="timeline-logo-frame" aria-hidden="true">
+                    <img src="assets/img/company/ladetec.webp" alt="" aria-hidden="true" class="timeline-logo" loading="lazy" decoding="async">
+                  </div>
+                  <div class="timeline-copy">
+                    <h3 id="timeline-title-1">Software Developer @ Ladetec</h3>
+                    <p id="timeline-desc-1">API integration (Bigcommerce, KillBill) and ERP development using Django, Vue.js, Svelte, and Node.js.</p>
+                  </div>
+                </div>
+                <div class="timeline-links">
+                  <a href="https://www.ladetec.com/" target="_blank" rel="noopener noreferrer" class="timeline-link" aria-label="Open website in a new tab: Ladetec" data-tooltip="Open website in a new tab: Ladetec">
+                    <span class="inline-icon" aria-hidden="true"><svg class="glyph-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="assets/icons/social-sprite.svg#icon-external"></use></svg></span>
+                    <span>Ladetec</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <article class="timeline-item" aria-labelledby="timeline-title-2" aria-describedby="timeline-desc-2">
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <div class="timeline-date">Mar 2024 - Aug 2024</div>
+              <div class="timeline-content glass-panel">
+                <div class="timeline-header">
+                  <div class="timeline-logo-frame" aria-hidden="true">
+                    <img src="assets/img/company/towithuston.webp" alt="" aria-hidden="true" class="timeline-logo" loading="lazy" decoding="async">
+                  </div>
+                  <div class="timeline-copy">
+                    <h3 id="timeline-title-2">Software Maintenance @ TOWIT Houston</h3>
+                    <p id="timeline-desc-2">Implemented bug fixes and delivered new features for the company's management software, improving stability and day-to-day operations.</p>
+                  </div>
+                </div>
+                <div class="timeline-links">
+                  <a href="https://towithouston.com/" target="_blank" rel="noopener noreferrer" class="timeline-link" aria-label="Open website in a new tab: TOWIT Houston" data-tooltip="Open website in a new tab: TOWIT Houston">
+                    <span class="inline-icon" aria-hidden="true"><svg class="glyph-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="assets/icons/social-sprite.svg#icon-external"></use></svg></span>
+                    <span>TOWIT Houston</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <article class="timeline-item" aria-labelledby="timeline-title-3" aria-describedby="timeline-desc-3">
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <div class="timeline-date">Mar 2022 - Feb 2024</div>
+              <div class="timeline-content glass-panel">
+                <div class="timeline-header">
+                  <div class="timeline-logo-frame is-wide is-light" aria-hidden="true">
+                    <img src="assets/img/company/wateketech.svg" alt="" aria-hidden="true" class="timeline-logo" loading="lazy" decoding="async">
+                  </div>
+                  <div class="timeline-copy">
+                    <h3 id="timeline-title-3">IT Support Manager @ Wateke Soluciones</h3>
+                    <p id="timeline-desc-3">Developed custom ERP and CMS systems using Laravel &amp; Livewire. Managed WordPress sites and custom plugins.</p>
+                  </div>
+                </div>
+                <div class="timeline-links">
+                  <a href="https://wateke.tech/" target="_blank" rel="noopener noreferrer" class="timeline-link" aria-label="Open website in a new tab: Wateke Soluciones Tecnológicas" data-tooltip="Open website in a new tab: Wateke Soluciones Tecnológicas">
+                    <span class="inline-icon" aria-hidden="true"><svg class="glyph-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="assets/icons/social-sprite.svg#icon-external"></use></svg></span>
+                    <span>Wateke Soluciones Tecnológicas</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <article class="timeline-item" aria-labelledby="timeline-title-4" aria-describedby="timeline-desc-4">
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <div class="timeline-date">Jan 2022 - Feb 2024</div>
+              <div class="timeline-content glass-panel">
+                <div class="timeline-header">
+                  <div class="timeline-logo-frame is-wide is-dark" aria-hidden="true">
+                    <img src="assets/img/company/wateketravel.webp" alt="" aria-hidden="true" class="timeline-logo" loading="lazy" decoding="async">
+                  </div>
+                  <div class="timeline-copy">
+                    <h3 id="timeline-title-4">External Collaborator @ Wateke Travel</h3>
+                    <p id="timeline-desc-4">Built mobile apps with Apache Cordova and managed interactive logo animations using After Effects.</p>
+                  </div>
+                </div>
+                <div class="timeline-links">
+                  <a href="https://wateke.travel/" target="_blank" rel="noopener noreferrer" class="timeline-link" aria-label="Open website in a new tab: Wateke Travel" data-tooltip="Open website in a new tab: Wateke Travel">
+                    <span class="inline-icon" aria-hidden="true"><svg class="glyph-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="assets/icons/social-sprite.svg#icon-external"></use></svg></span>
+                    <span>Wateke Travel</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <article class="timeline-item" aria-labelledby="timeline-title-5" aria-describedby="timeline-desc-5">
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <div class="timeline-date">Sep 2019 - Jan 2024</div>
+              <div class="timeline-content glass-panel">
+                <div class="timeline-header">
+                  <div class="timeline-logo-frame is-wide is-dark" aria-hidden="true">
+                    <img src="assets/img/company/ucm.webp" alt="" aria-hidden="true" class="timeline-logo" loading="lazy" decoding="async">
+                  </div>
+                  <div class="timeline-copy">
+                    <h3 id="timeline-title-5">Computer Engineering @ Universidad de Camagüey</h3>
+                    <p id="timeline-desc-5">Graduated in Computer Engineering and also completed one academic year of Accounting and Finance studies.</p>
+                  </div>
+                </div>
+                <div class="timeline-links">
+                  <a href="https://www.reduc.edu.cu/" target="_blank" rel="noopener noreferrer" class="timeline-link" aria-label="Open website in a new tab: Universidad de Camagüey" data-tooltip="Open website in a new tab: Universidad de Camagüey">
+                    <span class="inline-icon" aria-hidden="true"><svg class="glyph-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="assets/icons/social-sprite.svg#icon-external"></use></svg></span>
+                    <span>Universidad de Camagüey</span>
+                  </a>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -373,7 +586,117 @@
         <div class="container glass-panel">
           <h2 class="section-title" id="tech-stack-title" data-i18n="home.skills_section.title">Languages &amp; Tech</h2>
           <div class="tech-categories" id="tech-stack-container" style="margin-top: 2rem;">
-            <!-- Tech stack injected by script.js -->
+            <div class="tech-category" data-tech-category>
+              <h4 class="tech-category-title" data-i18n="home.skills_section.categories.code">Programming &amp; Languages</h4>
+              <div class="tech-chips" role="list" aria-label="Programming &amp; Languages">
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/english.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>English</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/spanish.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>Español</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/python.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>Python</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/javascript.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>JavaScript</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/html.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>HTML</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/css.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>CSS</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/typescript.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>TypeScript</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/swift.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>Swift</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/kotlin.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>Kotlin</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/java.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>Java</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/php.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>PHP</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/csharp.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>C#</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/sql.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>SQL</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/bash.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>Bash</span></div>
+              </div>
+            </div>
+            <div class="tech-category is-hidden" data-tech-category>
+              <h4 class="tech-category-title" data-i18n="home.skills_section.categories.frontend">Frontend</h4>
+              <div class="tech-chips" role="list" aria-label="Frontend">
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/react.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>React</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/vue.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>Vue.js</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/svelte.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>Svelte</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/astro.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>Astro</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/alpine.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>Alpine.js</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/livewire.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>Livewire</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/tailwind.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>Tailwind CSS</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/sass.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>Sass</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/bootstrap.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>Bootstrap</span></div>
+              </div>
+            </div>
+            <div class="tech-category is-hidden" data-tech-category>
+              <h4 class="tech-category-title" data-i18n="home.skills_section.categories.backend">Backend</h4>
+              <div class="tech-chips" role="list" aria-label="Backend">
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/django.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>Django</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/flask.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>Flask</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/nodejs.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>Node.js</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/express.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>Express.js</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/laravel.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>Laravel</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/firebase.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>Firebase</span></div>
+              </div>
+            </div>
+            <div class="tech-category is-hidden" data-tech-category>
+              <h4 class="tech-category-title" data-i18n="home.skills_section.categories.mobile">Mobile</h4>
+              <div class="tech-chips" role="list" aria-label="Mobile">
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/react-native.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>React Native</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/cordova.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>Cordova</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/android-studio.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>Android Studio</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/xcode.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>Xcode</span></div>
+              </div>
+            </div>
+            <div class="tech-category is-hidden" data-tech-category>
+              <h4 class="tech-category-title" data-i18n="home.skills_section.categories.databases">Databases</h4>
+              <div class="tech-chips" role="list" aria-label="Databases">
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/postgresql.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>PostgreSQL</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/mysql.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>MySQL</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/mongodb.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>MongoDB</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/sqlite.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>SQLite</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/mariadb.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>MariaDB</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/mssql.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>MS SQL</span></div>
+              </div>
+            </div>
+            <div class="tech-category is-hidden" data-tech-category>
+              <h4 class="tech-category-title" data-i18n="home.skills_section.categories.devopsTools">DevOps &amp; Tools</h4>
+              <div class="tech-chips" role="list" aria-label="DevOps &amp; Tools">
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/docker.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>Docker</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/aws.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>AWS</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/azure.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>Azure</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/jenkins.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>Jenkins</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/git.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>Git</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/postman.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>Postman</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/linux.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>Linux</span></div>
+              </div>
+            </div>
+            <div class="tech-category is-hidden" data-tech-category>
+              <h4 class="tech-category-title" data-i18n="home.skills_section.categories.design">Design</h4>
+              <div class="tech-chips" role="list" aria-label="Design">
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/figma.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>Figma</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/procreate.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>Procreate</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/krita.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>Krita</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/canva.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>Canva</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/photoshop.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>Photoshop</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/illustrator.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>Illustrator</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/coreldraw.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>CorelDRAW</span></div>
+              </div>
+            </div>
+            <div class="tech-category is-hidden" data-tech-category>
+              <h4 class="tech-category-title" data-i18n="home.skills_section.categories.animationAndVideo">Animation &amp; Video</h4>
+              <div class="tech-chips" role="list" aria-label="Animation &amp; Video">
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/blender.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>Blender</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/autograph.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>Autograph</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/premiere-pro.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>Premiere Pro</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/after-effects.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>After Effects</span></div>
+              </div>
+            </div>
+            <div class="tech-category is-hidden" data-tech-category>
+              <h4 class="tech-category-title" data-i18n="home.skills_section.categories.gaming">Gaming</h4>
+              <div class="tech-chips" role="list" aria-label="Gaming">
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/unity.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>Unity</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/unreal-engine.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>Unreal Engine</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/pygame.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>Pygame</span></div>
+                <div class="tech-chip" role="listitem"><img src="assets/icons/tech/renpy.svg" alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy"><span>Ren'Py</span></div>
+              </div>
+            </div>
+            <div class="tech-expand-container">
+              <button class="tech-expand-btn pulse-animation" id="tech-expand-btn" data-i18n-tooltip="home.skills_section.view_more_tooltip" data-tooltip="Click to expand">
+                <span id="tech-expand-text" data-i18n="home.skills_section.view_more">View More</span>
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -458,6 +781,8 @@
                   rel="noopener noreferrer"
                   class="social-icon"
                   data-social="github"
+                  aria-label="Open GitHub profile in a new tab"
+                  data-tooltip="Open GitHub profile in a new tab"
                   aria-describedby="site-a11y-help"
                   ><svg class="social-icon-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
                     <use href="assets/icons/social-sprite.svg#icon-github"></use></svg
@@ -468,6 +793,8 @@
                   rel="noopener noreferrer"
                   class="social-icon"
                   data-social="linkedin"
+                  aria-label="Open LinkedIn profile in a new tab"
+                  data-tooltip="Open LinkedIn profile in a new tab"
                   aria-describedby="site-a11y-help"
                   ><svg class="social-icon-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
                     <use href="assets/icons/social-sprite.svg#icon-linkedin"></use></svg
@@ -478,6 +805,8 @@
                   rel="noopener noreferrer"
                   class="social-icon"
                   data-social="x"
+                  aria-label="Open X profile in a new tab"
+                  data-tooltip="Open X profile in a new tab"
                   aria-describedby="site-a11y-help"
                   ><svg class="social-icon-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
                     <use href="assets/icons/social-sprite.svg#icon-x"></use></svg
@@ -488,6 +817,8 @@
                   rel="noopener noreferrer"
                   class="social-icon"
                   data-social="instagram"
+                  aria-label="Open Instagram profile in a new tab"
+                  data-tooltip="Open Instagram profile in a new tab"
                   aria-describedby="site-a11y-help"
                   ><svg class="social-icon-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
                     <use href="assets/icons/social-sprite.svg#icon-instagram"></use></svg
@@ -500,13 +831,13 @@
               </div>
             </div>
             <div class="contact-form-container glass-panel">
-              <!-- <p
-                class="form-helper"
+              <p
+                class="form-helper sr-only"
                 id="contact-form-help"
                 data-i18n="home.contact_section.form_help"
               >
                 Fill out the form and I'll get back to you as soon as possible.
-              </p> -->
+              </p>
               <form
                 id="contact-form"
                 class="contact-form"

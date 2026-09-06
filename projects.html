@@ -98,7 +98,7 @@
 
     <nav class="navbar" id="site-navigation" aria-label="Primary navigation">
       <div class="nav-container">
-        <a href="index.html" class="logo"
+        <a href="index.html" class="logo" aria-label="Home"
           ><span>@</span>albertolicea00<span>.</span></a
         >
         <ul class="nav-links" id="primary-navigation">
@@ -108,6 +108,7 @@
               href="projects.html"
               class="active-link"
               data-i18n="home.nav.allwork"
+              aria-current="page"
               >All Work</a
             >
           </li>
@@ -121,6 +122,8 @@
               class="theme-toggle"
               id="theme-toggle"
               type="button"
+              aria-label="Switch to light theme"
+              data-tooltip="Switch to light theme"
               aria-describedby="site-a11y-help"
             >
               <span class="toggle-glyph" aria-hidden="true">☾</span>
@@ -265,7 +268,8 @@
           <button
             class="menu-toggle"
             type="button"
-            aria-label="Open menu"
+            aria-label="Open navigation menu"
+            data-tooltip="Open navigation menu"
             aria-controls="primary-navigation"
             aria-expanded="false"
             aria-describedby="site-a11y-help"
@@ -300,7 +304,177 @@
           </p>
 
           <div class="projects-grid" id="all-projects-container">
-            <!-- All projects injected by script.js -->
+            <article class="project-card" aria-labelledby="project-title-4" aria-describedby="project-desc-4">
+              <figure class="project-img-container" role="img" aria-labelledby="project-title-4" aria-describedby="project-image-caption-4">
+                <img src="assets/img/apps/bancaremota.webp" alt="" aria-hidden="true" class="project-img" loading="lazy" decoding="async">
+                <figcaption id="project-image-caption-4" class="sr-only">Native iPhone app for Cuban banking via USSD codes. Works entirely offline, storing cards, nauta accounts, utility bills, and biometric-protected keys locally.</figcaption>
+              </figure>
+              <div class="project-content">
+                <h3 class="project-title" id="project-title-4">Banca Remota — Cuba</h3>
+                <div class="project-tags" aria-label="Technologies used: Cuba, iOS, Offline"><span class="tag">Cuba</span><span class="tag">iOS</span><span class="tag">Offline</span></div>
+                <p class="project-desc" id="project-desc-4">Native iPhone app for Cuban banking via USSD codes. Works entirely offline, storing cards, nauta accounts, utility bills, and biometric-protected keys locally.</p>
+                <div class="project-links">
+                  <a href="https://bancaremota.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--primary" aria-label="Open live project in a new tab: Banca Remota — Cuba" data-tooltip="Open live project in a new tab: Banca Remota — Cuba">
+                    <span class="inline-icon" aria-hidden="true"><svg class="glyph-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="assets/icons/social-sprite.svg#icon-external"></use></svg></span> <span class="project-btn-label">View Project</span>
+                  </a>
+                  <a href="https://github.com/albertolicea00/BancaRemota_app" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--secondary" aria-label="Open source code in a new tab: Banca Remota — Cuba" data-tooltip="Open source code in a new tab: Banca Remota — Cuba">
+                    <span class="inline-icon" aria-hidden="true"><svg class="glyph-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="assets/icons/social-sprite.svg#icon-external"></use></svg></span> <span class="project-btn-label">Source Code</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <article class="project-card" aria-labelledby="project-title-5" aria-describedby="project-desc-5">
+              <figure class="project-img-container" role="img" aria-labelledby="project-title-5" aria-describedby="project-image-caption-5">
+                <img src="assets/img/apps/mivio.webp" alt="" aria-hidden="true" class="project-img" loading="lazy" decoding="async">
+                <figcaption id="project-image-caption-5" class="sr-only">The ultimate multi-platform media player. Stream from Jellyfin, Plex, or WebDAV, and play local files with automatic artwork and subtitles.</figcaption>
+              </figure>
+              <div class="project-content">
+                <h3 class="project-title" id="project-title-5">Mivio Ecosystem</h3>
+                <div class="project-tags" aria-label="Technologies used: Smart TV, Desktop, macOS, Android, iOS, VR"><span class="tag">Smart TV</span><span class="tag">Desktop</span><span class="tag">macOS</span><span class="tag">Android</span><span class="tag">iOS</span><span class="tag">VR</span></div>
+                <p class="project-desc" id="project-desc-5">The ultimate multi-platform media player. Stream from Jellyfin, Plex, or WebDAV, and play local files with automatic artwork and subtitles.</p>
+                <div class="project-links">
+                  <a href="https://mivio.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--primary" aria-label="Open live project in a new tab: Mivio Ecosystem" data-tooltip="Open live project in a new tab: Mivio Ecosystem">
+                    <span class="inline-icon" aria-hidden="true"><svg class="glyph-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="assets/icons/social-sprite.svg#icon-external"></use></svg></span> <span class="project-btn-label">View Project</span>
+                  </a>
+                  <a href="https://github.com/albertolicea00/mivio-landing" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--secondary" aria-label="Open source code in a new tab: Mivio Ecosystem" data-tooltip="Open source code in a new tab: Mivio Ecosystem">
+                    <span class="inline-icon" aria-hidden="true"><svg class="glyph-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="assets/icons/social-sprite.svg#icon-external"></use></svg></span> <span class="project-btn-label">Source Code</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <article class="project-card" aria-labelledby="project-title-6" aria-describedby="project-desc-6">
+              <figure class="project-img-container" role="img" aria-labelledby="project-title-6" aria-describedby="project-image-caption-6">
+                <img src="assets/img/apps/hide-n-seek-block-media-addon.webp" alt="" aria-hidden="true" class="project-img" loading="lazy" decoding="async">
+                <figcaption id="project-image-caption-6" class="sr-only">A high-performance browser extension designed to help you browse the web safely and discreetly. Automatically hides sensitive images, videos, and thumbnails.</figcaption>
+              </figure>
+              <div class="project-content">
+                <h3 class="project-title" id="project-title-6">Hide &amp; Seek - Media Blocker</h3>
+                <div class="project-tags" aria-label="Technologies used: Chrome, Edge, Firefox"><span class="tag">Chrome</span><span class="tag">Edge</span><span class="tag">Firefox</span></div>
+                <p class="project-desc" id="project-desc-6">A high-performance browser extension designed to help you browse the web safely and discreetly. Automatically hides sensitive images, videos, and thumbnails.</p>
+                <div class="project-links">
+                  <a href="https://addons.mozilla.org/en-US/firefox/addon/hidenseek/" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--primary" aria-label="Open live project in a new tab: Hide &amp; Seek - Media Blocker" data-tooltip="Open live project in a new tab: Hide &amp; Seek - Media Blocker">
+                    <span class="inline-icon" aria-hidden="true"><svg class="glyph-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="assets/icons/social-sprite.svg#icon-external"></use></svg></span> <span class="project-btn-label">View Project</span>
+                  </a>
+                  <a href="https://github.com/albertolicea00/hide-n-seek-block-media-addon" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--secondary" aria-label="Open source code in a new tab: Hide &amp; Seek - Media Blocker" data-tooltip="Open source code in a new tab: Hide &amp; Seek - Media Blocker">
+                    <span class="inline-icon" aria-hidden="true"><svg class="glyph-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="assets/icons/social-sprite.svg#icon-external"></use></svg></span> <span class="project-btn-label">Source Code</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <article class="project-card" aria-labelledby="project-title-7" aria-describedby="project-desc-7">
+              <figure class="project-img-container" role="img" aria-labelledby="project-title-7" aria-describedby="project-image-caption-7">
+                <img src="assets/img/apps/cache-cleaner-addon.webp" alt="" aria-hidden="true" class="project-img" loading="lazy" decoding="async">
+                <figcaption id="project-image-caption-7" class="sr-only">One-click browser data cleaner for developers. Sweep away cookies, localStorage, sessionStorage, IndexedDB, and CacheStorage instantly.</figcaption>
+              </figure>
+              <div class="project-content">
+                <h3 class="project-title" id="project-title-7">CacheCleaner</h3>
+                <div class="project-tags" aria-label="Technologies used: Chrome, Edge, Firefox"><span class="tag">Chrome</span><span class="tag">Edge</span><span class="tag">Firefox</span></div>
+                <p class="project-desc" id="project-desc-7">One-click browser data cleaner for developers. Sweep away cookies, localStorage, sessionStorage, IndexedDB, and CacheStorage instantly.</p>
+                <div class="project-links">
+                  <a href="https://addons.mozilla.org/en-US/firefox/addon/cacheflux/" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--primary" aria-label="Open live project in a new tab: CacheCleaner" data-tooltip="Open live project in a new tab: CacheCleaner">
+                    <span class="inline-icon" aria-hidden="true"><svg class="glyph-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="assets/icons/social-sprite.svg#icon-external"></use></svg></span> <span class="project-btn-label">View Project</span>
+                  </a>
+                  <a href="https://github.com/albertolicea00/cache-cleaner-addon" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--secondary" aria-label="Open source code in a new tab: CacheCleaner" data-tooltip="Open source code in a new tab: CacheCleaner">
+                    <span class="inline-icon" aria-hidden="true"><svg class="glyph-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="assets/icons/social-sprite.svg#icon-external"></use></svg></span> <span class="project-btn-label">Source Code</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <article class="project-card" aria-labelledby="project-title-8" aria-describedby="project-desc-8">
+              <figure class="project-img-container" role="img" aria-labelledby="project-title-8" aria-describedby="project-image-caption-8">
+                <img src="assets/img/apps/m3u8-detector.webp" alt="" aria-hidden="true" class="project-img" loading="lazy" decoding="async">
+                <figcaption id="project-image-caption-8" class="sr-only">High-performance browser extension that detects and resolves HLS (.m3u8) video streams, bypassing IP-locks, and exports ready-to-use scripts for ffmpeg, shell, and Google Colab downloads.</figcaption>
+              </figure>
+              <div class="project-content">
+                <h3 class="project-title" id="project-title-8">M3U8 Detector</h3>
+                <div class="project-tags" aria-label="Technologies used: Chrome, Firefox, HLS"><span class="tag">Chrome</span><span class="tag">Firefox</span><span class="tag">HLS</span></div>
+                <p class="project-desc" id="project-desc-8">High-performance browser extension that detects and resolves HLS (.m3u8) video streams, bypassing IP-locks, and exports ready-to-use scripts for ffmpeg, shell, and Google Colab downloads.</p>
+                <div class="project-links">
+                  <a href="https://addons.mozilla.org/en-US/firefox/addon/m3u8-detector" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--primary" aria-label="Open live project in a new tab: M3U8 Detector" data-tooltip="Open live project in a new tab: M3U8 Detector">
+                    <span class="inline-icon" aria-hidden="true"><svg class="glyph-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="assets/icons/social-sprite.svg#icon-external"></use></svg></span> <span class="project-btn-label">View Project</span>
+                  </a>
+                  <a href="https://github.com/albertolicea00/m3u8-detector" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--secondary" aria-label="Open source code in a new tab: M3U8 Detector" data-tooltip="Open source code in a new tab: M3U8 Detector">
+                    <span class="inline-icon" aria-hidden="true"><svg class="glyph-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="assets/icons/social-sprite.svg#icon-external"></use></svg></span> <span class="project-btn-label">Source Code</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <article class="project-card" aria-labelledby="project-title-9" aria-describedby="project-desc-9">
+              <figure class="project-img-container" role="img" aria-labelledby="project-title-9" aria-describedby="project-image-caption-9">
+                <img src="assets/img/apps/linkxlink.webp" alt="" aria-hidden="true" class="project-img" loading="lazy" decoding="async">
+                <figcaption id="project-image-caption-9" class="sr-only">Tinder-style PWA for browsing people profiles with swipeable horizontal cards and one-tap direct WhatsApp connect links.</figcaption>
+              </figure>
+              <div class="project-content">
+                <h3 class="project-title" id="project-title-9">linkXlink</h3>
+                <div class="project-tags" aria-label="Technologies used: Web, React, PWA"><span class="tag">Web</span><span class="tag">React</span><span class="tag">PWA</span></div>
+                <p class="project-desc" id="project-desc-9">Tinder-style PWA for browsing people profiles with swipeable horizontal cards and one-tap direct WhatsApp connect links.</p>
+                <div class="project-links">
+                  <a href="https://linkxlink.vercel.app" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--primary" aria-label="Open live project in a new tab: linkXlink" data-tooltip="Open live project in a new tab: linkXlink">
+                    <span class="inline-icon" aria-hidden="true"><svg class="glyph-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="assets/icons/social-sprite.svg#icon-external"></use></svg></span> <span class="project-btn-label">View Project</span>
+                  </a>
+                  <a href="https://github.com/albertolicea00/linkXlink" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--secondary" aria-label="Open source code in a new tab: linkXlink" data-tooltip="Open source code in a new tab: linkXlink">
+                    <span class="inline-icon" aria-hidden="true"><svg class="glyph-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="assets/icons/social-sprite.svg#icon-external"></use></svg></span> <span class="project-btn-label">Source Code</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <article class="project-card" aria-labelledby="project-title-1" aria-describedby="project-desc-1">
+              <figure class="project-img-container" role="img" aria-labelledby="project-title-1" aria-describedby="project-image-caption-1">
+                <img src="assets/img/apps/bettahvacservices.webp" alt="" aria-hidden="true" class="project-img" loading="lazy" decoding="async">
+                <figcaption id="project-image-caption-1" class="sr-only">Scalable corporate platform for HVAC services, featuring automated quote generation and customer management.</figcaption>
+              </figure>
+              <div class="project-content">
+                <h3 class="project-title" id="project-title-1">BettaHVAC Services</h3>
+                <div class="project-tags" aria-label="Technologies used: Web, Svelte, Node.js, CSS"><span class="tag">Web</span><span class="tag">Svelte</span><span class="tag">Node.js</span><span class="tag">CSS</span></div>
+                <p class="project-desc" id="project-desc-1">Scalable corporate platform for HVAC services, featuring automated quote generation and customer management.</p>
+                <div class="project-links">
+                  <a href="https://www.bettahvacservices.com/" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--primary" aria-label="Open live project in a new tab: BettaHVAC Services" data-tooltip="Open live project in a new tab: BettaHVAC Services">
+                    <span class="inline-icon" aria-hidden="true"><svg class="glyph-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="assets/icons/social-sprite.svg#icon-external"></use></svg></span> <span class="project-btn-label">View Project</span>
+                  </a>
+                  <a href="https://github.com/albertolicea00/bettahvac-landing" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--secondary" aria-label="Open source code in a new tab: BettaHVAC Services" data-tooltip="Open source code in a new tab: BettaHVAC Services">
+                    <span class="inline-icon" aria-hidden="true"><svg class="glyph-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="assets/icons/social-sprite.svg#icon-external"></use></svg></span> <span class="project-btn-label">Source Code</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <article class="project-card" aria-labelledby="project-title-2" aria-describedby="project-desc-2">
+              <figure class="project-img-container" role="img" aria-labelledby="project-title-2" aria-describedby="project-image-caption-2">
+                <img src="assets/img/apps/laslocurasdemiguelin.webp" alt="" aria-hidden="true" class="project-img" loading="lazy" decoding="async">
+                <figcaption id="project-image-caption-2" class="sr-only">Highly dynamic entertainment landing page with immersive design and fluid animations.</figcaption>
+              </figure>
+              <div class="project-content">
+                <h3 class="project-title" id="project-title-2">Las Locuras de Miguelín</h3>
+                <div class="project-tags" aria-label="Technologies used: Web, Astro, Tailwind CSS"><span class="tag">Web</span><span class="tag">Astro</span><span class="tag">Tailwind CSS</span></div>
+                <p class="project-desc" id="project-desc-2">Highly dynamic entertainment landing page with immersive design and fluid animations.</p>
+                <div class="project-links">
+                  <a href="https://las-locuras-de-miguelin-landing.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--primary" aria-label="Open live project in a new tab: Las Locuras de Miguelín" data-tooltip="Open live project in a new tab: Las Locuras de Miguelín">
+                    <span class="inline-icon" aria-hidden="true"><svg class="glyph-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="assets/icons/social-sprite.svg#icon-external"></use></svg></span> <span class="project-btn-label">View Project</span>
+                  </a>
+                  <a href="https://github.com/albertolicea00/las-locuras-de-miguelin-landing" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--secondary" aria-label="Open source code in a new tab: Las Locuras de Miguelín" data-tooltip="Open source code in a new tab: Las Locuras de Miguelín">
+                    <span class="inline-icon" aria-hidden="true"><svg class="glyph-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="assets/icons/social-sprite.svg#icon-external"></use></svg></span> <span class="project-btn-label">Source Code</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <article class="project-card" aria-labelledby="project-title-3" aria-describedby="project-desc-3">
+              <figure class="project-img-container" role="img" aria-labelledby="project-title-3" aria-describedby="project-image-caption-3">
+                <img src="assets/img/apps/kristoff.webp" alt="" aria-hidden="true" class="project-img" loading="lazy" decoding="async">
+                <figcaption id="project-image-caption-3" class="sr-only">Modern VOD platform landing page focused on UX/UI excellence and brand storytelling.</figcaption>
+              </figure>
+              <div class="project-content">
+                <h3 class="project-title" id="project-title-3">Kristoff Landing Page</h3>
+                <div class="project-tags" aria-label="Technologies used: Web, Astro, Tailwind CSS"><span class="tag">Web</span><span class="tag">Astro</span><span class="tag">Tailwind CSS</span></div>
+                <p class="project-desc" id="project-desc-3">Modern VOD platform landing page focused on UX/UI excellence and brand storytelling.</p>
+                <div class="project-links">
+                  <a href="https://kristoff-landing.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--primary" aria-label="Open live project in a new tab: Kristoff Landing Page" data-tooltip="Open live project in a new tab: Kristoff Landing Page">
+                    <span class="inline-icon" aria-hidden="true"><svg class="glyph-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="assets/icons/social-sprite.svg#icon-external"></use></svg></span> <span class="project-btn-label">View Project</span>
+                  </a>
+                  <a href="https://github.com/albertolicea00/kristoff-landing" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--secondary" aria-label="Open source code in a new tab: Kristoff Landing Page" data-tooltip="Open source code in a new tab: Kristoff Landing Page">
+                    <span class="inline-icon" aria-hidden="true"><svg class="glyph-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="assets/icons/social-sprite.svg#icon-external"></use></svg></span> <span class="project-btn-label">Source Code</span>
+                  </a>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -315,6 +489,8 @@
             rel="noopener noreferrer"
             class="social-icon"
             data-social="github"
+            aria-label="Open GitHub profile in a new tab"
+            data-tooltip="Open GitHub profile in a new tab"
             aria-describedby="site-a11y-help"
             ><svg
               class="social-icon-svg"
@@ -330,6 +506,8 @@
             rel="noopener noreferrer"
             class="social-icon"
             data-social="linkedin"
+            aria-label="Open LinkedIn profile in a new tab"
+            data-tooltip="Open LinkedIn profile in a new tab"
             aria-describedby="site-a11y-help"
             ><svg
               class="social-icon-svg"
@@ -347,6 +525,8 @@
             rel="noopener noreferrer"
             class="social-icon"
             data-social="x"
+            aria-label="Open X profile in a new tab"
+            data-tooltip="Open X profile in a new tab"
             aria-describedby="site-a11y-help"
             ><svg
               class="social-icon-svg"
@@ -362,6 +542,8 @@
             rel="noopener noreferrer"
             class="social-icon"
             data-social="instagram"
+            aria-label="Open Instagram profile in a new tab"
+            data-tooltip="Open Instagram profile in a new tab"
             aria-describedby="site-a11y-help"
             ><svg
               class="social-icon-svg"
