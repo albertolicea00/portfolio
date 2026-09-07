@@ -1244,7 +1244,10 @@ function syncAccessibilityUI() {
         github: getLocalizedText('home.accessibility.open_github', 'Open GitHub profile in a new tab'),
         linkedin: getLocalizedText('home.accessibility.open_linkedin', 'Open LinkedIn profile in a new tab'),
         x: getLocalizedText('home.accessibility.open_x', 'Open X profile in a new tab'),
-        instagram: getLocalizedText('home.accessibility.open_instagram', 'Open Instagram profile in a new tab')
+        instagram: getLocalizedText('home.accessibility.open_instagram', 'Open Instagram profile in a new tab'),
+        indeed: getLocalizedText('home.accessibility.open_indeed', 'Open Indeed profile in a new tab'),
+        upwork: getLocalizedText('home.accessibility.open_upwork', 'Open Upwork profile in a new tab'),
+        infojobs: getLocalizedText('home.accessibility.open_infojobs', 'Open InfoJobs profile in a new tab')
     };
 
     const siteNavigation = document.getElementById('site-navigation');
