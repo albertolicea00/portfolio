@@ -1505,10 +1505,30 @@ function setupEventListeners() {
         const formData = new FormData(form);
         const turnstileResponse = formData.get('cf-turnstile-response') || '';
 
-        if (!name || (!email && !phone) || !message) return;
+        const showValidationError = (path, fallback) => {
+            statusEl.textContent = getLocalizedText(path, fallback);
+            statusEl.style.display = 'block';
+            statusEl.style.color = '#f87171';
+        };
+
+        if (!name) {
+            showValidationError('home.contact_section.validation_name', 'Please enter your name.');
+            return;
+        }
+        if (!message) {
+            showValidationError('home.contact_section.validation_message', 'Please enter a message.');
+            return;
+        }
+        if (!email && !phone) {
+            showValidationError('home.contact_section.validation_contact', 'Please enter at least an email or phone number so I can contact you back.');
+            return;
+        }
+
+        const originalBtnLabel = btn.textContent;
 
         btn.disabled = true;
         btn.style.opacity = '0.7';
+        btn.textContent = getLocalizedText('home.contact_section.sending', 'Sending...');
         statusEl.style.display = 'none';
 
         try {
@@ -1540,6 +1560,7 @@ function setupEventListeners() {
         } finally {
             btn.disabled = false;
             btn.style.opacity = '';
+            btn.textContent = originalBtnLabel;
             if (window.turnstile) {
                 window.turnstile.reset();
             }

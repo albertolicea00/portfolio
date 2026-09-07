@@ -67,6 +67,10 @@
             },
             "form_help": "Fill out the form and I'll get back to you as soon as possible.",
             "submit_btn": "Send Message",
+            "sending": "Sending...",
+            "validation_name": "Please enter your name.",
+            "validation_message": "Please enter a message.",
+            "validation_contact": "Please enter at least an email or phone number so I can contact you back.",
             "success_msg": "Message sent! I'll get back to you soon.",
             "error_msg": "Something went wrong. Please try again or use the social links.",
             "submit_btn_tooltip": "Click to send your message"

@@ -1505,6 +1505,10 @@ textarea:focus-visible {
   color: var(--text-main);
 }
 
+.required-mark {
+  color: var(--brand-yellow-darker);
+}
+
 .form-group input,
 .form-group textarea {
   width: 100%;
@@ -1516,6 +1520,10 @@ textarea:focus-visible {
   font-family: var(--font-body);
   font-size: 1rem;
   transition: var(--transition-smooth);
+}
+
+.form-group textarea {
+  resize: vertical;
 }
 
 .form-group input:focus,

@@ -67,6 +67,10 @@
             },
             "form_help": "Remplissez le formulaire et je vous répondrai dès que possible.",
             "submit_btn": "Envoyer le message",
+            "sending": "Envoi en cours...",
+            "validation_name": "Veuillez indiquer votre nom.",
+            "validation_message": "Veuillez indiquer un message.",
+            "validation_contact": "Veuillez indiquer au moins un e-mail ou un numéro de téléphone.",
             "success_msg": "Message envoyé ! Je vous répondrai bientôt.",
             "error_msg": "Une erreur s'est produite. Réessayez ou utilisez les liens sociaux.",
             "submit_btn_tooltip": "Cliquez pour envoyer votre message"

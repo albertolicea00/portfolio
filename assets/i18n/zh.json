@@ -67,6 +67,10 @@
             },
             "form_help": "填写表格，我会尽快与您联系。",
             "submit_btn": "发送消息",
+            "sending": "发送中...",
+            "validation_name": "请填写姓名。",
+            "validation_message": "请填写留言。",
+            "validation_contact": "请至少填写一个邮箱或电话。",
             "success_msg": "消息已发送！我会尽快与您联系。",
             "error_msg": "出现错误，请重试或使用社交链接。",
             "submit_btn_tooltip": "点击发送您的信息"

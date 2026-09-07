@@ -67,6 +67,10 @@
             },
             "form_help": "Füllen Sie das Formular aus und ich melde mich so schnell wie möglich.",
             "submit_btn": "Nachricht senden",
+            "sending": "Wird gesendet...",
+            "validation_name": "Bitte gib deinen Namen ein.",
+            "validation_message": "Bitte gib eine Nachricht ein.",
+            "validation_contact": "Bitte gib mindestens eine E-Mail-Adresse oder Telefonnummer ein.",
             "success_msg": "Nachricht gesendet! Ich melde mich bald.",
             "error_msg": "Etwas ist schiefgelaufen. Bitte versuche es erneut oder nutze die sozialen Links.",
             "submit_btn_tooltip": "Klicken, um deine Nachricht zu senden"

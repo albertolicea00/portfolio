@@ -67,6 +67,10 @@
             },
             "form_help": "Form you use. Me answer fast.",
             "submit_btn": "You send message",
+            "sending": "Message flying...",
+            "validation_name": "Need name.",
+            "validation_message": "Need message.",
+            "validation_contact": "Need email or phone.",
             "success_msg": "Message sent! Me contact soon.",
             "error_msg": "Fire bad. Send fail. You try again or send smoke signal.",
             "submit_btn_tooltip": "You click. Me get word."

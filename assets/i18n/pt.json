@@ -67,6 +67,10 @@
             },
             "form_help": "Preencha o formulário e entrarei em contato o mais rápido possível.",
             "submit_btn": "Enviar Mensagem",
+            "sending": "Enviando...",
+            "validation_name": "Por favor, informe seu nome.",
+            "validation_message": "Por favor, informe uma mensagem.",
+            "validation_contact": "Por favor, informe pelo menos um e-mail ou telefone.",
             "success_msg": "Mensagem enviada! Entrarei em contato em breve.",
             "error_msg": "Algo deu errado. Tente novamente ou use os links sociais.",
             "submit_btn_tooltip": "Clique para enviar sua mensagem"
