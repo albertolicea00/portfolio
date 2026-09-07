@@ -15,9 +15,19 @@ Thumbs.db
 
 # Project specific
 .env
+.env.local
+.env.*.local
 
-# Temp files
+# Astro / Node build output
 node_modules
+dist
+.astro
+.vercel
+.netlify
+.output
+.wrangler
 
-# Build artifact from `make build` (Cloudflare Pages)
-functions/api/contact.mjs
+# Python helper scripts
+__pycache__/
+*.pyc
+tmp_icons/
