@@ -1250,7 +1250,7 @@ textarea:focus-visible {
   margin-left: calc(50% - 50vw);
   padding: 0 4rem;
   box-sizing: border-box;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
 }
 
@@ -1264,14 +1264,12 @@ textarea:focus-visible {
 
 @media (max-width: 1400px) {
   #recent-projects-container {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
     padding: 0 3rem;
   }
 }
 
 @media (max-width: 768px) {
   #recent-projects-container {
-    grid-template-columns: minmax(0, 1fr);
     padding: 0 2rem;
   }
 }
@@ -1284,33 +1282,9 @@ textarea:focus-visible {
 
 /* All Projects Container layout */
 #all-projects-container {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   max-width: 2400px;
   margin: 0 auto;
-}
-
-@media (min-width: 1920px) {
-  #all-projects-container {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 1450px) {
-  #all-projects-container {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 992px) {
-  #all-projects-container {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 768px) {
-  #all-projects-container {
-    grid-template-columns: minmax(0, 1fr);
-  }
 }
 
 .project-card {
@@ -1325,7 +1299,7 @@ textarea:focus-visible {
 .project-img-container {
   margin: 0;
   width: 100%;
-  height: 220px;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   position: relative;
   border-bottom: 1px solid var(--glass-border);
