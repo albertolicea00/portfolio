@@ -2,8 +2,8 @@ services:
   - type: web
     name: alberto-portfolio
     env: node
-    buildCommand: make build
-    startCommand: make start
+    buildCommand: DEPLOY_TARGET=node npm run build
+    startCommand: node ./dist/server/entry.mjs
     envVars:
       - key: TELEGRAM_BOT_TOKEN
         sync: false

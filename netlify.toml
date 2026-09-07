@@ -1,13 +1,10 @@
 [build]
-  functions = "functions/netlify"
+  command = "npm run build"
+  publish = "dist"
 
 [build.environment]
+  DEPLOY_TARGET = "netlify"
   SECRETS_SCAN_OMIT_KEYS = "TURNSTILE_SITE_ID"
-
-[[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/:splat"
-  status = 200
 
 [[headers]]
   for = "/assets/*"
