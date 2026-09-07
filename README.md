@@ -1,14 +1,13 @@
 # @albertolicea00's Portfolio
 
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-000000?logo=github&logoColor=white)](https://pages.github.com/)
-[![Cloudflare Pages](https://img.shields.io/badge/Cloudflare%20Pages-F38020?logo=cloudflare&logoColor=white)](https://pages.cloudflare.com/)
 [![Vercel](https://img.shields.io/badge/Vercel-000000?logo=vercel&logoColor=white)](https://vercel.com/)
-[![Render](https://img.shields.io/badge/Render-0099E5?logo=render&logoColor=white)](https://render.com)
 [![Netlify](https://img.shields.io/badge/Netlify-00C7B7?logo=netlify&logoColor=white)](https://netlify.com)
+[![Cloudflare Pages](https://img.shields.io/badge/Cloudflare%20Pages-F38020?logo=cloudflare&logoColor=white)](https://pages.cloudflare.com/)
+[![Render](https://img.shields.io/badge/Render-0099E5?logo=render&logoColor=white)](https://render.com)
 
 > **Note:** The `redirect` branch (https://github.com/albertolicea00/portfolio/tree/redirect) holds a zero-config static redirect to the Target (Vercel) deployment site, for hosts where you don't want to manage env vars/functions.
 
-Responsive portfolio built with plain **HTML**, **CSS**, and **JavaScript**. The site ships as a pure static frontend with no build step and loads its UI copy and dynamic sections from per-language JSON files in `assets/i18n/`.
+Portfolio built with **Astro** — componentized, statically prerendered per locale, with a single serverless endpoint for the contact form. Migrated from a plain HTML/CSS/JS build (issue [#12](https://github.com/albertolicea00/portfolio/issues/12); the original trade-offs that motivated the migration are tracked in [#6](https://github.com/albertolicea00/portfolio/issues/6)).
 
 [![DuckDuckGo](https://img.shields.io/badge/DuckDuckGo-FF6600?logo=duckduckgo&logoColor=white)](https://duckduckgo.com/?q=albertolicea00)
 [![Google](https://img.shields.io/badge/Google-4285F4?logo=google&logoColor=white)](https://www.google.com/search?q=albertolicea00)
@@ -20,153 +19,138 @@ Responsive portfolio built with plain **HTML**, **CSS**, and **JavaScript**. The
 
 ## ✨ Features
 
-- 🌓 **Theme Toggle:** Light and dark mode support
-- 🌍 **Localization:** Multi-language interface with automatic browser detection and English fallback
-- ⌨️ **Accessibility:** Custom language dropdown with keyboard support
-- 🗂️ **Dynamic Content:** Project and experience sections rendered dynamically from JSON
-- 📱 **Responsive:** Fluid layout optimized for desktop, tablet, and mobile
-- ✉️ **Secure Contact Form:** Powered by Serverless Functions and Telegram Bot API
-- 🛡️ **Spam Protection:** Built-in Honeypot and Cloudflare Turnstile verification
-- 🎨 **Premium Assets:** Local SVG icons for high-quality, crisp rendering (emoji-free)
-- ⚡ **Zero Dependencies:** No heavy frontend frameworks or runtime dependencies 
+- 🧩 **Componentized:** shared layout/nav/footer/card/timeline components — no more hand-copied markup between pages
+- 🌍 **Real per-locale static HTML:** 10 languages + 2 pre-baked "caveman" variants, each prerendered at build time (not fetched client-side) — crawlable, indexable, no JS required to read content
+- 🐱 **Cat/alien joke languages:** still a client-side toggle layered on top of whichever real locale is active — explicitly non-canonical, never prerendered
+- 🌓 **Theme Toggle:** light/dark mode, persisted in `localStorage`
+- ⌨️ **Accessibility:** keyboard-navigable language dropdown, skip link, live-region announcements
+- ✉️ **Secure Contact Form:** one shared handler (`src/lib/contact.ts`), Cloudflare Turnstile + honeypot spam protection, Telegram Bot API delivery
+- 📱 **Responsive:** fluid layout for desktop, tablet, and mobile
+- ⚡ **Astro build:** Vite-based tree-shaking, code-splitting, and minification
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** HTML5, CSS3, JavaScript (ES6+)
-- **Backend (Serverless):** Node.js (Vercel Functions, Cloudflare Pages, Netlify)
+- **Framework:** Astro (static output, one server-rendered API route)
+- **Frontend:** Astro components + plain-JS islands (no UI framework — theme/lang/tooltip/particles/form behaviors ported 1:1 from the original vanilla JS)
+- **Content:** Astro content collections, one typed JSON file per locale (`src/content/i18n/`)
+- **Backend (serverless):** Node.js, adapter-selected at build time (Vercel, Netlify, Cloudflare Pages, or Node standalone for Render/Coolify/Dokploy)
 - **Messaging:** Telegram Bot API
-- **Testing:** Python (pytest)
+- **Testing:** Python (structure/asset/link checks against the i18n source files)
 - **CI/CD:** GitHub Actions
 - **Typography:** Google Fonts
 
-## ⚖️ Trade-offs (why there's no framework)
+## 🔀 Adapter-per-target (the Astro equivalent of the old "one handler, multi-cloud" trick)
 
-> Tracked in [#6](https://github.com/albertolicea00/portfolio/issues/6).
+The pre-Astro version ran one static build, unmodified, on five hosts, by re-exporting a single `api/contact.mjs` handler through host-specific wrapper files — zero rebuilds. **Astro requires exactly one adapter per build**, so that specific trick doesn't survive the migration. What does survive: all the actual logic still lives in one file, `src/lib/contact.ts`, imported by the one API route `src/pages/api/contact.ts`. Only the *adapter* changes per target, selected via the `DEPLOY_TARGET` env var in `astro.config.mjs`:
 
-This portfolio is deliberately **vanilla** — HTML/CSS/JS, no build step, no React/Vue/Svelte, no bundler. Reason: personal repo, built raw on purpose to showcase skills. No regrets, just not general advice. Costs:
+```bash
+DEPLOY_TARGET=vercel     npm run build   # default — @astrojs/vercel
+DEPLOY_TARGET=netlify    npm run build   # @astrojs/netlify
+DEPLOY_TARGET=cloudflare npm run build   # @astrojs/cloudflare
+DEPLOY_TARGET=node       npm run build   # @astrojs/node, standalone mode — Render/Coolify/Dokploy
+```
 
-- **No componentization:** `index.html` and `projects.html` duplicate markup (header, nav, footer, cards). Structural changes get hand-copied everywhere instead of living in one shared component.
-- **Weaker SEO:** content (projects, experience, i18n copy) isn't in the initial HTML — it's fetched from `assets/i18n/` JSON at runtime. Crawlers that don't execute JS, or hit it under a tight budget, can index an empty page. SSG/SSR (Next.js, Astro, Nuxt) ships populated HTML on first byte.
-- **No reactivity/state:** theme toggle, language dropdown, card rendering — all manual DOM manipulation. Imperative, easy to desync (e.g. update a class but forget the matching `aria-*`).
-- **No type safety:** plain JS. Typos/shape errors in `assets/i18n/` JSON surface at runtime, not compile time.
-- **No build tooling:** no tree-shaking, code-splitting, minification. Fine at this size, won't scale.
-- **Testing covers structure, not behavior:** Python suite checks files/assets/links, not UI/JS logic.
-- **Weaker DX:** `live-server` full-reloads, no HMR, no linting/type-checking on save.
-
-Fine for a small personal portfolio. For anything meant to grow — more pages, more contributors, content that needs to rank — use a framework with SSR/SSG from day one.
+So: one rebuild per target instead of zero rebuilds, but still zero code duplication. Every page is prerendered static HTML except `/api/contact`, which opts out via `export const prerender = false` and is the only route any adapter actually serves at runtime.
 
 ## 📁 Project Structure
 
 ```bash
-├── index.html
-├── projects.html
-├── style.css
-├── script.js
-├── server.mjs              # Local dev server + Node backend for Render/Coolify/Dokploy
-├── Makefile                 # build, start, dev, test, and helper-script targets
-├── functions/
-│   ├── api/                # Build output for Cloudflare Pages (`make build` copies contact.mjs here)
-│   └── netlify/            # Netlify Functions wrapper around contact.mjs
-├── api/
-│   └── contact.mjs         # Master serverless handler, reused by every deployment target
-├── assets/
-│   ├── i18n/               # Per-language JSON content (en, es, de, fr, it, ja, ko, pt, ru, zh)
-│   ├── icons/
-│   │   ├── tech/           # Local tech-stack SVG icons
-│   │   ├── social/         # Social platform icons + social-sprite.svg
-│   │   ├── flags/           # Language-switcher flag icons
-│   │   └── emojis/         # Local emoji replacements (SVG)
-│   ├── img/                # avatar, hero background, apps/ and company/ screenshots
-│   └── pdf/                # CV....pdf
-├── scripts/                # Standalone helper scripts (not shipped with the site)
-│   ├── fetch_icons.py      # Downloads missing tech icons via simple-icons
-│   ├── validate_translations.py    # Audits assets/i18n/ for missing/duplicate/untranslated keys
-│   └── package.json        # simple-icons dependency used by fetch_icons.py
-├── tests/                  # Python test suite
-│   ├── run_all.py          # Orchestrator (`make test`)
-│   ├── test_structure.py
-│   ├── test_assets.py
-│   └── test_links.py
-├── .github/workflows/test.yml  # CI: runs the test suite on push/PR
-├── netlify.toml            # Netlify functions + /api/* redirect config
-├── vercel.json             # Vercel config
-├── render.yaml             # Render deployment config
-├── robots.txt / sitemap.xml    # SEO
-├── llms.txt
-├── LICENSE                 # MIT License
+├── astro.config.mjs         # adapter selection (DEPLOY_TARGET), site config
+├── package.json
+├── src/
+│   ├── layouts/BaseLayout.astro     # <head>, skip-link, a11y-status region
+│   ├── components/
+│   │   ├── Navbar.astro, Hero.astro, ProjectsSection.astro, ProjectCard.astro,
+│   │   ├── ExperienceSection.astro, TimelineItem.astro, TechStack.astro,
+│   │   ├── AboutSection.astro, ContactSection.astro, Footer.astro, SocialLinks.astro
+│   │   └── pages/HomePage.astro, ProjectsPage.astro   # shared bodies for the default + [locale] routes
+│   ├── content.config.ts     # i18n collection schema (zod)
+│   ├── content/i18n/*.json   # one file per locale: home / projects / experience
+│   ├── scripts/               # one file per client-side behavior
+│   │   ├── theme.js, mobile-menu.js, lang-switcher.js, cat-alien-transform.js,
+│   │   ├── tech-expand.js, contact-form.js, tooltip.js, cursor-particles.js,
+│   │   └── scroll-animations.js, a11y.js
+│   ├── lib/
+│   │   ├── contact.ts          # processRequest() — shared by every adapter's API route
+│   │   ├── tech-data.ts        # tech chip names/categories
+│   │   └── locales.ts          # locale metadata + routing helpers
+│   ├── styles/global.css      # single global stylesheet
+│   └── pages/
+│       ├── index.astro, projects.astro           # default locale (en) at "/"
+│       ├── [locale]/index.astro, [locale]/projects.astro  # the other 11 locales
+│       └── api/contact.ts     # the one non-prerendered route
+├── public/
+│   ├── assets/                # img, icons, pdf — served as-is (icon paths are built
+│   │                             dynamically from strings, so they stay outside Astro's
+│   │                             optimized asset pipeline)
+│   └── robots.txt, sitemap.xml, llms.txt
+├── scripts/                   # standalone dev-only helper scripts (not shipped)
+│   ├── fetch_icons.py, validate_translations.py, package.json
+├── tests/                     # Python test suite, checked against src/content/i18n/
+│   ├── run_all.py, test_structure.py, test_assets.py, test_links.py
+├── .github/workflows/test.yml
+├── netlify.toml, vercel.json, render.yaml
+├── LICENSE
 └── README.md
 ```
 
 ## 📝 Content Model
 
-Each file in `assets/i18n/` contains:
+Each file in `src/content/i18n/` (`en`, `es`, `de`, `fr`, `it`, `ja`, `ko`, `pt`, `ru`, `zh`, `en.cav`, `es.cav`) contains:
 - `home`: UI text, labels, accessibility copy, and section content
-- `projects`: Project cards rendered on the home page and projects page
-- `experience`: Timeline entries rendered dynamically
+- `projects`: project cards rendered on the home page and the "All Work" page
+- `experience`: timeline entries
 
-`script.js` loads `assets/i18n/{lang}.json`, applies translated UI strings, and falls back to `en.json` if a language file cannot be loaded.
+Shape is enforced at build time by the zod schema in `src/content.config.ts` — a malformed or missing key fails the build instead of silently rendering blank.
+
+`cat` and `alien` are **not** locale files — they're a deterministic client-side transform (`src/scripts/cat-alien-transform.js`) layered over whichever real locale is currently displayed, exactly as before. Never prerendered, never indexed — consistent with the site's own `ai-content-note` metadata, which already flags them as playful, non-authoritative variants.
 
 ## 🔄 Updating Content
 
-1. Edit `assets/i18n/en.json` to update the default English content.
-2. Mirror those changes in the other language files (`es.json`, etc.) if you want localized versions.
-3. Add or update entries in the `projects` array to change the portfolio cards.
-4. Add or update entries in the `experience` array to change the timeline.
-5. Replace assets in `assets/img/`, `assets/icons/`, or `assets/pdf/` when needed.
+1. Edit `src/content/i18n/en.json` to update the default English content.
+2. Mirror those changes in the other locale files if you want localized versions.
+3. Add or update entries in `projects` to change the portfolio cards.
+4. Add or update entries in `experience` to change the timeline.
+5. Replace assets in `public/assets/img/`, `public/assets/icons/`, or `public/assets/pdf/` when needed.
 
 ## 💻 Local Preview
 
-Open `index.html` directly in the browser for a quick check, or serve the folder with auto-reload:
 ```bash
-make dev
+npm install
+make dev        # astro dev, with HMR, at http://localhost:4321
 ```
-This runs `live-server` and opens the browser automatically.
 
-To test the full API and contact form locally, run the included server:
+To test a specific adapter's build output locally:
 ```bash
-make start
+DEPLOY_TARGET=node make build   # or vercel / netlify / cloudflare
+make start                      # runs the Node standalone server (Render/Coolify/Dokploy shape)
 ```
-Then visit `http://localhost:3000`.
 
-Run the Python test suite with:
+Run the Python test suite (validates `src/content/i18n/*.json` structure, local asset paths, and external link reachability — no build required):
 ```bash
 make test
 ```
-Or run a single suite (`make test-structure`, `make test-assets`, `make test-links`). Helper scripts are available too: `make fetch-icons` and `make validate-translations`.
+Or run a single suite (`make test-structure`, `make test-assets`, `make test-links`). Helper scripts: `make fetch-icons` and `make validate-translations`.
 
 ## 🚀 Deployment
 
-This project can be deployed anywhere. It supports a **Multi-Cloud Zero-Config** architecture, meaning it runs seamlessly on:
-- [Vercel](https://vercel.com/)
-- [Cloudflare Pages](https://pages.cloudflare.com/)
-- [Netlify](https://www.netlify.com/)
-- [Render](https://render.com/)
-- [Coolify](https://coolify.io/)
-- [Dokploy](https://dokploy.com/)
-- [GitHub Pages](https://pages.github.com/)
+Supports the same five targets as before, one adapter per target:
+- [Vercel](https://vercel.com/) — zero-config, `DEPLOY_TARGET` unset defaults to `vercel`
+- [Netlify](https://www.netlify.com/) — build command `npm run build`, `DEPLOY_TARGET=netlify` set in `netlify.toml`
+- [Cloudflare Pages](https://pages.cloudflare.com/) — build command `DEPLOY_TARGET=cloudflare npm run build`, output directory `dist`
+- [Render](https://render.com/) / [Coolify](https://coolify.io/) / [Dokploy](https://dokploy.com/) — Node Web Service, `DEPLOY_TARGET=node npm run build` then `node ./dist/server/entry.mjs` (see `render.yaml`)
 
-### 🪄 The Multi-Cloud Architecture Trick
-
-This portfolio uses a unique "Multi-Cloud Zero-Config" approach for its backend. Instead of duplicating backend code for every cloud provider, the entire API logic lives in a single master file: `api/contact.mjs`. 
-
-Here is how it seamlessly supports all major platforms with zero frontend code changes (the frontend simply calls `/api/contact`):
-- **Vercel:** Natively looks for the `api/` directory and exposes the file automatically. This is a true zero-config deployment.
-- **Cloudflare Pages:** Strictly requires a `functions/` directory. To avoid code duplication, the `Makefile` includes a `build` target (`mkdir -p functions/api && cp api/contact.mjs functions/api/contact.mjs`). By setting your Cloudflare Pages build command to `make build`, Cloudflare dynamically creates the required folder structure during deployment.
-- **Netlify:** `functions/netlify/contact.mjs` is a thin wrapper that imports `processRequest` from the master file and exposes it as a classic (`event`, `context`) handler. It has to live in its own file with no `export default`, because Netlify's function bundler treats any module with a default export as its newer Request/Response-style (v2) API and would otherwise route around the named `handler` export. `netlify.toml` points `functions` at that directory and rewrites `/api/*` to `/.netlify/functions/:splat`.
-- **Render / Coolify / Dokploy:** The included `server.mjs` natively imports the master file and serves it as a standard Node.js Express-like endpoint.
+**GitHub Pages:** not wired up in this pass. It has no functions support at all (same as before the migration — the old README already required an external form service like Formspree there), and every adapter above still expects to run its own SSR function for `/api/contact`. Serving GH Pages would need a fifth, adapter-less `output: 'static'` build profile that drops the API route entirely; left as a follow-up rather than guessed at here.
 
 ### 🔑 Contact Form Environment Variables
 
-Regardless of where you deploy, the contact form requires the following environment variables:
-- `TELEGRAM_BOT_TOKEN`: Your Telegram Bot API token (from [@BotFather](https://t.me/botfather)).
-- `TELEGRAM_CHAT_ID`: Your Telegram numeric Chat ID (use `@userinfobot` to find yours).
-- `TURNSTILE_SECRET_KEY`: Your Cloudflare Turnstile Secret Key.
+Regardless of where you deploy, the contact form requires:
+- `TELEGRAM_BOT_TOKEN`: your Telegram Bot API token (from [@BotFather](https://t.me/botfather)).
+- `TELEGRAM_CHAT_ID`: your Telegram numeric Chat ID (use `@userinfobot` to find yours).
+- `TURNSTILE_SECRET_KEY`: your Cloudflare Turnstile Secret Key.
 
-*(Don't forget to add your Turnstile Site Key to `index.html` inside the `<div class="cf-turnstile">` element!)*
+*(Don't forget to keep your Turnstile Site Key in `src/components/ContactSection.astro`'s `.cf-turnstile` element in sync with your own site!)*
 
 ### 🏢 Self-Hosted PaaS (Coolify, Dokploy) & Container Platforms (Render, Heroku)
 
-If you deploy this project to platforms like **Coolify**, **Dokploy**, **Render**, or **Heroku**, do NOT deploy it as a "Static Site". Instead, deploy it as a **Node.js Web Service**.
-Thanks to the included `server.mjs` and `Makefile` (`make start`), these platforms will automatically start a native web server that serves both your static portfolio and the backend API on the same domain seamlessly.
-
-*(Note: If you deploy to **GitHub Pages**, the static site will work perfectly, but because GitHub Pages has no backend support, you must use an external form service like Formspree).*
+Deploy as a **Node.js Web Service**, not a static site — `DEPLOY_TARGET=node npm run build` followed by `node ./dist/server/entry.mjs` serves both the static pages and the API on the same origin.
