@@ -7,7 +7,7 @@ import sys
 
 # Get the root directory of the repository
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-I18N_DIR = os.path.join(ROOT_DIR, "assets", "i18n")
+I18N_DIR = os.path.join(ROOT_DIR, "src", "content", "i18n")
 
 def print_success(message):
     print(f"\033[92m✔ {message}\033[0m")

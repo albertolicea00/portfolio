@@ -5,7 +5,8 @@ import sys
 
 # Get the root directory of the repository
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-I18N_DIR = os.path.join(ROOT_DIR, "assets", "i18n")
+I18N_DIR = os.path.join(ROOT_DIR, "src", "content", "i18n")
+PUBLIC_DIR = os.path.join(ROOT_DIR, "public")
 
 def print_success(message):
     print(f"\033[92m✔ {message}\033[0m")
@@ -30,7 +31,7 @@ def verify_assets_exist(data):
         for idx, project in enumerate(data["projects"]):
             img_path = project.get("image")
             if img_path:
-                full_path = os.path.join(ROOT_DIR, img_path)
+                full_path = os.path.join(PUBLIC_DIR, img_path)
                 if not os.path.exists(full_path):
                     errors.append(f"Project '{project.get('title', idx)}' image path not found on disk: {img_path}")
                     
@@ -39,7 +40,7 @@ def verify_assets_exist(data):
         for idx, exp in enumerate(data["experience"]):
             logo_path = exp.get("logo")
             if logo_path:
-                full_path = os.path.join(ROOT_DIR, logo_path)
+                full_path = os.path.join(PUBLIC_DIR, logo_path)
                 if not os.path.exists(full_path):
                     errors.append(f"Experience '{exp.get('title', idx)}' logo path not found on disk: {logo_path}")
                     

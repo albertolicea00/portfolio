@@ -2,7 +2,7 @@ import json
 import urllib.request
 import os
 
-icons_dir = '/Users/albertolicea00/Develop/my_portfolio/assets/icons/tech'
+icons_dir = '/Users/albertolicea00/Develop/my_portfolio/public/assets/icons/tech'
 simple_icons_json = '/Users/albertolicea00/Develop/my_portfolio/tmp_icons/node_modules/simple-icons/data/simple-icons.json'
 
 targets = {
