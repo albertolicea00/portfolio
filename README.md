@@ -55,6 +55,8 @@ This portfolio is deliberately **vanilla** — HTML/CSS/JS, no build step, no Re
 
 Fine for a small personal portfolio. For anything meant to grow — more pages, more contributors, content that needs to rank — use a framework with SSR/SSG from day one.
 
+**Update:** this was fully explored on the `astro-migration` branch (tracked in [#12](https://github.com/albertolicea00/portfolio/issues/12)) — a working end-to-end Astro rewrite that fixes every cost listed above. It works, and #12 was closed as not planned: staying vanilla for this portfolio. Keeping this issue open and pinned as the living record of that trade-off.
+
 ## 📁 Project Structure
 
 ```bash
