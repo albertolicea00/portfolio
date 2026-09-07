@@ -1,0 +1,12 @@
+---
+interface Props {
+  title: string;
+  text: string;
+}
+const { title, text } = Astro.props;
+---
+<div class="coming-soon-box glass-panel" style="padding:4rem;width:100%;grid-column:1/-1;text-align:center">
+  <span class="coming-soon-icon inline-icon" aria-hidden="true">🛠</span>
+  <h3 style="font-size:1.8rem;margin-bottom:1rem;">{title}</h3>
+  <p style="opacity:0.8;font-size:1.1rem;">{text}</p>
+</div>

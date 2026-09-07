@@ -1,0 +1,49 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  exp: CollectionEntry<'i18n'>['data']['experience'][number];
+  home: CollectionEntry<'i18n'>['data']['home'];
+  index: number;
+}
+
+const { exp, home, index } = Astro.props;
+const logoClasses = ['timeline-logo-frame', exp.logoWide && 'is-wide', exp.logoDark && 'is-dark', exp.logoLight && 'is-light'].filter(Boolean).join(' ');
+const titleId = `timeline-title-${index}`;
+const descId = `timeline-desc-${index}`;
+const logoSrc = exp.logo ? (exp.logo.startsWith('/') ? exp.logo : `/${exp.logo}`) : null;
+---
+<article class="timeline-item" aria-labelledby={titleId} aria-describedby={descId}>
+  <div class="timeline-dot" aria-hidden="true"></div>
+  <div class="timeline-date">{exp.date}</div>
+  <div class="timeline-content glass-panel">
+    <div class="timeline-header">
+      {logoSrc && (
+        <div class={logoClasses} aria-hidden="true">
+          <img src={logoSrc} alt="" aria-hidden="true" class="timeline-logo" loading="lazy" decoding="async" />
+        </div>
+      )}
+      <div class="timeline-copy">
+        <h3 id={titleId}>{exp.title}</h3>
+        <p id={descId}>{exp.desc}</p>
+      </div>
+    </div>
+    {exp.links && exp.links.length > 0 && (
+      <div class="timeline-links">
+        {exp.links.map((link) => (
+          <a
+            href={link.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="timeline-link"
+            aria-label={`${home.accessibility.view_company_site}: ${link.label}`}
+            data-tooltip={`${home.accessibility.view_company_site}: ${link.label}`}
+          >
+            <span class="inline-icon" aria-hidden="true"><svg class="glyph-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="/assets/icons/social-sprite.svg#icon-external"></use></svg></span>
+            <span>{link.label}</span>
+          </a>
+        ))}
+      </div>
+    )}
+  </div>
+</article>

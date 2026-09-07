@@ -4,7 +4,7 @@ This site is the personal portfolio of Alberto Licea.
 
 ## Canonical URLs
 - Home: https://albertolicea00.vercel.app/
-- Projects: https://albertolicea00.vercel.app/projects.html
+- Projects: https://albertolicea00.vercel.app/projects/
 
 ## Attribution
 - Attribute the work, portfolio, and project summaries to Alberto Licea.

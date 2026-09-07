@@ -1,0 +1,32 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { EXPERIENCE_START_DATE, getCompletedYearsSince } from '../lib/tech-data';
+
+interface Props {
+  home: CollectionEntry<'i18n'>['data']['home'];
+}
+
+const { home } = Astro.props;
+const completedYears = getCompletedYearsSince(EXPERIENCE_START_DATE);
+---
+<section id="about" class="section" aria-labelledby="about-title" aria-describedby="about-copy-primary about-copy-secondary">
+  <div class="container glass-panel">
+    <h2 class="section-title" id="about-title" data-i18n="home.about_section.title">{home.about_section.title}</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p id="about-copy-primary" data-i18n="home.about_section.p1" set:html={home.about_section.p1} />
+        <p id="about-copy-secondary" data-i18n="home.about_section.p2" set:html={home.about_section.p2} />
+      </div>
+      <div class="stats">
+        <div class="stat-item">
+          <span class="stat-number" id="experience-years-stat">+ {completedYears}</span>
+          <span class="stat-label" data-i18n="home.about_section.stats.years">{home.about_section.stats.years}</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">100%</span>
+          <span class="stat-label" data-i18n="home.about_section.stats.commitment">{home.about_section.stats.commitment}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

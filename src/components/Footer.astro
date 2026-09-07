@@ -1,0 +1,21 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import SocialLinks from './SocialLinks.astro';
+
+interface Props {
+  home: CollectionEntry<'i18n'>['data']['home'];
+}
+const { home } = Astro.props;
+const year = new Date().getFullYear();
+---
+<footer class="footer" style="padding: 2rem">
+  <div class="container">
+    <div class="social-links-footer" style="text-align: center;">
+      <SocialLinks home={home} />
+    </div>
+    <p class="copyright" style="padding-top: 2rem;">
+      © <span id="year">{year}</span> Alberto Licea.
+      <span data-i18n="home.footer.rights">{home.footer.rights}</span>
+    </p>
+  </div>
+</footer>

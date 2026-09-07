@@ -1,0 +1,45 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { TECH_CATEGORIES, formatTechName } from '../lib/tech-data';
+
+interface Props {
+  home: CollectionEntry<'i18n'>['data']['home'];
+}
+
+const { home } = Astro.props;
+const categoryLabels: Record<string, string> = home.skills_section.categories;
+---
+<section id="tech-stack" class="section" style="padding-top: 0; padding-bottom: 2rem;">
+  <div class="container glass-panel">
+    <h2 class="section-title" id="tech-stack-title" data-i18n="home.skills_section.title">{home.skills_section.title}</h2>
+    <div class="tech-categories" id="tech-stack-container" style="margin-top: 2rem;">
+      {TECH_CATEGORIES.map((category, index) => (
+        <div class={`tech-category ${index > 0 ? 'is-hidden' : ''}`} data-tech-category>
+          <h4 class="tech-category-title" data-i18n={category.i18n}>{categoryLabels[category.id] ?? category.label}</h4>
+          <div class="tech-chips" role="list" aria-label={categoryLabels[category.id] ?? category.label}>
+            {category.items.map((item) => (
+              <div class="tech-chip" role="listitem">
+                <img src={`/assets/icons/tech/${item}.svg`} alt="" aria-hidden="true" class="tech-chip-icon" loading="lazy" />
+                <span>{formatTechName(item)}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+      <div class="tech-expand-container">
+        <button
+          class="tech-expand-btn pulse-animation"
+          id="tech-expand-btn"
+          data-i18n-tooltip="home.skills_section.view_more_tooltip"
+          data-tooltip={home.skills_section.view_more_tooltip}
+          data-view-more={home.skills_section.view_more}
+          data-view-less={home.skills_section.view_less}
+          data-view-more-tooltip={home.skills_section.view_more_tooltip}
+          data-view-less-tooltip={home.skills_section.view_less_tooltip}
+        >
+          <span id="tech-expand-text" data-i18n="home.skills_section.view_more">{home.skills_section.view_more}</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

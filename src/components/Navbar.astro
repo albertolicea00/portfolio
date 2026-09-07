@@ -1,0 +1,125 @@
+---
+import { DROPDOWN_LOCALES, SYNTHETIC_LOCALES, TOKEN_SAVER_VARIANTS, getBaseLocale, localeHref } from '../lib/locales';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  locale: string;
+  page: 'home' | 'projects';
+  home: CollectionEntry<'i18n'>['data']['home'];
+}
+
+const { locale, page, home } = Astro.props;
+const baseLocale = getBaseLocale(locale);
+const homeHref = localeHref(locale, '');
+const allWorkHref = localeHref(locale, 'projects');
+const tokenSaver = TOKEN_SAVER_VARIANTS[baseLocale];
+const isTokenSaverActive = tokenSaver && locale === tokenSaver.id;
+---
+<nav class="navbar" id="site-navigation" aria-label={home.accessibility.navigation}>
+  <div class="nav-container">
+    <a href={homeHref} class="logo" aria-label={home.nav.home}><span>@</span>albertolicea00<span>.</span></a>
+    <ul class="nav-links" id="primary-navigation">
+      {page === 'home' ? (
+        <>
+          <li><a href={`${homeHref}#projects`} data-i18n="home.nav.projects">{home.nav.projects}</a></li>
+          <li><a href={`${homeHref}#experience`} data-i18n="home.nav.experience">{home.nav.experience}</a></li>
+          <li><a href={allWorkHref} data-i18n="home.nav.allwork">{home.nav.allwork}</a></li>
+          <li><a href={`${homeHref}#contact`} data-i18n="home.nav.contact">{home.nav.contact}</a></li>
+        </>
+      ) : (
+        <>
+          <li><a href={homeHref} data-i18n="home.nav.home">{home.nav.home}</a></li>
+          <li><a href={allWorkHref} class="active-link" aria-current="page" data-i18n="home.nav.allwork">{home.nav.allwork}</a></li>
+          <li><a href={`${homeHref}#contact`} data-i18n="home.nav.contact">{home.nav.contact}</a></li>
+        </>
+      )}
+      <li class="controls-container">
+        <button
+          class="theme-toggle"
+          id="theme-toggle"
+          type="button"
+          aria-describedby="site-a11y-help"
+          data-label-to-light={home.accessibility.theme_to_light}
+          data-label-to-dark={home.accessibility.theme_to_dark}
+          data-announce-dark={home.accessibility.theme_enabled_dark}
+          data-announce-light={home.accessibility.theme_enabled_light}
+        >
+          <span class="toggle-glyph" aria-hidden="true">☾</span>
+        </button>
+        <div class="lang-select-wrapper">
+          <button
+            class="lang-toggle"
+            id="lang-toggle"
+            type="button"
+            aria-haspopup="listbox"
+            aria-expanded="false"
+            aria-label="Select language"
+            aria-describedby="site-a11y-help"
+          >{DROPDOWN_LOCALES.find((l) => l.id === baseLocale)?.buttonLabel ?? '🇺🇸 EN'}</button>
+          <ul class="lang-dropdown" id="lang-dropdown" role="listbox" aria-label="Select language">
+            {DROPDOWN_LOCALES.map((l) => (
+              <li role="option" data-lang={l.id} data-button-label={l.buttonLabel} aria-selected={String(l.id === baseLocale)}>
+                <a href={page === 'home' ? localeHref(l.id, '') : localeHref(l.id, 'projects')} tabindex="-1"><span class="lang-option-main">{l.buttonLabel}</span></a>
+              </li>
+            ))}
+            {SYNTHETIC_LOCALES.map((l) => (
+              <li role="option" data-lang={l.id} data-button-label={l.buttonLabel} aria-selected="false">
+                <button
+                  type="button"
+                  tabindex="-1"
+                  class="lang-option-trigger"
+                  data-synthetic-lang={l.id}
+                  data-announce-active={l.id === 'cat' ? 'Cat language active' : 'Alien language active'}
+                ><span class="lang-option-main">{l.buttonLabel}</span></button>
+              </li>
+            ))}
+          </ul>
+        </div>
+        {tokenSaver && (
+          <a
+            href={isTokenSaverActive ? homeHref : localeHref(tokenSaver.id, page === 'home' ? '' : 'projects')}
+            class:list={['lang-variant-toggle', 'lang-variant-toggle--menu', 'is-visible', { 'is-active': isTokenSaverActive }]}
+            aria-describedby="site-a11y-help"
+            aria-pressed={String(isTokenSaverActive)}
+            data-tooltip={isTokenSaverActive ? tokenSaver.deactivateLabel : tokenSaver.activateLabel}
+            aria-label={isTokenSaverActive ? tokenSaver.deactivateLabel : tokenSaver.activateLabel}
+          >
+            <span class="lang-variant-icon" aria-hidden="true">{tokenSaver.icon}</span>
+            <span class="lang-variant-copy">{tokenSaver.text}</span>
+            <span class="lang-variant-rail" aria-hidden="true"></span>
+          </a>
+        )}
+      </li>
+    </ul>
+    <div class="nav-mobile-tools">
+      {tokenSaver && (
+        <a
+          href={isTokenSaverActive ? homeHref : localeHref(tokenSaver.id, page === 'home' ? '' : 'projects')}
+          class:list={['lang-variant-toggle', 'lang-variant-toggle--mobile', 'is-visible', { 'is-active': isTokenSaverActive }]}
+          aria-describedby="site-a11y-help"
+          aria-pressed={String(isTokenSaverActive)}
+          data-tooltip={isTokenSaverActive ? tokenSaver.deactivateLabel : tokenSaver.activateLabel}
+          aria-label={isTokenSaverActive ? tokenSaver.deactivateLabel : tokenSaver.activateLabel}
+        >
+          <span class="lang-variant-icon" aria-hidden="true">{tokenSaver.icon}</span>
+          <span class="lang-variant-copy">{tokenSaver.text}</span>
+          <span class="lang-variant-rail" aria-hidden="true"></span>
+        </a>
+      )}
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label={home.accessibility.open_menu}
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+        aria-describedby="site-a11y-help"
+        data-label-open={home.accessibility.open_menu}
+        data-label-close={home.accessibility.close_menu}
+        data-announce-expanded={home.accessibility.menu_expanded}
+        data-announce-collapsed={home.accessibility.menu_collapsed}
+      >
+        <span class="toggle-glyph" aria-hidden="true">☰</span>
+      </button>
+    </div>
+  </div>
+</nav>

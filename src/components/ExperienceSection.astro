@@ -1,0 +1,20 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import TimelineItem from './TimelineItem.astro';
+
+interface Props {
+  home: CollectionEntry<'i18n'>['data']['home'];
+  experience: CollectionEntry<'i18n'>['data']['experience'];
+}
+
+const { home, experience } = Astro.props;
+---
+<section id="experience" class="section" tabindex="-1" aria-labelledby="experience-title" aria-describedby="experience-subtitle">
+  <div class="container">
+    <h2 class="section-title" id="experience-title" data-i18n="home.experience_section.title">{home.experience_section.title}</h2>
+    <p class="section-subtitle" id="experience-subtitle" data-i18n="home.experience_section.subtitle">{home.experience_section.subtitle}</p>
+    <div class="timeline" id="experience-timeline">
+      {experience.map((exp, index) => <TimelineItem exp={exp} home={home} index={index} />)}
+    </div>
+  </div>
+</section>

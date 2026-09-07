@@ -1,0 +1,11 @@
+---
+import ProjectsPage from '../../components/pages/ProjectsPage.astro';
+import { ALL_CONTENT_LOCALES, DEFAULT_LOCALE } from '../../lib/locales';
+
+export function getStaticPaths() {
+  return ALL_CONTENT_LOCALES.filter((id) => id !== DEFAULT_LOCALE).map((id) => ({ params: { locale: id } }));
+}
+
+const { locale } = Astro.params;
+---
+<ProjectsPage locale={locale} />

@@ -1,0 +1,29 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  home: CollectionEntry<'i18n'>['data']['home'];
+}
+const { home } = Astro.props;
+
+const links = [
+  { key: 'github', href: 'https://github.com/albertolicea00', label: home.accessibility.open_github },
+  { key: 'linkedin', href: 'https://linkedin.com/in/albertolicea00', label: home.accessibility.open_linkedin },
+  { key: 'x', href: 'https://x.com/albertolicea00', label: home.accessibility.open_x },
+  { key: 'instagram', href: 'https://instagram.com/albertolicea00', label: home.accessibility.open_instagram },
+];
+---
+{links.map((link) => (
+  <a
+    href={link.href}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="social-icon"
+    data-social={link.key}
+    aria-describedby="site-a11y-help"
+    aria-label={link.label}
+    data-tooltip={link.label}
+  ><svg class="social-icon-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
+    <use href={`/assets/icons/social-sprite.svg#icon-${link.key}`}></use></svg
+  ></a>
+))}

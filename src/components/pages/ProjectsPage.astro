@@ -1,0 +1,47 @@
+---
+import { getEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navbar from '../Navbar.astro';
+import Footer from '../Footer.astro';
+import ProjectCard from '../ProjectCard.astro';
+import ComingSoon from '../ComingSoon.astro';
+import { htmlLangFor, localeHref } from '../../lib/locales';
+
+interface Props {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+const entry = await getEntry('i18n', locale);
+if (!entry) throw new Error(`Missing i18n content collection entry for locale "${locale}"`);
+const { home, projects } = entry.data;
+---
+<BaseLayout
+  title="All Projects | Alberto Licea"
+  description="A comprehensive list of projects and applications developed by Alberto Licea."
+  canonicalPath={localeHref(locale, 'projects')}
+  htmlLang={htmlLangFor(locale)}
+>
+  <Navbar locale={locale} page="projects" home={home} />
+  <main id="main-content" tabindex="-1">
+    <section class="section" style="padding-top: 10rem" aria-labelledby="all-projects-title" aria-describedby="all-projects-subtitle">
+      <div class="container" style="max-width: 100vw;margin: 0 auto;padding: 0 4rem;">
+        <h1 class="section-title" id="all-projects-title" data-i18n="home.nav.allwork">{home.nav.allwork}</h1>
+        <p class="section-subtitle" id="all-projects-subtitle" data-i18n="home.projects_section.subtitle">{home.projects_section.subtitle}</p>
+        <div class="projects-grid" id="all-projects-container">
+          {projects.length === 0
+            ? <ComingSoon title={home.common.coming_soon_title} text={home.common.coming_soon} />
+            : projects.map((project) => <ProjectCard project={project} home={home} />)}
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer home={home} />
+  <script src="../../scripts/theme.js"></script>
+  <script src="../../scripts/mobile-menu.js"></script>
+  <script src="../../scripts/lang-switcher.js"></script>
+  <script src="../../scripts/cat-alien-transform.js"></script>
+  <script src="../../scripts/tooltip.js"></script>
+  <script src="../../scripts/cursor-particles.js"></script>
+  <script src="../../scripts/scroll-animations.js"></script>
+</BaseLayout>

@@ -1,0 +1,31 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import ProjectCard from './ProjectCard.astro';
+import ComingSoon from './ComingSoon.astro';
+
+interface Props {
+  home: CollectionEntry<'i18n'>['data']['home'];
+  projects: CollectionEntry<'i18n'>['data']['projects'];
+  allWorkHref: string;
+}
+
+const { home, projects, allWorkHref } = Astro.props;
+const featured = projects.filter((p) => p.featured);
+---
+<section id="projects" class="section" tabindex="-1" aria-labelledby="projects-title" aria-describedby="projects-subtitle">
+  <div class="container">
+    <h2 class="section-title" id="projects-title" data-i18n="home.projects_section.title">{home.projects_section.title}</h2>
+    <p class="section-subtitle" id="projects-subtitle" data-i18n="home.projects_section.subtitle">{home.projects_section.subtitle}</p>
+    <div class="projects-grid" id="recent-projects-container">
+      {featured.length === 0
+        ? <ComingSoon title={home.common.coming_soon_title} text={home.common.coming_soon} />
+        : featured.map((project) => <ProjectCard project={project} home={home} />)}
+    </div>
+    <div class="view-all-container" style="text-align: center; margin-top: 4rem">
+      <a href={allWorkHref} class="outline-btn" id="view-all-projects-link" aria-describedby="site-a11y-help" aria-label={home.accessibility.all_projects} data-tooltip={home.accessibility.all_projects}>
+        <span data-i18n="home.projects_section.view_all">{home.projects_section.view_all}</span>
+        <span class="inline-icon" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</section>

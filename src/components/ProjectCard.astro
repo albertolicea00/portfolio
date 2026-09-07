@@ -1,0 +1,53 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  project: CollectionEntry<'i18n'>['data']['projects'][number];
+  home: CollectionEntry<'i18n'>['data']['home'];
+}
+
+const { project, home } = Astro.props;
+const titleId = `project-title-${project.id}`;
+const descId = `project-desc-${project.id}`;
+const imageCaptionId = `project-image-caption-${project.id}`;
+const techList = project.tags.join(', ');
+const imageCaption = project.description || project.title;
+const imageSrc = project.image.startsWith('/') ? project.image : `/${project.image}`;
+---
+<article class="project-card" aria-labelledby={titleId} aria-describedby={descId}>
+  <figure class="project-img-container" role="img" aria-labelledby={titleId} aria-describedby={imageCaptionId}>
+    <img src={imageSrc} alt="" aria-hidden="true" class="project-img" loading="lazy" decoding="async" />
+    <figcaption id={imageCaptionId} class="sr-only">{imageCaption}</figcaption>
+  </figure>
+  <div class="project-content">
+    <h3 class="project-title" id={titleId}>{project.title}</h3>
+    <div class="project-tags" aria-label={`${home.accessibility.technologies_used}: ${techList}`}>
+      {project.tags.map((tag) => <span class="tag">{tag}</span>)}
+    </div>
+    <p class="project-desc" id={descId}>{project.description}</p>
+    <div class="project-links">
+      <a
+        href={project.liveUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="project-btn project-btn--primary"
+        aria-label={`${home.accessibility.view_live_project}: ${project.title}`}
+        data-tooltip={`${home.accessibility.view_live_project}: ${project.title}`}
+      >
+        <span class="inline-icon" aria-hidden="true"><svg class="glyph-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="/assets/icons/social-sprite.svg#icon-external"></use></svg></span>
+        {' '}{home.common.view_project}
+      </a>
+      <a
+        href={project.githubUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="project-btn project-btn--secondary"
+        aria-label={`${home.accessibility.view_repository}: ${project.title}`}
+        data-tooltip={`${home.accessibility.view_repository}: ${project.title}`}
+      >
+        <span class="inline-icon" aria-hidden="true"><svg class="glyph-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="/assets/icons/social-sprite.svg#icon-external"></use></svg></span>
+        {' '}{home.common.repository}
+      </a>
+    </div>
+  </div>
+</article>

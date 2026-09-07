@@ -1,0 +1,95 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { EXPERIENCE_START_DATE, getCompletedYearsSince } from '../lib/tech-data';
+
+interface Props {
+  home: CollectionEntry<'i18n'>['data']['home'];
+}
+
+const { home } = Astro.props;
+const completedYears = getCompletedYearsSince(EXPERIENCE_START_DATE);
+const bio = home.hero.bio.replace(/\{\{years\}\}/g, String(completedYears));
+---
+<header class="hero" id="home" aria-labelledby="hero-title" aria-describedby="hero-subtitle hero-bio">
+  <div class="hero-bg" style="background-image: url('/assets/img/hero-bg.webp')" aria-hidden="true"></div>
+  <div class="hero-content">
+    <div class="avatar-container">
+      <img
+        src="/assets/img/avatar.webp"
+        alt="Portrait of Alberto Licea"
+        class="avatar"
+        width="360"
+        height="360"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+      />
+      <div class="glow" aria-hidden="true"></div>
+    </div>
+    <h1 class="glitch-text" id="hero-title" data-text="Alberto Licea">Alberto Licea</h1>
+    <h2 class="subtitle" id="hero-subtitle" data-i18n="home.hero.subtitle" set:html={home.hero.subtitle} />
+    <p class="bio" id="hero-bio" data-i18n="home.hero.bio" set:html={bio} />
+    <div class="hero-actions">
+      <a
+        href="https://github.com/albertolicea00"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-icon"
+        data-social="github"
+        aria-describedby="site-a11y-help"
+        aria-label={home.accessibility.open_github}
+        data-tooltip={home.accessibility.open_github}
+      ><svg class="social-icon-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
+        <use href="/assets/icons/social-sprite.svg#icon-github"></use></svg
+      ></a>
+      <a
+        href="https://linkedin.com/in/albertolicea00"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-icon"
+        data-social="linkedin"
+        aria-describedby="site-a11y-help"
+        aria-label={home.accessibility.open_linkedin}
+        data-tooltip={home.accessibility.open_linkedin}
+      ><svg class="social-icon-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
+        <use href="/assets/icons/social-sprite.svg#icon-linkedin"></use></svg
+      ></a>
+      <a
+        href="#contact"
+        class="outline-btn"
+        id="hero-contact-link"
+        data-i18n="home.hero.contact"
+        aria-describedby="site-a11y-help"
+        aria-label={home.accessibility.contact_shortcut}
+        data-tooltip={home.accessibility.contact_shortcut}
+      >{home.hero.contact}</a>
+      <a
+        href="/assets/pdf/CV_Alberto_Licea_2024.pdf"
+        download
+        class="outline-btn"
+        id="download-cv-link"
+        style="border-color: var(--brand-yellow)"
+        aria-describedby="site-a11y-help"
+        aria-label={home.accessibility.download_cv}
+        data-tooltip={home.accessibility.download_cv}
+      ><span class="inline-icon" aria-hidden="true">↓</span>
+        <span data-i18n="home.hero.download_cv">{home.hero.download_cv}</span></a>
+    </div>
+  </div>
+  <a
+    href="#projects"
+    class="scroll-indicator"
+    id="scroll-projects-link"
+    aria-label={home.accessibility.scroll_to_projects}
+    aria-describedby="site-a11y-help"
+    data-tooltip={home.accessibility.scroll_to_projects}
+  >
+    <div class="mouse" aria-hidden="true">
+      <div class="wheel" aria-hidden="true"></div>
+    </div>
+    <div class="arrows" aria-hidden="true">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </div>
+  </a>
+</header>

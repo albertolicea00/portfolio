@@ -1,0 +1,50 @@
+---
+import { getEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navbar from '../Navbar.astro';
+import Hero from '../Hero.astro';
+import ProjectsSection from '../ProjectsSection.astro';
+import ExperienceSection from '../ExperienceSection.astro';
+import TechStack from '../TechStack.astro';
+import AboutSection from '../AboutSection.astro';
+import ContactSection from '../ContactSection.astro';
+import { htmlLangFor, localeHref } from '../../lib/locales';
+
+interface Props {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+const entry = await getEntry('i18n', locale);
+if (!entry) throw new Error(`Missing i18n content collection entry for locale "${locale}"`);
+const { home, projects, experience } = entry.data;
+---
+<BaseLayout
+  title="Alberto Licea | Fullstack Developer & Designer"
+  description="Portfolio of Alberto Licea, Fullstack Web & Mobile Developer with 10+ years of experience."
+  canonicalPath={localeHref(locale, '')}
+  htmlLang={htmlLangFor(locale)}
+  skipToContentLabel={home.accessibility.skip_to_content}
+  keyboardHelpLabel={home.accessibility.keyboard_help}
+  includeTurnstile
+  includeJsonLd
+>
+  <Navbar locale={locale} page="home" home={home} />
+  <main id="main-content" tabindex="-1">
+    <Hero home={home} />
+    <ProjectsSection home={home} projects={projects} allWorkHref={localeHref(locale, 'projects')} />
+    <ExperienceSection home={home} experience={experience} />
+    <TechStack home={home} />
+    <AboutSection home={home} />
+    <ContactSection home={home} />
+  </main>
+  <script src="../../scripts/theme.js"></script>
+  <script src="../../scripts/mobile-menu.js"></script>
+  <script src="../../scripts/lang-switcher.js"></script>
+  <script src="../../scripts/cat-alien-transform.js"></script>
+  <script src="../../scripts/tech-expand.js"></script>
+  <script src="../../scripts/contact-form.js"></script>
+  <script src="../../scripts/tooltip.js"></script>
+  <script src="../../scripts/cursor-particles.js"></script>
+  <script src="../../scripts/scroll-animations.js"></script>
+</BaseLayout>

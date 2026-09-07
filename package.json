@@ -1,0 +1,38 @@
+{
+  "name": "portfolio",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Alberto Licea's portfolio — Astro, multi-locale static site with a single serverless contact endpoint, deployable to Vercel, Netlify, Cloudflare Pages, and Node hosts (Render/Coolify/Dokploy).",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "start": "node ./dist/server/entry.mjs",
+    "astro": "astro",
+    "test": "python3 tests/run_all.py",
+    "test-structure": "python3 tests/test_structure.py",
+    "test-assets": "python3 tests/test_assets.py",
+    "test-links": "python3 tests/test_links.py",
+    "fetch-icons": "python3 scripts/fetch_icons.py",
+    "validate-translations": "python3 scripts/validate_translations.py"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/albertolicea00/portfolio.git"
+  },
+  "author": "Alberto Licea",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/albertolicea00/portfolio/issues"
+  },
+  "homepage": "https://github.com/albertolicea00/portfolio#readme",
+  "dependencies": {
+    "@astrojs/cloudflare": "^14.3.0",
+    "@astrojs/netlify": "^8.2.5",
+    "@astrojs/node": "^11.1.5",
+    "@astrojs/vercel": "^11.0.10",
+    "astro": "^7.3.1",
+    "zod": "^4.5.4"
+  }
+}
