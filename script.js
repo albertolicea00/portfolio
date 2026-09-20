@@ -385,6 +385,30 @@ function escapeHtmlAttribute(value) {
         .replace(/>/g, '&gt;');
 }
 
+function addUtmParams(rawUrl, customParams = {}) {
+    if (!rawUrl || typeof rawUrl !== 'string') return rawUrl;
+    try {
+        const url = new URL(rawUrl);
+        if (!url.protocol.startsWith('http')) return rawUrl;
+
+        const defaultParams = {
+            utm_source: 'portfolio',
+            utm_medium: 'referral',
+            utm_campaign: 'portfolio_apps',
+            ...customParams
+        };
+
+        for (const [key, value] of Object.entries(defaultParams)) {
+            if (value && !url.searchParams.has(key)) {
+                url.searchParams.set(key, value);
+            }
+        }
+        return url.toString();
+    } catch {
+        return rawUrl;
+    }
+}
+
 function getSamePageHashTarget(link) {
     if (!(link instanceof HTMLAnchorElement)) return null;
 
@@ -1147,7 +1171,7 @@ function renderProjects() {
                     <div class="project-tags" aria-label="${technologiesLabel}: ${techList}">${tagsHtml}</div>
                     <p class="project-desc" id="${descId}">${projectDescription}</p>
                     <div class="project-links">
-                        <a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--primary" aria-label="${liveProjectA11y}: ${projectTitle}" data-tooltip="${liveProjectA11y}: ${projectTitle}">
+                        <a href="${addUtmParams(project.liveUrl)}" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--primary" aria-label="${liveProjectA11y}: ${projectTitle}" data-tooltip="${liveProjectA11y}: ${projectTitle}">
                             ${getInlineIconMarkup('external')} ${viewProjectLabel}
                         </a>
                         <a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--secondary" aria-label="${repoA11y}: ${projectTitle}" data-tooltip="${repoA11y}: ${projectTitle}">
@@ -1597,3 +1621,123 @@ function initScrollAnimations() {
         observer.observe(el);
     });
 }
+
+// ─── DevTools Console Welcome & Easter Egg ──────────────────────────────────
+(function initDevToolsWelcome() {
+    'use strict';
+
+    var THRESHOLD_PX     = 160;   // px gap signalling docked DevTools
+    var POLL_INTERVAL_MS = 1500;  // polling interval (ms)
+    var WARNED           = false; // show once per page session
+
+    function getConsoleColors() {
+        var isDark = true;
+        try {
+            var theme = document.documentElement.getAttribute('data-theme');
+            if (theme) {
+                isDark = theme === 'dark';
+            } else if (window.matchMedia) {
+                isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            }
+        } catch (e) { /* ignore */ }
+
+        return {
+            badgeBg: '#6366f1',
+            badgeText: '#ffffff',
+            subBadgeBg: isDark ? '#1e1b4b' : '#ede9fe',
+            subBadgeText: isDark ? '#38bdf8' : '#4338ca',
+            subBadgeBorder: isDark ? '#6366f1' : '#818cf8',
+            textColor: isDark ? '#cbd5e1' : '#334155',
+            tipColor: isDark ? '#f59e0b' : '#d97706'
+        };
+    }
+
+    function printWelcomeMessage() {
+        var c = getConsoleColors();
+
+        var headerStyle1 = 'background:' + c.badgeBg + ';color:' + c.badgeText + ';font-weight:800;font-size:12px;padding:4px 8px;border-radius:4px 0 0 4px;font-family:system-ui,sans-serif;';
+        var headerStyle2 = 'background:' + c.subBadgeBg + ';color:' + c.subBadgeText + ';font-weight:600;font-size:12px;padding:4px 8px;border-radius:0 4px 4px 0;border:1px solid ' + c.subBadgeBorder + ';font-family:system-ui,sans-serif;';
+        var bodyStyle    = 'color:' + c.textColor + ';font-size:12px;font-family:Menlo,Monaco,Consolas,"Courier New",monospace;line-height:1.6;';
+        var h1Style      = 'color:red;font-size:28px;font-weight:900;font-family:system-ui,sans-serif;';
+        var handleStyle  = bodyStyle + 'color:' + c.tipColor + ';font-style:italic;font-weight:700;';
+
+        var header = [
+            '%c %c',
+            headerStyle1,
+            headerStyle2
+        ];
+
+        var body = [
+            '%c\n👋 Welcome to the other side of the website.\n\n'
+            + '%cIf you are reading this, you probably know what DevTools is. 😏\n\n'
+            + 'Made with 💛 by %c@albertolicea00%c with: HTML5 · CSS3 · JavaScript\n'
+            + 'There is no framework hiding back here. Just code!\n\n'
+            + 'Want to see the code behind the scenes?\n'
+            + '👉 https://github.com/albertolicea00/portfolio\n',
+            h1Style,
+            bodyStyle,
+            handleStyle,
+            bodyStyle
+        ];
+
+        try { console.clear(); } catch (e) { /* ignore */ }
+        console.log.apply(console, header);
+        console.log.apply(console, body);
+    }
+
+    function trigger() {
+        if (WARNED) return;
+        WARNED = true;
+        printWelcomeMessage();
+    }
+
+    // Method 1: Docked DevTools size-difference heuristic
+    function checkBySize() {
+        var widthDiff  = window.outerWidth  - window.innerWidth;
+        var heightDiff = window.outerHeight - window.innerHeight;
+        if (widthDiff > THRESHOLD_PX || heightDiff > THRESHOLD_PX) {
+            trigger();
+        }
+    }
+
+    window.addEventListener('resize', checkBySize);
+    window.addEventListener('focus',  checkBySize);
+
+    // Method 2: Console getter sentinel
+    var sentinel = Object.defineProperty({}, 'id', {
+        get: function () {
+            trigger();
+            return 'alberto-sentinel';
+        }
+    });
+    console.log('%c ', 'font-size:0;', sentinel);
+
+    // Method 3: toString trap for undocked DevTools
+    function checkByToString() {
+        var trap = {
+            toString: function () {
+                trigger();
+                return '';
+            }
+        };
+        console.log('%c%s', 'font-size:0;', trap);
+    }
+
+    // Polling until DevTools is opened and message is displayed once
+    function poll() {
+        if (WARNED) return;
+        checkBySize();
+        checkByToString();
+        if (!WARNED) {
+            setTimeout(poll, POLL_INTERVAL_MS);
+        }
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function () {
+            setTimeout(poll, POLL_INTERVAL_MS);
+        });
+    } else {
+        setTimeout(poll, POLL_INTERVAL_MS);
+    }
+})();
