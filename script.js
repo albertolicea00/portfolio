@@ -1174,7 +1174,7 @@ function renderProjects() {
                         <a href="${addUtmParams(project.liveUrl)}" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--primary" aria-label="${liveProjectA11y}: ${projectTitle}" data-tooltip="${liveProjectA11y}: ${projectTitle}">
                             ${getInlineIconMarkup('external')} ${viewProjectLabel}
                         </a>
-                        <a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--secondary" aria-label="${repoA11y}: ${projectTitle}" data-tooltip="${repoA11y}: ${projectTitle}">
+                        <a href="${addUtmParams(project.githubUrl)}" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--secondary" aria-label="${repoA11y}: ${projectTitle}" data-tooltip="${repoA11y}: ${projectTitle}">
                             ${getInlineIconMarkup('external')} ${repoLabel}
                         </a>
                     </div>
