@@ -18,3 +18,4 @@ Thumbs.db
 
 # Temp files
 node_modules
+scripts/package-lock.json
